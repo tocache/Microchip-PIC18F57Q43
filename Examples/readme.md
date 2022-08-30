@@ -1,1 +1,1 @@
-A Collection of MPLABX examples
+A collection of MPLABX examples
