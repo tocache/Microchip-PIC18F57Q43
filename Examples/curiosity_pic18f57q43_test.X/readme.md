@@ -1,5 +1,5 @@
--Programa para controlar el titileo de un LED conectado en RF3, si RB4 es uno empezará a parpadear, si es cero se apagará el LED<br>
+-Programa en lenguaje C XC8 para controlar el titileo de un LED conectado en RF3, si RB4 es uno empezará a parpadear, si es cero se apagará el LED<br>
 -El curiosity tiene un pulsador activo en bajo en el pin RB4 y un LED activo en bajo en el pin RF3<br>
 -Los pines del  puerto B por defecto vienen configurados como entradas analógicas, por eso se debe de especificar cuál pin será digital mediante la manipulación del registro ANSELB<br>
 -Las resistencias weak pull-up del puerto B se activan de manera individual cada pin y a través del registro WPUB<br>
--Para la fuente principal de reloj se esta empleando el oscilador interno trabajando a
+-Para la fuente principal de reloj se esta empleando el oscilador interno trabajando a 4MHz
