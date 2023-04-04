@@ -1,6 +1,6 @@
 # Microchip-PIC18F57Q43
 <img src="Curiosity PIC18F57Q43.jpg"><br>
-Some examples using the PIC18F57Q43 microcontroller and Microchip PIC18F57Q43 Curiosity Development Board
+Some examples using the PIC18F57Q43 microcontroller and the Microchip PIC18F57Q43 Curiosity Development Board
 
 Documentation:<br>
 -Product page: https://www.microchip.com/en-us/product/PIC18F57Q43#<br>
