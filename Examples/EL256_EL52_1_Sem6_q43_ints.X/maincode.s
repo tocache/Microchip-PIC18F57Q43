@@ -32,6 +32,8 @@ configuro:
     movwf OSCFRQ
     movlw 40H
     movwf OSCEN
+    movlb 3H
+    bcf IPR6, 0  ;INT1IP=0
     ;conf de E/S
     movlb 4H
     movlw 80H
@@ -54,7 +56,6 @@ configuro:
     bsf PIE6, 0  ;INT1IE=1
     bcf INTCON0, 0  ;INTEDG0=0
     bcf INTCON0, 1  ;INTEDG1=0
-    bcf IPR6, 0  ;INT1IP=0
     ;conf adicionales
     movlw 01H
     movwf LATA
@@ -72,7 +73,7 @@ inicio:
 INT0_ISR:
     bcf PIR1, 0   ;INT0IF=0
     movlw 9
-    cpfseq CUENTA   ;¿CUENTA=9?
+    cpfseq CUENTA   ;Â¿CUENTA=9?
     bra noesnueve   ;F: salto a noesnueve
     clrf CUENTA	    ;V: limpia CUENTA
     bra siguiente1  ;salto a siguiente1
@@ -85,7 +86,7 @@ siguiente1:
 INT1_ISR:
     bcf PIR6, 0  ;INT1IF=0
     movlw 0
-    cpfseq CUENTA   ;¿CUENTA=0?
+    cpfseq CUENTA   ;Â¿CUENTA=0?
     bra noescero    ;F: salto a noesceor
     movlw 9
     movwf CUENTA    ;V: CUENTA=9
