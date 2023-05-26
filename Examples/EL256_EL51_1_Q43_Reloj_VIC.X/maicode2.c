@@ -20,14 +20,16 @@ void configuro(void){
     TRISB = 0xFF;               //RB2 a RB0 como entradas
     ANSELB = 0xF8;              //RB2 a RB0 como digital
     WPUB = 0x07;                //RB2 a RB0 con pullups habilitados
+    TRISCbits.TRISC2 = 0;
+    ANSELCbits.ANSELC2 = 1;    
     //configuracion del ADC
     ADCON0bits.ADFM = 0;        //justificacion a la izquierda
     ADCON0bits.CS = 1;          //fuente de reloj ADCRC
-    ADPCH = 0x00;               //canal analógico RA0
+    ADPCH = 0x00;               //canal analÃ³gico RA0
     ADCON0bits.ADON = 1;        //ADC On    
     //configuracion del CCP2 para PWM
     T2PR = 62;               //frecuencia de PWM a 1KHz
-    RC2PPS = 0x15;          //PPS asignación de RC2 hacia CCP1
+    RC2PPS = 0x15;          //PPS asignaciÃ³n de RC2 hacia CCP1
     CCP2CON = 0x9C;         //CCP1 ON, justificacion izquierda, PWM mode
     CCPR2H = 0;
     CCPR2L = 0;             //duty cycle a 0%
