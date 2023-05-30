@@ -12,6 +12,14 @@ void POS_CURSOR(unsigned char fila,unsigned char columna)
 	{
 		ENVIA_LCD_CMD(0xC0+columna);
 	}
+	else if(fila == 3)
+	{
+		ENVIA_LCD_CMD(0x94+columna);
+	}
+	else if(fila == 4)
+	{
+		ENVIA_LCD_CMD(0xD4+columna);
+	}
 }
 
 void BLINK_CURSOR(unsigned char val)
@@ -173,12 +181,12 @@ void LEER_LCD(void)
 void GENERACARACTER(const unsigned char *vector,unsigned char pos)
 {
 	unsigned char i;
-	ENVIA_LCD_CMD(0x40+8*pos);//Dirección de la CGRAM +
-	for(i=0;i<8;i++)			 //offset de posición de caracter	
+	ENVIA_LCD_CMD(0x40+8*pos);//DirecciÃ³n de la CGRAM +
+	for(i=0;i<8;i++)			 //offset de posiciÃ³n de caracter	
 	{
 		ENVIA_CHAR(vector[i]);
 	}
-	ENVIA_LCD_CMD(0x80);	//Dirección de la DDRAM
+	ENVIA_LCD_CMD(0x80);	//DirecciÃ³n de la DDRAM
 }
 
 void LCD_INIT(void){
