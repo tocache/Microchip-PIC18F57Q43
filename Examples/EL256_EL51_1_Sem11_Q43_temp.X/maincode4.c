@@ -27,13 +27,13 @@ void configuro(void){
     //configuracion del ADC
     ADCON0bits.ADFM = 1;    //justificacion a la derecha
     ADCON0bits.CS = 1;      //fuente de reloj ADCRC
-    ADPCH = 0x00;           //canal anal骻ico RA0
+    ADPCH = 0x00;           //canal anal贸gico RA0
     ADCON0bits.ADON = 1;      //ADC On
     ADREF = 0x03;           //Vref+ conectado a FVR_buf1
     FVRCON = 0x81;          //modulo FVR entregando 1.024V a FVR_buf1
     //configuracion del CCP1 para que entregue PWM al contraste del LCD
     T2PR = 62;               //frecuencia de PWM a 1KHz
-    RC2PPS = 0x15;          //PPS asignaci髇 de RC2 hacia CCP1
+    RC2PPS = 0x15;          //PPS asignaci贸n de RC2 hacia CCP1
     CCP1CON = 0x9C;         //CCP1 ON, justificacion izquierda, PWM mode
     CCPR1H = 19;
     CCPR1L = 0;             //duty cycle a 50%
@@ -43,12 +43,12 @@ void configuro(void){
     INTCON0bits.GIE = 1;
     PIE1bits.INT0IE = 1;
     INTCON0bits.INT0EDG = 0;
-    //configuraci髇 del UART
+    //configuraci贸n del UART
     U1BRGH = 0x00;
     U1BRGL = 25;      //BRG=25 para 9600 baudios con BRGS=0
     //U3BRGS = 0;         //normal speed
     U1CON0 = 0x30;      //BRGS=0, TXEN=1, RXEN=0, MODE=00 (8bit async uart)
-    RF0PPS = 0x20;       //asignaci髇 de RF0 para TX de UART1 
+    RF0PPS = 0x20;       //asignaci贸n de RF0 para TX de UART1 
     U1CON1 = 0x80;      // UART1 enabled
     U1CON2 = 0x00;      //por seacaso
     //configuracion inicial del LCD
@@ -72,7 +72,6 @@ void UART1_String_Send(const char *cadena)
         while(U1ERRIRbits.TXMTIF == 0);
 	}
 }    
-    
 
 void convierte(unsigned int numero){
     diezmillar = numero / 10000;
