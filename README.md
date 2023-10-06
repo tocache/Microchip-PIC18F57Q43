@@ -10,3 +10,5 @@ Documentation:<br>
 
 More resources:<br>
 -iSebas microProgramando - Serie - Curiosity Nano: https://youtube.com/playlist?list=PLmX2_OhrubDAKTyopNOu7JDwZPXZ6jRMr<br>
+-sine wave in 8 bits: https://gist.github.com/funkfinger/965900<br>
+
