@@ -1,0 +1,695 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                               Mon Sep 25 10:50:34 2023
+
+Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     7                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    12                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    13   000000                     
+    14                           ; Generated 18/07/2023 GMT
+    15                           ; 
+    16                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    17                           ; All rights reserved.
+    18                           ; 
+    19                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    20                           ; 
+    21                           ; Redistribution and use in source and binary forms, with or without modification, are
+    22                           ; permitted provided that the following conditions are met:
+    23                           ; 
+    24                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    25                           ;        conditions and the following disclaimer.
+    26                           ; 
+    27                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    28                           ;        of conditions and the following disclaimer in the documentation and/or other
+    29                           ;        materials provided with the distribution. Publication is not required when
+    30                           ;        this file is used in an embedded application.
+    31                           ; 
+    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    33                           ;        software without specific prior written permission.
+    34                           ; 
+    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    43                           ; 
+    44                           ; 
+    45                           ; Code-generator required, PIC18F57Q43 Definitions
+    46                           ; 
+    47                           ; SFR Addresses
+    48   000000                     _LATD	set	1217
+    49   000000                     _OSCCON1	set	173
+    50   000000                     _ANSELD	set	1048
+    51   000000                     _LATDbits	set	1217
+    52   000000                     _LATEbits	set	1218
+    53   000000                     _TRISD	set	1225
+    54   000000                     _TRISEbits	set	1226
+    55   000000                     _PORTD	set	1233
+    56   000000                     _ANSELEbits	set	1056
+    57   000000                     _OSCFRQ	set	177
+    58   000000                     _OSCEN	set	179
+    59                           
+    60                           ; #config settings
+    61                           
+    62                           	psect	cinit
+    63   002522                     __pcinit:
+    64                           	callstack 0
+    65   002522                     start_initialization:
+    66                           	callstack 0
+    67   002522                     __initialization:
+    68                           	callstack 0
+    69   002522                     end_of_initialization:
+    70                           	callstack 0
+    71   002522                     __end_of__initialization:
+    72                           	callstack 0
+    73   002522  0100               	movlb	0
+    74   002524  EF8D  F012         	goto	_main	;jump to C main() function
+    75                           
+    76                           	psect	cstackCOMRAM
+    77   000000                     __pcstackCOMRAM:
+    78                           	callstack 0
+    79   000000                     
+    80                           ; 1 bytes @ 0x0
+    81 ;;
+    82 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    83 ;;
+    84 ;; *************** function _main *****************
+    85 ;; Defined at:
+    86 ;;		line 15 in file "maincode.c"
+    87 ;; Parameters:    Size  Location     Type
+    88 ;;		None
+    89 ;; Auto vars:     Size  Location     Type
+    90 ;;		None
+    91 ;; Return value:  Size  Location     Type
+    92 ;;                  1    wreg      void 
+    93 ;; Registers used:
+    94 ;;		wreg, status,2, cstack
+    95 ;; Tracked objects:
+    96 ;;		On entry : 0/0
+    97 ;;		On exit  : 0/0
+    98 ;;		Unchanged: 0/0
+    99 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   100 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   101 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   102 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   103 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   104 ;;Total ram usage:        0 bytes
+   105 ;; Hardware stack levels required when called: 1
+   106 ;; This function calls:
+   107 ;;		_configuro
+   108 ;; This function is called by:
+   109 ;;		Startup code after reset
+   110 ;; This function uses a non-reentrant model
+   111 ;;
+   112                           
+   113                           	psect	text0
+   114   00251A                     __ptext0:
+   115                           	callstack 0
+   116   00251A                     _main:
+   117                           	callstack 126
+   118   00251A                     
+   119                           ;maincode.c: 16:     configuro();
+   120   00251A  EC81  F012         	call	_configuro	;wreg free
+   121   00251E  EFFE  F0FF         	goto	start
+   122   002522                     __end_of_main:
+   123                           	callstack 0
+   124                           
+   125 ;; *************** function _configuro *****************
+   126 ;; Defined at:
+   127 ;;		line 6 in file "maincode.c"
+   128 ;; Parameters:    Size  Location     Type
+   129 ;;		None
+   130 ;; Auto vars:     Size  Location     Type
+   131 ;;		None
+   132 ;; Return value:  Size  Location     Type
+   133 ;;                  1    wreg      void 
+   134 ;; Registers used:
+   135 ;;		wreg, status,2
+   136 ;; Tracked objects:
+   137 ;;		On entry : 0/0
+   138 ;;		On exit  : 0/0
+   139 ;;		Unchanged: 0/0
+   140 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   141 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   142 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   143 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   144 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   145 ;;Total ram usage:        0 bytes
+   146 ;; Hardware stack levels used: 1
+   147 ;; This function calls:
+   148 ;;		Nothing
+   149 ;; This function is called by:
+   150 ;;		_main
+   151 ;; This function uses a non-reentrant model
+   152 ;;
+   153                           
+   154                           	psect	text1
+   155   002502                     __ptext1:
+   156                           	callstack 0
+   157   002502                     _configuro:
+   158                           	callstack 126
+   159   002502                     
+   160                           ;maincode.c: 7:     OSCCON1 = 0x60;
+   161   002502  0E60               	movlw	96
+   162   002504  0100               	movlb	0	; () banked
+   163   002506  6FAD               	movwf	173,b	;volatile
+   164                           
+   165                           ;maincode.c: 8:     OSCFRQ = 0x02;
+   166   002508  0E02               	movlw	2
+   167   00250A  6FB1               	movwf	177,b	;volatile
+   168                           
+   169                           ;maincode.c: 9:     OSCEN = 0x40;
+   170   00250C  0E40               	movlw	64
+   171   00250E  6FB3               	movwf	179,b	;volatile
+   172   002510                     
+   173                           ; BSR set to: 0
+   174                           ;maincode.c: 10:     TRISEbits.TRISE0 = 0;
+   175   002510  90CA               	bcf	202,0,c	;volatile
+   176   002512                     
+   177                           ; BSR set to: 0
+   178                           ;maincode.c: 11:     ANSELEbits.ANSELE0 = 0;
+   179   002512  0104               	movlb	4	; () banked
+   180   002514  9120               	bcf	32,0,b	;volatile
+   181   002516                     
+   182                           ; BSR set to: 4
+   183                           ;maincode.c: 12:     LATEbits.LATE0 = 1;
+   184   002516  80C2               	bsf	194,0,c	;volatile
+   185   002518                     
+   186                           ; BSR set to: 4
+   187   002518  0012               	return		;funcret
+   188   00251A                     __end_of_configuro:
+   189                           	callstack 0
+   190                           
+   191                           	psect	smallconst
+   192   002500                     __psmallconst:
+   193                           	callstack 0
+   194   002500  00                 	db	0
+   195   002501  00                 	db	0	; dummy byte at the end
+   196   000000                     
+   197                           	psect	rparam
+   198   000000                     
+   199                           	psect	config
+   200                           
+   201                           ;Config register CONFIG1 @ 0x300000
+   202                           ;	External Oscillator Selection
+   203                           ;	FEXTOSC = OFF, Oscillator not enabled
+   204                           ;	Reset Oscillator Selection
+   205                           ;	RSTOSC = EXTOSC, EXTOSC operating per FEXTOSC bits (device manufacturing default)
+   206   300000                     	org	3145728
+   207   300000  FC                 	db	252
+   208                           
+   209                           ;Config register CONFIG2 @ 0x300001
+   210                           ;	Clock out Enable bit
+   211                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+   212                           ;	PRLOCKED One-Way Set Enable bit
+   213                           ;	PR1WAY = ON, PRLOCKED bit can be cleared and set only once
+   214                           ;	Clock Switch Enable bit
+   215                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+   216                           ;	Fail-Safe Clock Monitor Enable bit
+   217                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+   218   300001                     	org	3145729
+   219   300001  FF                 	db	255
+   220                           
+   221                           ;Config register CONFIG3 @ 0x300002
+   222                           ;	MCLR Enable bit
+   223                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+   224                           ;	Power-up timer selection bits
+   225                           ;	PWRTS = PWRT_64, PWRT set at 64ms
+   226                           ;	Multi-vector enable bit
+   227                           ;	MVECEN = ON, Multi-vector enabled, Vector table used for interrupts
+   228                           ;	IVTLOCK bit One-way set enable bit
+   229                           ;	IVT1WAY = ON, IVTLOCKED bit can be cleared and set only once
+   230                           ;	Low Power BOR Enable bit
+   231                           ;	LPBOREN = OFF, Low-Power BOR disabled
+   232                           ;	Brown-out Reset Enable bits
+   233                           ;	BOREN = OFF, Brown-out Reset disabled
+   234   300002                     	org	3145730
+   235   300002  3D                 	db	61
+   236                           
+   237                           ;Config register CONFIG4 @ 0x300003
+   238                           ;	Brown-out Reset Voltage Selection bits
+   239                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+   240                           ;	ZCD Disable bit
+   241                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+   242                           ;	PPSLOCK bit One-Way Set Enable bit
+   243                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+   244                           ;	Stack Full/Underflow Reset Enable bit
+   245                           ;	STVREN = ON, Stack full/underflow will cause Reset
+   246                           ;	Low Voltage Programming Enable bit
+   247                           ;	LVP = OFF, HV on MCLR/VPP must be used for programming
+   248                           ;	Extended Instruction Set Enable bit
+   249                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+   250   300003                     	org	3145731
+   251   300003  DF                 	db	223
+   252                           
+   253                           ;Config register CONFIG5 @ 0x300004
+   254                           ;	WDT Period selection bits
+   255                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+   256                           ;	WDT operating mode
+   257                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+   258   300004                     	org	3145732
+   259   300004  9F                 	db	159
+   260                           
+   261                           ;Config register CONFIG6 @ 0x300005
+   262                           ;	WDT Window Select bits
+   263                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+   264                           ;	WDT input clock selector
+   265                           ;	WDTCCS = SC, Software Control
+   266   300005                     	org	3145733
+   267   300005  FF                 	db	255
+   268                           
+   269                           ;Config register CONFIG7 @ 0x300006
+   270                           ;	Boot Block Size selection bits
+   271                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+   272                           ;	Boot Block enable bit
+   273                           ;	BBEN = OFF, Boot block disabled
+   274                           ;	Storage Area Flash enable bit
+   275                           ;	SAFEN = OFF, SAF disabled
+   276                           ;	Background Debugger
+   277                           ;	DEBUG = OFF, Background Debugger disabled
+   278   300006                     	org	3145734
+   279   300006  FF                 	db	255
+   280                           
+   281                           ;Config register CONFIG8 @ 0x300007
+   282                           ;	Boot Block Write Protection bit
+   283                           ;	WRTB = OFF, Boot Block not Write protected
+   284                           ;	Configuration Register Write Protection bit
+   285                           ;	WRTC = OFF, Configuration registers not Write protected
+   286                           ;	Data EEPROM Write Protection bit
+   287                           ;	WRTD = OFF, Data EEPROM not Write protected
+   288                           ;	SAF Write protection bit
+   289                           ;	WRTSAF = OFF, SAF not Write Protected
+   290                           ;	Application Block write protection bit
+   291                           ;	WRTAPP = OFF, Application Block not write protected
+   292   300007                     	org	3145735
+   293   300007  FF                 	db	255
+   294                           
+   295                           ;Config register CONFIG10 @ 0x300009
+   296                           ;	PFM and Data EEPROM Code Protection bit
+   297                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+   298   300009                     	org	3145737
+   299   300009  FF                 	db	255
+   300                           tosu	equ	0x4FF
+   301                           tosh	equ	0x4FE
+   302                           tosl	equ	0x4FD
+   303                           stkptr	equ	0x4FC
+   304                           pclatu	equ	0x4FB
+   305                           pclath	equ	0x4FA
+   306                           pcl	equ	0x4F9
+   307                           tblptru	equ	0x4F8
+   308                           tblptrh	equ	0x4F7
+   309                           tblptrl	equ	0x4F6
+   310                           tablat	equ	0x4F5
+   311                           prodh	equ	0x4F4
+   312                           prodl	equ	0x4F3
+   313                           indf0	equ	0x4EF
+   314                           postinc0	equ	0x4EE
+   315                           postdec0	equ	0x4ED
+   316                           preinc0	equ	0x4EC
+   317                           plusw0	equ	0x4EB
+   318                           fsr0h	equ	0x4EA
+   319                           fsr0l	equ	0x4E9
+   320                           wreg	equ	0x4E8
+   321                           indf1	equ	0x4E7
+   322                           postinc1	equ	0x4E6
+   323                           postdec1	equ	0x4E5
+   324                           preinc1	equ	0x4E4
+   325                           plusw1	equ	0x4E3
+   326                           fsr1h	equ	0x4E2
+   327                           fsr1l	equ	0x4E1
+   328                           bsr	equ	0x4E0
+   329                           indf2	equ	0x4DF
+   330                           postinc2	equ	0x4DE
+   331                           postdec2	equ	0x4DD
+   332                           preinc2	equ	0x4DC
+   333                           plusw2	equ	0x4DB
+   334                           fsr2h	equ	0x4DA
+   335                           fsr2l	equ	0x4D9
+   336                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      0       0
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                          _configuro
+ ---------------------------------------------------------------------------------
+ (1) _configuro                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _configuro
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             400      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      0       0       1        0.0%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK27          100      0       0      48        0.0%
+BANK27             100      0       0      49        0.0%
+BITBANK28          100      0       0      50        0.0%
+BANK28             100      0       0      51        0.0%
+BITBANK29          100      0       0      52        0.0%
+BANK29             100      0       0      53        0.0%
+BITBANK30          100      0       0      54        0.0%
+BANK30             100      0       0      55        0.0%
+BITBANK31          100      0       0      56        0.0%
+BANK31             100      0       0      57        0.0%
+ABS                  0      0       0      58        0.0%
+BITBANK32          100      0       0      59        0.0%
+BANK32             100      0       0      60        0.0%
+BITBANK33          100      0       0      61        0.0%
+BANK33             100      0       0      62        0.0%
+BITBANK34          100      0       0      63        0.0%
+BANK34             100      0       0      64        0.0%
+BITBANK35          100      0       0      65        0.0%
+BANK35             100      0       0      66        0.0%
+BITBANK36          100      0       0      67        0.0%
+BANK36             100      0       0      68        0.0%
+BITBIGSFR_1        100      0       0      69        0.0%
+BIGRAM            1FFF      0       0      70        0.0%
+BITBIGSFRhhh        2E      0       0      71        0.0%
+BITBIGSFRhhl         6      0       0      72        0.0%
+BITBIGSFRhl          6      0       0      73        0.0%
+BITBIGSFRlhh        A0      0       0      74        0.0%
+BITBIGSFRlhl         7      0       0      75        0.0%
+BITBIGSFRllhhh     364      0       0      76        0.0%
+BITBIGSFRllhhl       1      0       0      77        0.0%
+BITBIGSFRllhl        3      0       0      78        0.0%
+BITBIGSFRlll        AD      0       0      79        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                   Mon Sep 25 10:50:34 2023
+
+                    l151 251E                      l146 2518                      l961 2512  
+                    l963 2516                      l957 2502                      l959 2510  
+                   l1109 251A                     _LATD 04C1                     _main 251A  
+                   start FFFC             ___param_bank 0000                    ?_main 0000  
+                  _OSCEN 00B3                    _PORTD 04D1                    _TRISD 04C9  
+        __initialization 2522             __end_of_main 2522                   ??_main 0000  
+          __activetblptr 0003                   _ANSELD 0418                   _OSCFRQ 00B1  
+                 isa$std 0001             __mediumconst 0000               __accesstop 0560  
+__end_of__initialization 2522            ___rparam_used 0001           __pcstackCOMRAM 0000  
+                _OSCCON1 00AD                  __Hparam 0000                  __Lparam 0000  
+      __end_of_configuro 251A             __psmallconst 2500                  __pcinit 2522  
+                __ramtop 2500                  __ptext0 251A                  __ptext1 2502  
+   end_of_initialization 2522                _TRISEbits 04CA      start_initialization 2522  
+              _configuro 2502              __smallconst 2500                 _LATDbits 04C1  
+               _LATEbits 04C2               ?_configuro 0000                 __Hrparam 0000  
+               __Lrparam 0000               _ANSELEbits 0420                 isa$xinst 0000  
+            ??_configuro 0000  

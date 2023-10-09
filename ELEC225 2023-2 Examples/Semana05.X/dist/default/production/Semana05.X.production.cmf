@@ -1,0 +1,640 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\Semana05.X.production.o
+ivt0x8 CODE 0 8 8 FA 1 2
+cinit CODE 0 2860 2860 14 1 2
+text0 CODE 0 2610 2610 68 1 2
+text1 CODE 0 2818 2818 2C 1 2
+text2 CODE 0 2524 2524 7A 1 2
+text3 CODE 0 270E 270E 3A 1 2
+text4 CODE 0 2678 2678 52 1 2
+text5 CODE 0 27E8 27E8 30 1 2
+text6 CODE 0 2874 2874 8 1 2
+text7 CODE 0 287C 287C 8 1 2
+text8 CODE 0 2780 2780 34 1 2
+text9 CODE 0 26CA 26CA 44 1 2
+text10 CODE 0 2748 2748 38 1 2
+text11 CODE 0 27B4 27B4 34 1 2
+text12 CODE 0 259E 259E 72 1 2
+text13 CODE 0 2844 2844 1C 1 2
+text14 CODE 0 2884 2884 6 1 4
+cstackCOMRAM COMRAM 1 501 501 9 1 1
+smallconst SMALLCONST 0 2500 2500 24 1 2
+config CONFIG 4 300000 300000 A 1 1
+$C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 106-24FF 1
+CONST 288A-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 288A-1FFFF 1
+CODE 4-7 1
+CODE 106-24FF 1
+CODE 288A-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 50A-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 50A-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 288A-FFFF 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Semana05.X.production.o
+2884 text14 CODE >138:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2884 text14 CODE >39:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2884 text14 CODE >40:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2886 text14 CODE >41:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2888 text14 CODE >42:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2844 text13 CODE >130:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2846 text13 CODE >132:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+284A text13 CODE >133:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+284E text13 CODE >134:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2852 text13 CODE >135:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2854 text13 CODE >136:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+285C text13 CODE >137:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+285E text13 CODE >138:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+259E text12 CODE >156:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+259E text12 CODE >159:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25A2 text12 CODE >160:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25A4 text12 CODE >161:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25A6 text12 CODE >162:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25A8 text12 CODE >163:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25B0 text12 CODE >164:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25B4 text12 CODE >165:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25B6 text12 CODE >166:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25BE text12 CODE >167:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25C0 text12 CODE >168:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25C8 text12 CODE >169:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25CA text12 CODE >170:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25D0 text12 CODE >171:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25D4 text12 CODE >173:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25D6 text12 CODE >174:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25DE text12 CODE >175:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25E2 text12 CODE >176:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25E4 text12 CODE >177:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25EC text12 CODE >178:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25EE text12 CODE >179:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25F6 text12 CODE >180:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+25FC text12 CODE >171:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+260E text12 CODE >183:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27B4 text11 CODE >92:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27B6 text11 CODE >95:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27B8 text11 CODE >96:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27BC text11 CODE >97:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27C0 text11 CODE >98:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27C8 text11 CODE >99:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27CA text11 CODE >100:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27CC text11 CODE >101:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27CE text11 CODE >102:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27D4 text11 CODE >103:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27DA text11 CODE >104:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27E0 text11 CODE >105:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27E6 text11 CODE >106:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2748 text10 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+2748 text10 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+274C text10 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+2750 text10 CODE >9:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+2752 text10 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+2772 text10 CODE >11:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+277E text10 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+26CA text9 CODE >81:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26CA text9 CODE >84:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26D6 text9 CODE >85:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26D6 text9 CODE >86:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26DE text9 CODE >88:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26F8 text9 CODE >89:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+270C text9 CODE >90:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2780 text8 CODE >140:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2782 text8 CODE >143:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2784 text8 CODE >144:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2788 text8 CODE >145:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+278C text8 CODE >146:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2794 text8 CODE >147:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2796 text8 CODE >148:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2798 text8 CODE >149:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+279A text8 CODE >150:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27A0 text8 CODE >151:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27A6 text8 CODE >152:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27AC text8 CODE >153:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27B2 text8 CODE >154:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+287C text7 CODE >108:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+287C text7 CODE >110:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2882 text7 CODE >111:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2874 text6 CODE >41:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2874 text6 CODE >43:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+287A text6 CODE >44:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27E8 text5 CODE >66:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+27EA text5 CODE >68:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2800 text5 CODE >69:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2816 text5 CODE >70:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2678 text4 CODE >113:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2678 text4 CODE >115:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+267A text4 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+267C text4 CODE >117:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2682 text4 CODE >118:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2690 text4 CODE >119:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2696 text4 CODE >120:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+269E text4 CODE >121:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26A4 text4 CODE >122:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26AA text4 CODE >123:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26B0 text4 CODE >124:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26B6 text4 CODE >125:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26BC text4 CODE >126:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26C2 text4 CODE >127:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+26C8 text4 CODE >128:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+270E text3 CODE >196:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+270E text3 CODE >197:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2712 text3 CODE >198:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2718 text3 CODE >199:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2726 text3 CODE >200:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+272A text3 CODE >201:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2738 text3 CODE >202:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+273C text3 CODE >203:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2740 text3 CODE >204:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2746 text3 CODE >205:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2524 text2 CODE >9:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2526 text2 CODE >11:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2536 text2 CODE >13:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+253E text2 CODE >14:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2542 text2 CODE >15:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2554 text2 CODE >17:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+255C text2 CODE >18:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2560 text2 CODE >19:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2572 text2 CODE >21:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+257A text2 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+257E text2 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2590 text2 CODE >25:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+259C text2 CODE >26:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+259C text2 CODE >27:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\LCD.c
+2818 text1 CODE >6:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2818 text1 CODE >7:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+281E text1 CODE >8:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2822 text1 CODE >9:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2826 text1 CODE >10:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2828 text1 CODE >11:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+282C text1 CODE >12:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+282E text1 CODE >14:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2830 text1 CODE >15:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2832 text1 CODE >16:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2834 text1 CODE >17:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+283A text1 CODE >18:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+283E text1 CODE >19:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2842 text1 CODE >20:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2610 text0 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2610 text0 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2614 text0 CODE >24:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2618 text0 CODE >25:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2622 text0 CODE >26:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+262A text0 CODE >29:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+262E text0 CODE >30:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2638 text0 CODE >31:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+263E text0 CODE >32:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+264C text0 CODE >33:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+265E text0 CODE >34:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2668 text0 CODE >35:D:\Taller de Microbios y Placas\Ejemplos\Semana05.X\maincode2.c
+2860 cinit CODE >3682:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2860 cinit CODE >3684:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2860 cinit CODE >3687:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2860 cinit CODE >3695:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2862 cinit CODE >3696:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2864 cinit CODE >3697:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2866 cinit CODE >3698:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2868 cinit CODE >3699:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+286A cinit CODE >3700:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+286C cinit CODE >3701:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+286E cinit CODE >3707:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+286E cinit CODE >3709:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+2870 cinit CODE >3710:C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Semana05.X.production.o
+__Hspace_0 288A 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hspace_1 50A 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production\Semana05.X.production.o
+ENVIA_CHAR@aux 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Semana05.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+_ENVIA_LCD_CMD 2780 0 CODE 0 text8 dist/default/production\Semana05.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Semana05.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Semana05.X.production.o
+_LCD_CONFIG 2678 0 CODE 0 text4 dist/default/production\Semana05.X.production.o
+__Lsmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\Semana05.X.production.o
+_LATD 4C1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_PIE1 49F 0 ABS 0 - dist/default/production\Semana05.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+_main 2610 0 CODE 0 text0 dist/default/production\Semana05.X.production.o
+ENVIA_NIBBLE@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__end_of_ENVIA_CHAR 27E8 0 CODE 0 text11 dist/default/production\Semana05.X.production.o
+start 102 0 CODE 0 init C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+_LCD_INIT 270E 0 CODE 0 text3 dist/default/production\Semana05.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Semana05.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__end_of_LCD_INIT 2748 0 CODE 0 text3 dist/default/production\Semana05.X.production.o
+intlevel0 0 0 CODE 0 text C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Semana05.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Semana05.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Semana05.X.production.o
+__end_of_configuro 2844 0 CODE 0 text1 dist/default/production\Semana05.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Semana05.X.production.o
+__end_of_LCD_CONFIG 26CA 0 CODE 0 text4 dist/default/production\Semana05.X.production.o
+_ANSELD 418 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_CURSOR_HOME 2874 0 CODE 0 text6 dist/default/production\Semana05.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Semana05.X.production.o
+_configuro 2818 0 CODE 0 text1 dist/default/production\Semana05.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Semana05.X.production.o
+?_strlen 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__end_of_ENVIA_LCD_CMD 27B4 0 CODE 0 text8 dist/default/production\Semana05.X.production.o
+_WPUBbits 409 0 ABS 0 - dist/default/production\Semana05.X.production.o
+start_initialization 2860 0 CODE 0 cinit dist/default/production\Semana05.X.production.o
+_ESCRIBE_MENSAJE2 26CA 0 CODE 0 text9 dist/default/production\Semana05.X.production.o
+_OSCFRQ B1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Semana05.X.production.o
+_TRISBbits 4C7 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_TRISEbits 4CA 0 ABS 0 - dist/default/production\Semana05.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_BORRAR_LCD 287C 0 CODE 0 text7 dist/default/production\Semana05.X.production.o
+LEER_LCD@aux 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Semana05.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Semana05.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Semana05.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\Semana05.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\Semana05.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Semana05.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\Semana05.X.production.o
+__end_of_strlen 2780 0 CODE 0 text10 dist/default/production\Semana05.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\Semana05.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\Semana05.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Semana05.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Semana05.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Semana05.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\Semana05.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\Semana05.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\Semana05.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\Semana05.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\Semana05.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\Semana05.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Semana05.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Semana05.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Semana05.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Semana05.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Semana05.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\Semana05.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\Semana05.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\Semana05.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\Semana05.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\Semana05.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\Semana05.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\Semana05.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\Semana05.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\Semana05.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\Semana05.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\Semana05.X.production.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/production\Semana05.X.production.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/production\Semana05.X.production.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/production\Semana05.X.production.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/production\Semana05.X.production.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/production\Semana05.X.production.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/production\Semana05.X.production.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/production\Semana05.X.production.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/production\Semana05.X.production.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/production\Semana05.X.production.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/production\Semana05.X.production.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/production\Semana05.X.production.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/production\Semana05.X.production.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/production\Semana05.X.production.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/production\Semana05.X.production.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/production\Semana05.X.production.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/production\Semana05.X.production.o
+_POS_CURSOR 2524 0 CODE 0 text2 dist/default/production\Semana05.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Semana05.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Semana05.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\Semana05.X.production.o
+__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\Semana05.X.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production\Semana05.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Semana05.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Semana05.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Semana05.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\Semana05.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\Semana05.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Semana05.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\Semana05.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\Semana05.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\Semana05.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Semana05.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Semana05.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Semana05.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\Semana05.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Semana05.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Semana05.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Semana05.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Semana05.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Semana05.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Semana05.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Semana05.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Semana05.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Semana05.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Semana05.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Semana05.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Semana05.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\Semana05.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\Semana05.X.production.o
+__Hinit 106 0 CODE 0 init dist/default/production\Semana05.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Semana05.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Semana05.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Semana05.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\Semana05.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Semana05.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\Semana05.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\Semana05.X.production.o
+__Linit 102 0 CODE 0 init dist/default/production\Semana05.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Semana05.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Semana05.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Semana05.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\Semana05.X.production.o
+__end_of_BORRAR_LCD 2884 0 CODE 0 text7 dist/default/production\Semana05.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Semana05.X.production.o
+POS_CURSOR@fila 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+_CURSOR_ONOFF 27E8 0 CODE 0 text5 dist/default/production\Semana05.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Semana05.X.production.o
+__S0 288A 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__S1 50A 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hivt0x8 102 0 CODE 0 ivt0x8 dist/default/production\Semana05.X.production.o
+IVTBASEH 45E 0 ABS 0 - dist/default/production\Semana05.X.production.o
+IVTBASEL 45D 0 ABS 0 - dist/default/production\Semana05.X.production.o
+IVTBASEU 45F 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__end_of_ESCRIBE_MENSAJE2 270E 0 CODE 0 text9 dist/default/production\Semana05.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Semana05.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Semana05.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Semana05.X.production.o
+__end_of_POS_CURSOR 259E 0 CODE 0 text2 dist/default/production\Semana05.X.production.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/production\Semana05.X.production.o
+strlen@a 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+strlen@s 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+_ENVIA_NIBBLE 2844 0 CODE 0 text13 dist/default/production\Semana05.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Semana05.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Semana05.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Semana05.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Semana05.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Semana05.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Semana05.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Semana05.X.production.o
+__end_of_CURSOR_HOME 287C 0 CODE 0 text6 dist/default/production\Semana05.X.production.o
+__ptext10 2748 0 CODE 0 text10 dist/default/production\Semana05.X.production.o
+__ptext11 27B4 0 CODE 0 text11 dist/default/production\Semana05.X.production.o
+__ptext12 259E 0 CODE 0 text12 dist/default/production\Semana05.X.production.o
+__ptext13 2844 0 CODE 0 text13 dist/default/production\Semana05.X.production.o
+__ptext14 2884 0 CODE 0 text14 dist/default/production\Semana05.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\Semana05.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\Semana05.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\Semana05.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\Semana05.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\Semana05.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\Semana05.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\Semana05.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\Semana05.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\Semana05.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\Semana05.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\Semana05.X.production.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/production\Semana05.X.production.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/production\Semana05.X.production.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/production\Semana05.X.production.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/production\Semana05.X.production.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/production\Semana05.X.production.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/production\Semana05.X.production.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/production\Semana05.X.production.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/production\Semana05.X.production.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/production\Semana05.X.production.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/production\Semana05.X.production.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/production\Semana05.X.production.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/production\Semana05.X.production.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/production\Semana05.X.production.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/production\Semana05.X.production.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/production\Semana05.X.production.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/production\Semana05.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Semana05.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Semana05.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Semana05.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\Semana05.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\Semana05.X.production.o
+ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/production\Semana05.X.production.o
+_LATDbits 4C1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_LATEbits 4C2 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__end_of_CURSOR_ONOFF 2818 0 CODE 0 text5 dist/default/production\Semana05.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Semana05.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+_strlen 2748 0 CODE 0 text10 dist/default/production\Semana05.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Semana05.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+main@x_var 509 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+stackhi 0 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Semana05.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Semana05.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_LEER_LCD 259E 0 CODE 0 text12 dist/default/production\Semana05.X.production.o
+_PIR1bits 4AF 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__end_of_ENVIA_NIBBLE 2860 0 CODE 0 text13 dist/default/production\Semana05.X.production.o
+end_of_initialization 286E 0 CODE 0 cinit dist/default/production\Semana05.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Semana05.X.production.o
+__end_of_LEER_LCD 2610 0 CODE 0 text12 dist/default/production\Semana05.X.production.o
+ESCRIBE_MENSAJE2@cadena 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Semana05.X.production.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/production\Semana05.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Semana05.X.production.o
+__pcinit 2860 0 CODE 0 cinit dist/default/production\Semana05.X.production.o
+__ptext0 2610 0 CODE 0 text0 dist/default/production\Semana05.X.production.o
+__ptext1 2818 0 CODE 0 text1 dist/default/production\Semana05.X.production.o
+__ptext2 2524 0 CODE 0 text2 dist/default/production\Semana05.X.production.o
+__ptext3 270E 0 CODE 0 text3 dist/default/production\Semana05.X.production.o
+__ptext4 2678 0 CODE 0 text4 dist/default/production\Semana05.X.production.o
+__ptext5 27E8 0 CODE 0 text5 dist/default/production\Semana05.X.production.o
+__ptext6 2874 0 CODE 0 text6 dist/default/production\Semana05.X.production.o
+__ptext7 287C 0 CODE 0 text7 dist/default/production\Semana05.X.production.o
+__ptext8 2780 0 CODE 0 text8 dist/default/production\Semana05.X.production.o
+__ptext9 26CA 0 CODE 0 text9 dist/default/production\Semana05.X.production.o
+_INT0_ISR 2884 0 CODE 0 text14 dist/default/production\Semana05.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Semana05.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Semana05.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Semana05.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Semana05.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Semana05.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Semana05.X.production.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Semana05.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Semana05.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Semana05.X.production.o
+ENVIA_LCD_CMD@dato 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__end_of_INT0_ISR 288A 0 CODE 0 text14 dist/default/production\Semana05.X.production.o
+__psmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\Semana05.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Semana05.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\ELECTR~1.DES\AppData\Local\Temp\xcAsduk.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Semana05.X.production.o
+__end_of__initialization 286E 0 CODE 0 cinit dist/default/production\Semana05.X.production.o
+_INT0PPS 23E 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_INTCON0 4D6 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Semana05.X.production.o
+POS_CURSOR@columna 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+ESCRIBE_MENSAJE2@i 507 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Semana05.X.production.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+ENVIA_CHAR@dato 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__end_of_main 2678 0 CODE 0 text0 dist/default/production\Semana05.X.production.o
+ESCRIBE_MENSAJE2@tam 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+_OSCEN B3 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_PORTD 4D1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_TRISD 4C9 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\Semana05.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\Semana05.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Semana05.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\Semana05.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\Semana05.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Semana05.X.production.o
+_ENVIA_CHAR 27B4 0 CODE 0 text11 dist/default/production\Semana05.X.production.o
+__initialization 2860 0 CODE 0 cinit dist/default/production\Semana05.X.production.o
+ENVIA_LCD_CMD@aux 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Semana05.X.production.o
+__Hsmallconst 2524 0 SMALLCONST 0 smallconst dist/default/production\Semana05.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Semana05.X.production.o
+_ANSELBbits 408 0 ABS 0 - dist/default/production\Semana05.X.production.o
+_ANSELEbits 420 0 ABS 0 - dist/default/production\Semana05.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Semana05.X.production.o
+CURSOR_ONOFF@estado 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana05.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 FE 1
+text2 0 2524 2524 366 1
+cstackCOMRAM 1 501 501 9 1
+reset_vec 0 0 0 4 1
+smallconst 0 2500 2500 24 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
