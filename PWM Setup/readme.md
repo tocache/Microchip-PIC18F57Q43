@@ -1,3 +1,5 @@
+Cálculo del periodo de PWM en el CCP1<br>
+<img src="pwm.JPG"><br>
 Procedimiento para configurar el CCP en modo PWM<br>
 <img src="pwm01.JPG"><br>
 Para 1KHz de frecuencia y 50% de duty cycle:<br>
