@@ -1,0 +1,3547 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                               Thu Oct 19 21:13:41 2023
+
+Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og9 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     9                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    10                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    11                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    16                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text6,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text7,global,reloc=2,class=CODE,delta=1,group=1
+    19                           	psect	text8,global,reloc=2,class=CODE,delta=1,group=1
+    20                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    21                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    22                           	psect	text11,global,reloc=2,class=CODE,delta=1
+    23                           	psect	text12,global,reloc=2,class=CODE,delta=1
+    24                           	psect	text13,global,reloc=2,class=CODE,delta=1
+    25                           	psect	text14,global,reloc=2,class=CODE,delta=1
+    26                           	psect	text15,global,reloc=2,class=CODE,delta=1
+    27                           	psect	text16,global,reloc=4,class=CODE,delta=1
+    28                           	psect	text17,global,reloc=4,class=CODE,delta=1
+    29                           	psect	text18,global,reloc=4,class=CODE,delta=1
+    30                           	psect	ivt0x8,global,reloc=2,class=CODE,delta=1,noexec,keep,optim=
+    31                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    32                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    33                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    34   000000                     
+    35                           ; Generated 18/09/2023 GMT
+    36                           ; 
+    37                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    38                           ; All rights reserved.
+    39                           ; 
+    40                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    41                           ; 
+    42                           ; Redistribution and use in source and binary forms, with or without modification, are
+    43                           ; permitted provided that the following conditions are met:
+    44                           ; 
+    45                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    46                           ;        conditions and the following disclaimer.
+    47                           ; 
+    48                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    49                           ;        of conditions and the following disclaimer in the documentation and/or other
+    50                           ;        materials provided with the distribution. Publication is not required when
+    51                           ;        this file is used in an embedded application.
+    52                           ; 
+    53                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    54                           ;        software without specific prior written permission.
+    55                           ; 
+    56                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    57                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    58                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    59                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    60                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    61                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    62                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    63                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    64                           ; 
+    65                           ; 
+    66                           ; Code-generator required, PIC18F57Q43 Definitions
+    67                           ; 
+    68                           ; SFR Addresses
+    69   000000                     
+    70                           	psect	idataCOMRAM
+    71   002930                     __pidataCOMRAM:
+    72                           	callstack 0
+    73                           
+    74                           ;initializer for _minutos
+    75   002930  17                 	db	23
+    76                           
+    77                           ;initializer for _horas
+    78   002931  14                 	db	20
+    79   000000                     _LATD	set	1217
+    80   000000                     _OSCCON1	set	173
+    81   000000                     _OSCFRQ	set	177
+    82   000000                     _OSCEN	set	179
+    83   000000                     _T1CON	set	798
+    84   000000                     _T1CLK	set	801
+    85   000000                     _ANSELBbits	set	1032
+    86   000000                     _TRISBbits	set	1223
+    87   000000                     _TRISD	set	1225
+    88   000000                     _INTCON0bits	set	1238
+    89   000000                     _ANSELD	set	1048
+    90   000000                     _PIE1bits	set	1183
+    91   000000                     _PIE3bits	set	1185
+    92   000000                     _WPUBbits	set	1033
+    93   000000                     _CCPR1L	set	832
+    94   000000                     _CCPR1H	set	833
+    95   000000                     _CCP1CON	set	834
+    96   000000                     _PIE6bits	set	1188
+    97   000000                     _PIR1bits	set	1199
+    98   000000                     _PIR3bits	set	1201
+    99   000000                     _PIR6bits	set	1204
+   100   000000                     _LATDbits	set	1217
+   101   000000                     _PORTD	set	1233
+   102                           
+   103                           	psect	smallconst
+   104   002500                     __psmallconst:
+   105                           	callstack 0
+   106   002500  00                 	db	0
+   107   002501                     STR_1:
+   108   002501  52                 	db	82	;'R'
+   109   002502  65                 	db	101	;'e'
+   110   002503  6C                 	db	108	;'l'
+   111   002504  6F                 	db	111	;'o'
+   112   002505  6A                 	db	106	;'j'
+   113   002506  6F                 	db	111	;'o'
+   114   002507  6E                 	db	110	;'n'
+   115   002508  20                 	db	32
+   116   002509  55                 	db	85	;'U'
+   117   00250A  50                 	db	80	;'P'
+   118   00250B  43                 	db	67	;'C'
+   119   00250C  69                 	db	105	;'i'
+   120   00250D  6E                 	db	110	;'n'
+   121   00250E  6F                 	db	111	;'o'
+   122   00250F  00                 	db	0
+   123   002510  00                 	db	0	; dummy byte at the end
+   124   000000                     
+   125                           ; #config settings
+   126                           
+   127                           	psect	cinit
+   128   002730                     __pcinit:
+   129                           	callstack 0
+   130   002730                     start_initialization:
+   131                           	callstack 0
+   132   002730                     __initialization:
+   133                           	callstack 0
+   134                           
+   135                           ; Initialize objects allocated to COMRAM (2 bytes)
+   136                           ; load TBLPTR registers with __pidataCOMRAM
+   137   002730  0E30               	movlw	low __pidataCOMRAM
+   138   002732  6EF6               	movwf	tblptrl,c
+   139   002734  0E29               	movlw	high __pidataCOMRAM
+   140   002736  6EF7               	movwf	tblptrh,c
+   141   002738  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   142   00273A  6EF8               	movwf	tblptru,c
+   143   00273C  0009               	tblrd		*+	;fetch initializer
+   144   00273E  C4F5 F513          	movff	tablat,__pdataCOMRAM
+   145   002742  0009               	tblrd		*+	;fetch initializer
+   146   002744  C4F5 F514          	movff	tablat,__pdataCOMRAM+1
+   147                           
+   148                           ; Clear objects allocated to COMRAM (8 bytes)
+   149   002748  EE01  F10B         	lfsr	0,__pbssCOMRAM
+   150   00274C  0E08               	movlw	8
+   151   00274E                     clear_0:
+   152   00274E  6AEE               	clrf	postinc0,c
+   153   002750  06E8               	decf	wreg,f,c
+   154   002752  E1FD               	bnz	clear_0
+   155                           
+   156                           ;
+   157                           ; Setup IVTBASE
+   158                           ;
+   159   002754  0104               	movlb	4
+   160   002756  0E08               	movlw	(ivt0x8_base shr 0)& (0+255)
+   161   002758  6F5D               	movwf	93,b
+   162   00275A  0E00               	movlw	(ivt0x8_base shr (0+8))& (0+255)
+   163   00275C  6F5E               	movwf	94,b
+   164   00275E  0E00               	movlw	(ivt0x8_base shr (0+16))& (0+255)
+   165   002760  6F5F               	movwf	95,b
+   166   002762                     end_of_initialization:
+   167                           	callstack 0
+   168   002762                     __end_of__initialization:
+   169                           	callstack 0
+   170   002762  0E00               	movlw	low (__Lsmallconst shr (0+16))
+   171   002764  6EF8               	movwf	tblptru,c
+   172   002766  0E25               	movlw	high __Lsmallconst
+   173   002768  6EF7               	movwf	tblptrh,c
+   174   00276A  0100               	movlb	0
+   175   00276C  EF89  F012         	goto	_main	;jump to C main() function
+   176                           
+   177                           	psect	bssCOMRAM
+   178   00050B                     __pbssCOMRAM:
+   179                           	callstack 0
+   180   00050B                     _unidad:
+   181                           	callstack 0
+   182   00050B                     	ds	2
+   183   00050D                     _decena:
+   184                           	callstack 0
+   185   00050D                     	ds	2
+   186   00050F                     _centena:
+   187                           	callstack 0
+   188   00050F                     	ds	2
+   189   000511                     _centesimas:
+   190                           	callstack 0
+   191   000511                     	ds	1
+   192   000512                     _segundos:
+   193                           	callstack 0
+   194   000512                     	ds	1
+   195                           
+   196                           	psect	dataCOMRAM
+   197   000513                     __pdataCOMRAM:
+   198                           	callstack 0
+   199   000513                     _minutos:
+   200                           	callstack 0
+   201   000513                     	ds	1
+   202   000514                     _horas:
+   203                           	callstack 0
+   204   000514                     	ds	1
+   205                           
+   206                           	psect	cstackCOMRAM
+   207   000501                     __pcstackCOMRAM:
+   208                           	callstack 0
+   209   000501                     ENVIA_NIBBLE@dato:
+   210                           	callstack 0
+   211   000501                     LEER_LCD@aux:
+   212                           	callstack 0
+   213   000501                     ___lbmod@divisor:
+   214                           	callstack 0
+   215                           
+   216                           ; 1 bytes @ 0x0
+   217   000501                     	ds	1
+   218   000502                     ENVIA_CHAR@dato:
+   219                           	callstack 0
+   220   000502                     ENVIA_LCD_CMD@dato:
+   221                           	callstack 0
+   222   000502                     ___lbmod@dividend:
+   223                           	callstack 0
+   224                           
+   225                           ; 1 bytes @ 0x1
+   226   000502                     	ds	1
+   227   000503                     ENVIA_CHAR@aux:
+   228                           	callstack 0
+   229   000503                     ENVIA_LCD_CMD@aux:
+   230                           	callstack 0
+   231   000503                     ___lbmod@counter:
+   232                           	callstack 0
+   233                           
+   234                           ; 1 bytes @ 0x2
+   235   000503                     	ds	1
+   236   000504                     ??_LCD_CONFIG:
+   237   000504                     POS_CURSOR@columna:
+   238                           	callstack 0
+   239   000504                     CURSOR_ONOFF@estado:
+   240                           	callstack 0
+   241   000504                     ESCRIBE_MENSAJE@cadena:
+   242                           	callstack 0
+   243   000504                     ___lbmod@rem:
+   244                           	callstack 0
+   245                           
+   246                           ; 1 bytes @ 0x3
+   247   000504                     	ds	1
+   248   000505                     ??_lcd_init:
+   249   000505                     POS_CURSOR@fila:
+   250                           	callstack 0
+   251   000505                     ESCRIBE_MENSAJE@tam:
+   252                           	callstack 0
+   253   000505                     ___lbdiv@divisor:
+   254                           	callstack 0
+   255                           
+   256                           ; 1 bytes @ 0x4
+   257   000505                     	ds	1
+   258   000506                     ??_ESCRIBE_MENSAJE:
+   259   000506                     ___lbdiv@dividend:
+   260                           	callstack 0
+   261                           
+   262                           ; 1 bytes @ 0x5
+   263   000506                     	ds	1
+   264   000507                     ESCRIBE_MENSAJE@i:
+   265                           	callstack 0
+   266   000507                     ___lbdiv@counter:
+   267                           	callstack 0
+   268                           
+   269                           ; 1 bytes @ 0x6
+   270   000507                     	ds	1
+   271   000508                     ___lbdiv@quotient:
+   272                           	callstack 0
+   273                           
+   274                           ; 1 bytes @ 0x7
+   275   000508                     	ds	1
+   276   000509                     ??_convierte:
+   277                           
+   278                           ; 1 bytes @ 0x8
+   279   000509                     	ds	1
+   280   00050A                     convierte@numero:
+   281                           	callstack 0
+   282                           
+   283                           ; 1 bytes @ 0x9
+   284   00050A                     	ds	1
+   285   00050B                     
+   286                           ; 1 bytes @ 0xA
+   287 ;;
+   288 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   289 ;;
+   290 ;; *************** function _main *****************
+   291 ;; Defined at:
+   292 ;;		line 54 in file "maincode01.c"
+   293 ;; Parameters:    Size  Location     Type
+   294 ;;		None
+   295 ;; Auto vars:     Size  Location     Type
+   296 ;;		None
+   297 ;; Return value:  Size  Location     Type
+   298 ;;                  1    wreg      void 
+   299 ;; Registers used:
+   300 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+   301 ;; Tracked objects:
+   302 ;;		On entry : 0/0
+   303 ;;		On exit  : 0/0
+   304 ;;		Unchanged: 0/0
+   305 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   306 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   307 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   308 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   309 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   310 ;;Total ram usage:        0 bytes
+   311 ;; Hardware stack levels required when called: 5
+   312 ;; This function calls:
+   313 ;;		_ENVIA_CHAR
+   314 ;;		_ESCRIBE_MENSAJE
+   315 ;;		_POS_CURSOR
+   316 ;;		_configuro
+   317 ;;		_convierte
+   318 ;;		_lcd_init
+   319 ;; This function is called by:
+   320 ;;		Startup code after reset
+   321 ;; This function uses a non-reentrant model
+   322 ;;
+   323                           
+   324                           	psect	text0
+   325   002512                     __ptext0:
+   326                           	callstack 0
+   327   002512                     _main:
+   328                           	callstack 122
+   329                           
+   330                           ;maincode01.c: 55:     configuro();
+   331                           
+   332                           ;incstack = 0
+   333   002512  EC77  F013         	call	_configuro	;wreg free
+   334                           
+   335                           ; BSR set to: 3
+   336                           ;maincode01.c: 56:     lcd_init();
+   337   002516  ECD5  F013         	call	_lcd_init	;wreg free
+   338                           
+   339                           ;maincode01.c: 57:     POS_CURSOR(1,1);
+   340   00251A  0E01               	movlw	1
+   341   00251C  6E04               	movwf	POS_CURSOR@columna^(0+1280),c
+   342   00251E  0E01               	movlw	1
+   343   002520  EC4D  F014         	call	_POS_CURSOR
+   344                           
+   345                           ;maincode01.c: 58:     ESCRIBE_MENSAJE("Relojon UPCino",14);
+   346   002524  0E01               	movlw	low STR_1
+   347   002526  6E04               	movwf	ESCRIBE_MENSAJE@cadena^(0+1280),c
+   348   002528  0E0E               	movlw	14
+   349   00252A  6E05               	movwf	ESCRIBE_MENSAJE@tam^(0+1280),c
+   350   00252C  EC39  F014         	call	_ESCRIBE_MENSAJE	;wreg free
+   351   002530                     l1240:
+   352                           
+   353                           ;maincode01.c: 60:         POS_CURSOR(2,2);
+   354   002530  0E02               	movlw	2
+   355   002532  6E04               	movwf	POS_CURSOR@columna^(0+1280),c
+   356   002534  0E02               	movlw	2
+   357   002536  EC4D  F014         	call	_POS_CURSOR
+   358                           
+   359                           ;maincode01.c: 61:         convierte(horas);
+   360   00253A  5014               	movf	_horas^(0+1280),w,c
+   361   00253C  EC56  F013         	call	_convierte
+   362                           
+   363                           ;maincode01.c: 62:         ENVIA_CHAR(decena+0x30);
+   364   002540  500D               	movf	_decena^(0+1280),w,c
+   365   002542  0F30               	addlw	48
+   366   002544  EC0A  F014         	call	_ENVIA_CHAR
+   367                           
+   368                           ;maincode01.c: 63:         ENVIA_CHAR(unidad+0x30);
+   369   002548  500B               	movf	_unidad^(0+1280),w,c
+   370   00254A  0F30               	addlw	48
+   371   00254C  EC0A  F014         	call	_ENVIA_CHAR
+   372                           
+   373                           ;maincode01.c: 64:         ENVIA_CHAR(':');
+   374   002550  0E3A               	movlw	58
+   375   002552  EC0A  F014         	call	_ENVIA_CHAR
+   376                           
+   377                           ;maincode01.c: 65:         convierte(minutos);
+   378   002556  5013               	movf	_minutos^(0+1280),w,c
+   379   002558  EC56  F013         	call	_convierte
+   380                           
+   381                           ;maincode01.c: 66:         ENVIA_CHAR(decena+0x30);
+   382   00255C  500D               	movf	_decena^(0+1280),w,c
+   383   00255E  0F30               	addlw	48
+   384   002560  EC0A  F014         	call	_ENVIA_CHAR
+   385                           
+   386                           ;maincode01.c: 67:         ENVIA_CHAR(unidad+0x30);
+   387   002564  500B               	movf	_unidad^(0+1280),w,c
+   388   002566  0F30               	addlw	48
+   389   002568  EC0A  F014         	call	_ENVIA_CHAR
+   390                           
+   391                           ;maincode01.c: 68:         ENVIA_CHAR(':');
+   392   00256C  0E3A               	movlw	58
+   393   00256E  EC0A  F014         	call	_ENVIA_CHAR
+   394                           
+   395                           ;maincode01.c: 69:         convierte(segundos);
+   396   002572  5012               	movf	_segundos^(0+1280),w,c
+   397   002574  EC56  F013         	call	_convierte
+   398                           
+   399                           ;maincode01.c: 70:         ENVIA_CHAR(decena+0x30);
+   400   002578  500D               	movf	_decena^(0+1280),w,c
+   401   00257A  0F30               	addlw	48
+   402   00257C  EC0A  F014         	call	_ENVIA_CHAR
+   403                           
+   404                           ;maincode01.c: 71:         ENVIA_CHAR(unidad+0x30);
+   405   002580  500B               	movf	_unidad^(0+1280),w,c
+   406   002582  0F30               	addlw	48
+   407   002584  EC0A  F014         	call	_ENVIA_CHAR
+   408                           
+   409                           ;maincode01.c: 72:         ENVIA_CHAR(':');
+   410   002588  0E3A               	movlw	58
+   411   00258A  EC0A  F014         	call	_ENVIA_CHAR
+   412                           
+   413                           ;maincode01.c: 73:         convierte(centesimas);
+   414   00258E  5011               	movf	_centesimas^(0+1280),w,c
+   415   002590  EC56  F013         	call	_convierte
+   416                           
+   417                           ;maincode01.c: 74:         ENVIA_CHAR(decena+0x30);
+   418   002594  500D               	movf	_decena^(0+1280),w,c
+   419   002596  0F30               	addlw	48
+   420   002598  EC0A  F014         	call	_ENVIA_CHAR
+   421                           
+   422                           ;maincode01.c: 75:         ENVIA_CHAR(unidad+0x30);
+   423   00259C  500B               	movf	_unidad^(0+1280),w,c
+   424   00259E  0F30               	addlw	48
+   425   0025A0  EC0A  F014         	call	_ENVIA_CHAR
+   426   0025A4  D7C5               	goto	l1240
+   427   0025A6                     __end_of_main:
+   428                           	callstack 0
+   429                           
+   430 ;; *************** function _lcd_init *****************
+   431 ;; Defined at:
+   432 ;;		line 38 in file "maincode01.c"
+   433 ;; Parameters:    Size  Location     Type
+   434 ;;		None
+   435 ;; Auto vars:     Size  Location     Type
+   436 ;;		None
+   437 ;; Return value:  Size  Location     Type
+   438 ;;                  1    wreg      void 
+   439 ;; Registers used:
+   440 ;;		wreg, status,2, status,0, cstack
+   441 ;; Tracked objects:
+   442 ;;		On entry : 3F/3
+   443 ;;		On exit  : 0/0
+   444 ;;		Unchanged: 0/0
+   445 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   446 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   447 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   448 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   449 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   450 ;;Total ram usage:        2 bytes
+   451 ;; Hardware stack levels used: 1
+   452 ;; Hardware stack levels required when called: 4
+   453 ;; This function calls:
+   454 ;;		_BORRAR_LCD
+   455 ;;		_CURSOR_HOME
+   456 ;;		_CURSOR_ONOFF
+   457 ;;		_LCD_CONFIG
+   458 ;; This function is called by:
+   459 ;;		_main
+   460 ;; This function uses a non-reentrant model
+   461 ;;
+   462                           
+   463                           	psect	text1
+   464   0027AA                     __ptext1:
+   465                           	callstack 0
+   466   0027AA                     _lcd_init:
+   467                           	callstack 122
+   468                           
+   469                           ; BSR set to: 3
+   470                           ;maincode01.c: 39:     TRISD = 0x00;
+   471                           
+   472                           ;incstack = 0
+   473   0027AA  0E00               	movlw	0
+   474   0027AC  6EC9               	movwf	201,c	;volatile
+   475                           
+   476                           ;maincode01.c: 40:     ANSELD = 0x00;
+   477   0027AE  0E00               	movlw	0
+   478   0027B0  0104               	movlb	4	; () banked
+   479   0027B2  6F18               	movwf	24,b	;volatile
+   480                           
+   481                           ; BSR set to: 4
+   482                           ;maincode01.c: 41:     LCD_CONFIG();
+   483   0027B4  EC04  F013         	call	_LCD_CONFIG	;wreg free
+   484                           
+   485                           ;maincode01.c: 42:     _delay((unsigned long)((25)*(32000000UL/4000.0)));
+   486   0027B8  0E02               	movlw	2
+   487   0027BA  6E06               	movwf	(??_lcd_init+1)^(0+1280),c
+   488   0027BC  0E04               	movlw	4
+   489   0027BE  6E05               	movwf	??_lcd_init^(0+1280),c
+   490   0027C0  0EBA               	movlw	186
+   491   0027C2                     u247:
+   492   0027C2  2EE8               	decfsz	wreg,f,c
+   493   0027C4  D7FE               	bra	u247
+   494   0027C6  2E05               	decfsz	??_lcd_init^(0+1280),f,c
+   495   0027C8  D7FC               	bra	u247
+   496   0027CA  2E06               	decfsz	(??_lcd_init+1)^(0+1280),f,c
+   497   0027CC  D7FA               	bra	u247
+   498   0027CE  D000               	nop2	
+   499                           
+   500                           ;maincode01.c: 43:     BORRAR_LCD();
+   501   0027D0  EC94  F014         	call	_BORRAR_LCD	;wreg free
+   502                           
+   503                           ;maincode01.c: 44:     CURSOR_ONOFF(1);
+   504   0027D4  0E01               	movlw	1
+   505   0027D6  EC5F  F014         	call	_CURSOR_ONOFF
+   506                           
+   507                           ;maincode01.c: 45:     CURSOR_HOME();
+   508   0027DA  EC90  F014         	call	_CURSOR_HOME	;wreg free
+   509   0027DE  0012               	return		;funcret
+   510   0027E0                     __end_of_lcd_init:
+   511                           	callstack 0
+   512                           
+   513 ;; *************** function _LCD_CONFIG *****************
+   514 ;; Defined at:
+   515 ;;		line 72 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+   516 ;; Parameters:    Size  Location     Type
+   517 ;;		None
+   518 ;; Auto vars:     Size  Location     Type
+   519 ;;		None
+   520 ;; Return value:  Size  Location     Type
+   521 ;;                  1    wreg      void 
+   522 ;; Registers used:
+   523 ;;		wreg, status,2, status,0, cstack
+   524 ;; Tracked objects:
+   525 ;;		On entry : 3F/4
+   526 ;;		On exit  : 0/0
+   527 ;;		Unchanged: 0/0
+   528 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   529 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   530 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   531 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   532 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   533 ;;Total ram usage:        1 bytes
+   534 ;; Hardware stack levels used: 1
+   535 ;; Hardware stack levels required when called: 3
+   536 ;; This function calls:
+   537 ;;		_ENVIA_LCD_CMD
+   538 ;;		_ENVIA_NIBBLE
+   539 ;; This function is called by:
+   540 ;;		_lcd_init
+   541 ;; This function uses a non-reentrant model
+   542 ;;
+   543                           
+   544                           	psect	text2
+   545   002608                     __ptext2:
+   546                           	callstack 0
+   547   002608                     _LCD_CONFIG:
+   548                           	callstack 122
+   549                           
+   550                           ; BSR set to: 4
+   551                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 74:  LATDbits.LATD0 = 0;
+   552                           
+   553                           ;incstack = 0
+   554   002608  90C1               	bcf	193,0,c	;volatile
+   555                           
+   556                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 75:  LATDbits.LATD1 = 0;
+   557   00260A  92C1               	bcf	193,1,c	;volatile
+   558                           
+   559                           ; BSR set to: 4
+   560                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 76:  ENVIA_NIBBLE(0x30);
+   561   00260C  0E30               	movlw	48
+   562   00260E  EC6D  F014         	call	_ENVIA_NIBBLE
+   563                           
+   564                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 77:         _delay(24000);
+   565   002612  0E20               	movlw	32
+   566   002614  6E04               	movwf	??_LCD_CONFIG^(0+1280),c
+   567   002616  0E2A               	movlw	42
+   568   002618                     u257:
+   569   002618  2EE8               	decfsz	wreg,f,c
+   570   00261A  D7FE               	bra	u257
+   571   00261C  2E04               	decfsz	??_LCD_CONFIG^(0+1280),f,c
+   572   00261E  D7FC               	bra	u257
+   573                           
+   574                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 78:         _delay(24000);
+   575   002620  0E20               	movlw	32
+   576   002622  6E04               	movwf	??_LCD_CONFIG^(0+1280),c
+   577   002624  0E2A               	movlw	42
+   578   002626                     u267:
+   579   002626  2EE8               	decfsz	wreg,f,c
+   580   002628  D7FE               	bra	u267
+   581   00262A  2E04               	decfsz	??_LCD_CONFIG^(0+1280),f,c
+   582   00262C  D7FC               	bra	u267
+   583                           
+   584                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 81:  ENVIA_NIBBLE(0x30);
+   585   00262E  0E30               	movlw	48
+   586   002630  EC6D  F014         	call	_ENVIA_NIBBLE
+   587                           
+   588                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 83:  _delay(1200);
+   589   002634  0EF0               	movlw	240
+   590   002636                     u277:
+   591   002636  D000               	nop2	
+   592   002638  2EE8               	decfsz	wreg,f,c
+   593   00263A  D7FD               	bra	u277
+   594                           
+   595                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 84:         ENVIA_NIBBLE(0x30);
+   596   00263C  0E30               	movlw	48
+   597   00263E  EC6D  F014         	call	_ENVIA_NIBBLE
+   598                           
+   599                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 85:  ENVIA_NIBBLE(0x20);
+   600   002642  0E20               	movlw	32
+   601   002644  EC6D  F014         	call	_ENVIA_NIBBLE
+   602                           
+   603                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 86:  ENVIA_LCD_CMD(0x01);
+   604   002648  0E01               	movlw	1
+   605   00264A  ECF0  F013         	call	_ENVIA_LCD_CMD
+   606                           
+   607                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 87:  ENVIA_LCD_CMD(0x28);
+   608   00264E  0E28               	movlw	40
+   609   002650  ECF0  F013         	call	_ENVIA_LCD_CMD
+   610                           
+   611                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 88:  ENVIA_LCD_CMD(0x0F);
+   612   002654  0E0F               	movlw	15
+   613   002656  ECF0  F013         	call	_ENVIA_LCD_CMD
+   614                           
+   615                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 89:  ENVIA_LCD_CMD(0x06);
+   616   00265A  0E06               	movlw	6
+   617   00265C  ECF0  F013         	call	_ENVIA_LCD_CMD
+   618                           
+   619                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 90:  ENVIA_LCD_CMD(0x01);
+   620   002660  0E01               	movlw	1
+   621   002662  ECF0  F013         	call	_ENVIA_LCD_CMD
+   622   002666  0012               	return		;funcret
+   623   002668                     __end_of_LCD_CONFIG:
+   624                           	callstack 0
+   625                           
+   626 ;; *************** function _CURSOR_ONOFF *****************
+   627 ;; Defined at:
+   628 ;;		line 35 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+   629 ;; Parameters:    Size  Location     Type
+   630 ;;  estado          1    wreg     unsigned char 
+   631 ;; Auto vars:     Size  Location     Type
+   632 ;;  estado          1    3[COMRAM] unsigned char 
+   633 ;; Return value:  Size  Location     Type
+   634 ;;                  1    wreg      void 
+   635 ;; Registers used:
+   636 ;;		wreg, status,2, status,0, cstack
+   637 ;; Tracked objects:
+   638 ;;		On entry : 0/4
+   639 ;;		On exit  : 0/0
+   640 ;;		Unchanged: 0/0
+   641 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   642 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   643 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   644 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   645 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   646 ;;Total ram usage:        1 bytes
+   647 ;; Hardware stack levels used: 1
+   648 ;; Hardware stack levels required when called: 3
+   649 ;; This function calls:
+   650 ;;		_ENVIA_LCD_CMD
+   651 ;; This function is called by:
+   652 ;;		_lcd_init
+   653 ;; This function uses a non-reentrant model
+   654 ;;
+   655                           
+   656                           	psect	text3
+   657   0028BE                     __ptext3:
+   658                           	callstack 0
+   659   0028BE                     _CURSOR_ONOFF:
+   660                           	callstack 122
+   661                           
+   662                           ;incstack = 0
+   663                           ;CURSOR_ONOFF@estado stored from wreg
+   664   0028BE  6E04               	movwf	CURSOR_ONOFF@estado^(0+1280),c
+   665                           
+   666                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 35: void CURSOR_ONOFF(unsigned char estado);../
+      +                          2023-2_EL52_1_Sem10_watchma.X/LCD.c: 36: {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 37:  
+      +                          if(estado == 0) ENVIA_LCD_CMD(0x0E);
+   667   0028C0  5004               	movf	CURSOR_ONOFF@estado^(0+1280),w,c
+   668   0028C2  A4D8               	btfss	status,2,c
+   669   0028C4  D003               	goto	l962
+   670   0028C6  0E0E               	movlw	14
+   671   0028C8  ECF0  F013         	call	_ENVIA_LCD_CMD
+   672   0028CC                     l962:
+   673                           
+   674                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 38:  if(estado == 1) ENVIA_LCD_CMD(0x0C);
+   675   0028CC  0404               	decf	CURSOR_ONOFF@estado^(0+1280),w,c
+   676   0028CE  A4D8               	btfss	status,2,c
+   677   0028D0  0012               	return	
+   678   0028D2  0E0C               	movlw	12
+   679   0028D4  ECF0  F013         	call	_ENVIA_LCD_CMD
+   680   0028D8  0012               	return		;funcret
+   681   0028DA                     __end_of_CURSOR_ONOFF:
+   682                           	callstack 0
+   683                           
+   684 ;; *************** function _CURSOR_HOME *****************
+   685 ;; Defined at:
+   686 ;;		line 30 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+   687 ;; Parameters:    Size  Location     Type
+   688 ;;		None
+   689 ;; Auto vars:     Size  Location     Type
+   690 ;;		None
+   691 ;; Return value:  Size  Location     Type
+   692 ;;                  1    wreg      void 
+   693 ;; Registers used:
+   694 ;;		wreg, status,2, status,0, cstack
+   695 ;; Tracked objects:
+   696 ;;		On entry : 0/4
+   697 ;;		On exit  : 0/0
+   698 ;;		Unchanged: 0/0
+   699 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   700 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   701 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   702 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   703 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   704 ;;Total ram usage:        0 bytes
+   705 ;; Hardware stack levels used: 1
+   706 ;; Hardware stack levels required when called: 3
+   707 ;; This function calls:
+   708 ;;		_ENVIA_LCD_CMD
+   709 ;; This function is called by:
+   710 ;;		_lcd_init
+   711 ;; This function uses a non-reentrant model
+   712 ;;
+   713                           
+   714                           	psect	text4
+   715   002920                     __ptext4:
+   716                           	callstack 0
+   717   002920                     _CURSOR_HOME:
+   718                           	callstack 122
+   719                           
+   720                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 32:  ENVIA_LCD_CMD(0x02);
+   721                           
+   722                           ;incstack = 0
+   723   002920  0E02               	movlw	2
+   724   002922  ECF0  F013         	call	_ENVIA_LCD_CMD
+   725   002926  0012               	return		;funcret
+   726   002928                     __end_of_CURSOR_HOME:
+   727                           	callstack 0
+   728                           
+   729 ;; *************** function _BORRAR_LCD *****************
+   730 ;; Defined at:
+   731 ;;		line 67 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+   732 ;; Parameters:    Size  Location     Type
+   733 ;;		None
+   734 ;; Auto vars:     Size  Location     Type
+   735 ;;		None
+   736 ;; Return value:  Size  Location     Type
+   737 ;;                  1    wreg      void 
+   738 ;; Registers used:
+   739 ;;		wreg, status,2, status,0, cstack
+   740 ;; Tracked objects:
+   741 ;;		On entry : 0/4
+   742 ;;		On exit  : 0/0
+   743 ;;		Unchanged: 0/0
+   744 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   745 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   746 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   747 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   748 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   749 ;;Total ram usage:        0 bytes
+   750 ;; Hardware stack levels used: 1
+   751 ;; Hardware stack levels required when called: 3
+   752 ;; This function calls:
+   753 ;;		_ENVIA_LCD_CMD
+   754 ;; This function is called by:
+   755 ;;		_lcd_init
+   756 ;; This function uses a non-reentrant model
+   757 ;;
+   758                           
+   759                           	psect	text5
+   760   002928                     __ptext5:
+   761                           	callstack 0
+   762   002928                     _BORRAR_LCD:
+   763                           	callstack 122
+   764                           
+   765                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 69:  ENVIA_LCD_CMD(0x01);
+   766                           
+   767                           ;incstack = 0
+   768   002928  0E01               	movlw	1
+   769   00292A  ECF0  F013         	call	_ENVIA_LCD_CMD
+   770   00292E  0012               	return		;funcret
+   771   002930                     __end_of_BORRAR_LCD:
+   772                           	callstack 0
+   773                           
+   774 ;; *************** function _convierte *****************
+   775 ;; Defined at:
+   776 ;;		line 48 in file "maincode01.c"
+   777 ;; Parameters:    Size  Location     Type
+   778 ;;  numero          1    wreg     unsigned char 
+   779 ;; Auto vars:     Size  Location     Type
+   780 ;;  numero          1    9[COMRAM] unsigned char 
+   781 ;; Return value:  Size  Location     Type
+   782 ;;                  1    wreg      void 
+   783 ;; Registers used:
+   784 ;;		wreg, status,2, status,0, cstack
+   785 ;; Tracked objects:
+   786 ;;		On entry : 0/3
+   787 ;;		On exit  : 0/0
+   788 ;;		Unchanged: 0/0
+   789 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   790 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   791 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   792 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   793 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   794 ;;Total ram usage:        2 bytes
+   795 ;; Hardware stack levels used: 1
+   796 ;; Hardware stack levels required when called: 2
+   797 ;; This function calls:
+   798 ;;		___lbdiv
+   799 ;;		___lbmod
+   800 ;; This function is called by:
+   801 ;;		_main
+   802 ;; This function uses a non-reentrant model
+   803 ;;
+   804                           
+   805                           	psect	text6
+   806   0026AC                     __ptext6:
+   807                           	callstack 0
+   808   0026AC                     _convierte:
+   809                           	callstack 124
+   810                           
+   811                           ;incstack = 0
+   812                           ;convierte@numero stored from wreg
+   813   0026AC  6E0A               	movwf	convierte@numero^(0+1280),c
+   814                           
+   815                           ;maincode01.c: 49:     centena = numero / 100;
+   816   0026AE  0E64               	movlw	100
+   817   0026B0  6E05               	movwf	___lbdiv@divisor^(0+1280),c
+   818   0026B2  500A               	movf	convierte@numero^(0+1280),w,c
+   819   0026B4  ECB8  F013         	call	___lbdiv
+   820   0026B8  6E09               	movwf	??_convierte^(0+1280),c
+   821   0026BA  5009               	movf	??_convierte^(0+1280),w,c
+   822   0026BC  6E0F               	movwf	_centena^(0+1280),c
+   823   0026BE  6A10               	clrf	(_centena+1)^(0+1280),c
+   824                           
+   825                           ;maincode01.c: 50:     decena = (numero % 100) / 10;
+   826   0026C0  0E0A               	movlw	10
+   827   0026C2  6E05               	movwf	___lbdiv@divisor^(0+1280),c
+   828   0026C4  0E64               	movlw	100
+   829   0026C6  6E01               	movwf	___lbmod@divisor^(0+1280),c
+   830   0026C8  500A               	movf	convierte@numero^(0+1280),w,c
+   831   0026CA  EC24  F014         	call	___lbmod
+   832   0026CE  ECB8  F013         	call	___lbdiv
+   833   0026D2  6E09               	movwf	??_convierte^(0+1280),c
+   834   0026D4  5009               	movf	??_convierte^(0+1280),w,c
+   835   0026D6  6E0D               	movwf	_decena^(0+1280),c
+   836   0026D8  6A0E               	clrf	(_decena+1)^(0+1280),c
+   837                           
+   838                           ;maincode01.c: 51:     unidad = numero % 10;
+   839   0026DA  0E0A               	movlw	10
+   840   0026DC  6E01               	movwf	___lbmod@divisor^(0+1280),c
+   841   0026DE  500A               	movf	convierte@numero^(0+1280),w,c
+   842   0026E0  EC24  F014         	call	___lbmod
+   843   0026E4  6E09               	movwf	??_convierte^(0+1280),c
+   844   0026E6  5009               	movf	??_convierte^(0+1280),w,c
+   845   0026E8  6E0B               	movwf	_unidad^(0+1280),c
+   846   0026EA  6A0C               	clrf	(_unidad+1)^(0+1280),c
+   847   0026EC  0012               	return		;funcret
+   848   0026EE                     __end_of_convierte:
+   849                           	callstack 0
+   850                           
+   851 ;; *************** function ___lbmod *****************
+   852 ;; Defined at:
+   853 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lbmod.c"
+   854 ;; Parameters:    Size  Location     Type
+   855 ;;  dividend        1    wreg     unsigned char 
+   856 ;;  divisor         1    0[COMRAM] unsigned char 
+   857 ;; Auto vars:     Size  Location     Type
+   858 ;;  dividend        1    1[COMRAM] unsigned char 
+   859 ;;  rem             1    3[COMRAM] unsigned char 
+   860 ;;  counter         1    2[COMRAM] unsigned char 
+   861 ;; Return value:  Size  Location     Type
+   862 ;;                  1    wreg      unsigned char 
+   863 ;; Registers used:
+   864 ;;		wreg, status,2, status,0
+   865 ;; Tracked objects:
+   866 ;;		On entry : 0/3
+   867 ;;		On exit  : 0/0
+   868 ;;		Unchanged: 0/0
+   869 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   870 ;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   871 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   872 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   873 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   874 ;;Total ram usage:        4 bytes
+   875 ;; Hardware stack levels used: 1
+   876 ;; Hardware stack levels required when called: 1
+   877 ;; This function calls:
+   878 ;;		Nothing
+   879 ;; This function is called by:
+   880 ;;		_convierte
+   881 ;; This function uses a non-reentrant model
+   882 ;;
+   883                           
+   884                           	psect	text7
+   885   002848                     __ptext7:
+   886                           	callstack 0
+   887   002848                     ___lbmod:
+   888                           	callstack 124
+   889                           
+   890                           ;incstack = 0
+   891                           ;___lbmod@dividend stored from wreg
+   892   002848  6E02               	movwf	___lbmod@dividend^(0+1280),c
+   893   00284A  0E08               	movlw	8
+   894   00284C  6E03               	movwf	___lbmod@counter^(0+1280),c
+   895   00284E  0E00               	movlw	0
+   896   002850  6E04               	movwf	___lbmod@rem^(0+1280),c
+   897   002852                     l1200:
+   898   002852  90D8               	bcf	status,0,c
+   899   002854  3402               	rlcf	___lbmod@dividend^(0+1280),w,c
+   900   002856  3404               	rlcf	___lbmod@rem^(0+1280),w,c
+   901   002858  6E04               	movwf	___lbmod@rem^(0+1280),c
+   902   00285A  90D8               	bcf	status,0,c
+   903   00285C  3602               	rlcf	___lbmod@dividend^(0+1280),f,c
+   904   00285E  5001               	movf	___lbmod@divisor^(0+1280),w,c
+   905   002860  5C04               	subwf	___lbmod@rem^(0+1280),w,c
+   906   002862  A0D8               	btfss	status,0,c
+   907   002864  D002               	goto	l1208
+   908   002866  5001               	movf	___lbmod@divisor^(0+1280),w,c
+   909   002868  5E04               	subwf	___lbmod@rem^(0+1280),f,c
+   910   00286A                     l1208:
+   911   00286A  2E03               	decfsz	___lbmod@counter^(0+1280),f,c
+   912   00286C  D7F2               	goto	l1200
+   913   00286E  5004               	movf	___lbmod@rem^(0+1280),w,c
+   914   002870  0012               	return		;funcret
+   915   002872                     __end_of___lbmod:
+   916                           	callstack 0
+   917                           
+   918 ;; *************** function ___lbdiv *****************
+   919 ;; Defined at:
+   920 ;;		line 4 in file "C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lbdiv.c"
+   921 ;; Parameters:    Size  Location     Type
+   922 ;;  dividend        1    wreg     unsigned char 
+   923 ;;  divisor         1    4[COMRAM] unsigned char 
+   924 ;; Auto vars:     Size  Location     Type
+   925 ;;  dividend        1    5[COMRAM] unsigned char 
+   926 ;;  quotient        1    7[COMRAM] unsigned char 
+   927 ;;  counter         1    6[COMRAM] unsigned char 
+   928 ;; Return value:  Size  Location     Type
+   929 ;;                  1    wreg      unsigned char 
+   930 ;; Registers used:
+   931 ;;		wreg, status,2, status,0
+   932 ;; Tracked objects:
+   933 ;;		On entry : 0/3
+   934 ;;		On exit  : 0/0
+   935 ;;		Unchanged: 0/0
+   936 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   937 ;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   938 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   939 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   940 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   941 ;;Total ram usage:        4 bytes
+   942 ;; Hardware stack levels used: 1
+   943 ;; Hardware stack levels required when called: 1
+   944 ;; This function calls:
+   945 ;;		Nothing
+   946 ;; This function is called by:
+   947 ;;		_convierte
+   948 ;; This function uses a non-reentrant model
+   949 ;;
+   950                           
+   951                           	psect	text8
+   952   002770                     __ptext8:
+   953                           	callstack 0
+   954   002770                     ___lbdiv:
+   955                           	callstack 124
+   956                           
+   957                           ;incstack = 0
+   958                           ;___lbdiv@dividend stored from wreg
+   959   002770  6E06               	movwf	___lbdiv@dividend^(0+1280),c
+   960   002772  0E00               	movlw	0
+   961   002774  6E08               	movwf	___lbdiv@quotient^(0+1280),c
+   962   002776  5005               	movf	___lbdiv@divisor^(0+1280),w,c
+   963   002778  B4D8               	btfsc	status,2,c
+   964   00277A  D015               	goto	l1194
+   965   00277C  0E01               	movlw	1
+   966   00277E  6E07               	movwf	___lbdiv@counter^(0+1280),c
+   967   002780  D003               	goto	l1182
+   968   002782                     l1178:
+   969   002782  90D8               	bcf	status,0,c
+   970   002784  3605               	rlcf	___lbdiv@divisor^(0+1280),f,c
+   971   002786  2A07               	incf	___lbdiv@counter^(0+1280),f,c
+   972   002788                     l1182:
+   973   002788  AE05               	btfss	___lbdiv@divisor^(0+1280),7,c
+   974   00278A  D7FB               	goto	l1178
+   975   00278C                     u180:
+   976   00278C  90D8               	bcf	status,0,c
+   977   00278E  3608               	rlcf	___lbdiv@quotient^(0+1280),f,c
+   978   002790  5005               	movf	___lbdiv@divisor^(0+1280),w,c
+   979   002792  5C06               	subwf	___lbdiv@dividend^(0+1280),w,c
+   980   002794  A0D8               	btfss	status,0,c
+   981   002796  D003               	goto	l1190
+   982   002798  5005               	movf	___lbdiv@divisor^(0+1280),w,c
+   983   00279A  5E06               	subwf	___lbdiv@dividend^(0+1280),f,c
+   984   00279C  8008               	bsf	___lbdiv@quotient^(0+1280),0,c
+   985   00279E                     l1190:
+   986   00279E  90D8               	bcf	status,0,c
+   987   0027A0  3205               	rrcf	___lbdiv@divisor^(0+1280),f,c
+   988   0027A2  2E07               	decfsz	___lbdiv@counter^(0+1280),f,c
+   989   0027A4  D7F3               	goto	u180
+   990   0027A6                     l1194:
+   991   0027A6  5008               	movf	___lbdiv@quotient^(0+1280),w,c
+   992   0027A8  0012               	return		;funcret
+   993   0027AA                     __end_of___lbdiv:
+   994                           	callstack 0
+   995                           
+   996 ;; *************** function _configuro *****************
+   997 ;; Defined at:
+   998 ;;		line 9 in file "maincode01.c"
+   999 ;; Parameters:    Size  Location     Type
+  1000 ;;		None
+  1001 ;; Auto vars:     Size  Location     Type
+  1002 ;;		None
+  1003 ;; Return value:  Size  Location     Type
+  1004 ;;                  1    wreg      void 
+  1005 ;; Registers used:
+  1006 ;;		wreg, status,2
+  1007 ;; Tracked objects:
+  1008 ;;		On entry : 0/0
+  1009 ;;		On exit  : 3F/3
+  1010 ;;		Unchanged: 0/0
+  1011 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1012 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1013 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1014 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1015 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1016 ;;Total ram usage:        0 bytes
+  1017 ;; Hardware stack levels used: 1
+  1018 ;; Hardware stack levels required when called: 1
+  1019 ;; This function calls:
+  1020 ;;		Nothing
+  1021 ;; This function is called by:
+  1022 ;;		_main
+  1023 ;; This function uses a non-reentrant model
+  1024 ;;
+  1025                           
+  1026                           	psect	text9
+  1027   0026EE                     __ptext9:
+  1028                           	callstack 0
+  1029   0026EE                     _configuro:
+  1030                           	callstack 125
+  1031                           
+  1032                           ;maincode01.c: 11:     OSCCON1 = 0x60;
+  1033                           
+  1034                           ;incstack = 0
+  1035   0026EE  0E60               	movlw	96
+  1036   0026F0  0100               	movlb	0	; () banked
+  1037   0026F2  6FAD               	movwf	173,b	;volatile
+  1038                           
+  1039                           ;maincode01.c: 12:     OSCFRQ = 0x06;
+  1040   0026F4  0E06               	movlw	6
+  1041   0026F6  6FB1               	movwf	177,b	;volatile
+  1042                           
+  1043                           ;maincode01.c: 13:     OSCEN = 0x40;
+  1044   0026F8  0E40               	movlw	64
+  1045   0026FA  6FB3               	movwf	179,b	;volatile
+  1046                           
+  1047                           ; BSR set to: 0
+  1048                           ;maincode01.c: 15:     TRISBbits.TRISB0 = 1;
+  1049   0026FC  80C7               	bsf	199,0,c	;volatile
+  1050                           
+  1051                           ; BSR set to: 0
+  1052                           ;maincode01.c: 16:     ANSELBbits.ANSELB0 = 0;
+  1053   0026FE  0104               	movlb	4	; () banked
+  1054   002700  9108               	bcf	8,0,b	;volatile
+  1055                           
+  1056                           ; BSR set to: 4
+  1057                           ;maincode01.c: 17:     WPUBbits.WPUB0 = 1;
+  1058   002702  8109               	bsf	9,0,b	;volatile
+  1059                           
+  1060                           ; BSR set to: 4
+  1061                           ;maincode01.c: 18:     TRISBbits.TRISB1 = 1;
+  1062   002704  82C7               	bsf	199,1,c	;volatile
+  1063                           
+  1064                           ; BSR set to: 4
+  1065                           ;maincode01.c: 19:     ANSELBbits.ANSELB1 = 0;
+  1066   002706  9308               	bcf	8,1,b	;volatile
+  1067                           
+  1068                           ; BSR set to: 4
+  1069                           ;maincode01.c: 20:     WPUBbits.WPUB1 = 1;
+  1070   002708  8309               	bsf	9,1,b	;volatile
+  1071                           
+  1072                           ;maincode01.c: 22:     T1CLK = 0x01;
+  1073   00270A  0E01               	movlw	1
+  1074   00270C  0103               	movlb	3	; () banked
+  1075   00270E  6F21               	movwf	33,b	;volatile
+  1076                           
+  1077                           ;maincode01.c: 23:     T1CON = 0x33;
+  1078   002710  0E33               	movlw	51
+  1079   002712  6F1E               	movwf	30,b	;volatile
+  1080                           
+  1081                           ;maincode01.c: 25:     CCP1CON = 0x81;
+  1082   002714  0E81               	movlw	129
+  1083   002716  6F42               	movwf	66,b	;volatile
+  1084                           
+  1085                           ;maincode01.c: 26:     CCPR1H = 0x27;
+  1086   002718  0E27               	movlw	39
+  1087   00271A  6F41               	movwf	65,b	;volatile
+  1088                           
+  1089                           ;maincode01.c: 27:     CCPR1L = 0x10;
+  1090   00271C  0E10               	movlw	16
+  1091   00271E  6F40               	movwf	64,b	;volatile
+  1092                           
+  1093                           ; BSR set to: 3
+  1094                           ;maincode01.c: 29:     PIE3bits.CCP1IE = 1;
+  1095   002720  8CA1               	bsf	161,6,c	;volatile
+  1096                           
+  1097                           ; BSR set to: 3
+  1098                           ;maincode01.c: 30:     PIR3bits.CCP1IF = 0;
+  1099   002722  9CB1               	bcf	177,6,c	;volatile
+  1100                           
+  1101                           ; BSR set to: 3
+  1102                           ;maincode01.c: 31:     PIE1bits.INT0IE = 1;
+  1103   002724  809F               	bsf	159,0,c	;volatile
+  1104                           
+  1105                           ; BSR set to: 3
+  1106                           ;maincode01.c: 32:     PIR1bits.INT0IF = 0;
+  1107   002726  90AF               	bcf	175,0,c	;volatile
+  1108                           
+  1109                           ; BSR set to: 3
+  1110                           ;maincode01.c: 33:     PIE6bits.INT1IE = 1;
+  1111   002728  80A4               	bsf	164,0,c	;volatile
+  1112                           
+  1113                           ; BSR set to: 3
+  1114                           ;maincode01.c: 34:     PIR6bits.INT1IF = 0;
+  1115   00272A  90B4               	bcf	180,0,c	;volatile
+  1116                           
+  1117                           ; BSR set to: 3
+  1118                           ;maincode01.c: 35:     INTCON0bits.GIE = 1;
+  1119   00272C  8ED6               	bsf	214,7,c	;volatile
+  1120                           
+  1121                           ; BSR set to: 3
+  1122   00272E  0012               	return		;funcret
+  1123   002730                     __end_of_configuro:
+  1124                           	callstack 0
+  1125                           
+  1126 ;; *************** function _POS_CURSOR *****************
+  1127 ;; Defined at:
+  1128 ;;		line 6 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1129 ;; Parameters:    Size  Location     Type
+  1130 ;;  fila            1    wreg     unsigned char 
+  1131 ;;  columna         1    3[COMRAM] unsigned char 
+  1132 ;; Auto vars:     Size  Location     Type
+  1133 ;;  fila            1    4[COMRAM] unsigned char 
+  1134 ;; Return value:  Size  Location     Type
+  1135 ;;                  1    wreg      void 
+  1136 ;; Registers used:
+  1137 ;;		wreg, status,2, status,0, cstack
+  1138 ;; Tracked objects:
+  1139 ;;		On entry : 0/3
+  1140 ;;		On exit  : 0/0
+  1141 ;;		Unchanged: 0/0
+  1142 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1143 ;;      Params:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1144 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1145 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1146 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1147 ;;Total ram usage:        2 bytes
+  1148 ;; Hardware stack levels used: 1
+  1149 ;; Hardware stack levels required when called: 3
+  1150 ;; This function calls:
+  1151 ;;		_ENVIA_LCD_CMD
+  1152 ;; This function is called by:
+  1153 ;;		_main
+  1154 ;; This function uses a non-reentrant model
+  1155 ;;
+  1156                           
+  1157                           	psect	text10
+  1158   00289A                     __ptext10:
+  1159                           	callstack 0
+  1160   00289A                     _POS_CURSOR:
+  1161                           	callstack 123
+  1162                           
+  1163                           ; BSR set to: 3
+  1164                           ;incstack = 0
+  1165                           ;POS_CURSOR@fila stored from wreg
+  1166   00289A  6E05               	movwf	POS_CURSOR@fila^(0+1280),c
+  1167                           
+  1168                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 6: void POS_CURSOR(unsigned char fila,unsigned 
+      +                          char columna);../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 7: {;../2023-2_EL52_1_Sem10_watchm
+      +                          a.X/LCD.c: 8:  if(fila == 1)
+  1169   00289C  0405               	decf	POS_CURSOR@fila^(0+1280),w,c
+  1170   00289E  A4D8               	btfss	status,2,c
+  1171   0028A0  D005               	goto	l1220
+  1172                           
+  1173                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 9:  {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 1
+      +                          0:   ENVIA_LCD_CMD(0x80+columna);
+  1174   0028A2  5004               	movf	POS_CURSOR@columna^(0+1280),w,c
+  1175   0028A4  0F80               	addlw	128
+  1176   0028A6  ECF0  F013         	call	_ENVIA_LCD_CMD
+  1177                           
+  1178                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 11:  }
+  1179   0028AA  0012               	return	
+  1180   0028AC                     l1220:
+  1181   0028AC  0E02               	movlw	2
+  1182   0028AE  1805               	xorwf	POS_CURSOR@fila^(0+1280),w,c
+  1183   0028B0  A4D8               	btfss	status,2,c
+  1184   0028B2  0012               	return	
+  1185                           
+  1186                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 13:  {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 
+      +                          14:   ENVIA_LCD_CMD(0xC0+columna);
+  1187   0028B4  5004               	movf	POS_CURSOR@columna^(0+1280),w,c
+  1188   0028B6  0FC0               	addlw	192
+  1189   0028B8  ECF0  F013         	call	_ENVIA_LCD_CMD
+  1190   0028BC  0012               	return		;funcret
+  1191   0028BE                     __end_of_POS_CURSOR:
+  1192                           	callstack 0
+  1193                           
+  1194 ;; *************** function _ENVIA_LCD_CMD *****************
+  1195 ;; Defined at:
+  1196 ;;		line 104 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1197 ;; Parameters:    Size  Location     Type
+  1198 ;;  dato            1    wreg     unsigned char 
+  1199 ;; Auto vars:     Size  Location     Type
+  1200 ;;  dato            1    1[COMRAM] unsigned char 
+  1201 ;;  aux             1    2[COMRAM] unsigned char 
+  1202 ;; Return value:  Size  Location     Type
+  1203 ;;                  1    wreg      void 
+  1204 ;; Registers used:
+  1205 ;;		wreg, status,2, status,0, cstack
+  1206 ;; Tracked objects:
+  1207 ;;		On entry : 0/4
+  1208 ;;		On exit  : 0/0
+  1209 ;;		Unchanged: 0/0
+  1210 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1211 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1212 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1213 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1214 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1215 ;;Total ram usage:        2 bytes
+  1216 ;; Hardware stack levels used: 1
+  1217 ;; Hardware stack levels required when called: 2
+  1218 ;; This function calls:
+  1219 ;;		_ENVIA_NIBBLE
+  1220 ;;		_LEER_LCD
+  1221 ;; This function is called by:
+  1222 ;;		_POS_CURSOR
+  1223 ;;		_CURSOR_HOME
+  1224 ;;		_CURSOR_ONOFF
+  1225 ;;		_BORRAR_LCD
+  1226 ;;		_LCD_CONFIG
+  1227 ;; This function uses a non-reentrant model
+  1228 ;;
+  1229                           
+  1230                           	psect	text11
+  1231   0027E0                     __ptext11:
+  1232                           	callstack 0
+  1233   0027E0                     _ENVIA_LCD_CMD:
+  1234                           	callstack 122
+  1235                           
+  1236                           ;incstack = 0
+  1237                           ;ENVIA_LCD_CMD@dato stored from wreg
+  1238   0027E0  6E02               	movwf	ENVIA_LCD_CMD@dato^(0+1280),c
+  1239                           
+  1240                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 104: void ENVIA_LCD_CMD(unsigned char dato);../
+      +                          2023-2_EL52_1_Sem10_watchma.X/LCD.c: 105: {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 106:
+      +                            unsigned char aux;;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 107:  LATDbits.LATD0 = 0;
+  1241   0027E2  90C1               	bcf	193,0,c	;volatile
+  1242                           
+  1243                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 108:  LEER_LCD();
+  1244   0027E4  ECD3  F012         	call	_LEER_LCD	;wreg free
+  1245                           
+  1246                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 109:  TRISD = 0b00000000;
+  1247   0027E8  0E00               	movlw	0
+  1248   0027EA  6EC9               	movwf	201,c	;volatile
+  1249                           
+  1250                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 111:         _delay(1200);
+  1251   0027EC  0EF0               	movlw	240
+  1252   0027EE                     u287:
+  1253   0027EE  D000               	nop2	
+  1254   0027F0  2EE8               	decfsz	wreg,f,c
+  1255   0027F2  D7FD               	bra	u287
+  1256                           
+  1257                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 112:         LATDbits.LATD1 = 0;
+  1258   0027F4  92C1               	bcf	193,1,c	;volatile
+  1259                           
+  1260                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 113:  LATDbits.LATD2 = 0;
+  1261   0027F6  94C1               	bcf	193,2,c	;volatile
+  1262                           
+  1263                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 114:  LATDbits.LATD0 = 0;
+  1264   0027F8  90C1               	bcf	193,0,c	;volatile
+  1265                           
+  1266                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 115:  aux = dato & 0xF0;
+  1267   0027FA  5002               	movf	ENVIA_LCD_CMD@dato^(0+1280),w,c
+  1268   0027FC  0BF0               	andlw	240
+  1269   0027FE  6E03               	movwf	ENVIA_LCD_CMD@aux^(0+1280),c
+  1270                           
+  1271                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 116:  ENVIA_NIBBLE(aux);
+  1272   002800  5003               	movf	ENVIA_LCD_CMD@aux^(0+1280),w,c
+  1273   002802  EC6D  F014         	call	_ENVIA_NIBBLE
+  1274                           
+  1275                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 117:  aux = dato<<4;
+  1276   002806  3802               	swapf	ENVIA_LCD_CMD@dato^(0+1280),w,c
+  1277   002808  0BF0               	andlw	240
+  1278   00280A  6E03               	movwf	ENVIA_LCD_CMD@aux^(0+1280),c
+  1279                           
+  1280                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 118:  ENVIA_NIBBLE(aux);
+  1281   00280C  5003               	movf	ENVIA_LCD_CMD@aux^(0+1280),w,c
+  1282   00280E  EC6D  F014         	call	_ENVIA_NIBBLE
+  1283   002812  0012               	return		;funcret
+  1284   002814                     __end_of_ENVIA_LCD_CMD:
+  1285                           	callstack 0
+  1286                           
+  1287 ;; *************** function _ESCRIBE_MENSAJE *****************
+  1288 ;; Defined at:
+  1289 ;;		line 41 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1290 ;; Parameters:    Size  Location     Type
+  1291 ;;  cadena          1    3[COMRAM] PTR const unsigned char 
+  1292 ;;		 -> STR_1(15), 
+  1293 ;;  tam             1    4[COMRAM] unsigned char 
+  1294 ;; Auto vars:     Size  Location     Type
+  1295 ;;  i               1    6[COMRAM] unsigned char 
+  1296 ;; Return value:  Size  Location     Type
+  1297 ;;                  1    wreg      void 
+  1298 ;; Registers used:
+  1299 ;;		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+  1300 ;; Tracked objects:
+  1301 ;;		On entry : 0/3
+  1302 ;;		On exit  : 0/0
+  1303 ;;		Unchanged: 0/0
+  1304 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1305 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1306 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1307 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1308 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1309 ;;Total ram usage:        4 bytes
+  1310 ;; Hardware stack levels used: 1
+  1311 ;; Hardware stack levels required when called: 3
+  1312 ;; This function calls:
+  1313 ;;		_ENVIA_CHAR
+  1314 ;; This function is called by:
+  1315 ;;		_main
+  1316 ;; This function uses a non-reentrant model
+  1317 ;;
+  1318                           
+  1319                           	psect	text12
+  1320   002872                     __ptext12:
+  1321                           	callstack 0
+  1322   002872                     _ESCRIBE_MENSAJE:
+  1323                           	callstack 123
+  1324                           
+  1325                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 41: void ESCRIBE_MENSAJE(const char *cadena,uns
+      +                          igned char tam);../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 42: {;../2023-2_EL52_1_Sem10_wat
+      +                          chma.X/LCD.c: 43:  unsigned char i = 0;
+  1326                           
+  1327                           ;incstack = 0
+  1328   002872  0E00               	movlw	0
+  1329   002874  6E07               	movwf	ESCRIBE_MENSAJE@i^(0+1280),c
+  1330                           
+  1331                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 44:  for(i = 0; i<tam; i++)
+  1332   002876  0E00               	movlw	0
+  1333   002878  6E07               	movwf	ESCRIBE_MENSAJE@i^(0+1280),c
+  1334   00287A  D00A               	goto	l1230
+  1335   00287C                     l1226:
+  1336                           
+  1337                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 45:  {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 
+      +                          46:   ENVIA_CHAR(cadena[i]);
+  1338   00287C  5004               	movf	ESCRIBE_MENSAJE@cadena^(0+1280),w,c
+  1339   00287E  2407               	addwf	ESCRIBE_MENSAJE@i^(0+1280),w,c
+  1340   002880  6E06               	movwf	??_ESCRIBE_MENSAJE^(0+1280),c
+  1341   002882  C506  F4F6         	movff	??_ESCRIBE_MENSAJE,tblptrl
+  1342   002886                     	if	0	;There is only one active tblptr byte
+  1343   002886                     	endif
+  1344   002886                     	if	0	;tblptru may be non-zero
+  1345   002886                     	endif
+  1346   002886                     	if	0	;tblptru may be non-zero
+  1347   002886                     	endif
+  1348   002886  0008               	tblrd		*
+  1349   002888  50F5               	movf	tablat,w,c
+  1350   00288A  EC0A  F014         	call	_ENVIA_CHAR
+  1351                           
+  1352                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 47:  }
+  1353   00288E  2A07               	incf	ESCRIBE_MENSAJE@i^(0+1280),f,c
+  1354   002890                     l1230:
+  1355   002890  5005               	movf	ESCRIBE_MENSAJE@tam^(0+1280),w,c
+  1356   002892  5C07               	subwf	ESCRIBE_MENSAJE@i^(0+1280),w,c
+  1357   002894  B0D8               	btfsc	status,0,c
+  1358   002896  0012               	return	
+  1359   002898  D7F1               	goto	l1226
+  1360   00289A                     __end_of_ESCRIBE_MENSAJE:
+  1361                           	callstack 0
+  1362                           
+  1363 ;; *************** function _ENVIA_CHAR *****************
+  1364 ;; Defined at:
+  1365 ;;		line 50 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1366 ;; Parameters:    Size  Location     Type
+  1367 ;;  dato            1    wreg     unsigned char 
+  1368 ;; Auto vars:     Size  Location     Type
+  1369 ;;  dato            1    1[COMRAM] unsigned char 
+  1370 ;;  aux             1    2[COMRAM] unsigned char 
+  1371 ;; Return value:  Size  Location     Type
+  1372 ;;                  1    wreg      void 
+  1373 ;; Registers used:
+  1374 ;;		wreg, status,2, status,0, cstack
+  1375 ;; Tracked objects:
+  1376 ;;		On entry : 0/3
+  1377 ;;		On exit  : 0/0
+  1378 ;;		Unchanged: 0/0
+  1379 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1380 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1381 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1382 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1383 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1384 ;;Total ram usage:        2 bytes
+  1385 ;; Hardware stack levels used: 1
+  1386 ;; Hardware stack levels required when called: 2
+  1387 ;; This function calls:
+  1388 ;;		_ENVIA_NIBBLE
+  1389 ;;		_LEER_LCD
+  1390 ;; This function is called by:
+  1391 ;;		_main
+  1392 ;;		_ESCRIBE_MENSAJE
+  1393 ;; This function uses a non-reentrant model
+  1394 ;;
+  1395                           
+  1396                           	psect	text13
+  1397   002814                     __ptext13:
+  1398                           	callstack 0
+  1399   002814                     _ENVIA_CHAR:
+  1400                           	callstack 123
+  1401                           
+  1402                           ;incstack = 0
+  1403                           ;ENVIA_CHAR@dato stored from wreg
+  1404   002814  6E02               	movwf	ENVIA_CHAR@dato^(0+1280),c
+  1405                           
+  1406                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 50: void ENVIA_CHAR(unsigned char dato);../2023
+      +                          -2_EL52_1_Sem10_watchma.X/LCD.c: 51: {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 52:  unsi
+      +                          gned char aux;;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 53:  LATDbits.LATD0 = 1;
+  1407   002816  80C1               	bsf	193,0,c	;volatile
+  1408                           
+  1409                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 54:  LEER_LCD();
+  1410   002818  ECD3  F012         	call	_LEER_LCD	;wreg free
+  1411                           
+  1412                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 55:  TRISD = 0x00;
+  1413   00281C  0E00               	movlw	0
+  1414   00281E  6EC9               	movwf	201,c	;volatile
+  1415                           
+  1416                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 56:         _delay(1200);
+  1417   002820  0EF0               	movlw	240
+  1418   002822                     u297:
+  1419   002822  D000               	nop2	
+  1420   002824  2EE8               	decfsz	wreg,f,c
+  1421   002826  D7FD               	bra	u297
+  1422                           
+  1423                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 58:  LATDbits.LATD1 = 0;
+  1424   002828  92C1               	bcf	193,1,c	;volatile
+  1425                           
+  1426                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 59:  LATDbits.LATD2 = 0;
+  1427   00282A  94C1               	bcf	193,2,c	;volatile
+  1428                           
+  1429                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 60:  LATDbits.LATD0 = 1;
+  1430   00282C  80C1               	bsf	193,0,c	;volatile
+  1431                           
+  1432                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 61:  aux = dato & 0xF0;
+  1433   00282E  5002               	movf	ENVIA_CHAR@dato^(0+1280),w,c
+  1434   002830  0BF0               	andlw	240
+  1435   002832  6E03               	movwf	ENVIA_CHAR@aux^(0+1280),c
+  1436                           
+  1437                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 62:  ENVIA_NIBBLE(aux);
+  1438   002834  5003               	movf	ENVIA_CHAR@aux^(0+1280),w,c
+  1439   002836  EC6D  F014         	call	_ENVIA_NIBBLE
+  1440                           
+  1441                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 63:  aux = dato << 4;
+  1442   00283A  3802               	swapf	ENVIA_CHAR@dato^(0+1280),w,c
+  1443   00283C  0BF0               	andlw	240
+  1444   00283E  6E03               	movwf	ENVIA_CHAR@aux^(0+1280),c
+  1445                           
+  1446                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 64:  ENVIA_NIBBLE(aux);
+  1447   002840  5003               	movf	ENVIA_CHAR@aux^(0+1280),w,c
+  1448   002842  EC6D  F014         	call	_ENVIA_NIBBLE
+  1449   002846  0012               	return		;funcret
+  1450   002848                     __end_of_ENVIA_CHAR:
+  1451                           	callstack 0
+  1452                           
+  1453 ;; *************** function _LEER_LCD *****************
+  1454 ;; Defined at:
+  1455 ;;		line 121 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1456 ;; Parameters:    Size  Location     Type
+  1457 ;;		None
+  1458 ;; Auto vars:     Size  Location     Type
+  1459 ;;  aux             1    0[COMRAM] unsigned char 
+  1460 ;; Return value:  Size  Location     Type
+  1461 ;;                  1    wreg      void 
+  1462 ;; Registers used:
+  1463 ;;		wreg, status,2, status,0
+  1464 ;; Tracked objects:
+  1465 ;;		On entry : 0/4
+  1466 ;;		On exit  : 0/0
+  1467 ;;		Unchanged: 0/0
+  1468 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1469 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1470 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1471 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1472 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1473 ;;Total ram usage:        1 bytes
+  1474 ;; Hardware stack levels used: 1
+  1475 ;; Hardware stack levels required when called: 1
+  1476 ;; This function calls:
+  1477 ;;		Nothing
+  1478 ;; This function is called by:
+  1479 ;;		_ENVIA_CHAR
+  1480 ;;		_ENVIA_LCD_CMD
+  1481 ;; This function uses a non-reentrant model
+  1482 ;;
+  1483                           
+  1484                           	psect	text14
+  1485   0025A6                     __ptext14:
+  1486                           	callstack 0
+  1487   0025A6                     _LEER_LCD:
+  1488                           	callstack 122
+  1489                           
+  1490                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 123:  unsigned char aux;;../2023-2_EL52_1_Sem10
+      +                          _watchma.X/LCD.c: 124:  TRISD = 0xF8;
+  1491                           
+  1492                           ;incstack = 0
+  1493   0025A6  0EF8               	movlw	248
+  1494   0025A8  6EC9               	movwf	201,c	;volatile
+  1495                           
+  1496                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 125:  LATDbits.LATD0 = 0;
+  1497   0025AA  90C1               	bcf	193,0,c	;volatile
+  1498                           
+  1499                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 126:  LATDbits.LATD1 = 1;
+  1500   0025AC  82C1               	bsf	193,1,c	;volatile
+  1501                           
+  1502                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 127:  LATDbits.LATD2 = 1;
+  1503   0025AE  84C1               	bsf	193,2,c	;volatile
+  1504                           
+  1505                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 128:         _delay(1200);
+  1506   0025B0  0EF0               	movlw	240
+  1507   0025B2                     u307:
+  1508   0025B2  D000               	nop2	
+  1509   0025B4  2EE8               	decfsz	wreg,f,c
+  1510   0025B6  D7FD               	bra	u307
+  1511                           
+  1512                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 130:  aux = PORTD;
+  1513   0025B8  C4D1 F501          	movff	1233,LEER_LCD@aux	;volatile
+  1514                           
+  1515                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 131:  LATDbits.LATD2 = 0;
+  1516   0025BC  94C1               	bcf	193,2,c	;volatile
+  1517                           
+  1518                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 132:         _delay(1200);
+  1519   0025BE  0EF0               	movlw	240
+  1520   0025C0                     u317:
+  1521   0025C0  D000               	nop2	
+  1522   0025C2  2EE8               	decfsz	wreg,f,c
+  1523   0025C4  D7FD               	bra	u317
+  1524                           
+  1525                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 134:  LATDbits.LATD2 = 1;
+  1526   0025C6  84C1               	bsf	193,2,c	;volatile
+  1527                           
+  1528                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 135:         _delay(1200);
+  1529   0025C8  0EF0               	movlw	240
+  1530   0025CA                     u327:
+  1531   0025CA  D000               	nop2	
+  1532   0025CC  2EE8               	decfsz	wreg,f,c
+  1533   0025CE  D7FD               	bra	u327
+  1534   0025D0                     l884:
+  1535                           
+  1536                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 137:  LATDbits.LATD2 = 0;
+  1537   0025D0  94C1               	bcf	193,2,c	;volatile
+  1538                           
+  1539                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 138:  aux = aux & 0x80;
+  1540   0025D2  5001               	movf	LEER_LCD@aux^(0+1280),w,c
+  1541   0025D4  0B80               	andlw	128
+  1542   0025D6  6E01               	movwf	LEER_LCD@aux^(0+1280),c
+  1543                           
+  1544                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 139:  while(aux == 0x80)
+  1545   0025D8  D012               	goto	l900
+  1546   0025DA                     l181:
+  1547                           
+  1548                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 140:         {;../2023-2_EL52_1_Sem10_watchma.X
+      +                          /LCD.c: 141:             LATDbits.LATD2 = 1;
+  1549   0025DA  84C1               	bsf	193,2,c	;volatile
+  1550                           
+  1551                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 142:             _delay(1200);
+  1552   0025DC  0EF0               	movlw	240
+  1553   0025DE                     u337:
+  1554   0025DE  D000               	nop2	
+  1555   0025E0  2EE8               	decfsz	wreg,f,c
+  1556   0025E2  D7FD               	bra	u337
+  1557                           
+  1558                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 143:             aux = PORTD;
+  1559   0025E4  C4D1 F501          	movff	1233,LEER_LCD@aux	;volatile
+  1560                           
+  1561                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 144:             LATDbits.LATD2 = 0;
+  1562   0025E8  94C1               	bcf	193,2,c	;volatile
+  1563                           
+  1564                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 145:             _delay(1200);
+  1565   0025EA  0EF0               	movlw	240
+  1566   0025EC                     u347:
+  1567   0025EC  D000               	nop2	
+  1568   0025EE  2EE8               	decfsz	wreg,f,c
+  1569   0025F0  D7FD               	bra	u347
+  1570                           
+  1571                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 146:             LATDbits.LATD2 = 1;
+  1572   0025F2  84C1               	bsf	193,2,c	;volatile
+  1573                           
+  1574                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 147:             _delay(1200);
+  1575   0025F4  0EF0               	movlw	240
+  1576   0025F6                     u357:
+  1577   0025F6  D000               	nop2	
+  1578   0025F8  2EE8               	decfsz	wreg,f,c
+  1579   0025FA  D7FD               	bra	u357
+  1580   0025FC  D7E9               	goto	l884
+  1581   0025FE                     l900:
+  1582                           
+  1583                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 139:  while(aux == 0x80)
+  1584   0025FE  0E80               	movlw	128
+  1585   002600  1801               	xorwf	LEER_LCD@aux^(0+1280),w,c
+  1586   002602  A4D8               	btfss	status,2,c
+  1587   002604  0012               	return	
+  1588   002606  D7E9               	goto	l181
+  1589   002608                     __end_of_LEER_LCD:
+  1590                           	callstack 0
+  1591                           
+  1592 ;; *************** function _ENVIA_NIBBLE *****************
+  1593 ;; Defined at:
+  1594 ;;		line 93 in file "../2023-2_EL52_1_Sem10_watchma.X/LCD.c"
+  1595 ;; Parameters:    Size  Location     Type
+  1596 ;;  dato            1    wreg     unsigned char 
+  1597 ;; Auto vars:     Size  Location     Type
+  1598 ;;  dato            1    0[COMRAM] unsigned char 
+  1599 ;; Return value:  Size  Location     Type
+  1600 ;;                  1    wreg      void 
+  1601 ;; Registers used:
+  1602 ;;		wreg, status,2, status,0
+  1603 ;; Tracked objects:
+  1604 ;;		On entry : 0/4
+  1605 ;;		On exit  : 0/0
+  1606 ;;		Unchanged: 0/0
+  1607 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1608 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1609 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1610 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1611 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1612 ;;Total ram usage:        1 bytes
+  1613 ;; Hardware stack levels used: 1
+  1614 ;; Hardware stack levels required when called: 1
+  1615 ;; This function calls:
+  1616 ;;		Nothing
+  1617 ;; This function is called by:
+  1618 ;;		_ENVIA_CHAR
+  1619 ;;		_LCD_CONFIG
+  1620 ;;		_ENVIA_LCD_CMD
+  1621 ;; This function uses a non-reentrant model
+  1622 ;;
+  1623                           
+  1624                           	psect	text15
+  1625   0028DA                     __ptext15:
+  1626                           	callstack 0
+  1627   0028DA                     _ENVIA_NIBBLE:
+  1628                           	callstack 123
+  1629                           
+  1630                           ;incstack = 0
+  1631                           ;ENVIA_NIBBLE@dato stored from wreg
+  1632   0028DA  6E01               	movwf	ENVIA_NIBBLE@dato^(0+1280),c
+  1633                           
+  1634                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 93: void ENVIA_NIBBLE(unsigned char dato);../20
+      +                          23-2_EL52_1_Sem10_watchma.X/LCD.c: 94: {;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 95:  LA
+      +                          TD &= 0x0F;
+  1635   0028DC  0E0F               	movlw	15
+  1636   0028DE  16C1               	andwf	193,f,c	;volatile
+  1637                           
+  1638                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 96:  dato &= 0xF0;
+  1639   0028E0  0EF0               	movlw	240
+  1640   0028E2  1601               	andwf	ENVIA_NIBBLE@dato^(0+1280),f,c
+  1641                           
+  1642                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 97:  LATD|= dato;
+  1643   0028E4  5001               	movf	ENVIA_NIBBLE@dato^(0+1280),w,c	;volatile
+  1644   0028E6  12C1               	iorwf	193,f,c	;volatile
+  1645                           
+  1646                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 98:  LATDbits.LATD2 = 1;
+  1647   0028E8  84C1               	bsf	193,2,c	;volatile
+  1648                           
+  1649                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 100:         _delay(1200);
+  1650   0028EA  0EF0               	movlw	240
+  1651   0028EC                     u367:
+  1652   0028EC  D000               	nop2	
+  1653   0028EE  2EE8               	decfsz	wreg,f,c
+  1654   0028F0  D7FD               	bra	u367
+  1655                           
+  1656                           ;../2023-2_EL52_1_Sem10_watchma.X/LCD.c: 101:  LATDbits.LATD2 = 0;
+  1657   0028F2  94C1               	bcf	193,2,c	;volatile
+  1658   0028F4  0012               	return		;funcret
+  1659   0028F6                     __end_of_ENVIA_NIBBLE:
+  1660                           	callstack 0
+  1661                           
+  1662 ;; *************** function _CCP1_ISR *****************
+  1663 ;; Defined at:
+  1664 ;;		line 79 in file "maincode01.c"
+  1665 ;; Parameters:    Size  Location     Type
+  1666 ;;		None
+  1667 ;; Auto vars:     Size  Location     Type
+  1668 ;;		None
+  1669 ;; Return value:  Size  Location     Type
+  1670 ;;                  1    wreg      void 
+  1671 ;; Registers used:
+  1672 ;;		wreg, status,2, status,0
+  1673 ;; Tracked objects:
+  1674 ;;		On entry : 0/0
+  1675 ;;		On exit  : 0/0
+  1676 ;;		Unchanged: 0/0
+  1677 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1678 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1679 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1680 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1681 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1682 ;;Total ram usage:        0 bytes
+  1683 ;; Hardware stack levels used: 1
+  1684 ;; This function calls:
+  1685 ;;		Nothing
+  1686 ;; This function is called by:
+  1687 ;;		Interrupt level 2
+  1688 ;; This function uses a non-reentrant model
+  1689 ;;
+  1690                           
+  1691                           	psect	text16
+  1692   002668                     __ptext16:
+  1693                           	callstack 0
+  1694   002668                     _CCP1_ISR:
+  1695                           	callstack 122
+  1696                           
+  1697                           ;maincode01.c: 80:     PIR3bits.CCP1IF = 0;
+  1698                           
+  1699                           ;incstack = 0
+  1700   002668  9CB1               	bcf	177,6,c	;volatile
+  1701                           
+  1702                           ;maincode01.c: 81:     if(centesimas == 99){
+  1703   00266A  0E63               	movlw	99
+  1704   00266C  1811               	xorwf	_centesimas^(0+1280),w,c
+  1705   00266E  A4D8               	btfss	status,2,c
+  1706   002670  D01B               	goto	i2l1154
+  1707                           
+  1708                           ;maincode01.c: 82:         centesimas = 0;
+  1709   002672  0E00               	movlw	0
+  1710   002674  6E11               	movwf	_centesimas^(0+1280),c
+  1711                           
+  1712                           ;maincode01.c: 83:         if(segundos == 59){
+  1713   002676  0E3B               	movlw	59
+  1714   002678  1812               	xorwf	_segundos^(0+1280),w,c
+  1715   00267A  A4D8               	btfss	status,2,c
+  1716   00267C  D013               	goto	i2l1152
+  1717                           
+  1718                           ;maincode01.c: 84:             segundos = 0;
+  1719   00267E  0E00               	movlw	0
+  1720   002680  6E12               	movwf	_segundos^(0+1280),c
+  1721                           
+  1722                           ;maincode01.c: 85:             if(minutos == 59){
+  1723   002682  0E3B               	movlw	59
+  1724   002684  1813               	xorwf	_minutos^(0+1280),w,c
+  1725   002686  A4D8               	btfss	status,2,c
+  1726   002688  D00B               	goto	i2l1150
+  1727                           
+  1728                           ;maincode01.c: 86:                 minutos = 0;
+  1729   00268A  0E00               	movlw	0
+  1730   00268C  6E13               	movwf	_minutos^(0+1280),c
+  1731                           
+  1732                           ;maincode01.c: 87:                 if(horas == 23){
+  1733   00268E  0E17               	movlw	23
+  1734   002690  1814               	xorwf	_horas^(0+1280),w,c
+  1735   002692  A4D8               	btfss	status,2,c
+  1736   002694  D003               	goto	i2l1148
+  1737                           
+  1738                           ;maincode01.c: 88:                     horas = 0;
+  1739   002696  0E00               	movlw	0
+  1740   002698  6E14               	movwf	_horas^(0+1280),c
+  1741                           
+  1742                           ;maincode01.c: 89:                 }
+  1743   00269A  0011               	retfie		f
+  1744   00269C                     i2l1148:
+  1745                           
+  1746                           ;maincode01.c: 91:                     horas++;
+  1747   00269C  2A14               	incf	_horas^(0+1280),f,c
+  1748   00269E  0011               	retfie		f
+  1749   0026A0                     i2l1150:
+  1750                           
+  1751                           ;maincode01.c: 95:                 minutos++;
+  1752   0026A0  2A13               	incf	_minutos^(0+1280),f,c
+  1753   0026A2  0011               	retfie		f
+  1754   0026A4                     i2l1152:
+  1755                           
+  1756                           ;maincode01.c: 99:             segundos++;
+  1757   0026A4  2A12               	incf	_segundos^(0+1280),f,c
+  1758   0026A6  0011               	retfie		f
+  1759   0026A8                     i2l1154:
+  1760                           
+  1761                           ;maincode01.c: 103:         centesimas++;
+  1762   0026A8  2A11               	incf	_centesimas^(0+1280),f,c
+  1763   0026AA  0011               	retfie		f
+  1764   0026AC                     __end_of_CCP1_ISR:
+  1765                           	callstack 0
+  1766                           
+  1767 ;; *************** function _INT0_ISR *****************
+  1768 ;; Defined at:
+  1769 ;;		line 107 in file "maincode01.c"
+  1770 ;; Parameters:    Size  Location     Type
+  1771 ;;		None
+  1772 ;; Auto vars:     Size  Location     Type
+  1773 ;;		None
+  1774 ;; Return value:  Size  Location     Type
+  1775 ;;                  1    wreg      void 
+  1776 ;; Registers used:
+  1777 ;;		wreg, status,2, status,0
+  1778 ;; Tracked objects:
+  1779 ;;		On entry : 0/0
+  1780 ;;		On exit  : 0/0
+  1781 ;;		Unchanged: 0/0
+  1782 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1783 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1784 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1785 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1786 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1787 ;;Total ram usage:        0 bytes
+  1788 ;; Hardware stack levels used: 1
+  1789 ;; This function calls:
+  1790 ;;		Nothing
+  1791 ;; This function is called by:
+  1792 ;;		Interrupt level 2
+  1793 ;; This function uses a non-reentrant model
+  1794 ;;
+  1795                           
+  1796                           	psect	text17
+  1797   0028F8                     __ptext17:
+  1798                           	callstack 0
+  1799   0028F8                     _INT0_ISR:
+  1800                           	callstack 122
+  1801                           
+  1802                           ;maincode01.c: 108:     PIR1bits.INT0IF = 0;
+  1803                           
+  1804                           ;incstack = 0
+  1805   0028F8  90AF               	bcf	175,0,c	;volatile
+  1806                           
+  1807                           ;maincode01.c: 109:     if(horas == 23){
+  1808   0028FA  0E17               	movlw	23
+  1809   0028FC  1814               	xorwf	_horas^(0+1280),w,c
+  1810   0028FE  A4D8               	btfss	status,2,c
+  1811   002900  D003               	goto	i2l1162
+  1812                           
+  1813                           ;maincode01.c: 110:         horas = 0;
+  1814   002902  0E00               	movlw	0
+  1815   002904  6E14               	movwf	_horas^(0+1280),c
+  1816                           
+  1817                           ;maincode01.c: 111:     }
+  1818   002906  0011               	retfie		f
+  1819   002908                     i2l1162:
+  1820                           
+  1821                           ;maincode01.c: 113:         horas++;
+  1822   002908  2A14               	incf	_horas^(0+1280),f,c
+  1823   00290A  0011               	retfie		f
+  1824   00290C                     __end_of_INT0_ISR:
+  1825                           	callstack 0
+  1826                           
+  1827 ;; *************** function _INT1_ISR *****************
+  1828 ;; Defined at:
+  1829 ;;		line 117 in file "maincode01.c"
+  1830 ;; Parameters:    Size  Location     Type
+  1831 ;;		None
+  1832 ;; Auto vars:     Size  Location     Type
+  1833 ;;		None
+  1834 ;; Return value:  Size  Location     Type
+  1835 ;;                  1    wreg      void 
+  1836 ;; Registers used:
+  1837 ;;		wreg, status,2, status,0
+  1838 ;; Tracked objects:
+  1839 ;;		On entry : 0/0
+  1840 ;;		On exit  : 0/0
+  1841 ;;		Unchanged: 0/0
+  1842 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1843 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1844 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1845 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1846 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1847 ;;Total ram usage:        0 bytes
+  1848 ;; Hardware stack levels used: 1
+  1849 ;; This function calls:
+  1850 ;;		Nothing
+  1851 ;; This function is called by:
+  1852 ;;		Interrupt level 2
+  1853 ;; This function uses a non-reentrant model
+  1854 ;;
+  1855                           
+  1856                           	psect	text18
+  1857   00290C                     __ptext18:
+  1858                           	callstack 0
+  1859   00290C                     _INT1_ISR:
+  1860                           	callstack 122
+  1861                           
+  1862                           ;maincode01.c: 118:     PIR6bits.INT1IF = 0;
+  1863                           
+  1864                           ;incstack = 0
+  1865   00290C  90B4               	bcf	180,0,c	;volatile
+  1866                           
+  1867                           ;maincode01.c: 119:     if(minutos == 59){
+  1868   00290E  0E3B               	movlw	59
+  1869   002910  1813               	xorwf	_minutos^(0+1280),w,c
+  1870   002912  A4D8               	btfss	status,2,c
+  1871   002914  D003               	goto	i2l1170
+  1872                           
+  1873                           ;maincode01.c: 120:         minutos = 0;
+  1874   002916  0E00               	movlw	0
+  1875   002918  6E13               	movwf	_minutos^(0+1280),c
+  1876                           
+  1877                           ;maincode01.c: 121:     }
+  1878   00291A  0011               	retfie		f
+  1879   00291C                     i2l1170:
+  1880                           
+  1881                           ;maincode01.c: 123:         minutos++;
+  1882   00291C  2A13               	incf	_minutos^(0+1280),f,c
+  1883   00291E  0011               	retfie		f
+  1884   002920                     __end_of_INT1_ISR:
+  1885                           	callstack 0
+  1886                           
+  1887                           ;
+  1888                           ; Interrupt Vector Table @ 0x8
+  1889                           ;
+  1890                           
+  1891                           	psect	ivt0x8
+  1892   000008                     __pivt0x8:
+  1893                           	callstack 0
+  1894   000008                     ivt0x8_base:
+  1895                           	callstack 0
+  1896                           
+  1897                           ; Vector 0 : SWINT
+  1898   000008  0040               	dw	ivt0x8_undefint shr (0+2)
+  1899                           
+  1900                           ; Vector 1 : HLVD
+  1901   00000A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1902                           
+  1903                           ; Vector 2 : OSF
+  1904   00000C  0040               	dw	ivt0x8_undefint shr (0+2)
+  1905                           
+  1906                           ; Vector 3 : CSW
+  1907   00000E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1908                           
+  1909                           ; Vector 4 : Undefined
+  1910   000010  0040               	dw	ivt0x8_undefint shr (0+2)
+  1911                           
+  1912                           ; Vector 5 : CLC1
+  1913   000012  0040               	dw	ivt0x8_undefint shr (0+2)
+  1914                           
+  1915                           ; Vector 6 : Undefined
+  1916   000014  0040               	dw	ivt0x8_undefint shr (0+2)
+  1917                           
+  1918                           ; Vector 7 : IOC
+  1919   000016  0040               	dw	ivt0x8_undefint shr (0+2)
+  1920                           
+  1921                           ; Vector 8 : INT0
+  1922   000018  0A3E               	dw	_INT0_ISR shr (0+2)
+  1923                           
+  1924                           ; Vector 9 : ZCD
+  1925   00001A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1926                           
+  1927                           ; Vector 10 : AD
+  1928   00001C  0040               	dw	ivt0x8_undefint shr (0+2)
+  1929                           
+  1930                           ; Vector 11 : ACT
+  1931   00001E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1932                           
+  1933                           ; Vector 12 : CMP1
+  1934   000020  0040               	dw	ivt0x8_undefint shr (0+2)
+  1935                           
+  1936                           ; Vector 13 : SMT1
+  1937   000022  0040               	dw	ivt0x8_undefint shr (0+2)
+  1938                           
+  1939                           ; Vector 14 : SMT1PRA
+  1940   000024  0040               	dw	ivt0x8_undefint shr (0+2)
+  1941                           
+  1942                           ; Vector 15 : SMT1PRW
+  1943   000026  0040               	dw	ivt0x8_undefint shr (0+2)
+  1944                           
+  1945                           ; Vector 16 : ADT
+  1946   000028  0040               	dw	ivt0x8_undefint shr (0+2)
+  1947                           
+  1948                           ; Vector 17 : Undefined
+  1949   00002A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1950                           
+  1951                           ; Vector 18 : Undefined
+  1952   00002C  0040               	dw	ivt0x8_undefint shr (0+2)
+  1953                           
+  1954                           ; Vector 19 : Undefined
+  1955   00002E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1956                           
+  1957                           ; Vector 20 : DMA1SCNT
+  1958   000030  0040               	dw	ivt0x8_undefint shr (0+2)
+  1959                           
+  1960                           ; Vector 21 : DMA1DCNT
+  1961   000032  0040               	dw	ivt0x8_undefint shr (0+2)
+  1962                           
+  1963                           ; Vector 22 : DMA1OR
+  1964   000034  0040               	dw	ivt0x8_undefint shr (0+2)
+  1965                           
+  1966                           ; Vector 23 : DMA1A
+  1967   000036  0040               	dw	ivt0x8_undefint shr (0+2)
+  1968                           
+  1969                           ; Vector 24 : SPI1RX
+  1970   000038  0040               	dw	ivt0x8_undefint shr (0+2)
+  1971                           
+  1972                           ; Vector 25 : SPI1TX
+  1973   00003A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1974                           
+  1975                           ; Vector 26 : SPI1
+  1976   00003C  0040               	dw	ivt0x8_undefint shr (0+2)
+  1977                           
+  1978                           ; Vector 27 : TMR2
+  1979   00003E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1980                           
+  1981                           ; Vector 28 : TMR1
+  1982   000040  0040               	dw	ivt0x8_undefint shr (0+2)
+  1983                           
+  1984                           ; Vector 29 : TMR1G
+  1985   000042  0040               	dw	ivt0x8_undefint shr (0+2)
+  1986                           
+  1987                           ; Vector 30 : CCP1
+  1988   000044  099A               	dw	_CCP1_ISR shr (0+2)
+  1989                           
+  1990                           ; Vector 31 : TMR0
+  1991   000046  0040               	dw	ivt0x8_undefint shr (0+2)
+  1992                           
+  1993                           ; Vector 32 : U1RX
+  1994   000048  0040               	dw	ivt0x8_undefint shr (0+2)
+  1995                           
+  1996                           ; Vector 33 : U1TX
+  1997   00004A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1998                           
+  1999                           ; Vector 34 : U1E
+  2000   00004C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2001                           
+  2002                           ; Vector 35 : U1
+  2003   00004E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2004                           
+  2005                           ; Vector 36 : Undefined
+  2006   000050  0040               	dw	ivt0x8_undefint shr (0+2)
+  2007                           
+  2008                           ; Vector 37 : Undefined
+  2009   000052  0040               	dw	ivt0x8_undefint shr (0+2)
+  2010                           
+  2011                           ; Vector 38 : PWM1PR
+  2012   000054  0040               	dw	ivt0x8_undefint shr (0+2)
+  2013                           
+  2014                           ; Vector 39 : PWM1
+  2015   000056  0040               	dw	ivt0x8_undefint shr (0+2)
+  2016                           
+  2017                           ; Vector 40 : SPI2RX
+  2018   000058  0040               	dw	ivt0x8_undefint shr (0+2)
+  2019                           
+  2020                           ; Vector 41 : SPI2TX
+  2021   00005A  0040               	dw	ivt0x8_undefint shr (0+2)
+  2022                           
+  2023                           ; Vector 42 : SPI2
+  2024   00005C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2025                           
+  2026                           ; Vector 43 : Undefined
+  2027   00005E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2028                           
+  2029                           ; Vector 44 : TMR3
+  2030   000060  0040               	dw	ivt0x8_undefint shr (0+2)
+  2031                           
+  2032                           ; Vector 45 : TMR3G
+  2033   000062  0040               	dw	ivt0x8_undefint shr (0+2)
+  2034                           
+  2035                           ; Vector 46 : PWM2PR
+  2036   000064  0040               	dw	ivt0x8_undefint shr (0+2)
+  2037                           
+  2038                           ; Vector 47 : PWM2
+  2039   000066  0040               	dw	ivt0x8_undefint shr (0+2)
+  2040                           
+  2041                           ; Vector 48 : INT1
+  2042   000068  0A43               	dw	_INT1_ISR shr (0+2)
+  2043                           
+  2044                           ; Vector 49 : CLC2
+  2045   00006A  0040               	dw	ivt0x8_undefint shr (0+2)
+  2046                           
+  2047                           ; Vector 50 : CWG1
+  2048   00006C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2049                           
+  2050                           ; Vector 51 : NCO1
+  2051   00006E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2052                           
+  2053                           ; Vector 52 : DMA2SCNT
+  2054   000070  0040               	dw	ivt0x8_undefint shr (0+2)
+  2055                           
+  2056                           ; Vector 53 : DMA2DCNT
+  2057   000072  0040               	dw	ivt0x8_undefint shr (0+2)
+  2058                           
+  2059                           ; Vector 54 : DMA2OR
+  2060   000074  0040               	dw	ivt0x8_undefint shr (0+2)
+  2061                           
+  2062                           ; Vector 55 : DMA2A
+  2063   000076  0040               	dw	ivt0x8_undefint shr (0+2)
+  2064                           
+  2065                           ; Vector 56 : I2C1RX
+  2066   000078  0040               	dw	ivt0x8_undefint shr (0+2)
+  2067                           
+  2068                           ; Vector 57 : I2C1TX
+  2069   00007A  0040               	dw	ivt0x8_undefint shr (0+2)
+  2070                           
+  2071                           ; Vector 58 : I2C1
+  2072   00007C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2073                           
+  2074                           ; Vector 59 : I2C1E
+  2075   00007E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2076                           
+  2077                           ; Vector 60 : Undefined
+  2078   000080  0040               	dw	ivt0x8_undefint shr (0+2)
+  2079                           
+  2080                           ; Vector 61 : CLC3
+  2081   000082  0040               	dw	ivt0x8_undefint shr (0+2)
+  2082                           
+  2083                           ; Vector 62 : PWM3PR
+  2084   000084  0040               	dw	ivt0x8_undefint shr (0+2)
+  2085                           
+  2086                           ; Vector 63 : PWM3
+  2087   000086  0040               	dw	ivt0x8_undefint shr (0+2)
+  2088                           
+  2089                           ; Vector 64 : U2RX
+  2090   000088  0040               	dw	ivt0x8_undefint shr (0+2)
+  2091                           
+  2092                           ; Vector 65 : U2TX
+  2093   00008A  0040               	dw	ivt0x8_undefint shr (0+2)
+  2094                           
+  2095                           ; Vector 66 : U2E
+  2096   00008C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2097                           
+  2098                           ; Vector 67 : U2
+  2099   00008E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2100                           
+  2101                           ; Vector 68 : TMR5
+  2102   000090  0040               	dw	ivt0x8_undefint shr (0+2)
+  2103                           
+  2104                           ; Vector 69 : TMR5G
+  2105   000092  0040               	dw	ivt0x8_undefint shr (0+2)
+  2106                           
+  2107                           ; Vector 70 : CCP2
+  2108   000094  0040               	dw	ivt0x8_undefint shr (0+2)
+  2109                           
+  2110                           ; Vector 71 : SCAN
+  2111   000096  0040               	dw	ivt0x8_undefint shr (0+2)
+  2112                           
+  2113                           ; Vector 72 : U3RX
+  2114   000098  0040               	dw	ivt0x8_undefint shr (0+2)
+  2115                           
+  2116                           ; Vector 73 : U3TX
+  2117   00009A  0040               	dw	ivt0x8_undefint shr (0+2)
+  2118                           
+  2119                           ; Vector 74 : U3E
+  2120   00009C  0040               	dw	ivt0x8_undefint shr (0+2)
+  2121                           
+  2122                           ; Vector 75 : U3
+  2123   00009E  0040               	dw	ivt0x8_undefint shr (0+2)
+  2124                           
+  2125                           ; Vector 76 : Undefined
+  2126   0000A0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2127                           
+  2128                           ; Vector 77 : CLC4
+  2129   0000A2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2130                           
+  2131                           ; Vector 78 : Undefined
+  2132   0000A4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2133                           
+  2134                           ; Vector 79 : Undefined
+  2135   0000A6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2136                           
+  2137                           ; Vector 80 : INT2
+  2138   0000A8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2139                           
+  2140                           ; Vector 81 : CLC5
+  2141   0000AA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2142                           
+  2143                           ; Vector 82 : CWG2
+  2144   0000AC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2145                           
+  2146                           ; Vector 83 : NCO2
+  2147   0000AE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2148                           
+  2149                           ; Vector 84 : DMA3SCNT
+  2150   0000B0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2151                           
+  2152                           ; Vector 85 : DMA3DCNT
+  2153   0000B2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2154                           
+  2155                           ; Vector 86 : DMA3OR
+  2156   0000B4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2157                           
+  2158                           ; Vector 87 : DMA3A
+  2159   0000B6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2160                           
+  2161                           ; Vector 88 : CCP3
+  2162   0000B8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2163                           
+  2164                           ; Vector 89 : CLC6
+  2165   0000BA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2166                           
+  2167                           ; Vector 90 : CWG3
+  2168   0000BC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2169                           
+  2170                           ; Vector 91 : TMR4
+  2171   0000BE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2172                           
+  2173                           ; Vector 92 : DMA4SCNT
+  2174   0000C0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2175                           
+  2176                           ; Vector 93 : DMA4DCNT
+  2177   0000C2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2178                           
+  2179                           ; Vector 94 : DMA4OR
+  2180   0000C4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2181                           
+  2182                           ; Vector 95 : DMA4A
+  2183   0000C6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2184                           
+  2185                           ; Vector 96 : U4RX
+  2186   0000C8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2187                           
+  2188                           ; Vector 97 : U4TX
+  2189   0000CA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2190                           
+  2191                           ; Vector 98 : U4E
+  2192   0000CC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2193                           
+  2194                           ; Vector 99 : U4
+  2195   0000CE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2196                           
+  2197                           ; Vector 100 : DMA5SCNT
+  2198   0000D0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2199                           
+  2200                           ; Vector 101 : DMA5DCNT
+  2201   0000D2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2202                           
+  2203                           ; Vector 102 : DMA5OR
+  2204   0000D4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2205                           
+  2206                           ; Vector 103 : DMA5A
+  2207   0000D6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2208                           
+  2209                           ; Vector 104 : U5RX
+  2210   0000D8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2211                           
+  2212                           ; Vector 105 : U5TX
+  2213   0000DA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2214                           
+  2215                           ; Vector 106 : U5E
+  2216   0000DC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2217                           
+  2218                           ; Vector 107 : U5
+  2219   0000DE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2220                           
+  2221                           ; Vector 108 : DMA6SCNT
+  2222   0000E0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2223                           
+  2224                           ; Vector 109 : DMA6DCNT
+  2225   0000E2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2226                           
+  2227                           ; Vector 110 : DMA6OR
+  2228   0000E4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2229                           
+  2230                           ; Vector 111 : DMA6A
+  2231   0000E6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2232                           
+  2233                           ; Vector 112 : Undefined
+  2234   0000E8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2235                           
+  2236                           ; Vector 113 : CLC7
+  2237   0000EA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2238                           
+  2239                           ; Vector 114 : CMP2
+  2240   0000EC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2241                           
+  2242                           ; Vector 115 : NCO3
+  2243   0000EE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2244                           
+  2245                           ; Vector 116 : Undefined
+  2246   0000F0  0040               	dw	ivt0x8_undefint shr (0+2)
+  2247                           
+  2248                           ; Vector 117 : Undefined
+  2249   0000F2  0040               	dw	ivt0x8_undefint shr (0+2)
+  2250                           
+  2251                           ; Vector 118 : Undefined
+  2252   0000F4  0040               	dw	ivt0x8_undefint shr (0+2)
+  2253                           
+  2254                           ; Vector 119 : Undefined
+  2255   0000F6  0040               	dw	ivt0x8_undefint shr (0+2)
+  2256                           
+  2257                           ; Vector 120 : NVM
+  2258   0000F8  0040               	dw	ivt0x8_undefint shr (0+2)
+  2259                           
+  2260                           ; Vector 121 : CLC8
+  2261   0000FA  0040               	dw	ivt0x8_undefint shr (0+2)
+  2262                           
+  2263                           ; Vector 122 : CRC
+  2264   0000FC  0040               	dw	ivt0x8_undefint shr (0+2)
+  2265                           
+  2266                           ; Vector 123 : TMR6
+  2267   0000FE  0040               	dw	ivt0x8_undefint shr (0+2)
+  2268   000100                     ivt0x8_undefint:
+  2269                           	callstack 0
+  2270   000100  00FF               	reset	
+  2271                           
+  2272                           	psect	rparam
+  2273   000000                     
+  2274                           	psect	config
+  2275                           
+  2276                           ;Config register CONFIG1 @ 0x300000
+  2277                           ;	External Oscillator Selection
+  2278                           ;	FEXTOSC = OFF, Oscillator not enabled
+  2279                           ;	Reset Oscillator Selection
+  2280                           ;	RSTOSC = EXTOSC, EXTOSC operating per FEXTOSC bits (device manufacturing default)
+  2281   300000                     	org	3145728
+  2282   300000  FC                 	db	252
+  2283                           
+  2284                           ;Config register CONFIG2 @ 0x300001
+  2285                           ;	Clock out Enable bit
+  2286                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+  2287                           ;	PRLOCKED One-Way Set Enable bit
+  2288                           ;	PR1WAY = ON, PRLOCKED bit can be cleared and set only once
+  2289                           ;	Clock Switch Enable bit
+  2290                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+  2291                           ;	Fail-Safe Clock Monitor Enable bit
+  2292                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+  2293   300001                     	org	3145729
+  2294   300001  FF                 	db	255
+  2295                           
+  2296                           ;Config register CONFIG3 @ 0x300002
+  2297                           ;	MCLR Enable bit
+  2298                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+  2299                           ;	Power-up timer selection bits
+  2300                           ;	PWRTS = PWRT_64, PWRT set at 64ms
+  2301                           ;	Multi-vector enable bit
+  2302                           ;	MVECEN = ON, Multi-vector enabled, Vector table used for interrupts
+  2303                           ;	IVTLOCK bit One-way set enable bit
+  2304                           ;	IVT1WAY = ON, IVTLOCKED bit can be cleared and set only once
+  2305                           ;	Low Power BOR Enable bit
+  2306                           ;	LPBOREN = OFF, Low-Power BOR disabled
+  2307                           ;	Brown-out Reset Enable bits
+  2308                           ;	BOREN = OFF, Brown-out Reset disabled
+  2309   300002                     	org	3145730
+  2310   300002  3D                 	db	61
+  2311                           
+  2312                           ;Config register CONFIG4 @ 0x300003
+  2313                           ;	Brown-out Reset Voltage Selection bits
+  2314                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+  2315                           ;	ZCD Disable bit
+  2316                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+  2317                           ;	PPSLOCK bit One-Way Set Enable bit
+  2318                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+  2319                           ;	Stack Full/Underflow Reset Enable bit
+  2320                           ;	STVREN = ON, Stack full/underflow will cause Reset
+  2321                           ;	Low Voltage Programming Enable bit
+  2322                           ;	LVP = OFF, HV on MCLR/VPP must be used for programming
+  2323                           ;	Extended Instruction Set Enable bit
+  2324                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+  2325   300003                     	org	3145731
+  2326   300003  DF                 	db	223
+  2327                           
+  2328                           ;Config register CONFIG5 @ 0x300004
+  2329                           ;	WDT Period selection bits
+  2330                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+  2331                           ;	WDT operating mode
+  2332                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+  2333   300004                     	org	3145732
+  2334   300004  9F                 	db	159
+  2335                           
+  2336                           ;Config register CONFIG6 @ 0x300005
+  2337                           ;	WDT Window Select bits
+  2338                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+  2339                           ;	WDT input clock selector
+  2340                           ;	WDTCCS = SC, Software Control
+  2341   300005                     	org	3145733
+  2342   300005  FF                 	db	255
+  2343                           
+  2344                           ;Config register CONFIG7 @ 0x300006
+  2345                           ;	Boot Block Size selection bits
+  2346                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+  2347                           ;	Boot Block enable bit
+  2348                           ;	BBEN = OFF, Boot block disabled
+  2349                           ;	Storage Area Flash enable bit
+  2350                           ;	SAFEN = OFF, SAF disabled
+  2351                           ;	Background Debugger
+  2352                           ;	DEBUG = OFF, Background Debugger disabled
+  2353   300006                     	org	3145734
+  2354   300006  FF                 	db	255
+  2355                           
+  2356                           ;Config register CONFIG8 @ 0x300007
+  2357                           ;	Boot Block Write Protection bit
+  2358                           ;	WRTB = OFF, Boot Block not Write protected
+  2359                           ;	Configuration Register Write Protection bit
+  2360                           ;	WRTC = OFF, Configuration registers not Write protected
+  2361                           ;	Data EEPROM Write Protection bit
+  2362                           ;	WRTD = OFF, Data EEPROM not Write protected
+  2363                           ;	SAF Write protection bit
+  2364                           ;	WRTSAF = OFF, SAF not Write Protected
+  2365                           ;	Application Block write protection bit
+  2366                           ;	WRTAPP = OFF, Application Block not write protected
+  2367   300007                     	org	3145735
+  2368   300007  FF                 	db	255
+  2369                           
+  2370                           ;Config register CONFIG10 @ 0x300009
+  2371                           ;	PFM and Data EEPROM Code Protection bit
+  2372                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+  2373   300009                     	org	3145737
+  2374   300009  FF                 	db	255
+  2375                           tosu	equ	0x4FF
+  2376                           tosh	equ	0x4FE
+  2377                           tosl	equ	0x4FD
+  2378                           stkptr	equ	0x4FC
+  2379                           pclatu	equ	0x4FB
+  2380                           pclath	equ	0x4FA
+  2381                           pcl	equ	0x4F9
+  2382                           tblptru	equ	0x4F8
+  2383                           tblptrh	equ	0x4F7
+  2384                           tblptrl	equ	0x4F6
+  2385                           tablat	equ	0x4F5
+  2386                           prodh	equ	0x4F4
+  2387                           prodl	equ	0x4F3
+  2388                           indf0	equ	0x4EF
+  2389                           postinc0	equ	0x4EE
+  2390                           postdec0	equ	0x4ED
+  2391                           preinc0	equ	0x4EC
+  2392                           plusw0	equ	0x4EB
+  2393                           fsr0h	equ	0x4EA
+  2394                           fsr0l	equ	0x4E9
+  2395                           wreg	equ	0x4E8
+  2396                           indf1	equ	0x4E7
+  2397                           postinc1	equ	0x4E6
+  2398                           postdec1	equ	0x4E5
+  2399                           preinc1	equ	0x4E4
+  2400                           plusw1	equ	0x4E3
+  2401                           fsr1h	equ	0x4E2
+  2402                           fsr1l	equ	0x4E1
+  2403                           bsr	equ	0x4E0
+  2404                           indf2	equ	0x4DF
+  2405                           postinc2	equ	0x4DE
+  2406                           postdec2	equ	0x4DD
+  2407                           preinc2	equ	0x4DC
+  2408                           plusw2	equ	0x4DB
+  2409                           fsr2h	equ	0x4DA
+  2410                           fsr2l	equ	0x4D9
+  2411                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     15
+    Constant    0
+    Data        2
+    BSS         8
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     10      20
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    ESCRIBE_MENSAJE@cadena	PTR const unsigned char  size(1) Largest target is 15
+		 -> STR_1(CODE[15]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_convierte
+    _lcd_init->_CURSOR_ONOFF
+    _lcd_init->_LCD_CONFIG
+    _LCD_CONFIG->_ENVIA_LCD_CMD
+    _CURSOR_ONOFF->_ENVIA_LCD_CMD
+    _CURSOR_HOME->_ENVIA_LCD_CMD
+    _BORRAR_LCD->_ENVIA_LCD_CMD
+    _convierte->___lbdiv
+    ___lbdiv->___lbmod
+    _POS_CURSOR->_ENVIA_LCD_CMD
+    _ENVIA_LCD_CMD->_ENVIA_NIBBLE
+    _ENVIA_LCD_CMD->_LEER_LCD
+    _ESCRIBE_MENSAJE->_ENVIA_CHAR
+    _ENVIA_CHAR->_ENVIA_NIBBLE
+    _ENVIA_CHAR->_LEER_LCD
+
+Critical Paths under _CCP1_ISR in COMRAM
+
+    None.
+
+Critical Paths under _INT0_ISR in COMRAM
+
+    None.
+
+Critical Paths under _INT1_ISR in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK5
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK5
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK6
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK6
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK7
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK7
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK8
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK8
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK9
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK9
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK10
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK10
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK11
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK11
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK12
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK12
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK13
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK13
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK14
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK14
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK15
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK15
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK16
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK16
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK17
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK17
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK18
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK18
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK19
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK19
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK20
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK20
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK21
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK21
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK22
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK22
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK23
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK23
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK24
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK24
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK25
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK25
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK26
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK26
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK27
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK27
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK28
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK28
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK29
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK29
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK30
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK30
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK31
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK31
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK32
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK32
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK33
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK33
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK34
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK34
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK35
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK35
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Critical Paths under _CCP1_ISR in BANK36
+
+    None.
+
+Critical Paths under _INT0_ISR in BANK36
+
+    None.
+
+Critical Paths under _INT1_ISR in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0    2059
+                         _ENVIA_CHAR
+                    _ESCRIBE_MENSAJE
+                         _POS_CURSOR
+                          _configuro
+                          _convierte
+                           _lcd_init
+ ---------------------------------------------------------------------------------
+ (1) _lcd_init                                             2     2      0     525
+                                              4 COMRAM     2     2      0
+                         _BORRAR_LCD
+                        _CURSOR_HOME
+                       _CURSOR_ONOFF
+                         _LCD_CONFIG
+ ---------------------------------------------------------------------------------
+ (2) _LCD_CONFIG                                           1     1      0     135
+                                              3 COMRAM     1     1      0
+                      _ENVIA_LCD_CMD
+                       _ENVIA_NIBBLE
+ ---------------------------------------------------------------------------------
+ (2) _CURSOR_ONOFF                                         1     1      0     150
+                                              3 COMRAM     1     1      0
+                      _ENVIA_LCD_CMD
+ ---------------------------------------------------------------------------------
+ (2) _CURSOR_HOME                                          0     0      0     120
+                      _ENVIA_LCD_CMD
+ ---------------------------------------------------------------------------------
+ (2) _BORRAR_LCD                                           0     0      0     120
+                      _ENVIA_LCD_CMD
+ ---------------------------------------------------------------------------------
+ (1) _convierte                                            2     2      0     691
+                                              8 COMRAM     2     2      0
+                            ___lbdiv
+                            ___lbmod
+ ---------------------------------------------------------------------------------
+ (2) ___lbmod                                              4     3      1     311
+                                              0 COMRAM     4     3      1
+ ---------------------------------------------------------------------------------
+ (2) ___lbdiv                                              4     3      1     314
+                                              4 COMRAM     4     3      1
+                            ___lbmod (ARG)
+ ---------------------------------------------------------------------------------
+ (1) _configuro                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _POS_CURSOR                                           2     1      1     360
+                                              3 COMRAM     2     1      1
+                      _ENVIA_LCD_CMD
+ ---------------------------------------------------------------------------------
+ (3) _ENVIA_LCD_CMD                                        2     2      0     120
+                                              1 COMRAM     2     2      0
+                       _ENVIA_NIBBLE
+                           _LEER_LCD
+ ---------------------------------------------------------------------------------
+ (1) _ESCRIBE_MENSAJE                                      4     2      2     363
+                                              3 COMRAM     4     2      2
+                         _ENVIA_CHAR
+ ---------------------------------------------------------------------------------
+ (2) _ENVIA_CHAR                                           2     2      0     120
+                                              1 COMRAM     2     2      0
+                       _ENVIA_NIBBLE
+                           _LEER_LCD
+ ---------------------------------------------------------------------------------
+ (4) _LEER_LCD                                             1     1      0      45
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (3) _ENVIA_NIBBLE                                         1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _CCP1_ISR                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _INT0_ISR                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (5) _INT1_ISR                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _ENVIA_CHAR
+     _ENVIA_NIBBLE
+     _LEER_LCD
+   _ESCRIBE_MENSAJE
+     _ENVIA_CHAR
+   _POS_CURSOR
+     _ENVIA_LCD_CMD
+       _ENVIA_NIBBLE
+       _LEER_LCD
+   _configuro
+   _convierte
+     ___lbdiv
+       ___lbmod (ARG)
+     ___lbmod
+   _lcd_init
+     _BORRAR_LCD
+       _ENVIA_LCD_CMD
+     _CURSOR_HOME
+       _ENVIA_LCD_CMD
+     _CURSOR_ONOFF
+       _ENVIA_LCD_CMD
+     _LCD_CONFIG
+       _ENVIA_LCD_CMD
+       _ENVIA_NIBBLE
+
+ _CCP1_ISR (ROOT)
+
+ _INT0_ISR (ROOT)
+
+ _INT1_ISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM            1FFF      0       0      70        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBIGSFRhhhlll    26A      0       0      87        0.0%
+BITBIGSFR_1        100      0       0      69        0.0%
+BITBANK36          100      0       0      67        0.0%
+BANK36             100      0       0      68        0.0%
+BITBANK35          100      0       0      65        0.0%
+BANK35             100      0       0      66        0.0%
+BITBANK34          100      0       0      63        0.0%
+BANK34             100      0       0      64        0.0%
+BITBANK33          100      0       0      61        0.0%
+BANK33             100      0       0      62        0.0%
+BITBANK32          100      0       0      59        0.0%
+BANK32             100      0       0      60        0.0%
+BITBANK31          100      0       0      57        0.0%
+BANK31             100      0       0      58        0.0%
+BITBANK30          100      0       0      55        0.0%
+BANK30             100      0       0      56        0.0%
+BITBANK29          100      0       0      53        0.0%
+BANK29             100      0       0      54        0.0%
+BITBANK28          100      0       0      51        0.0%
+BANK28             100      0       0      52        0.0%
+BITBANK27          100      0       0      49        0.0%
+BANK27             100      0       0      50        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBIGSFRhhhllh     C5      0       0      84        0.0%
+BITBIGSFRl          AD      0       0      90        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITBIGSFRhhhlhl     86      0       0      82        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      A      14       1       21.1%
+BITBIGSFRhhhhh      29      0       0      71        0.0%
+BITBIGSFRhhhllh     1E      0       0      85        0.0%
+BITBIGSFRhhhlhl      E      0       0      83        0.0%
+BITBIGSFRhhhlhh      C      0       0      76        0.0%
+BITBIGSFRhhhlhh      A      0       0      79        0.0%
+BITBIGSFRhhhhlh      7      0       0      73        0.0%
+BITBIGSFRhhhlhh      5      0       0      75        0.0%
+BITBIGSFRhhhhlh      4      0       0      72        0.0%
+BITBIGSFRhl          3      0       0      89        0.0%
+BITBIGSFRhhhlhh      2      0       0      77        0.0%
+BITBIGSFRhhhlhh      2      0       0      80        0.0%
+BITBIGSFRhhhlll      2      0       0      86        0.0%
+BITBIGSFRhhhlhh      1      0       0      78        0.0%
+BITBIGSFRhhhlhl      1      0       0      81        0.0%
+BITBIGSFRhhhhll      1      0       0      74        0.0%
+BITBIGSFRhhl         1      0       0      88        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      14      48        0.0%
+DATA                 0      0      14       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                   Thu Oct 19 21:13:41 2023
+
+          ENVIA_CHAR@aux 0503                      l181 25DA                      l900 25FE  
+                    l962 28CC                      l884 25D0                      u307 25B2  
+                    u180 278C                      u317 25C0                      u327 25CA  
+                    u247 27C2                      u337 25DE                      u257 2618  
+                    u347 25EC                      u267 2626                      u357 25F6  
+                    u277 2636                      u367 28EC                      u287 27EE  
+                    u297 2822              LEER_LCD@aux 0501                      wreg 04E8  
+           ?_CURSOR_HOME 0501           ??_ENVIA_NIBBLE 0501           ENVIA_CHAR@dato 0502  
+                   l1200 2852                     l1220 28AC                     l1230 2890  
+                   l1208 286A                     l1240 2530                     l1226 287C  
+                   l1190 279E                     l1182 2788                     l1178 2782  
+                   l1194 27A6                     STR_1 2501                     _LATD 04C1  
+                   _main 2512         __end_of_CCP1_ISR 26AC                     start 0102  
+          ?_CURSOR_ONOFF 0501             ___param_bank 0000          ??_ENVIA_LCD_CMD 0502  
+       __end_of_LEER_LCD 2608         __end_of_INT0_ISR 290C         __end_of_INT1_ISR 2920  
+                  ?_main 0501          __end_of___lbdiv 27AA          __end_of___lbmod 2872  
+                  _T1CLK 0321                    _T1CON 031E                    _OSCEN 00B3  
+                  _PORTD 04D1                    _TRISD 04C9                    _horas 0514  
+            ?_POS_CURSOR 0504                    tablat 04F5                    status 04D8  
+        ___lbdiv@divisor 0505          ___lbdiv@counter 0507           ??_CURSOR_ONOFF 0504  
+        __initialization 2730             __end_of_main 25A6          _ESCRIBE_MENSAJE 2872  
+                 ??_main 050B            __activetblptr 0001                   _CCPR1H 0341  
+                 _CCPR1L 0340                   _ANSELD 0418                   i2l1150 26A0  
+                 i2l1152 26A4                   i2l1170 291C                   i2l1162 2908  
+                 i2l1154 26A8                   i2l1148 269C                   _OSCFRQ 00B1  
+       __end_of_lcd_init 27E0                   _decena 050D                ??___lbdiv 0506  
+   __end_of_ENVIA_NIBBLE 28F6                ??___lbmod 0502                   clear_0 274E  
+                 isa$std 0001                   _unidad 050B                ?_CCP1_ISR 0501  
+           __pdataCOMRAM 0513             __mediumconst 0000                   tblptrh 04F7  
+                 tblptrl 04F6                   tblptru 04F8             ??_BORRAR_LCD 0504  
+       ___lbdiv@dividend 0506          ___lbmod@divisor 0501                ?_LEER_LCD 0501  
+             __accesstop 0560  __end_of__initialization 2762          ___lbmod@counter 0503  
+              ?_INT0_ISR 0501                ?_INT1_ISR 0501             ??_LCD_CONFIG 0504  
+          ___rparam_used 0001             ??_ENVIA_CHAR 0502  __end_of_ESCRIBE_MENSAJE 289A  
+         __pcstackCOMRAM 0501           ivt0x8_undefint 0100       __end_of_BORRAR_LCD 2930  
+       ___lbdiv@quotient 0508               ??_CCP1_ISR 0501         ENVIA_LCD_CMD@aux 0503  
+   __end_of_CURSOR_ONOFF 28DA       __end_of_LCD_CONFIG 2668       __end_of_ENVIA_CHAR 2848  
+             ??_LEER_LCD 0501         ENVIA_NIBBLE@dato 0501               ??_INT0_ISR 0501  
+             ??_INT1_ISR 0501                  IVTBASEH 045E                  IVTBASEL 045D  
+                IVTBASEU 045F               _centesimas 0511                  _CCP1CON 0342  
+                _OSCCON1 00AD             ??_POS_CURSOR 0505                ?_lcd_init 0501  
+                __Hparam 0000                  __Lparam 0000         ?_ESCRIBE_MENSAJE 0504  
+      __end_of_configuro 2730                  ___lbdiv 2770                  ___lbmod 2848  
+           __psmallconst 2500    __end_of_ENVIA_LCD_CMD 2814        __end_of_convierte 26EE  
+                __pcinit 2730       __end_of_POS_CURSOR 28BE                  __ramtop 2500  
+                _centena 050F                  __ptext0 2512                  __ptext1 27AA  
+                __ptext2 2608                  __ptext3 28BE                  __ptext4 2920  
+                __ptext5 2928                  __ptext6 26AC                  __ptext7 2848  
+                __ptext8 2770                  __ptext9 26EE                  _minutos 0513  
+             ??_lcd_init 0505             _ENVIA_NIBBLE 28DA     end_of_initialization 2762  
+                postinc0 04EE         ___lbmod@dividend 0502                _TRISBbits 04C7  
+            ___lbmod@rem 0504             _CURSOR_ONOFF 28BE       CURSOR_ONOFF@estado 0504  
+          __pidataCOMRAM 2930            ??_CURSOR_HOME 0504      start_initialization 2730  
+             ivt0x8_base 0008        ENVIA_LCD_CMD@dato 0502              __pbssCOMRAM 050B  
+    __end_of_CURSOR_HOME 2928                 ?___lbdiv 0505                 ?___lbmod 0501  
+              _configuro 26EE              __smallconst 2500                _convierte 26AC  
+               _CCP1_ISR 2668          convierte@numero 050A                 _LEER_LCD 25A6  
+               _INT0_ISR 28F8                 _INT1_ISR 290C                 _LATDbits 04C1  
+               _PIE1bits 049F                 _PIE3bits 04A1                 _PIE6bits 04A4  
+               _PIR1bits 04AF                 _PIR3bits 04B1                 _PIR6bits 04B4  
+       ESCRIBE_MENSAJE@i 0507           POS_CURSOR@fila 0505               ?_configuro 0501  
+             ?_convierte 0501                 _WPUBbits 0409              _CURSOR_HOME 2920  
+            _INTCON0bits 04D6                 __Hrparam 0000                 __Lrparam 0000  
+           __Lsmallconst 2500               _ANSELBbits 0408                 __pivt0x8 0008  
+               __ptext10 289A                 __ptext11 27E0                 __ptext12 2872  
+               __ptext13 2814                 __ptext14 25A6                 __ptext15 28DA  
+               __ptext16 2668                 __ptext17 28F8                 __ptext18 290C  
+             _BORRAR_LCD 2928                 _lcd_init 27AA               _LCD_CONFIG 2608  
+             _ENVIA_CHAR 2814                 _segundos 0512                 isa$xinst 0000  
+          _ENVIA_LCD_CMD 27E0              ??_configuro 0501              ??_convierte 0509  
+      ??_ESCRIBE_MENSAJE 0506                 intlevel2 0000    ESCRIBE_MENSAJE@cadena 0504  
+         ?_ENVIA_LCD_CMD 0501              ?_BORRAR_LCD 0501            ?_ENVIA_NIBBLE 0501  
+             _POS_CURSOR 289A              ?_LCD_CONFIG 0501       ESCRIBE_MENSAJE@tam 0505  
+            ?_ENVIA_CHAR 0501        POS_CURSOR@columna 0504  
