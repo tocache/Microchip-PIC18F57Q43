@@ -90,9 +90,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;./LCD.h: 24: void ESCRIBE_MENSAJE2(const char *cadena);
 [v _ESCRIBE_MENSAJE2 `(v ~T0 @X0 0 ef1`*Cuc ]
-"30
-[; ;./LCD.h: 30: void LCD_ESCRIBE_VAR_CHAR(unsigned char numero, unsigned char n_digitos);
-[v _LCD_ESCRIBE_VAR_CHAR `(v ~T0 @X0 0 ef2`uc`uc ]
+"31
+[; ;./LCD.h: 31: void LCD_ESCRIBE_VAR_INT(unsigned int numero, unsigned char n_digitos);
+[v _LCD_ESCRIBE_VAR_INT `(v ~T0 @X0 0 ef2`ui`uc ]
 "32
 [; ;./LCD.h: 32: void LCD_CHAR_GRADO(void);
 [v _LCD_CHAR_GRADO `(v ~T0 @X0 0 ef ]
@@ -2736,9 +2736,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "87
 [p x CP  =  OFF          ]
 "7 maincode3.c
-[; ;maincode3.c: 7: unsigned int const_offset, const_gain;
-[v _const_offset `ui ~T0 @X0 1 e ]
-[v _const_gain `ui ~T0 @X0 1 e ]
+[; ;maincode3.c: 7: int const_offset, const_gain;
+[v _const_offset `i ~T0 @X0 1 e ]
+[v _const_gain `i ~T0 @X0 1 e ]
 "9
 [; ;maincode3.c: 9: void configuro(void){
 [v _configuro `(v ~T0 @X0 1 ef ]
@@ -2761,14 +2761,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;maincode3.c: 16:     ADCON0bits.CS = 1;
 [e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
 "17
-[; ;maincode3.c: 17:     ADPCH = 0x00;
-[e = _ADPCH -> -> 0 `i `uc ]
+[; ;maincode3.c: 17:     ADPCH = 0x3C;
+[e = _ADPCH -> -> 60 `i `uc ]
 "18
-[; ;maincode3.c: 18:     ADREF = 0x00;
-[e = _ADREF -> -> 0 `i `uc ]
+[; ;maincode3.c: 18:     ADREF = 0x03;
+[e = _ADREF -> -> 3 `i `uc ]
 "19
-[; ;maincode3.c: 19:     FVRCON = 0xA2;
-[e = _FVRCON -> -> 162 `i `uc ]
+[; ;maincode3.c: 19:     FVRCON = 0xB2;
+[e = _FVRCON -> -> 178 `i `uc ]
 "20
 [; ;maincode3.c: 20:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
@@ -2835,11 +2835,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _get_DIA_values ]
 [f ]
 "38
-[; ;maincode3.c: 38:     unsigned char TSLR1H, TSLR1L, TSLR3H, TSLR3L;
-[v _TSLR1H `uc ~T0 @X0 1 a ]
-[v _TSLR1L `uc ~T0 @X0 1 a ]
-[v _TSLR3H `uc ~T0 @X0 1 a ]
-[v _TSLR3L `uc ~T0 @X0 1 a ]
+[; ;maincode3.c: 38:     unsigned char TSHR1H, TSHR1L, TSHR3H, TSHR3L;
+[v _TSHR1H `uc ~T0 @X0 1 a ]
+[v _TSHR1L `uc ~T0 @X0 1 a ]
+[v _TSHR3H `uc ~T0 @X0 1 a ]
+[v _TSHR3L `uc ~T0 @X0 1 a ]
 "39
 [; ;maincode3.c: 39:     TBLPTRU = 0x2C;
 [e = _TBLPTRU -> -> 44 `i `uc ]
@@ -2847,23 +2847,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;maincode3.c: 40:     TBLPTRH = 0x00;
 [e = _TBLPTRH -> -> 0 `i `uc ]
 "41
-[; ;maincode3.c: 41:     TBLPTRL = 0x24;
-[e = _TBLPTRL -> -> 36 `i `uc ]
+[; ;maincode3.c: 41:     TBLPTRL = 0x2A;
+[e = _TBLPTRL -> -> 42 `i `uc ]
 "42
 [; ;maincode3.c: 42:     __asm("TBLRD*+");
 [; <" TBLRD*+ ;# ">
 "43
-[; ;maincode3.c: 43:     TSLR1H = TABLAT;
-[e = _TSLR1H _TABLAT ]
+[; ;maincode3.c: 43:     TSHR1L = TABLAT;
+[e = _TSHR1L _TABLAT ]
 "44
 [; ;maincode3.c: 44:     __asm("TBLRD*");
 [; <" TBLRD* ;# ">
 "45
-[; ;maincode3.c: 45:     TSLR1L = TABLAT;
-[e = _TSLR1L _TABLAT ]
+[; ;maincode3.c: 45:     TSHR1H = TABLAT;
+[e = _TSHR1H _TABLAT ]
 "46
-[; ;maincode3.c: 46:     const_gain = ((TSLR1H << 8) + TSLR1L);
-[e = _const_gain -> + << -> _TSLR1H `i -> 8 `i -> _TSLR1L `i `ui ]
+[; ;maincode3.c: 46:     const_gain = ((TSHR1H << 8) + TSHR1L);
+[e = _const_gain + << -> _TSHR1H `i -> 8 `i -> _TSHR1L `i ]
 "47
 [; ;maincode3.c: 47:     TBLPTRU = 0x2C;
 [e = _TBLPTRU -> -> 44 `i `uc ]
@@ -2871,23 +2871,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;maincode3.c: 48:     TBLPTRH = 0x00;
 [e = _TBLPTRH -> -> 0 `i `uc ]
 "49
-[; ;maincode3.c: 49:     TBLPTRL = 0x28;
-[e = _TBLPTRL -> -> 40 `i `uc ]
+[; ;maincode3.c: 49:     TBLPTRL = 0x2E;
+[e = _TBLPTRL -> -> 46 `i `uc ]
 "50
 [; ;maincode3.c: 50:     __asm("TBLRD*+");
 [; <" TBLRD*+ ;# ">
 "51
-[; ;maincode3.c: 51:     TSLR3H = TABLAT;
-[e = _TSLR3H _TABLAT ]
+[; ;maincode3.c: 51:     TSHR3L = TABLAT;
+[e = _TSHR3L _TABLAT ]
 "52
 [; ;maincode3.c: 52:     __asm("TBLRD*");
 [; <" TBLRD* ;# ">
 "53
-[; ;maincode3.c: 53:     TSLR3L = TABLAT;
-[e = _TSLR3L _TABLAT ]
+[; ;maincode3.c: 53:     TSHR3H = TABLAT;
+[e = _TSHR3H _TABLAT ]
 "54
-[; ;maincode3.c: 54:     const_offset = ((TSLR3H << 8) + TSLR3L);
-[e = _const_offset -> + << -> _TSLR3H `i -> 8 `i -> _TSLR3L `i `ui ]
+[; ;maincode3.c: 54:     const_offset = ((TSHR3H << 8) + TSHR3L);
+[e = _const_offset + << -> _TSHR3H `i -> 8 `i -> _TSHR3L `i ]
 "55
 [; ;maincode3.c: 55: }
 [e :UE 2423 ]
@@ -2919,49 +2919,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;maincode3.c: 83:         unsigned int lectura_ADC;
 [v _lectura_ADC `ui ~T0 @X0 1 a ]
 "84
-[; ;maincode3.c: 84:         float temporal;
-[v _temporal `f ~T0 @X0 1 a ]
-"91
-[; ;maincode3.c: 91:         lectura_ADC = tomamuestra_ADC(0x3C);
-[e = _lectura_ADC ( _tomamuestra_ADC (1 -> -> 60 `i `uc ]
+[; ;maincode3.c: 84:         int24_t temporal;
+[v _temporal `m ~T0 @X0 1 a ]
 "92
-[; ;maincode3.c: 92:         temporal = lectura_ADC * const_gain;
-[e = _temporal -> * _lectura_ADC _const_gain `f ]
+[; ;maincode3.c: 92:         lectura_ADC = tomamuestra_ADC(0x3C);
+[e = _lectura_ADC ( _tomamuestra_ADC (1 -> -> 60 `i `uc ]
 "93
-[; ;maincode3.c: 93:         temporal = temporal / 256;
-[e = _temporal / _temporal -> -> 256 `i `f ]
+[; ;maincode3.c: 93:         temporal = (int24_t)(lectura_ADC) * const_gain;
+[e = _temporal * -> _lectura_ADC `m -> _const_gain `m ]
 "94
-[; ;maincode3.c: 94:         temporal = temporal + const_offset;
-[e = _temporal + _temporal -> _const_offset `f ]
+[; ;maincode3.c: 94:         temporal = temporal / 256;
+[e = _temporal / _temporal -> -> 256 `i `m ]
 "95
-[; ;maincode3.c: 95:         temporal = temporal / 10;
-[e = _temporal / _temporal -> -> 10 `i `f ]
+[; ;maincode3.c: 95:         temporal = temporal + const_offset;
+[e = _temporal + _temporal -> _const_offset `m ]
 "96
-[; ;maincode3.c: 96:         POS_CURSOR(2,0);
-[e ( _POS_CURSOR (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-"97
-[; ;maincode3.c: 97:         ESCRIBE_MENSAJE2("Value: ");
-[e ( _ESCRIBE_MENSAJE2 (1 :s 2C ]
+[; ;maincode3.c: 96:         temporal = temporal / 10;
+[e = _temporal / _temporal -> -> 10 `i `m ]
 "98
-[; ;maincode3.c: 98:         LCD_ESCRIBE_VAR_CHAR(temporal,3);
-[e ( _LCD_ESCRIBE_VAR_CHAR (2 , -> _temporal `uc -> -> 3 `i `uc ]
+[; ;maincode3.c: 98:         POS_CURSOR(2,0);
+[e ( _POS_CURSOR (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
 "99
-[; ;maincode3.c: 99:         LCD_CHAR_GRADO();
-[e ( _LCD_CHAR_GRADO ..  ]
+[; ;maincode3.c: 99:         ESCRIBE_MENSAJE2("Value: ");
+[e ( _ESCRIBE_MENSAJE2 (1 :s 2C ]
 "100
-[; ;maincode3.c: 100:         ESCRIBE_MENSAJE2("C   ");
-[e ( _ESCRIBE_MENSAJE2 (1 :s 3C ]
+[; ;maincode3.c: 100:         LCD_ESCRIBE_VAR_INT(temporal,5);
+[e ( _LCD_ESCRIBE_VAR_INT (2 , -> _temporal `ui -> -> 5 `i `uc ]
 "101
-[; ;maincode3.c: 101:         _delay((unsigned long)((100)*(32000000UL/4000.0)));
+[; ;maincode3.c: 101:         LCD_CHAR_GRADO();
+[e ( _LCD_CHAR_GRADO ..  ]
+"102
+[; ;maincode3.c: 102:         ESCRIBE_MENSAJE2("C   ");
+[e ( _ESCRIBE_MENSAJE2 (1 :s 3C ]
+"103
+[; ;maincode3.c: 103:         _delay((unsigned long)((100)*(32000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"109
-[; ;maincode3.c: 109:     }
+"111
+[; ;maincode3.c: 111:     }
 }
 [e :U 2425 ]
 [e $U 2426  ]
 [e :U 2427 ]
-"110
-[; ;maincode3.c: 110: }
+"112
+[; ;maincode3.c: 112: }
 [e :UE 2424 ]
 }
 [a 1C 84 101 109 112 46 32 73 110 100 105 99 97 116 111 114 0 ]

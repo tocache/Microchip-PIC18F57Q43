@@ -29399,7 +29399,7 @@ void LCD_VARCHAR_BITS(unsigned char dato);
 
 
 
-unsigned int const_offset, const_gain;
+int const_offset, const_gain;
 
 void configuro(void){
 
@@ -29409,9 +29409,9 @@ void configuro(void){
 
     ADCON0bits.ADFM = 1;
     ADCON0bits.CS = 1;
-    ADPCH = 0x00;
-    ADREF = 0x00;
-    FVRCON = 0xA2;
+    ADPCH = 0x3C;
+    ADREF = 0x03;
+    FVRCON = 0xB2;
     ADCON0bits.ADON = 1;
 
     LCD_INIT();
@@ -29430,23 +29430,23 @@ unsigned int tomamuestra_ADC(unsigned char canal){
 }
 
 void get_DIA_values(void){
-    unsigned char TSLR1H, TSLR1L, TSLR3H, TSLR3L;
+    unsigned char TSHR1H, TSHR1L, TSHR3H, TSHR3L;
     TBLPTRU = 0x2C;
     TBLPTRH = 0x00;
-    TBLPTRL = 0x24;
+    TBLPTRL = 0x2A;
     __asm("TBLRD*+");
-    TSLR1H = TABLAT;
+    TSHR1L = TABLAT;
     __asm("TBLRD*");
-    TSLR1L = TABLAT;
-    const_gain = ((TSLR1H << 8) + TSLR1L);
+    TSHR1H = TABLAT;
+    const_gain = ((TSHR1H << 8) + TSHR1L);
     TBLPTRU = 0x2C;
     TBLPTRH = 0x00;
-    TBLPTRL = 0x28;
+    TBLPTRL = 0x2E;
     __asm("TBLRD*+");
-    TSLR3H = TABLAT;
+    TSHR3L = TABLAT;
     __asm("TBLRD*");
-    TSLR3L = TABLAT;
-    const_offset = ((TSLR3H << 8) + TSLR3L);
+    TSHR3H = TABLAT;
+    const_offset = ((TSHR3H << 8) + TSHR3L);
 }
 # 77 "maincode3.c"
 void main(void) {
@@ -29456,7 +29456,8 @@ void main(void) {
     get_DIA_values();
     while(1){
         unsigned int lectura_ADC;
-        float temporal;
+        int24_t temporal;
+
 
 
 
@@ -29464,13 +29465,14 @@ void main(void) {
 
 
         lectura_ADC = tomamuestra_ADC(0x3C);
-        temporal = lectura_ADC * const_gain;
+        temporal = (int24_t)(lectura_ADC) * const_gain;
         temporal = temporal / 256;
         temporal = temporal + const_offset;
         temporal = temporal / 10;
+
         POS_CURSOR(2,0);
         ESCRIBE_MENSAJE2("Value: ");
-        LCD_ESCRIBE_VAR_CHAR(temporal,3);
+        LCD_ESCRIBE_VAR_INT(temporal,5);
         LCD_CHAR_GRADO();
         ESCRIBE_MENSAJE2("C   ");
         _delay((unsigned long)((100)*(32000000UL/4000.0)));
