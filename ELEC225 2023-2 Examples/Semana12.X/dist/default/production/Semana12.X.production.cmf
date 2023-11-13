@@ -1,0 +1,1218 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\Semana12.X.production.o
+ivt0x8 CODE 0 8 8 FA 1 2
+cinit CODE 0 1129A 1129A 2C 1 2
+text0 CODE 0 10EC4 10EC4 68 1 2
+text1 CODE 0 10784 10784 17E 1 2
+text2 CODE 0 1042A 1042A 1B4 1 2
+text3 CODE 0 10CD8 10CD8 8C 1 2
+text4 CODE 0 10902 10902 106 1 2
+text5 CODE 0 10000 10000 42A 1 2
+text6 CODE 0 10A08 10A08 104 1 2
+text7 CODE 0 10F90 10F90 5E 1 2
+text8 CODE 0 112C6 112C6 2C 1 2
+text9 CODE 0 11148 11148 3E 1 2
+text10 CODE 0 110A6 110A6 54 1 2
+text11 CODE 0 1126A 1126A 30 1 2
+text12 CODE 0 1135A 1135A 8 1 2
+text13 CODE 0 11362 11362 8 1 2
+text14 CODE 0 10BAC 10BAC 96 1 2
+text15 CODE 0 10FEE 10FEE 5C 1 2
+text16 CODE 0 1133E 1133E E 1 2
+text17 CODE 0 1130E 1130E 18 1 2
+text18 CODE 0 10D64 10D64 7A 1 2
+text19 CODE 0 11202 11202 34 1 2
+text20 CODE 0 105DE 105DE 1A6 1 2
+text21 CODE 0 10F2C 10F2C 64 1 2
+text22 CODE 0 10DDE 10DDE 74 1 2
+text23 CODE 0 110FA 110FA 4E 1 2
+text24 CODE 0 11186 11186 3E 1 2
+text25 CODE 0 11236 11236 34 1 2
+text26 CODE 0 10E52 10E52 72 1 2
+text27 CODE 0 112F2 112F2 1C 1 2
+text28 CODE 0 10B0C 10B0C A0 1 4
+text29 CODE 0 10C42 10C42 96 1 2
+text30 CODE 0 1104A 1104A 5C 1 2
+text31 CODE 0 111C4 111C4 3E 1 2
+text32 CODE 0 1134C 1134C E 1 2
+text33 CODE 0 11326 11326 18 1 2
+idataCOMRAM CODE 0 1136A 1136A 2 1 1
+cstackCOMRAM COMRAM 1 501 501 4D 1 1
+cstackBANK5 BANK5 1 560 560 15 1 1
+dataCOMRAM COMRAM 1 54E 54E 2 1 1
+mediumconst MEDIUMCONST 0 FEB8 FEB8 148 1 2
+config CONFIG 4 300000 300000 A 1 1
+$C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 575-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 575-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 106-FEB7 1
+CONST 1136C-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2500-FEB7 1
+SMALLCONST 1136C-1FFFF 1
+CODE 4-7 1
+CODE 106-FEB7 1
+CODE 1136C-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 550-55F 1
+BIGRAM 575-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 550-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2500-FEB7 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Semana12.X.production.o
+11326 text33 CODE >20:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11328 text33 CODE >21:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1132C text33 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1133C text33 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1134C text32 CODE >37:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1134C text32 CODE >38:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11352 text32 CODE >39:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11358 text32 CODE >40:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+111C4 text31 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111C4 text31 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111CC text31 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111D0 text31 CODE >9:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111D4 text31 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111F4 text31 CODE >11:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+11200 text31 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+1104A text30 CODE >25:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1104A text30 CODE >28:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1104A text30 CODE >29:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1105A text30 CODE >30:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11062 text30 CODE >32:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11080 text30 CODE >33:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11090 text30 CODE >34:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+110A4 text30 CODE >35:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10C42 text29 CODE >63:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C42 text29 CODE >64:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C46 text29 CODE >65:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C52 text29 CODE >66:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C56 text29 CODE >67:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C62 text29 CODE >68:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C66 text29 CODE >69:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C72 text29 CODE >70:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C76 text29 CODE >71:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C82 text29 CODE >72:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C86 text29 CODE >73:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C92 text29 CODE >74:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C96 text29 CODE >75:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CA2 text29 CODE >76:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CA6 text29 CODE >77:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CB2 text29 CODE >78:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CB6 text29 CODE >79:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CC2 text29 CODE >80:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CC6 text29 CODE >81:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CD2 text29 CODE >82:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10CD6 text29 CODE >83:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B0C text28 CODE >138:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10B0C text28 CODE >98:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B1C text28 CODE >99:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B1E text28 CODE >100:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B22 text28 CODE >102:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B2E text28 CODE >103:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B32 text28 CODE >104:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B36 text28 CODE >106:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B46 text28 CODE >110:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B56 text28 CODE >114:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B5A text28 CODE >115:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B5E text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B6A text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B78 text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B80 text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B88 text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B90 text28 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10B9A text28 CODE >117:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+112F2 text27 CODE >130:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+112F4 text27 CODE >132:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+112F8 text27 CODE >133:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+112FC text27 CODE >134:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11300 text27 CODE >135:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11302 text27 CODE >136:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1130A text27 CODE >137:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1130C text27 CODE >138:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E52 text26 CODE >156:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E52 text26 CODE >159:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E56 text26 CODE >160:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E58 text26 CODE >161:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E5A text26 CODE >162:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E5C text26 CODE >163:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E64 text26 CODE >164:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E68 text26 CODE >165:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E6A text26 CODE >166:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E72 text26 CODE >167:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E74 text26 CODE >168:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E7C text26 CODE >169:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E7E text26 CODE >170:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E84 text26 CODE >171:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E88 text26 CODE >173:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E8A text26 CODE >174:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E92 text26 CODE >175:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E96 text26 CODE >176:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10E98 text26 CODE >177:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10EA0 text26 CODE >178:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10EA2 text26 CODE >179:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10EAA text26 CODE >180:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10EB0 text26 CODE >171:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10EC2 text26 CODE >183:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11236 text25 CODE >92:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11238 text25 CODE >95:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1123A text25 CODE >96:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1123E text25 CODE >97:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11242 text25 CODE >98:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1124A text25 CODE >99:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1124C text25 CODE >100:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1124E text25 CODE >101:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11250 text25 CODE >102:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11256 text25 CODE >103:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1125C text25 CODE >104:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11262 text25 CODE >105:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11268 text25 CODE >106:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11186 text24 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+11186 text24 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+1118E text24 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+11192 text24 CODE >9:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+11196 text24 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111B6 text24 CODE >11:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+111C2 text24 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\strlen.c
+110FA text23 CODE >81:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110FA text23 CODE >84:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1110A text23 CODE >85:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1110A text23 CODE >86:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11112 text23 CODE >88:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11132 text23 CODE >89:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11146 text23 CODE >90:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DDE text22 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10DDE text22 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10DE6 text22 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10DF8 text22 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10DFC text22 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E00 text22 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E06 text22 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E08 text22 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E16 text22 CODE >21:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E1C text22 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E32 text22 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E3A text22 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E3C text22 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E42 text22 CODE >27:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E48 text22 CODE >28:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E48 text22 CODE >29:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10E50 text22 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwdiv.c
+10F2C text21 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F2C text21 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F3E text21 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F42 text21 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F46 text21 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F4C text21 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F4E text21 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F5C text21 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F72 text21 CODE >20:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F7A text21 CODE >21:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F80 text21 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F86 text21 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F86 text21 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+10F8E text21 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\lwmod.c
+105DE text20 CODE >228:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+105DE text20 CODE >230:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+105F8 text20 CODE >231:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10626 text20 CODE >232:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10654 text20 CODE >233:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10682 text20 CODE >234:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1069C text20 CODE >235:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106A0 text20 CODE >237:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106A8 text20 CODE >238:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106AC text20 CODE >240:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106B4 text20 CODE >241:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106BE text20 CODE >242:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106C2 text20 CODE >244:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106CA text20 CODE >245:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106D4 text20 CODE >246:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106DE text20 CODE >247:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106E2 text20 CODE >249:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106EA text20 CODE >250:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106F4 text20 CODE >251:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+106FE text20 CODE >252:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10708 text20 CODE >253:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1070C text20 CODE >255:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10714 text20 CODE >256:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1071E text20 CODE >257:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10728 text20 CODE >258:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10732 text20 CODE >259:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1073C text20 CODE >260:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10740 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1074A text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10758 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10760 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10768 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10770 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10778 text20 CODE >261:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10782 text20 CODE >262:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11202 text19 CODE >140:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11204 text19 CODE >143:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11206 text19 CODE >144:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1120A text19 CODE >145:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1120E text19 CODE >146:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11216 text19 CODE >147:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11218 text19 CODE >148:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1121A text19 CODE >149:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1121C text19 CODE >150:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11222 text19 CODE >151:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11228 text19 CODE >152:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1122E text19 CODE >153:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11234 text19 CODE >154:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D64 text18 CODE >9:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D66 text18 CODE >11:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D76 text18 CODE >13:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D7E text18 CODE >14:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D82 text18 CODE >15:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D94 text18 CODE >17:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10D9C text18 CODE >18:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DA0 text18 CODE >19:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DB2 text18 CODE >21:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DBA text18 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DBE text18 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DD0 text18 CODE >25:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DDC text18 CODE >26:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+10DDC text18 CODE >27:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1130E text17 CODE >20:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11310 text17 CODE >21:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11314 text17 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11324 text17 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1133E text16 CODE >37:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1133E text16 CODE >38:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11344 text16 CODE >39:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+1134A text16 CODE >40:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10FEE text15 CODE >25:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10FEE text15 CODE >28:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10FEE text15 CODE >29:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10FFE text15 CODE >30:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11006 text15 CODE >32:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11024 text15 CODE >33:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11034 text15 CODE >34:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+11048 text15 CODE >35:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10BAC text14 CODE >63:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BAC text14 CODE >64:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BB0 text14 CODE >65:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BBC text14 CODE >66:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BC0 text14 CODE >67:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BCC text14 CODE >68:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BD0 text14 CODE >69:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BDC text14 CODE >70:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BE0 text14 CODE >71:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BEC text14 CODE >72:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BF0 text14 CODE >73:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10BFC text14 CODE >74:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C00 text14 CODE >75:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C0C text14 CODE >76:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C10 text14 CODE >77:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C1C text14 CODE >78:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C20 text14 CODE >79:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C2C text14 CODE >80:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C30 text14 CODE >81:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C3C text14 CODE >82:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10C40 text14 CODE >83:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+11362 text13 CODE >108:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11362 text13 CODE >110:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11368 text13 CODE >111:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1135A text12 CODE >41:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1135A text12 CODE >43:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11360 text12 CODE >44:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1126A text11 CODE >66:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1126C text11 CODE >68:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11282 text11 CODE >69:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11298 text11 CODE >70:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110A6 text10 CODE >113:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110A6 text10 CODE >115:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110A8 text10 CODE >116:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110AA text10 CODE >117:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110B0 text10 CODE >118:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110C0 text10 CODE >119:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110C6 text10 CODE >120:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110CE text10 CODE >121:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110D4 text10 CODE >122:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110DA text10 CODE >123:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110E0 text10 CODE >124:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110E6 text10 CODE >125:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110EC text10 CODE >126:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110F2 text10 CODE >127:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+110F8 text10 CODE >128:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11148 text9 CODE >196:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11148 text9 CODE >197:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1114C text9 CODE >198:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11152 text9 CODE >199:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11162 text9 CODE >200:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11166 text9 CODE >201:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11176 text9 CODE >202:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1117A text9 CODE >203:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+1117E text9 CODE >204:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+11184 text9 CODE >205:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\LCD.c
+112C6 text8 CODE >5:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112C8 text8 CODE >7:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112CA text8 CODE >8:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112CE text8 CODE >9:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112D0 text8 CODE >10:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112D2 text8 CODE >11:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112D8 text8 CODE >12:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112DC text8 CODE >13:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112E0 text8 CODE >14:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112E4 text8 CODE >15:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112E8 text8 CODE >16:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112EC text8 CODE >17:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+112F0 text8 CODE >18:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\U1Serial.c
+10F90 text7 CODE >9:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F90 text7 CODE >11:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F96 text7 CODE >12:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F9A text7 CODE >13:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F9E text7 CODE >15:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FA2 text7 CODE >17:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FA8 text7 CODE >19:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FAA text7 CODE >20:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FAE text7 CODE >21:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FB8 text7 CODE >22:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FBA text7 CODE >23:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FBE text7 CODE >24:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FC0 text7 CODE >26:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FC6 text7 CODE >27:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FC8 text7 CODE >28:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FCC text7 CODE >29:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FD2 text7 CODE >30:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FD6 text7 CODE >31:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FDA text7 CODE >32:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FDE text7 CODE >33:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FE2 text7 CODE >34:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FE6 text7 CODE >36:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FE8 text7 CODE >37:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FEA text7 CODE >38:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10FEC text7 CODE >39:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10A08 text6 CODE >4:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A08 text6 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A36 text6 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A46 text6 CODE >9:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A74 text6 CODE >10:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A84 text6 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10A92 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10AA4 text6 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10AB2 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10AC4 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10AD4 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10AE4 text6 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10B0A text6 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\flge.c
+10000 text5 CODE >8:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10000 text5 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10006 text5 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1000C text5 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1001A text5 CODE >20:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1001C text5 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1002C text5 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1003C text5 CODE >28:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1004C text5 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1004E text5 CODE >33:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10052 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10062 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10068 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1006E text5 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1007C text5 CODE >42:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1007E text5 CODE >45:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1008E text5 CODE >48:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1009E text5 CODE >50:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100AE text5 CODE >53:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100B0 text5 CODE >54:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100B4 text5 CODE >57:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100C4 text5 CODE >58:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100C4 text5 CODE >65:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100E4 text5 CODE >66:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+100F8 text5 CODE >95:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10104 text5 CODE >96:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1010E text5 CODE >97:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10118 text5 CODE >98:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10124 text5 CODE >99:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10130 text5 CODE >100:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1013C text5 CODE >101:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10148 text5 CODE >102:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10154 text5 CODE >103:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10160 text5 CODE >104:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1016E text5 CODE >105:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1017A text5 CODE >106:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1018A text5 CODE >107:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10196 text5 CODE >108:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101A6 text5 CODE >109:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101B4 text5 CODE >110:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101C0 text5 CODE >111:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101D0 text5 CODE >112:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101DC text5 CODE >113:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101EC text5 CODE >114:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+101F8 text5 CODE >115:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10208 text5 CODE >116:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10214 text5 CODE >117:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1023E text5 CODE >145:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10274 text5 CODE >146:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10282 text5 CODE >149:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1029C text5 CODE >152:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102A0 text5 CODE >153:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102AA text5 CODE >154:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102B8 text5 CODE >155:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102BA text5 CODE >156:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102BA text5 CODE >157:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102C4 text5 CODE >158:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102CA text5 CODE >152:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102D8 text5 CODE >163:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102DC text5 CODE >164:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+102EA text5 CODE >165:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10318 text5 CODE >166:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1031C text5 CODE >167:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10320 text5 CODE >168:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10320 text5 CODE >169:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10332 text5 CODE >173:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10332 text5 CODE >174:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10342 text5 CODE >175:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1034E text5 CODE >176:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1035C text5 CODE >177:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10386 text5 CODE >178:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1038A text5 CODE >183:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103A4 text5 CODE >184:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103B4 text5 CODE >185:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103B8 text5 CODE >187:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103D2 text5 CODE >188:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103E2 text5 CODE >190:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103E6 text5 CODE >191:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103EA text5 CODE >192:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103EA text5 CODE >194:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103EE text5 CODE >195:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+103FE text5 CODE >196:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1040C text5 CODE >197:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+1040E text5 CODE >199:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10414 text5 CODE >201:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10418 text5 CODE >203:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10428 text5 CODE >205:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+10902 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10902 text4 CODE >47:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10918 text4 CODE >48:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+1092C text4 CODE >49:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10956 text4 CODE >50:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10958 text4 CODE >51:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10968 text4 CODE >52:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+1096C text4 CODE >53:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+1097A text4 CODE >54:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10992 text4 CODE >57:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109A6 text4 CODE >60:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109BA text4 CODE >63:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109C4 text4 CODE >64:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109C6 text4 CODE >62:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109D6 text4 CODE >67:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109E6 text4 CODE >68:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+109F6 text4 CODE >69:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10A06 text4 CODE >70:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fltol.c
+10CD8 text3 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10CD8 text3 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10CE4 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10CF8 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10CFC text3 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D00 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D08 text3 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D0A text3 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D18 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D20 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D3A text3 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D46 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D48 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D48 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D50 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D56 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D56 text3 CODE >29:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+10D62 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ltdiv.c
+1042A text2 CODE >10:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1042C text2 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1044A text2 CODE >16:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1047C text2 CODE >17:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10480 text2 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10480 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10490 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104A6 text2 CODE >22:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104BA text2 CODE >23:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104BE text2 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104C2 text2 CODE >25:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104C4 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+104CE text2 CODE >24:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10500 text2 CODE >29:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10502 text2 CODE >30:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1050E text2 CODE >31:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10518 text2 CODE >28:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10518 text2 CODE >32:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1054A text2 CODE >34:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+1054C text2 CODE >35:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10556 text2 CODE >33:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10574 text2 CODE >37:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10582 text2 CODE >38:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10584 text2 CODE >39:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10588 text2 CODE >40:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+105AC text2 CODE >41:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+105CA text2 CODE >42:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+105CC text2 CODE >43:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+105DC text2 CODE >44:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\xxtofl.c
+10784 text1 CODE >41:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10788 text1 CODE >42:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10796 text1 CODE >46:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+1079A text1 CODE >47:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+107A2 text1 CODE >48:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+107A6 text1 CODE >49:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+107B4 text1 CODE >50:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+107CC text1 CODE >51:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+107E8 text1 CODE >52:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10802 text1 CODE >53:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+1089A text1 CODE >54:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+108CC text1 CODE >55:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+108DE text1 CODE >59:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+108F8 text1 CODE >60:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10900 text1 CODE >61:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EC4 text0 CODE >85:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EC4 text0 CODE >86:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EC8 text0 CODE >87:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EDE text0 CODE >88:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EE2 text0 CODE >89:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EEC text0 CODE >90:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10EF8 text0 CODE >92:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F02 text0 CODE >93:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+10F0E text0 CODE >94:D:\Taller de Microbios y Placas\Ejemplos\Semana12.X\maincode02.c
+1129A cinit CODE >5789:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+1129A cinit CODE >5791:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+1129A cinit CODE >5794:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+1129A cinit CODE >5809:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+1129C cinit CODE >5810:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+1129E cinit CODE >5811:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112A0 cinit CODE >5812:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112A2 cinit CODE >5813:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112A4 cinit CODE >5814:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112A6 cinit CODE >5815:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112A8 cinit CODE >5816:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112AC cinit CODE >5817:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112AE cinit CODE >5818:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112B2 cinit CODE >5826:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112B4 cinit CODE >5827:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112B6 cinit CODE >5828:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112B8 cinit CODE >5829:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112BA cinit CODE >5830:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112BC cinit CODE >5831:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112BE cinit CODE >5832:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112C0 cinit CODE >5838:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112C0 cinit CODE >5840:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+112C2 cinit CODE >5841:C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwmod@counter 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+U1_DATA_SEND@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lmediumconst FEB8 0 MEDIUMCONST 0 mediumconst dist/default/production\Semana12.X.production.o
+__Hspace_0 1136C 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hspace_1 575 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production\Semana12.X.production.o
+i2U1_STRING_SEND@i 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+U1_INIT@baudios 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+ENVIA_CHAR@aux 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Semana12.X.production.o
+__mediumconst FEB8 0 MEDIUMCONST 0 mediumconst C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+_ENVIA_LCD_CMD 11202 0 CODE 0 text19 dist/default/production\Semana12.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Semana12.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Semana12.X.production.o
+_LCD_ESCRIBE_VAR_INT 105DE 0 CODE 0 text20 dist/default/production\Semana12.X.production.o
+_LCD_CONFIG 110A6 0 CODE 0 text10 dist/default/production\Semana12.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Semana12.X.production.o
+_LATD 4C1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_T2PR 323 0 ABS 0 - dist/default/production\Semana12.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+_main 10EC4 0 CODE 0 text0 dist/default/production\Semana12.X.production.o
+U1_STRING_SEND@i 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+ENVIA_NIBBLE@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__end_of_ENVIA_CHAR 1126A 0 CODE 0 text25 dist/default/production\Semana12.X.production.o
+start 102 0 CODE 0 init C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___flmul@aexp 53A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@bexp 53B 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@prod 53C 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@sign 535 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@temp 540 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+i2_U1_STRING_SEND 1104A 0 CODE 0 text30 dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@decena 573 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+___ltdiv@divisor 514 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_LCD_INIT 11148 0 CODE 0 text9 dist/default/production\Semana12.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Semana12.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Semana12.X.production.o
+_U1RX_ISR 10B0C 0 CODE 0 text28 dist/default/production\Semana12.X.production.o
+__end_of_U1_DATA_SEND 11326 0 CODE 0 text17 dist/default/production\Semana12.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__end_of_LCD_INIT 11186 0 CODE 0 text9 dist/default/production\Semana12.X.production.o
+intlevel0 0 0 CODE 0 text C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Semana12.X.production.o
+i2U1_STRING_SEND@cadena 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_U1RX_ISR 10BAC 0 CODE 0 text28 dist/default/production\Semana12.X.production.o
+tomamuestra_ADC@canal 564 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Semana12.X.production.o
+tomamuestra_ADC@x_var 56E 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@millar 571 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@n_digitos 549 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_configuro 10FEE 0 CODE 0 text7 dist/default/production\Semana12.X.production.o
+__pidataCOMRAM 1136A 0 CODE 0 idataCOMRAM dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@numero 547 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Semana12.X.production.o
+__end_of_LCD_CONFIG 110FA 0 CODE 0 text10 dist/default/production\Semana12.X.production.o
+_U1RXPPS 272 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1_INIT 112C6 0 CODE 0 text8 dist/default/production\Semana12.X.production.o
+_U1_Menu 10BAC 0 CODE 0 text14 dist/default/production\Semana12.X.production.o
+_ADRESH 3EB 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_ADRESL 3EA 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_ANSELD 418 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_CURSOR_HOME 1135A 0 CODE 0 text12 dist/default/production\Semana12.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Semana12.X.production.o
+_CCPR1H 341 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_CCPR1L 340 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__end_of___flge 10B0C 0 CODE 0 text6 dist/default/production\Semana12.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Semana12.X.production.o
+_configuro 10F90 0 CODE 0 text7 dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@unidad 574 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Hmediumconst 10000 0 MEDIUMCONST 0 mediumconst dist/default/production\Semana12.X.production.o
+__end_of_LCD_ESCRIBE_VAR_INT 10784 0 CODE 0 text20 dist/default/production\Semana12.X.production.o
+___lwmod@divisor 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of___flmul 1042A 0 CODE 0 text5 dist/default/production\Semana12.X.production.o
+__end_of___fltol 10A08 0 CODE 0 text4 dist/default/production\Semana12.X.production.o
+__end_ofi2_U1_STRING_SEND 110A6 0 CODE 0 text30 dist/default/production\Semana12.X.production.o
+__end_of___ltdiv 10D64 0 CODE 0 text3 dist/default/production\Semana12.X.production.o
+__end_of___lwdiv 10E52 0 CODE 0 text22 dist/default/production\Semana12.X.production.o
+__end_of___lwmod 10F90 0 CODE 0 text21 dist/default/production\Semana12.X.production.o
+__end_ofi2_U1_Menu 10CD8 0 CODE 0 text29 dist/default/production\Semana12.X.production.o
+?_strlen 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___lwdiv@quotient 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@a 52D 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flmul@b 529 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__end_of_ENVIA_LCD_CMD 11236 0 CODE 0 text19 dist/default/production\Semana12.X.production.o
+___lwmod@dividend 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+start_initialization 1129A 0 CODE 0 cinit dist/default/production\Semana12.X.production.o
+_ESCRIBE_MENSAJE2 110FA 0 CODE 0 text23 dist/default/production\Semana12.X.production.o
+_OSCFRQ B1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+i2_U1_Menu 10C42 0 CODE 0 text29 dist/default/production\Semana12.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Semana12.X.production.o
+_TRISAbits 4C6 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_TRISFbits 4CB 0 ABS 0 - dist/default/production\Semana12.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_BORRAR_LCD 11362 0 CODE 0 text13 dist/default/production\Semana12.X.production.o
+_RF0PPS 229 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_RF1PPS 22A 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__pcstackBANK5 560 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+___ltdiv@quotient 517 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_T2CLKCON 326 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1BRGH 2AF 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1BRGL 2AE 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1CON0 2AB 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1CON1 2AC 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1CON2 2AD 0 ABS 0 - dist/default/production\Semana12.X.production.o
+LEER_LCD@aux 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@centena 572 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Semana12.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Semana12.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Semana12.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\Semana12.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\Semana12.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Semana12.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\Semana12.X.production.o
+__end_of_strlen 111C4 0 CODE 0 text24 dist/default/production\Semana12.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\Semana12.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\Semana12.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Semana12.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Semana12.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Semana12.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\Semana12.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\Semana12.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\Semana12.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\Semana12.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\Semana12.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\Semana12.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Semana12.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Semana12.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Semana12.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Semana12.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Semana12.X.production.o
+___lwdiv@counter 51C 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\Semana12.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\Semana12.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\Semana12.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\Semana12.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\Semana12.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\Semana12.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\Semana12.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\Semana12.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\Semana12.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\Semana12.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\Semana12.X.production.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/production\Semana12.X.production.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/production\Semana12.X.production.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/production\Semana12.X.production.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/production\Semana12.X.production.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/production\Semana12.X.production.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/production\Semana12.X.production.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/production\Semana12.X.production.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/production\Semana12.X.production.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/production\Semana12.X.production.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/production\Semana12.X.production.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/production\Semana12.X.production.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/production\Semana12.X.production.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/production\Semana12.X.production.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/production\Semana12.X.production.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/production\Semana12.X.production.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/production\Semana12.X.production.o
+_POS_CURSOR 10D64 0 CODE 0 text18 dist/default/production\Semana12.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Semana12.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Semana12.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\Semana12.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___xxtofl@arg 525 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___xxtofl@exp 524 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___xxtofl@val 51B 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_ganancia 54E 0 COMRAM 1 dataCOMRAM dist/default/production\Semana12.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\Semana12.X.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production\Semana12.X.production.o
+i2U1_STRING_SEND@tam 509 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Semana12.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Semana12.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Semana12.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\Semana12.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\Semana12.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Semana12.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\Semana12.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\Semana12.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\Semana12.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Semana12.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Semana12.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Semana12.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\Semana12.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Semana12.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Semana12.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Semana12.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Semana12.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Semana12.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Semana12.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Semana12.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Semana12.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Semana12.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Semana12.X.production.o
+i2_U1_NEWLINE 1134C 0 CODE 0 text32 dist/default/production\Semana12.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Semana12.X.production.o
+___flmul@grs 536 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Semana12.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\Semana12.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\Semana12.X.production.o
+__Hinit 106 0 CODE 0 init dist/default/production\Semana12.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Semana12.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Semana12.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Semana12.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\Semana12.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Semana12.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\Semana12.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\Semana12.X.production.o
+__Linit 102 0 CODE 0 init dist/default/production\Semana12.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Semana12.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Semana12.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Semana12.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\Semana12.X.production.o
+___flge 10A08 0 CODE 0 text6 dist/default/production\Semana12.X.production.o
+__LcstackBANK5 0 0 ABS 0 cstackBANK5 dist/default/production\Semana12.X.production.o
+__end_of_BORRAR_LCD 1136A 0 CODE 0 text13 dist/default/production\Semana12.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Semana12.X.production.o
+POS_CURSOR@fila 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_CURSOR_ONOFF 1126A 0 CODE 0 text11 dist/default/production\Semana12.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Semana12.X.production.o
+__S0 1136C 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__S1 575 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hivt0x8 102 0 CODE 0 ivt0x8 dist/default/production\Semana12.X.production.o
+IVTBASEH 45E 0 ABS 0 - dist/default/production\Semana12.X.production.o
+IVTBASEL 45D 0 ABS 0 - dist/default/production\Semana12.X.production.o
+IVTBASEU 45F 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__end_of_ESCRIBE_MENSAJE2 11148 0 CODE 0 text23 dist/default/production\Semana12.X.production.o
+i2_strlen 111C4 0 CODE 0 text31 dist/default/production\Semana12.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Semana12.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Semana12.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Semana12.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Semana12.X.production.o
+___xxtofl 1042A 0 CODE 0 text2 dist/default/production\Semana12.X.production.o
+__end_ofi2_strlen 11202 0 CODE 0 text31 dist/default/production\Semana12.X.production.o
+__end_of_POS_CURSOR 10DDE 0 CODE 0 text18 dist/default/production\Semana12.X.production.o
+tomamuestra_ADC@lectura 56C 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/production\Semana12.X.production.o
+strlen@a 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+strlen@s 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_ENVIA_NIBBLE 112F2 0 CODE 0 text27 dist/default/production\Semana12.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Semana12.X.production.o
+__end_of___xxtofl 105DE 0 CODE 0 text2 dist/default/production\Semana12.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Semana12.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Semana12.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Semana12.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Semana12.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Semana12.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Semana12.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\Semana12.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\Semana12.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\Semana12.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\Semana12.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\Semana12.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\Semana12.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\Semana12.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\Semana12.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\Semana12.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\Semana12.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\Semana12.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\Semana12.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\Semana12.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\Semana12.X.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production\Semana12.X.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production\Semana12.X.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production\Semana12.X.production.o
+__Htext32 0 0 ABS 0 text32 dist/default/production\Semana12.X.production.o
+__Htext33 0 0 ABS 0 text33 dist/default/production\Semana12.X.production.o
+__end_of_CURSOR_HOME 11362 0 CODE 0 text12 dist/default/production\Semana12.X.production.o
+_U1_STRING_SEND 10FEE 0 CODE 0 text15 dist/default/production\Semana12.X.production.o
+_PIE4bits 4A2 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__end_ofi2_U1_NEWLINE 1135A 0 CODE 0 text32 dist/default/production\Semana12.X.production.o
+__ptext10 110A6 0 CODE 0 text10 dist/default/production\Semana12.X.production.o
+__ptext11 1126A 0 CODE 0 text11 dist/default/production\Semana12.X.production.o
+__ptext12 1135A 0 CODE 0 text12 dist/default/production\Semana12.X.production.o
+__ptext13 11362 0 CODE 0 text13 dist/default/production\Semana12.X.production.o
+__ptext14 10BAC 0 CODE 0 text14 dist/default/production\Semana12.X.production.o
+__ptext15 10FEE 0 CODE 0 text15 dist/default/production\Semana12.X.production.o
+__ptext16 1133E 0 CODE 0 text16 dist/default/production\Semana12.X.production.o
+__ptext17 1130E 0 CODE 0 text17 dist/default/production\Semana12.X.production.o
+__ptext18 10D64 0 CODE 0 text18 dist/default/production\Semana12.X.production.o
+__ptext19 11202 0 CODE 0 text19 dist/default/production\Semana12.X.production.o
+__ptext20 105DE 0 CODE 0 text20 dist/default/production\Semana12.X.production.o
+__ptext21 10F2C 0 CODE 0 text21 dist/default/production\Semana12.X.production.o
+__ptext22 10DDE 0 CODE 0 text22 dist/default/production\Semana12.X.production.o
+__ptext23 110FA 0 CODE 0 text23 dist/default/production\Semana12.X.production.o
+__ptext24 11186 0 CODE 0 text24 dist/default/production\Semana12.X.production.o
+__ptext25 11236 0 CODE 0 text25 dist/default/production\Semana12.X.production.o
+__ptext26 10E52 0 CODE 0 text26 dist/default/production\Semana12.X.production.o
+__ptext27 112F2 0 CODE 0 text27 dist/default/production\Semana12.X.production.o
+__ptext28 10B0C 0 CODE 0 text28 dist/default/production\Semana12.X.production.o
+__ptext29 10C42 0 CODE 0 text29 dist/default/production\Semana12.X.production.o
+__ptext30 1104A 0 CODE 0 text30 dist/default/production\Semana12.X.production.o
+__ptext31 111C4 0 CODE 0 text31 dist/default/production\Semana12.X.production.o
+__ptext32 1134C 0 CODE 0 text32 dist/default/production\Semana12.X.production.o
+__ptext33 11326 0 CODE 0 text33 dist/default/production\Semana12.X.production.o
+___flmul 10000 0 CODE 0 text5 dist/default/production\Semana12.X.production.o
+___fltol 10902 0 CODE 0 text4 dist/default/production\Semana12.X.production.o
+___ltdiv 10CD8 0 CODE 0 text3 dist/default/production\Semana12.X.production.o
+___lwdiv 10DDE 0 CODE 0 text22 dist/default/production\Semana12.X.production.o
+___lwmod 10F2C 0 CODE 0 text21 dist/default/production\Semana12.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\Semana12.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\Semana12.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\Semana12.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\Semana12.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\Semana12.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\Semana12.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\Semana12.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\Semana12.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\Semana12.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\Semana12.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\Semana12.X.production.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/production\Semana12.X.production.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/production\Semana12.X.production.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/production\Semana12.X.production.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/production\Semana12.X.production.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/production\Semana12.X.production.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/production\Semana12.X.production.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/production\Semana12.X.production.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/production\Semana12.X.production.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/production\Semana12.X.production.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/production\Semana12.X.production.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/production\Semana12.X.production.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/production\Semana12.X.production.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/production\Semana12.X.production.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/production\Semana12.X.production.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/production\Semana12.X.production.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/production\Semana12.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Semana12.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Semana12.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Semana12.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\Semana12.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\Semana12.X.production.o
+ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/production\Semana12.X.production.o
+_LATDbits 4C1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__end_of_CURSOR_ONOFF 1129A 0 CODE 0 text11 dist/default/production\Semana12.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Semana12.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___lwdiv@divisor 518 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_strlen 11186 0 CODE 0 text24 dist/default/production\Semana12.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Semana12.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+i2_U1_DATA_SEND 11326 0 CODE 0 text33 dist/default/production\Semana12.X.production.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Semana12.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Semana12.X.production.o
+_ADCON0bits 3F3 0 ABS 0 - dist/default/production\Semana12.X.production.o
+i2strlen@a 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+i2strlen@s 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__HcstackBANK5 0 0 ABS 0 cstackBANK5 dist/default/production\Semana12.X.production.o
+_LEER_LCD 10E52 0 CODE 0 text26 dist/default/production\Semana12.X.production.o
+___flge@ff1 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___flge@ff2 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_U1_STRING_SEND 1104A 0 CODE 0 text15 dist/default/production\Semana12.X.production.o
+_PIR4bits 4B2 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___fltol@exp1 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_ENVIA_NIBBLE 1130E 0 CODE 0 text27 dist/default/production\Semana12.X.production.o
+end_of_initialization 112C0 0 CODE 0 cinit dist/default/production\Semana12.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Semana12.X.production.o
+tomamuestra_ADC@temporal 565 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__end_of_LEER_LCD 10EC4 0 CODE 0 text26 dist/default/production\Semana12.X.production.o
+ESCRIBE_MENSAJE2@cadena 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___lwdiv@dividend 516 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?___flmul 529 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?___fltol 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?___ltdiv 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?___lwdiv 516 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?___lwmod 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Semana12.X.production.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/production\Semana12.X.production.o
+LCD_ESCRIBE_VAR_INT@d_millar 570 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Semana12.X.production.o
+__pcinit 1129A 0 CODE 0 cinit dist/default/production\Semana12.X.production.o
+?i2_strlen 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__ptext0 10EC4 0 CODE 0 text0 dist/default/production\Semana12.X.production.o
+__ptext1 10784 0 CODE 0 text1 dist/default/production\Semana12.X.production.o
+__ptext2 1042A 0 CODE 0 text2 dist/default/production\Semana12.X.production.o
+__ptext3 10CD8 0 CODE 0 text3 dist/default/production\Semana12.X.production.o
+__ptext4 10902 0 CODE 0 text4 dist/default/production\Semana12.X.production.o
+__ptext5 10000 0 CODE 0 text5 dist/default/production\Semana12.X.production.o
+__ptext6 10A08 0 CODE 0 text6 dist/default/production\Semana12.X.production.o
+__ptext7 10F90 0 CODE 0 text7 dist/default/production\Semana12.X.production.o
+__ptext8 112C6 0 CODE 0 text8 dist/default/production\Semana12.X.production.o
+__ptext9 11148 0 CODE 0 text9 dist/default/production\Semana12.X.production.o
+i2U1_DATA_SEND@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Semana12.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Semana12.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Semana12.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Semana12.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Semana12.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Semana12.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Semana12.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Semana12.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Semana12.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Semana12.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Semana12.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Semana12.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Semana12.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Semana12.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\Semana12.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Semana12.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Semana12.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\Semana12.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\Semana12.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\Semana12.X.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production\Semana12.X.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production\Semana12.X.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production\Semana12.X.production.o
+__Ltext32 0 0 ABS 0 text32 dist/default/production\Semana12.X.production.o
+__Ltext33 0 0 ABS 0 text33 dist/default/production\Semana12.X.production.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__end_ofi2_U1_DATA_SEND 1133E 0 CODE 0 text33 dist/default/production\Semana12.X.production.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Semana12.X.production.o
+?___xxtofl 51B 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Semana12.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Semana12.X.production.o
+ENVIA_LCD_CMD@dato 512 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___fltol@sign1 519 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___ltdiv@dividend 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Semana12.X.production.o
+U1_STRING_SEND@cadena 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+?_tomamuestra_ADC 542 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_U1_INIT 112F2 0 CODE 0 text8 dist/default/production\Semana12.X.production.o
+__end_of_U1_Menu 10C42 0 CODE 0 text14 dist/default/production\Semana12.X.production.o
+_U1_NEWLINE 1133E 0 CODE 0 text16 dist/default/production\Semana12.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___fltol@f1 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\DOCENT~1\AppData\Local\Temp\xcAs19e4.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Semana12.X.production.o
+___ltdiv@counter 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__end_of__initialization 112C0 0 CODE 0 cinit dist/default/production\Semana12.X.production.o
+__end_of_tomamuestra_ADC 10902 0 CODE 0 text1 dist/default/production\Semana12.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Semana12.X.production.o
+POS_CURSOR@columna 514 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+ESCRIBE_MENSAJE2@i 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Semana12.X.production.o
+U1_STRING_SEND@tam 519 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+ENVIA_CHAR@dato 512 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_tomamuestra_ADC$1274 560 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__pmediumconst FEB8 0 MEDIUMCONST 0 mediumconst dist/default/production\Semana12.X.production.o
+__end_of_main 10F2C 0 CODE 0 text0 dist/default/production\Semana12.X.production.o
+ESCRIBE_MENSAJE2@tam 519 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_ADPCH 3EC 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_OSCEN B3 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_PORTD 4D1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_T2CON 324 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_TRISD 4C9 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1RXB 2A1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_U1TXB 2A3 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\Semana12.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\Semana12.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Semana12.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\Semana12.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\Semana12.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Semana12.X.production.o
+_ENVIA_CHAR 11236 0 CODE 0 text25 dist/default/production\Semana12.X.production.o
+_CCP1CON 342 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__initialization 1129A 0 CODE 0 cinit dist/default/production\Semana12.X.production.o
+_tomamuestra_ADC 10784 0 CODE 0 text1 dist/default/production\Semana12.X.production.o
+___xxtofl@sign 523 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+__pdataCOMRAM 54E 0 COMRAM 1 dataCOMRAM dist/default/production\Semana12.X.production.o
+__end_of_U1_NEWLINE 1134C 0 CODE 0 text16 dist/default/production\Semana12.X.production.o
+ENVIA_LCD_CMD@aux 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+_U1_DATA_SEND 1130E 0 CODE 0 text17 dist/default/production\Semana12.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Semana12.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Semana12.X.production.o
+tomamuestra_ADC@promedio 569 0 BANK5 1 cstackBANK5 dist/default/production\Semana12.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Semana12.X.production.o
+_U1ERRIRbits 2B2 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_ANSELAbits 400 0 ABS 0 - dist/default/production\Semana12.X.production.o
+_ANSELFbits 428 0 ABS 0 - dist/default/production\Semana12.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Semana12.X.production.o
+CURSOR_ONOFF@estado 514 0 COMRAM 1 cstackCOMRAM dist/default/production\Semana12.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 FE 1
+text5 0 10000 10000 136C 1
+cstackCOMRAM 1 501 501 4F 1
+cstackBANK5 1 560 560 15 1
+reset_vec 0 0 0 4 1
+mediumconst 0 FEB8 FEB8 148 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
