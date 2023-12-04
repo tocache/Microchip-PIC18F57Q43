@@ -104,6 +104,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24245
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-Q_DFP/1.20.405/xc8\pic\include\proc\pic18f57q43.h: 24245: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x31E)));
 [v _T1CONbits `VS1154 ~T0 @X0 0 e@798 ]
+"23956
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18F-Q_DFP/1.20.405/xc8\pic\include\proc\pic18f57q43.h: 23956: extern volatile unsigned short TMR1 __attribute__((address(0x31C)));
+[v _TMR1 `Vus ~T0 @X0 0 e@796 ]
 [p mainexit ]
 "32 ./I2C_LCD.h
 [; ;./I2C_LCD.h: 32: void I2C_POS_CURSOR(unsigned char fila,unsigned char columna);
@@ -111,6 +114,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;./I2C_LCD.h: 65: void I2C_ESCRIBE_MENSAJE2(const char *cadena);
 [v _I2C_ESCRIBE_MENSAJE2 `(v ~T0 @X0 0 ef1`*Cuc ]
+"45
+[; ;./I2C_LCD.h: 45: void I2C_BORRAR_LCD(void);
+[v _I2C_BORRAR_LCD `(v ~T0 @X0 0 ef ]
 "75
 [; ;./I2C_LCD.h: 75: void I2C_LCD_ESCRIBE_VAR_INT(unsigned int numero, unsigned char n_digitos, unsigned char punto);
 [v _I2C_LCD_ESCRIBE_VAR_INT `(v ~T0 @X0 0 ef3`ui`uc`uc ]
@@ -2797,146 +2803,137 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;maincode01.c: 22:     T1CON = 0x32;
 [e = _T1CON -> -> 50 `i `uc ]
-"24
-[; ;maincode01.c: 24: }
+"23
+[; ;maincode01.c: 23: }
 [e :UE 2413 ]
 }
-"26
-[; ;maincode01.c: 26: unsigned int Read_HCSR04(unsigned char numero){
+"25
+[; ;maincode01.c: 25: unsigned int Read_HCSR04(unsigned char numero){
 [v _Read_HCSR04 `(ui ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Read_HCSR04 ]
 [v _numero `uc ~T0 @X0 1 r1 ]
 [f ]
-"27
-[; ;maincode01.c: 27:     unsigned int cuentas;
+"26
+[; ;maincode01.c: 26:     unsigned int cuentas;
 [v _cuentas `ui ~T0 @X0 1 a ]
-"28
-[; ;maincode01.c: 28:     TMR1H = 0;
+"27
+[; ;maincode01.c: 27:     TMR1H = 0;
 [e = _TMR1H -> -> 0 `i `uc ]
-"29
-[; ;maincode01.c: 29:     TMR1L = 0;
+"28
+[; ;maincode01.c: 28:     TMR1L = 0;
 [e = _TMR1L -> -> 0 `i `uc ]
-"30
-[; ;maincode01.c: 30:     switch (numero){
+"29
+[; ;maincode01.c: 29:     switch (numero){
 [e $U 2416  ]
 {
-"31
-[; ;maincode01.c: 31:         case 0:
+"30
+[; ;maincode01.c: 30:         case 0:
 [e :U 2417 ]
-"32
-[; ;maincode01.c: 32:             LATEbits.LATE0 = 1;
+"31
+[; ;maincode01.c: 31:             LATEbits.LATE0 = 1;
 [e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-"33
-[; ;maincode01.c: 33:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
+"32
+[; ;maincode01.c: 32:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `ul `d .4000000.0 `ul ]
-"34
-[; ;maincode01.c: 34:             LATEbits.LATE0 = 0;
+"33
+[; ;maincode01.c: 33:             LATEbits.LATE0 = 0;
 [e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
-"35
-[; ;maincode01.c: 35:             while(PORTCbits.RC0 == 0);
+"34
+[; ;maincode01.c: 34:             while(PORTCbits.RC0 == 0);
 [e $U 2418  ]
 [e :U 2419 ]
 [e :U 2418 ]
 [e $ == -> . . _PORTCbits 0 0 `i -> 0 `i 2419  ]
 [e :U 2420 ]
-"36
-[; ;maincode01.c: 36:             T1CONbits.ON = 1;
+"35
+[; ;maincode01.c: 35:             T1CONbits.ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"37
-[; ;maincode01.c: 37:             while(PORTCbits.RC0 == 1);
+"36
+[; ;maincode01.c: 36:             while(PORTCbits.RC0 == 1);
 [e $U 2421  ]
 [e :U 2422 ]
 [e :U 2421 ]
 [e $ == -> . . _PORTCbits 0 0 `i -> 1 `i 2422  ]
 [e :U 2423 ]
-"38
-[; ;maincode01.c: 38:             T1CONbits.ON = 0;
+"37
+[; ;maincode01.c: 37:             T1CONbits.ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"39
-[; ;maincode01.c: 39:             cuentas = (TMR1H << 8) + TMR1L;
-[e = _cuentas -> + << -> _TMR1H `i -> 8 `i -> _TMR1L `i `ui ]
-"40
-[; ;maincode01.c: 40:             break;
+"38
+[; ;maincode01.c: 38:             break;
 [e $U 2415  ]
-"41
-[; ;maincode01.c: 41:         case 1:
+"39
+[; ;maincode01.c: 39:         case 1:
 [e :U 2424 ]
-"42
-[; ;maincode01.c: 42:             LATEbits.LATE1 = 1;
+"40
+[; ;maincode01.c: 40:             LATEbits.LATE1 = 1;
 [e = . . _LATEbits 0 1 -> -> 1 `i `uc ]
-"43
-[; ;maincode01.c: 43:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
+"41
+[; ;maincode01.c: 41:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `ul `d .4000000.0 `ul ]
-"44
-[; ;maincode01.c: 44:             LATEbits.LATE1 = 0;
+"42
+[; ;maincode01.c: 42:             LATEbits.LATE1 = 0;
 [e = . . _LATEbits 0 1 -> -> 0 `i `uc ]
-"45
-[; ;maincode01.c: 45:             while(PORTCbits.RC1 == 0);
+"43
+[; ;maincode01.c: 43:             while(PORTCbits.RC1 == 0);
 [e $U 2425  ]
 [e :U 2426 ]
 [e :U 2425 ]
 [e $ == -> . . _PORTCbits 0 1 `i -> 0 `i 2426  ]
 [e :U 2427 ]
-"46
-[; ;maincode01.c: 46:             T1CONbits.ON = 1;
+"44
+[; ;maincode01.c: 44:             T1CONbits.ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"47
-[; ;maincode01.c: 47:             while(PORTCbits.RC1 == 1);
+"45
+[; ;maincode01.c: 45:             while(PORTCbits.RC1 == 1);
 [e $U 2428  ]
 [e :U 2429 ]
 [e :U 2428 ]
 [e $ == -> . . _PORTCbits 0 1 `i -> 1 `i 2429  ]
 [e :U 2430 ]
-"48
-[; ;maincode01.c: 48:             T1CONbits.ON = 0;
+"46
+[; ;maincode01.c: 46:             T1CONbits.ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"49
-[; ;maincode01.c: 49:             cuentas = (TMR1H << 8) + TMR1L;
-[e = _cuentas -> + << -> _TMR1H `i -> 8 `i -> _TMR1L `i `ui ]
-"50
-[; ;maincode01.c: 50:             break;
+"47
+[; ;maincode01.c: 47:             break;
 [e $U 2415  ]
-"51
-[; ;maincode01.c: 51:         case 2:
+"48
+[; ;maincode01.c: 48:         case 2:
 [e :U 2431 ]
-"52
-[; ;maincode01.c: 52:             LATEbits.LATE2 = 1;
+"49
+[; ;maincode01.c: 49:             LATEbits.LATE2 = 1;
 [e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
-"53
-[; ;maincode01.c: 53:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
+"50
+[; ;maincode01.c: 50:             _delay((unsigned long)((10)*(32000000UL/4000000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `ul `d .4000000.0 `ul ]
-"54
-[; ;maincode01.c: 54:             LATEbits.LATE2 = 0;
+"51
+[; ;maincode01.c: 51:             LATEbits.LATE2 = 0;
 [e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-"55
-[; ;maincode01.c: 55:             while(PORTCbits.RC2 == 0);
+"52
+[; ;maincode01.c: 52:             while(PORTCbits.RC2 == 0);
 [e $U 2432  ]
 [e :U 2433 ]
 [e :U 2432 ]
 [e $ == -> . . _PORTCbits 0 2 `i -> 0 `i 2433  ]
 [e :U 2434 ]
-"56
-[; ;maincode01.c: 56:             T1CONbits.ON = 1;
+"53
+[; ;maincode01.c: 53:             T1CONbits.ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"57
-[; ;maincode01.c: 57:             while(PORTCbits.RC2 == 1);
+"54
+[; ;maincode01.c: 54:             while(PORTCbits.RC2 == 1);
 [e $U 2435  ]
 [e :U 2436 ]
 [e :U 2435 ]
 [e $ == -> . . _PORTCbits 0 2 `i -> 1 `i 2436  ]
 [e :U 2437 ]
-"58
-[; ;maincode01.c: 58:             T1CONbits.ON = 0;
+"55
+[; ;maincode01.c: 55:             T1CONbits.ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"59
-[; ;maincode01.c: 59:             cuentas = (TMR1H << 8) + TMR1L;
-[e = _cuentas -> + << -> _TMR1H `i -> 8 `i -> _TMR1L `i `ui ]
-"60
-[; ;maincode01.c: 60:             break;
+"56
+[; ;maincode01.c: 56:             break;
 [e $U 2415  ]
-"61
-[; ;maincode01.c: 61:     }
+"57
+[; ;maincode01.c: 57:     }
 }
 [e $U 2415  ]
 [e :U 2416 ]
@@ -2945,91 +2942,103 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 2431
  2415 ]
 [e :U 2415 ]
-"62
-[; ;maincode01.c: 62:     return cuentas;
+"58
+[; ;maincode01.c: 58:     cuentas = TMR1;
+[e = _cuentas -> _TMR1 `ui ]
+"59
+[; ;maincode01.c: 59:     return cuentas;
 [e ) _cuentas ]
 [e $UE 2414  ]
-"63
-[; ;maincode01.c: 63: }
+"60
+[; ;maincode01.c: 60: }
 [e :UE 2414 ]
 }
-"65
-[; ;maincode01.c: 65: unsigned int calculo(unsigned int valor){
+"62
+[; ;maincode01.c: 62: unsigned int calculo(unsigned int valor){
 [v _calculo `(ui ~T0 @X0 1 ef1`ui ]
 {
 [e :U _calculo ]
 [v _valor `ui ~T0 @X0 1 r1 ]
 [f ]
-"66
-[; ;maincode01.c: 66:     float tiempo;
+"63
+[; ;maincode01.c: 63:     float tiempo;
 [v _tiempo `f ~T0 @X0 1 a ]
-"67
-[; ;maincode01.c: 67:     unsigned int distancia;
+"64
+[; ;maincode01.c: 64:     unsigned int distancia;
 [v _distancia `ui ~T0 @X0 1 a ]
-"68
-[; ;maincode01.c: 68:     tiempo= (float)valor;
+"65
+[; ;maincode01.c: 65:     tiempo= (float)valor;
 [e = _tiempo -> _valor `f ]
-"69
-[; ;maincode01.c: 69:     tiempo= tiempo / 5.8;
+"66
+[; ;maincode01.c: 66:     tiempo= tiempo / 5.8;
 [e = _tiempo -> / -> _tiempo `d .5.8 `f ]
-"70
-[; ;maincode01.c: 70:     distancia = (int)tiempo + 1;
+"67
+[; ;maincode01.c: 67:     distancia = (int)tiempo + 1;
 [e = _distancia -> + -> _tiempo `i -> 1 `i `ui ]
-"71
-[; ;maincode01.c: 71:     return distancia;
+"68
+[; ;maincode01.c: 68:     return distancia;
 [e ) _distancia ]
 [e $UE 2438  ]
-"72
-[; ;maincode01.c: 72: }
+"69
+[; ;maincode01.c: 69: }
 [e :UE 2438 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"74
-[; ;maincode01.c: 74: void main(void) {
+"71
+[; ;maincode01.c: 71: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"75
-[; ;maincode01.c: 75:     configuro();
+"72
+[; ;maincode01.c: 72:     configuro();
 [e ( _configuro ..  ]
-"76
-[; ;maincode01.c: 76:     I2C_POS_CURSOR(1,0);
+"73
+[; ;maincode01.c: 73:     I2C_POS_CURSOR(1,0);
 [e ( _I2C_POS_CURSOR (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"77
-[; ;maincode01.c: 77:     I2C_ESCRIBE_MENSAJE2("Hola mundo I2C");
+"74
+[; ;maincode01.c: 74:     I2C_ESCRIBE_MENSAJE2("Hola mundo I2C");
 [e ( _I2C_ESCRIBE_MENSAJE2 (1 :s 1C ]
-"78
-[; ;maincode01.c: 78:     _delay((unsigned long)((3000)*(32000000UL/4000.0)));
+"75
+[; ;maincode01.c: 75:     _delay((unsigned long)((3000)*(32000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"79
-[; ;maincode01.c: 79:     while(1){
+"76
+[; ;maincode01.c: 76:     I2C_BORRAR_LCD();
+[e ( _I2C_BORRAR_LCD ..  ]
+"77
+[; ;maincode01.c: 77:     while(1){
 [e :U 2441 ]
 {
-"80
-[; ;maincode01.c: 80:         I2C_POS_CURSOR(1,0);
+"78
+[; ;maincode01.c: 78:         I2C_POS_CURSOR(1,0);
 [e ( _I2C_POS_CURSOR (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"81
-[; ;maincode01.c: 81:         I2C_ESCRIBE_MENSAJE2("HCSR04-0:");
+"79
+[; ;maincode01.c: 79:         I2C_ESCRIBE_MENSAJE2("HCSR04-0:");
 [e ( _I2C_ESCRIBE_MENSAJE2 (1 :s 2C ]
-"82
-[; ;maincode01.c: 82:         I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(0)),5,0);
-[e ( _I2C_LCD_ESCRIBE_VAR_INT (3 , , ( _calculo (1 ( _Read_HCSR04 (1 -> -> 0 `i `uc -> -> 5 `i `uc -> -> 0 `i `uc ]
-"83
-[; ;maincode01.c: 83:         _delay((unsigned long)((50)*(32000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"84
-[; ;maincode01.c: 84:         I2C_POS_CURSOR(2,0);
-[e ( _I2C_POS_CURSOR (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
-"85
-[; ;maincode01.c: 85:         I2C_ESCRIBE_MENSAJE2("HCSR04-1:");
+"80
+[; ;maincode01.c: 80:         I2C_LCD_ESCRIBE_VAR_INT(Read_HCSR04(0),5,0);
+[e ( _I2C_LCD_ESCRIBE_VAR_INT (3 , , ( _Read_HCSR04 (1 -> -> 0 `i `uc -> -> 5 `i `uc -> -> 0 `i `uc ]
+"81
+[; ;maincode01.c: 81:         I2C_ESCRIBE_MENSAJE2("cm");
 [e ( _I2C_ESCRIBE_MENSAJE2 (1 :s 3C ]
+"82
+[; ;maincode01.c: 82:         _delay((unsigned long)((100)*(32000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"83
+[; ;maincode01.c: 83:         I2C_POS_CURSOR(2,0);
+[e ( _I2C_POS_CURSOR (2 , -> -> 2 `i `uc -> -> 0 `i `uc ]
+"84
+[; ;maincode01.c: 84:         I2C_ESCRIBE_MENSAJE2("HCSR04-1:");
+[e ( _I2C_ESCRIBE_MENSAJE2 (1 :s 4C ]
+"85
+[; ;maincode01.c: 85:         I2C_LCD_ESCRIBE_VAR_INT(Read_HCSR04(1),5,0);
+[e ( _I2C_LCD_ESCRIBE_VAR_INT (3 , , ( _Read_HCSR04 (1 -> -> 1 `i `uc -> -> 5 `i `uc -> -> 0 `i `uc ]
 "86
-[; ;maincode01.c: 86:         I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(1)),5,0);
-[e ( _I2C_LCD_ESCRIBE_VAR_INT (3 , , ( _calculo (1 ( _Read_HCSR04 (1 -> -> 1 `i `uc -> -> 5 `i `uc -> -> 0 `i `uc ]
+[; ;maincode01.c: 86:         I2C_ESCRIBE_MENSAJE2("cm");
+[e ( _I2C_ESCRIBE_MENSAJE2 (1 :s 5C ]
 "87
-[; ;maincode01.c: 87:         _delay((unsigned long)((50)*(32000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+[; ;maincode01.c: 87:         _delay((unsigned long)((100)*(32000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
 "88
 [; ;maincode01.c: 88:     }
 }
@@ -3040,6 +3049,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;maincode01.c: 89: }
 [e :UE 2439 ]
 }
+[a 3C 99 109 0 ]
+[a 5C 99 109 0 ]
 [a 1C 72 111 108 97 32 109 117 110 100 111 32 73 50 67 0 ]
-[a 3C 72 67 83 82 48 52 45 49 58 0 ]
+[a 4C 72 67 83 82 48 52 45 49 58 0 ]
 [a 2C 72 67 83 82 48 52 45 48 58 0 ]

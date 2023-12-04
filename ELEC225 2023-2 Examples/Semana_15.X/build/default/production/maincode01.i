@@ -29394,7 +29394,6 @@ void configuro(void){
     ANSELCbits.ANSELC2 = 0;
     T1CLK = 0x01;
     T1CON = 0x32;
-
 }
 
 unsigned int Read_HCSR04(unsigned char numero){
@@ -29410,7 +29409,6 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC0 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;
         case 1:
             LATEbits.LATE1 = 1;
@@ -29420,7 +29418,6 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC1 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;
         case 2:
             LATEbits.LATE2 = 1;
@@ -29430,9 +29427,9 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC2 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;
     }
+    cuentas = TMR1;
     return cuentas;
 }
 
@@ -29450,14 +29447,17 @@ void main(void) {
     I2C_POS_CURSOR(1,0);
     I2C_ESCRIBE_MENSAJE2("Hola mundo I2C");
     _delay((unsigned long)((3000)*(32000000UL/4000.0)));
+    I2C_BORRAR_LCD();
     while(1){
         I2C_POS_CURSOR(1,0);
         I2C_ESCRIBE_MENSAJE2("HCSR04-0:");
-        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(0)),5,0);
-        _delay((unsigned long)((50)*(32000000UL/4000.0)));
+        I2C_LCD_ESCRIBE_VAR_INT(Read_HCSR04(0),5,0);
+        I2C_ESCRIBE_MENSAJE2("cm");
+        _delay((unsigned long)((100)*(32000000UL/4000.0)));
         I2C_POS_CURSOR(2,0);
         I2C_ESCRIBE_MENSAJE2("HCSR04-1:");
-        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(1)),5,0);
-        _delay((unsigned long)((50)*(32000000UL/4000.0)));
+        I2C_LCD_ESCRIBE_VAR_INT(Read_HCSR04(1),5,0);
+        I2C_ESCRIBE_MENSAJE2("cm");
+        _delay((unsigned long)((100)*(32000000UL/4000.0)));
     }
 }

@@ -20,11 +20,10 @@ void configuro(void){
     ANSELCbits.ANSELC2 = 0;   //RC2 como digital
     T1CLK = 0x01;       //Timer1 con fuente de reloj FOSC/4
     T1CON = 0x32;       //presc 1:8, rd16=1, async, timer1 OFF = 1us x cta   
-    
 }
 
 unsigned int Read_HCSR04(unsigned char numero){
-    unsigned int cuentas;
+    //unsigned int cuentas;
     TMR1H = 0;
     TMR1L = 0;
     switch (numero){
@@ -36,7 +35,6 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC0 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;
         case 1:
             LATEbits.LATE1 = 1;
@@ -46,7 +44,6 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC1 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;
         case 2:
             LATEbits.LATE2 = 1;
@@ -56,10 +53,10 @@ unsigned int Read_HCSR04(unsigned char numero){
             T1CONbits.ON = 1;
             while(PORTCbits.RC2 == 1);
             T1CONbits.ON = 0;
-            cuentas = (TMR1H << 8) + TMR1L;
             break;            
     }
-    return cuentas;
+    //cuentas = TMR1;
+    return TMR1;
 }
 
 unsigned int calculo(unsigned int valor){
@@ -76,14 +73,17 @@ void main(void) {
     I2C_POS_CURSOR(1,0);
     I2C_ESCRIBE_MENSAJE2("Hola mundo I2C");
     __delay_ms(3000);
+    I2C_BORRAR_LCD();
     while(1){
-        I2C_POS_CURSOR(1,0);
+        I2C_POS_CURSOR(3,0);
         I2C_ESCRIBE_MENSAJE2("HCSR04-0:");
-        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(0)),5,0);
-        __delay_ms(50);
-        I2C_POS_CURSOR(2,0);
+        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(0)),3,1);
+        I2C_ESCRIBE_MENSAJE2("cm");
+        __delay_ms(100);
+        I2C_POS_CURSOR(4,0);
         I2C_ESCRIBE_MENSAJE2("HCSR04-1:");
-        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(1)),5,0);
-        __delay_ms(50);
+        I2C_LCD_ESCRIBE_VAR_INT(calculo(Read_HCSR04(1)),3,1);
+        I2C_ESCRIBE_MENSAJE2("cm");
+        __delay_ms(100);
     }
 }
