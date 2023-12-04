@@ -15,20 +15,20 @@
 
 void I2C1_INIT(void){
     //configuracion del I2C
-    TRISCbits.TRISC3 = 0; // outputs
-    TRISCbits.TRISC4 = 0;
-    ANSELCbits.ANSELC3 = 0; // digitales
-    ANSELCbits.ANSELC4 = 0;
-    ODCONCbits.ODCC3 = 1; // open drain
-    ODCONCbits.ODCC4 = 1;
+    TRISBbits.TRISB4 = 0; // outputs
+    TRISBbits.TRISB5 = 0;
+    ANSELBbits.ANSELB4 = 0; // digitales
+    ANSELBbits.ANSELB5 = 0;
+    ODCONBbits.ODCB4 = 1; // open drain
+    ODCONBbits.ODCB5 = 1;
     // COnfiguracion de PPS para I2C (outputs en RC3, RC4)    
-    RC3PPS = 0x37; // I2C1 SCL
-    RC4PPS = 0x38; // I2C1 SDA
-    // Configuracion de puerto C para i2c    
-    RC3I2Cbits.PU = 2; // RC3I2C, PU = "10". 10x current of standard weak pull-up
-    RC3I2Cbits.TH = 1; // RC3I2C, TH = "01". I2C-specific input thresholds
-    RC4I2Cbits.PU = 2; // RC4I2C, PU = "10". 10x current of standard weak pull-up
-    RC4I2Cbits.TH = 1; // RC4I2C, TH = "01". I2C-specific input thresholds    
+    RB5PPS = 0x37; // I2C1 SCL
+    RB4PPS = 0x38; // I2C1 SDA
+    // Configuracion de puerto B para i2c    
+//    RB43I2Cbits.PU = 2; // RC3I2C, PU = "10". 10x current of standard weak pull-up
+//    RB4I2Cbits.TH = 1; // RC3I2C, TH = "01". I2C-specific input thresholds
+//    RB5I2Cbits.PU = 2; // RC4I2C, PU = "10". 10x current of standard weak pull-up
+//    RB5I2Cbits.TH = 1; // RC4I2C, TH = "01". I2C-specific input thresholds    
     I2C1CON0bits.EN = 1; // habilitar modulo I2C
     I2C1CLKbits.CLK = 3; // MFINTOSC (500 kHz), lo cual genera un SCL a 100 KHz por defecto
     I2C1CON0bits.MODE = 0x4;            //I2C host mode 7bit addressing
