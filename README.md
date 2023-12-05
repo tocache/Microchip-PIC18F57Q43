@@ -8,6 +8,13 @@ Documentation:<br>
 -Curiosity Board for PIC18F57Q43: http://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf<br>
 -PIC18F57Q43 Curiosity Nano Hardware User Guide: https://onlinedocs.microchip.com/pr/GUID-5D38BF5C-8481-46C4-BD08-1B8F4C7289B2-en-US-2/index.html<br>
 
+My contributions:<br>
+-LCD HD44780: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem13_UART.X<br>
+-I2C_LCD with PCF8574: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem14_I2C.X<br>
+-MCP23017: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem14_I2C.X<br>
+-RTC with Timer1: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem10_relojon.X/maincode02.c<br>
+-UART TX & RX: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL52_2_Sem13_UART.X/maincode05.c<br>
+
 More resources:<br>
 -iSebas microProgramando - Serie - Curiosity Nano: https://youtube.com/playlist?list=PLmX2_OhrubDAKTyopNOu7JDwZPXZ6jRMr<br>
 -sine wave in 8 bits: https://gist.github.com/funkfinger/965900<br>
