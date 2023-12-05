@@ -14,6 +14,10 @@ My contributions:<br>
 -MCP23017: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem14_I2C.X<br>
 -RTC with Timer1: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem10_relojon.X/maincode02.c<br>
 -UART TX & RX: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL52_2_Sem13_UART.X/maincode05.c<br>
+-HCSR04 using FSM: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL_57_1_Sem14_hcsr04.X<br>
+-Multiple HCSR04: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/ELEC225%202023-2%20Examples/Semana_15.X<br>
+-PID Implementation for balance bar: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/ELEC225%202023-2%20Examples/Semana%2013.X/maincode01.c<br>
+-Servo movement with Timer0: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem11_servon.X/maincode4.c<br>
 
 More resources:<br>
 -iSebas microProgramando - Serie - Curiosity Nano: https://youtube.com/playlist?list=PLmX2_OhrubDAKTyopNOu7JDwZPXZ6jRMr<br>
