@@ -25,3 +25,5 @@ External resources:<br>
 -Microchip - How to use Neopixels with PIC® Microcontrollers: https://www.youtube.com/watch?v=hHLMnJs87VE<br>
 -Wels - Curso PIC18F57Q43: https://www.youtube.com/playlist?list=PLO92aMMVufR-jhC-6h1Vyl4mw2k4MqHxv<br>
 -Jorge APC - PIC18F57Q43 Curiosity Nano Módulo ADCC y PWM - MPLAB X - XC8 - Code Configurator: https://www.youtube.com/watch?v=99n-ugK6fpM&list=PLuPJRYD-JsdhFVf440nqOWhk71nJUR0h0<br>
+-Bengy De La Cruz: https://www.youtube.com/playlist?list=PLmn-Cv0jVVdrMfKdJ2-EZPNBo3sOyId3j<br>
+-Renzo Rey: https://www.youtube.com/playlist?list=PLb8OzRofTZ02Sql_n3M4C6jbUBQmyUyif<br>
