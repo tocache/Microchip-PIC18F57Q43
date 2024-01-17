@@ -27,3 +27,4 @@ External resources:<br>
 -Jorge APC - PIC18F57Q43 Curiosity Nano Módulo ADCC y PWM - MPLAB X - XC8 - Code Configurator: https://www.youtube.com/watch?v=99n-ugK6fpM&list=PLuPJRYD-JsdhFVf440nqOWhk71nJUR0h0<br>
 -Bengy De La Cruz: https://www.youtube.com/playlist?list=PLmn-Cv0jVVdrMfKdJ2-EZPNBo3sOyId3j<br>
 -Renzo Rey: https://www.youtube.com/playlist?list=PLb8OzRofTZ02Sql_n3M4C6jbUBQmyUyif<br>
+-Julio Francisco Motta Claudio - Proyecto Final - Especialización Completa en Microcontroladores Pic Nuevas Familias - Umaker: https://www.youtube.com/watch?v=RFbnPU8FA6E<br>
