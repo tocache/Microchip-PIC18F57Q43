@@ -19,9 +19,9 @@ My contributions:<br>
 -PID Implementation for balance bar: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/ELEC225%202023-2%20Examples/Semana%2013.X/maincode01.c<br>
 -Servo movement with Timer0: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem11_servon.X/maincode4.c<br>
 
-More resources:<br>
+External resources:<br>
 -iSebas microProgramando - Serie - Curiosity Nano: https://youtube.com/playlist?list=PLmX2_OhrubDAKTyopNOu7JDwZPXZ6jRMr<br>
 -sine wave in 8 bits: https://gist.github.com/funkfinger/965900<br>
 -Microchip - How to use Neopixels with PIC® Microcontrollers: https://www.youtube.com/watch?v=hHLMnJs87VE<br>
 -Wels - Curso PIC18F57Q43: https://www.youtube.com/playlist?list=PLO92aMMVufR-jhC-6h1Vyl4mw2k4MqHxv<br>
-
+-Jorge APC - PIC18F57Q43 Curiosity Nano Módulo ADCC y PWM - MPLAB X - XC8 - Code Configurator: https://www.youtube.com/watch?v=99n-ugK6fpM&list=PLuPJRYD-JsdhFVf440nqOWhk71nJUR0h0<br>
