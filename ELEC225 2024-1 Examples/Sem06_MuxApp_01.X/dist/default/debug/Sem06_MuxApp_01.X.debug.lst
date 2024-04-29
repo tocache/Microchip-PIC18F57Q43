@@ -1,0 +1,2320 @@
+
+
+Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
+                                                                                               Mon Apr 29 18:27:54 2024
+
+Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
+     1                           	processor	18F57Q43
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1,noexec
+     6                           	psect	nvCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     7                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     8                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     9                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    10                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+    11                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text4,global,reloc=2,class=CODE,delta=1,group=2
+    16                           	psect	text5,global,reloc=4,class=CODE,delta=1
+    17                           	psect	text6,global,reloc=4,class=CODE,delta=1
+    18                           	psect	ivt0x8,global,reloc=2,class=CODE,delta=1,noexec,keep,optim=
+    19                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+    20                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    21                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    22                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    23   000000                     
+    24                           ; Generated 18/12/2023 GMT
+    25                           ; 
+    26                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    27                           ; All rights reserved.
+    28                           ; 
+    29                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    30                           ; 
+    31                           ; Redistribution and use in source and binary forms, with or without modification, are
+    32                           ; permitted provided that the following conditions are met:
+    33                           ; 
+    34                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    35                           ;        conditions and the following disclaimer.
+    36                           ; 
+    37                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    38                           ;        of conditions and the following disclaimer in the documentation and/or other
+    39                           ;        materials provided with the distribution. Publication is not required when
+    40                           ;        this file is used in an embedded application.
+    41                           ; 
+    42                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    43                           ;        software without specific prior written permission.
+    44                           ; 
+    45                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    46                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    47                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    48                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    49                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    50                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    51                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    52                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    53                           ; 
+    54                           ; 
+    55                           ; Code-generator required, PIC18F57Q43 Definitions
+    56                           ; 
+    57                           ; SFR Addresses
+    58   000000                     
+    59                           	psect	idataCOMRAM
+    60   0027CC                     __pidataCOMRAM:
+    61                           	callstack 0
+    62                           
+    63                           ;initializer for _decod
+    64   0027CC  77                 	db	119
+    65   0027CD  7C                 	db	124
+    66   0027CE  39                 	db	57
+    67   0027CF  5E                 	db	94
+    68   0027D0  79                 	db	121
+    69   0027D1  71                 	db	113
+    70   0027D2  6F                 	db	111
+    71   0027D3  74                 	db	116
+    72   0027D4  30                 	db	48
+    73   0027D5  1E                 	db	30
+    74   0027D6  76                 	db	118
+    75   0027D7  38                 	db	56
+    76   0027D8  15                 	db	21
+    77   0027D9  54                 	db	84
+    78   0027DA  3F                 	db	63
+    79   0027DB  73                 	db	115
+    80   0027DC  67                 	db	103
+    81   0027DD  50                 	db	80
+    82   0027DE  6D                 	db	109
+    83   0027DF  78                 	db	120
+    84   0027E0  3E                 	db	62
+    85   0027E1  1C                 	db	28
+    86   0027E2  2A                 	db	42
+    87   0027E3  76                 	db	118
+    88   0027E4  6E                 	db	110
+    89   0027E5  5B                 	db	91
+    90                           
+    91                           ;initializer for _mensaje
+    92   0027E6  49                 	db	73
+    93   0027E7  4E                 	db	78
+    94   0027E8  47                 	db	71
+    95   0027E9  45                 	db	69
+    96   0027EA  4E                 	db	78
+    97   0027EB  49                 	db	73
+    98   0027EC  45                 	db	69
+    99   0027ED  52                 	db	82
+   100   0027EE  49                 	db	73
+   101   0027EF  41                 	db	65
+   102   0027F0  20                 	db	32
+   103   0027F1  45                 	db	69
+   104   0027F2  4C                 	db	76
+   105   0027F3  45                 	db	69
+   106   0027F4  43                 	db	67
+   107   0027F5  54                 	db	84
+   108   0027F6  52                 	db	82
+   109   0027F7  4F                 	db	79
+   110   0027F8  4E                 	db	78
+   111   0027F9  49                 	db	73
+   112   0027FA  43                 	db	67
+   113   0027FB  41                 	db	65
+   114   0027FC  20                 	db	32
+   115   0027FD  55                 	db	85
+   116   0027FE  50                 	db	80
+   117   0027FF  41                 	db	65
+   118   002800  4F                 	db	79
+   119   002801  00                 	db	0
+   120                           
+   121                           	psect	nvCOMRAM
+   122   000544                     __pnvCOMRAM:
+   123                           	callstack 0
+   124   000544                     _cantidad:
+   125                           	callstack 0
+   126   000544                     	ds	2
+   127   000000                     _OSCCON1	set	173
+   128   000000                     _OSCFRQ	set	177
+   129   000000                     _OSCEN	set	179
+   130   000000                     _T0CON0	set	794
+   131   000000                     _ANSELB	set	1032
+   132   000000                     _ANSELD	set	1048
+   133   000000                     _TRISD	set	1225
+   134   000000                     _INTCON0bits	set	1238
+   135   000000                     _ANSELE	set	1056
+   136   000000                     _TRISB	set	1223
+   137   000000                     _PIE3bits	set	1185
+   138   000000                     _WPUE	set	1057
+   139   000000                     _T0CON1	set	795
+   140   000000                     _PIR3bits	set	1201
+   141   000000                     _LATBbits	set	1215
+   142   000000                     _LATD	set	1217
+   143                           
+   144                           ; #config settings
+   145                           
+   146                           	psect	cinit
+   147   00275A                     __pcinit:
+   148                           	callstack 0
+   149   00275A                     start_initialization:
+   150                           	callstack 0
+   151   00275A                     __initialization:
+   152                           	callstack 0
+   153                           
+   154                           ; Initialize objects allocated to COMRAM (54 bytes)
+   155                           ; load TBLPTR registers with __pidataCOMRAM
+   156   00275A  0ECC               	movlw	low __pidataCOMRAM
+   157   00275C  6EF6               	movwf	tblptrl,c
+   158   00275E  0E27               	movlw	high __pidataCOMRAM
+   159   002760  6EF7               	movwf	tblptrh,c
+   160   002762  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+   161   002764  6EF8               	movwf	tblptru,c
+   162   002766  EE01  F101         	lfsr	0,__pdataCOMRAM
+   163   00276A  EE10 F036          	lfsr	1,54
+   164   00276E                     copy_data0:
+   165   00276E  0009               	tblrd		*+
+   166   002770  C4F5 F4EE          	movff	tablat,postinc0
+   167   002774  50E5               	movf	postdec1,w,c
+   168   002776  50E1               	movf	fsr1l,w,c
+   169   002778  E1FA               	bnz	copy_data0
+   170                           
+   171                           ; Clear objects allocated to COMRAM (2 bytes)
+   172   00277A  6A47               	clrf	(__pbssCOMRAM+1)& (0+255),c
+   173   00277C  6A46               	clrf	__pbssCOMRAM& (0+255),c
+   174                           
+   175                           ;
+   176                           ; Setup IVTBASE
+   177                           ;
+   178   00277E  0104               	movlb	4
+   179   002780  0E08               	movlw	(ivt0x8_base shr 0)& (0+255)
+   180   002782  6F5D               	movwf	93,b
+   181   002784  0E00               	movlw	(ivt0x8_base shr (0+8))& (0+255)
+   182   002786  6F5E               	movwf	94,b
+   183   002788  0E00               	movlw	(ivt0x8_base shr (0+16))& (0+255)
+   184   00278A  6F5F               	movwf	95,b
+   185   00278C                     end_of_initialization:
+   186                           	callstack 0
+   187   00278C                     __end_of__initialization:
+   188                           	callstack 0
+   189   00278C  0100               	movlb	0
+   190   00278E  EF1C  F014         	goto	_main	;jump to C main() function
+   191                           
+   192                           	psect	bssCOMRAM
+   193   000546                     __pbssCOMRAM:
+   194                           	callstack 0
+   195   000546                     _indice:
+   196                           	callstack 0
+   197   000546                     	ds	1
+   198   000547                     _decodificado:
+   199                           	callstack 0
+   200   000547                     	ds	1
+   201                           
+   202                           	psect	dataCOMRAM
+   203   000501                     __pdataCOMRAM:
+   204                           	callstack 0
+   205   000501                     _decod:
+   206                           	callstack 0
+   207   000501                     	ds	26
+   208   00051B                     _mensaje:
+   209                           	callstack 0
+   210   00051B                     	ds	28
+   211                           
+   212                           	psect	cstackCOMRAM
+   213   000537                     __pcstackCOMRAM:
+   214                           	callstack 0
+   215   000537                     ??_TMR0_ISR:
+   216   000537                     
+   217                           ; 1 bytes @ 0x0
+   218   000537                     	ds	4
+   219   00053B                     ??_multiplexacion:
+   220   00053B                     ?_strlen:
+   221                           	callstack 0
+   222   00053B                     strlen@s:
+   223                           	callstack 0
+   224                           
+   225                           ; 2 bytes @ 0x4
+   226   00053B                     	ds	2
+   227   00053D                     strlen@a:
+   228                           	callstack 0
+   229                           
+   230                           ; 2 bytes @ 0x6
+   231   00053D                     	ds	2
+   232   00053F                     ??_decodificacion:
+   233                           
+   234                           ; 1 bytes @ 0x8
+   235   00053F                     	ds	2
+   236   000541                     decodificacion@y_var:
+   237                           	callstack 0
+   238                           
+   239                           ; 1 bytes @ 0xA
+   240   000541                     	ds	1
+   241   000542                     decodificacion@z_var:
+   242                           	callstack 0
+   243                           
+   244                           ; 1 bytes @ 0xB
+   245   000542                     	ds	1
+   246   000543                     decodificacion@x_var:
+   247                           	callstack 0
+   248                           
+   249                           ; 1 bytes @ 0xC
+   250   000543                     	ds	1
+   251   000544                     
+   252                           ; 1 bytes @ 0xD
+   253 ;;
+   254 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   255 ;;
+   256 ;; *************** function _main *****************
+   257 ;; Defined at:
+   258 ;;		line 87 in file "maincode.c"
+   259 ;; Parameters:    Size  Location     Type
+   260 ;;		None
+   261 ;; Auto vars:     Size  Location     Type
+   262 ;;		None
+   263 ;; Return value:  Size  Location     Type
+   264 ;;                  1    wreg      void 
+   265 ;; Registers used:
+   266 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+   267 ;; Tracked objects:
+   268 ;;		On entry : 0/0
+   269 ;;		On exit  : 0/0
+   270 ;;		Unchanged: 0/0
+   271 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   272 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   273 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   274 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   275 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   276 ;;Total ram usage:        0 bytes
+   277 ;; Hardware stack levels required when called: 3
+   278 ;; This function calls:
+   279 ;;		_configuro
+   280 ;;		_decodificacion
+   281 ;;		_multiplexacion
+   282 ;; This function is called by:
+   283 ;;		Startup code after reset
+   284 ;; This function uses a non-reentrant model
+   285 ;;
+   286                           
+   287                           	psect	text0
+   288   002838                     __ptext0:
+   289                           	callstack 0
+   290   002838                     _main:
+   291                           	callstack 124
+   292   002838                     
+   293                           ;maincode.c: 88:     configuro();
+   294   002838  EC87  F013         	call	_configuro	;wreg free
+   295   00283C                     l948:
+   296                           
+   297                           ;maincode.c: 90:         decodificacion();
+   298   00283C  EC0A  F013         	call	_decodificacion	;wreg free
+   299   002840                     
+   300                           ;maincode.c: 91:         multiplexacion();
+   301   002840  EC81  F012         	call	_multiplexacion	;wreg free
+   302   002844  EF1E  F014         	goto	l948
+   303   002848  EF81  F000         	goto	start
+   304   00284C                     __end_of_main:
+   305                           	callstack 0
+   306                           
+   307 ;; *************** function _multiplexacion *****************
+   308 ;; Defined at:
+   309 ;;		line 52 in file "maincode.c"
+   310 ;; Parameters:    Size  Location     Type
+   311 ;;		None
+   312 ;; Auto vars:     Size  Location     Type
+   313 ;;		None
+   314 ;; Return value:  Size  Location     Type
+   315 ;;                  1    wreg      void 
+   316 ;; Registers used:
+   317 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+   318 ;; Tracked objects:
+   319 ;;		On entry : 0/0
+   320 ;;		On exit  : 0/0
+   321 ;;		Unchanged: 0/0
+   322 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   323 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   324 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   325 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   326 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   327 ;;Total ram usage:        1 bytes
+   328 ;; Hardware stack levels used: 1
+   329 ;; Hardware stack levels required when called: 1
+   330 ;; This function calls:
+   331 ;;		Nothing
+   332 ;; This function is called by:
+   333 ;;		_main
+   334 ;; This function uses a non-reentrant model
+   335 ;;
+   336                           
+   337                           	psect	text1
+   338   002502                     __ptext1:
+   339                           	callstack 0
+   340   002502                     _multiplexacion:
+   341                           	callstack 125
+   342   002502                     
+   343                           ;maincode.c: 53:     LATD = decodificado[indice];
+   344   002502  0E47               	movlw	low _decodificado
+   345   002504  2446               	addwf	_indice^(0+1280),w,c
+   346   002506  6ED9               	movwf	fsr2l,c
+   347   002508  6ADA               	clrf	fsr2h,c
+   348   00250A  0E05               	movlw	high _decodificado
+   349   00250C  22DA               	addwfc	fsr2h,f,c
+   350   00250E  50DF               	movf	indf2,w,c
+   351   002510  6EC1               	movwf	193,c	;volatile
+   352   002512                     
+   353                           ;maincode.c: 54:     LATBbits.LATB0 = 1;
+   354   002512  80BF               	bsf	191,0,c	;volatile
+   355   002514                     
+   356                           ;maincode.c: 55:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   357   002514  0E03               	movlw	3
+   358   002516  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   359   002518  0E98               	movlw	152
+   360   00251A                     u127:
+   361   00251A  2EE8               	decfsz	wreg,f,c
+   362   00251C  D7FE               	bra	u127
+   363   00251E  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   364   002520  D7FC               	bra	u127
+   365   002522                     
+   366                           ;maincode.c: 56:     LATBbits.LATB0 = 0;
+   367   002522  90BF               	bcf	191,0,c	;volatile
+   368   002524                     
+   369                           ;maincode.c: 57:     LATD = decodificado[indice+1];
+   370   002524  0E48               	movlw	low (_decodificado+1)
+   371   002526  2446               	addwf	_indice^(0+1280),w,c
+   372   002528  6ED9               	movwf	fsr2l,c
+   373   00252A  6ADA               	clrf	fsr2h,c
+   374   00252C  0E05               	movlw	high (_decodificado+1)
+   375   00252E  22DA               	addwfc	fsr2h,f,c
+   376   002530  50DF               	movf	indf2,w,c
+   377   002532  6EC1               	movwf	193,c	;volatile
+   378   002534                     
+   379                           ;maincode.c: 58:     LATBbits.LATB1 = 1;
+   380   002534  82BF               	bsf	191,1,c	;volatile
+   381                           
+   382                           ;maincode.c: 59:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   383   002536  0E03               	movlw	3
+   384   002538  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   385   00253A  0E98               	movlw	152
+   386   00253C                     u137:
+   387   00253C  2EE8               	decfsz	wreg,f,c
+   388   00253E  D7FE               	bra	u137
+   389   002540  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   390   002542  D7FC               	bra	u137
+   391   002544                     
+   392                           ;maincode.c: 60:     LATBbits.LATB1 = 0;
+   393   002544  92BF               	bcf	191,1,c	;volatile
+   394   002546                     
+   395                           ;maincode.c: 61:     LATD = decodificado[indice+2];
+   396   002546  0E49               	movlw	low (_decodificado+2)
+   397   002548  2446               	addwf	_indice^(0+1280),w,c
+   398   00254A  6ED9               	movwf	fsr2l,c
+   399   00254C  6ADA               	clrf	fsr2h,c
+   400   00254E  0E05               	movlw	high (_decodificado+2)
+   401   002550  22DA               	addwfc	fsr2h,f,c
+   402   002552  50DF               	movf	indf2,w,c
+   403   002554  6EC1               	movwf	193,c	;volatile
+   404   002556                     
+   405                           ;maincode.c: 62:     LATBbits.LATB2 = 1;
+   406   002556  84BF               	bsf	191,2,c	;volatile
+   407   002558                     
+   408                           ;maincode.c: 63:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   409   002558  0E03               	movlw	3
+   410   00255A  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   411   00255C  0E98               	movlw	152
+   412   00255E                     u147:
+   413   00255E  2EE8               	decfsz	wreg,f,c
+   414   002560  D7FE               	bra	u147
+   415   002562  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   416   002564  D7FC               	bra	u147
+   417   002566                     
+   418                           ;maincode.c: 64:     LATBbits.LATB2 = 0;
+   419   002566  94BF               	bcf	191,2,c	;volatile
+   420                           
+   421                           ;maincode.c: 65:     LATD = decodificado[indice+3];
+   422   002568  0E4A               	movlw	low (_decodificado+3)
+   423   00256A  2446               	addwf	_indice^(0+1280),w,c
+   424   00256C  6ED9               	movwf	fsr2l,c
+   425   00256E  6ADA               	clrf	fsr2h,c
+   426   002570  0E05               	movlw	high (_decodificado+3)
+   427   002572  22DA               	addwfc	fsr2h,f,c
+   428   002574  50DF               	movf	indf2,w,c
+   429   002576  6EC1               	movwf	193,c	;volatile
+   430   002578                     
+   431                           ;maincode.c: 66:     LATBbits.LATB3 = 1;
+   432   002578  86BF               	bsf	191,3,c	;volatile
+   433   00257A                     
+   434                           ;maincode.c: 67:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   435   00257A  0E03               	movlw	3
+   436   00257C  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   437   00257E  0E98               	movlw	152
+   438   002580                     u157:
+   439   002580  2EE8               	decfsz	wreg,f,c
+   440   002582  D7FE               	bra	u157
+   441   002584  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   442   002586  D7FC               	bra	u157
+   443   002588                     
+   444                           ;maincode.c: 68:     LATBbits.LATB3 = 0;
+   445   002588  96BF               	bcf	191,3,c	;volatile
+   446   00258A                     
+   447                           ;maincode.c: 69:     LATD = decodificado[indice+4];
+   448   00258A  0E4B               	movlw	low (_decodificado+4)
+   449   00258C  2446               	addwf	_indice^(0+1280),w,c
+   450   00258E  6ED9               	movwf	fsr2l,c
+   451   002590  6ADA               	clrf	fsr2h,c
+   452   002592  0E05               	movlw	high (_decodificado+4)
+   453   002594  22DA               	addwfc	fsr2h,f,c
+   454   002596  50DF               	movf	indf2,w,c
+   455   002598  6EC1               	movwf	193,c	;volatile
+   456   00259A                     
+   457                           ;maincode.c: 70:     LATBbits.LATB4 = 1;
+   458   00259A  88BF               	bsf	191,4,c	;volatile
+   459                           
+   460                           ;maincode.c: 71:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   461   00259C  0E03               	movlw	3
+   462   00259E  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   463   0025A0  0E98               	movlw	152
+   464   0025A2                     u167:
+   465   0025A2  2EE8               	decfsz	wreg,f,c
+   466   0025A4  D7FE               	bra	u167
+   467   0025A6  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   468   0025A8  D7FC               	bra	u167
+   469   0025AA                     
+   470                           ;maincode.c: 72:     LATBbits.LATB4 = 0;
+   471   0025AA  98BF               	bcf	191,4,c	;volatile
+   472   0025AC                     
+   473                           ;maincode.c: 73:     LATD = decodificado[indice+5];
+   474   0025AC  0E4C               	movlw	low (_decodificado+5)
+   475   0025AE  2446               	addwf	_indice^(0+1280),w,c
+   476   0025B0  6ED9               	movwf	fsr2l,c
+   477   0025B2  6ADA               	clrf	fsr2h,c
+   478   0025B4  0E05               	movlw	high (_decodificado+5)
+   479   0025B6  22DA               	addwfc	fsr2h,f,c
+   480   0025B8  50DF               	movf	indf2,w,c
+   481   0025BA  6EC1               	movwf	193,c	;volatile
+   482   0025BC                     
+   483                           ;maincode.c: 74:     LATBbits.LATB5 = 1;
+   484   0025BC  8ABF               	bsf	191,5,c	;volatile
+   485   0025BE                     
+   486                           ;maincode.c: 75:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   487   0025BE  0E03               	movlw	3
+   488   0025C0  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   489   0025C2  0E98               	movlw	152
+   490   0025C4                     u177:
+   491   0025C4  2EE8               	decfsz	wreg,f,c
+   492   0025C6  D7FE               	bra	u177
+   493   0025C8  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   494   0025CA  D7FC               	bra	u177
+   495   0025CC                     
+   496                           ;maincode.c: 76:     LATBbits.LATB5 = 0;
+   497   0025CC  9ABF               	bcf	191,5,c	;volatile
+   498                           
+   499                           ;maincode.c: 77:     LATD = decodificado[indice+6];
+   500   0025CE  0E4D               	movlw	low (_decodificado+6)
+   501   0025D0  2446               	addwf	_indice^(0+1280),w,c
+   502   0025D2  6ED9               	movwf	fsr2l,c
+   503   0025D4  6ADA               	clrf	fsr2h,c
+   504   0025D6  0E05               	movlw	high (_decodificado+6)
+   505   0025D8  22DA               	addwfc	fsr2h,f,c
+   506   0025DA  50DF               	movf	indf2,w,c
+   507   0025DC  6EC1               	movwf	193,c	;volatile
+   508   0025DE                     
+   509                           ;maincode.c: 78:     LATBbits.LATB6 = 1;
+   510   0025DE  8CBF               	bsf	191,6,c	;volatile
+   511   0025E0                     
+   512                           ;maincode.c: 79:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   513   0025E0  0E03               	movlw	3
+   514   0025E2  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   515   0025E4  0E98               	movlw	152
+   516   0025E6                     u187:
+   517   0025E6  2EE8               	decfsz	wreg,f,c
+   518   0025E8  D7FE               	bra	u187
+   519   0025EA  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   520   0025EC  D7FC               	bra	u187
+   521   0025EE                     
+   522                           ;maincode.c: 80:     LATBbits.LATB6 = 0;
+   523   0025EE  9CBF               	bcf	191,6,c	;volatile
+   524   0025F0                     
+   525                           ;maincode.c: 81:     LATD = decodificado[indice+7];
+   526   0025F0  0E4E               	movlw	low (_decodificado+7)
+   527   0025F2  2446               	addwf	_indice^(0+1280),w,c
+   528   0025F4  6ED9               	movwf	fsr2l,c
+   529   0025F6  6ADA               	clrf	fsr2h,c
+   530   0025F8  0E05               	movlw	high (_decodificado+7)
+   531   0025FA  22DA               	addwfc	fsr2h,f,c
+   532   0025FC  50DF               	movf	indf2,w,c
+   533   0025FE  6EC1               	movwf	193,c	;volatile
+   534   002600                     
+   535                           ;maincode.c: 82:     LATBbits.LATB7 = 1;
+   536   002600  8EBF               	bsf	191,7,c	;volatile
+   537                           
+   538                           ;maincode.c: 83:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+   539   002602  0E03               	movlw	3
+   540   002604  6E3B               	movwf	??_multiplexacion^(0+1280),c
+   541   002606  0E98               	movlw	152
+   542   002608                     u197:
+   543   002608  2EE8               	decfsz	wreg,f,c
+   544   00260A  D7FE               	bra	u197
+   545   00260C  2E3B               	decfsz	??_multiplexacion^(0+1280),f,c
+   546   00260E  D7FC               	bra	u197
+   547   002610                     
+   548                           ;maincode.c: 84:     LATBbits.LATB7 = 0;
+   549   002610  9EBF               	bcf	191,7,c	;volatile
+   550   002612  0012               	return		;funcret
+   551   002614                     __end_of_multiplexacion:
+   552                           	callstack 0
+   553                           
+   554 ;; *************** function _decodificacion *****************
+   555 ;; Defined at:
+   556 ;;		line 31 in file "maincode.c"
+   557 ;; Parameters:    Size  Location     Type
+   558 ;;		None
+   559 ;; Auto vars:     Size  Location     Type
+   560 ;;  x_var           1   12[COMRAM] unsigned char 
+   561 ;;  z_var           1   11[COMRAM] unsigned char 
+   562 ;;  y_var           1   10[COMRAM] unsigned char 
+   563 ;; Return value:  Size  Location     Type
+   564 ;;                  1    wreg      void 
+   565 ;; Registers used:
+   566 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, cstack
+   567 ;; Tracked objects:
+   568 ;;		On entry : 0/0
+   569 ;;		On exit  : 0/0
+   570 ;;		Unchanged: 0/0
+   571 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   572 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   573 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   574 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   575 ;;      Totals:         5       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   576 ;;Total ram usage:        5 bytes
+   577 ;; Hardware stack levels used: 1
+   578 ;; Hardware stack levels required when called: 2
+   579 ;; This function calls:
+   580 ;;		_strlen
+   581 ;; This function is called by:
+   582 ;;		_main
+   583 ;; This function uses a non-reentrant model
+   584 ;;
+   585                           
+   586                           	psect	text2
+   587   002614                     __ptext2:
+   588                           	callstack 0
+   589   002614                     _decodificacion:
+   590                           	callstack 124
+   591   002614                     
+   592                           ;maincode.c: 32:     unsigned char x_var;;maincode.c: 33:     unsigned char y_var;;mainc
+      +                          ode.c: 34:     unsigned char z_var;;maincode.c: 35:     for(y_var=0;y_var<8;y_var++){
+   593   002614  0E00               	movlw	0
+   594   002616  6E41               	movwf	decodificacion@y_var^(0+1280),c
+   595   002618                     l914:
+   596                           
+   597                           ;maincode.c: 36:         decodificado[y_var] = 0x00;
+   598   002618  0E47               	movlw	low _decodificado
+   599   00261A  2441               	addwf	decodificacion@y_var^(0+1280),w,c
+   600   00261C  6ED9               	movwf	fsr2l,c
+   601   00261E  6ADA               	clrf	fsr2h,c
+   602   002620  0E05               	movlw	high _decodificado
+   603   002622  22DA               	addwfc	fsr2h,f,c
+   604   002624  6ADF               	clrf	indf2,c
+   605   002626                     
+   606                           ;maincode.c: 37:     }
+   607   002626  2A41               	incf	decodificacion@y_var^(0+1280),f,c
+   608   002628  0E07               	movlw	7
+   609   00262A  6441               	cpfsgt	decodificacion@y_var^(0+1280),c
+   610   00262C  EF1A  F013         	goto	u81
+   611   002630  EF1C  F013         	goto	u80
+   612   002634                     u81:
+   613   002634  EF0C  F013         	goto	l914
+   614   002638                     u80:
+   615   002638                     
+   616                           ;maincode.c: 38:     cantidad = strlen(mensaje);
+   617   002638  0E1B               	movlw	low _mensaje
+   618   00263A  6E3B               	movwf	strlen@s^(0+1280),c
+   619   00263C  0E05               	movlw	high _mensaje
+   620   00263E  6E3C               	movwf	(strlen@s+1)^(0+1280),c
+   621   002640  EC01  F014         	call	_strlen	;wreg free
+   622   002644  C53B  F544         	movff	?_strlen,_cantidad
+   623   002648  C53C  F545         	movff	?_strlen+1,_cantidad+1
+   624   00264C                     
+   625                           ;maincode.c: 39:     for(x_var=0;x_var<cantidad;x_var++){
+   626   00264C  0E00               	movlw	0
+   627   00264E  6E43               	movwf	decodificacion@x_var^(0+1280),c
+   628   002650  EF5A  F013         	goto	l932
+   629   002654                     l924:
+   630                           
+   631                           ;maincode.c: 40:         if(mensaje[x_var] == 0x20){
+   632   002654  0E1B               	movlw	low _mensaje
+   633   002656  2443               	addwf	decodificacion@x_var^(0+1280),w,c
+   634   002658  6ED9               	movwf	fsr2l,c
+   635   00265A  6ADA               	clrf	fsr2h,c
+   636   00265C  0E05               	movlw	high _mensaje
+   637   00265E  22DA               	addwfc	fsr2h,f,c
+   638   002660  0E20               	movlw	32
+   639   002662  18DE               	xorwf	postinc2,w,c
+   640   002664  A4D8               	btfss	status,2,c
+   641   002666  EF37  F013         	goto	u91
+   642   00266A  EF39  F013         	goto	u90
+   643   00266E                     u91:
+   644   00266E  EF42  F013         	goto	l928
+   645   002672                     u90:
+   646   002672                     
+   647                           ;maincode.c: 41:             decodificado[x_var+8] = 0x00;
+   648   002672  0E4F               	movlw	low (_decodificado+8)
+   649   002674  2443               	addwf	decodificacion@x_var^(0+1280),w,c
+   650   002676  6ED9               	movwf	fsr2l,c
+   651   002678  6ADA               	clrf	fsr2h,c
+   652   00267A  0E05               	movlw	high (_decodificado+8)
+   653   00267C  22DA               	addwfc	fsr2h,f,c
+   654   00267E  6ADF               	clrf	indf2,c
+   655                           
+   656                           ;maincode.c: 42:         }
+   657   002680  EF59  F013         	goto	l930
+   658   002684                     l928:
+   659                           
+   660                           ;maincode.c: 44:             decodificado[x_var+8] = decod[mensaje[x_var]-0x41];
+   661   002684  0E1B               	movlw	low _mensaje
+   662   002686  2443               	addwf	decodificacion@x_var^(0+1280),w,c
+   663   002688  6ED9               	movwf	fsr2l,c
+   664   00268A  6ADA               	clrf	fsr2h,c
+   665   00268C  0E05               	movlw	high _mensaje
+   666   00268E  22DA               	addwfc	fsr2h,f,c
+   667   002690  50DF               	movf	indf2,w,c
+   668   002692  6E3F               	movwf	??_decodificacion^(0+1280),c
+   669   002694  6A40               	clrf	(??_decodificacion+1)^(0+1280),c
+   670   002696  0EC0               	movlw	low (_decod+65471)
+   671   002698  243F               	addwf	??_decodificacion^(0+1280),w,c
+   672   00269A  6ED9               	movwf	fsr2l,c
+   673   00269C  0E04               	movlw	high (_decod+65471)
+   674   00269E  2040               	addwfc	(??_decodificacion+1)^(0+1280),w,c
+   675   0026A0  6EDA               	movwf	fsr2h,c
+   676   0026A2  0E4F               	movlw	low (_decodificado+8)
+   677   0026A4  2443               	addwf	decodificacion@x_var^(0+1280),w,c
+   678   0026A6  6EE1               	movwf	fsr1l,c
+   679   0026A8  6AE2               	clrf	fsr1h,c
+   680   0026AA  0E05               	movlw	high (_decodificado+8)
+   681   0026AC  22E2               	addwfc	fsr1h,f,c
+   682   0026AE  C4DF F4E7          	movff	indf2,indf1
+   683   0026B2                     l930:
+   684                           
+   685                           ;maincode.c: 46:     }
+   686   0026B2  2A43               	incf	decodificacion@x_var^(0+1280),f,c
+   687   0026B4                     l932:
+   688   0026B4  5043               	movf	decodificacion@x_var^(0+1280),w,c
+   689   0026B6  6E3F               	movwf	??_decodificacion^(0+1280),c
+   690   0026B8  6A40               	clrf	(??_decodificacion+1)^(0+1280),c
+   691   0026BA  5044               	movf	_cantidad^(0+1280),w,c
+   692   0026BC  5C3F               	subwf	??_decodificacion^(0+1280),w,c
+   693   0026BE  5045               	movf	(_cantidad+1)^(0+1280),w,c
+   694   0026C0  5840               	subwfb	(??_decodificacion+1)^(0+1280),w,c
+   695   0026C2  A0D8               	btfss	status,0,c
+   696   0026C4  EF66  F013         	goto	u101
+   697   0026C8  EF68  F013         	goto	u100
+   698   0026CC                     u101:
+   699   0026CC  EF2A  F013         	goto	l924
+   700   0026D0                     u100:
+   701   0026D0                     
+   702                           ;maincode.c: 47:     for(z_var=0;z_var<7;z_var++){
+   703   0026D0  0E00               	movlw	0
+   704   0026D2  6E42               	movwf	decodificacion@z_var^(0+1280),c
+   705   0026D4                     l940:
+   706                           
+   707                           ;maincode.c: 48:         decodificado[z_var+cantidad+8] = 0x00;
+   708   0026D4  0E47               	movlw	low _decodificado
+   709   0026D6  6E3F               	movwf	??_decodificacion^(0+1280),c
+   710   0026D8  0E05               	movlw	high _decodificado
+   711   0026DA  6E40               	movwf	(??_decodificacion+1)^(0+1280),c
+   712   0026DC  0E08               	movlw	8
+   713   0026DE  263F               	addwf	??_decodificacion^(0+1280),f,c
+   714   0026E0  0E00               	movlw	0
+   715   0026E2  2240               	addwfc	(??_decodificacion+1)^(0+1280),f,c
+   716   0026E4  5042               	movf	decodificacion@z_var^(0+1280),w,c
+   717   0026E6  263F               	addwf	??_decodificacion^(0+1280),f,c
+   718   0026E8  0E00               	movlw	0
+   719   0026EA  2240               	addwfc	(??_decodificacion+1)^(0+1280),f,c
+   720   0026EC  5044               	movf	_cantidad^(0+1280),w,c
+   721   0026EE  243F               	addwf	??_decodificacion^(0+1280),w,c
+   722   0026F0  6ED9               	movwf	fsr2l,c
+   723   0026F2  5045               	movf	(_cantidad+1)^(0+1280),w,c
+   724   0026F4  2040               	addwfc	(??_decodificacion+1)^(0+1280),w,c
+   725   0026F6  6EDA               	movwf	fsr2h,c
+   726   0026F8  6ADF               	clrf	indf2,c
+   727   0026FA                     
+   728                           ;maincode.c: 49:     }
+   729   0026FA  2A42               	incf	decodificacion@z_var^(0+1280),f,c
+   730   0026FC  0E06               	movlw	6
+   731   0026FE  6442               	cpfsgt	decodificacion@z_var^(0+1280),c
+   732   002700  EF84  F013         	goto	u111
+   733   002704  EF86  F013         	goto	u110
+   734   002708                     u111:
+   735   002708  EF6A  F013         	goto	l940
+   736   00270C                     u110:
+   737   00270C  0012               	return		;funcret
+   738   00270E                     __end_of_decodificacion:
+   739                           	callstack 0
+   740                           
+   741 ;; *************** function _configuro *****************
+   742 ;; Defined at:
+   743 ;;		line 14 in file "maincode.c"
+   744 ;; Parameters:    Size  Location     Type
+   745 ;;		None
+   746 ;; Auto vars:     Size  Location     Type
+   747 ;;		None
+   748 ;; Return value:  Size  Location     Type
+   749 ;;                  1    wreg      void 
+   750 ;; Registers used:
+   751 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   752 ;; Tracked objects:
+   753 ;;		On entry : 0/0
+   754 ;;		On exit  : 0/0
+   755 ;;		Unchanged: 0/0
+   756 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   757 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   758 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   759 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   760 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   761 ;;Total ram usage:        0 bytes
+   762 ;; Hardware stack levels used: 1
+   763 ;; Hardware stack levels required when called: 2
+   764 ;; This function calls:
+   765 ;;		_strlen
+   766 ;; This function is called by:
+   767 ;;		_main
+   768 ;; This function uses a non-reentrant model
+   769 ;;
+   770                           
+   771                           	psect	text3
+   772   00270E                     __ptext3:
+   773                           	callstack 0
+   774   00270E                     _configuro:
+   775                           	callstack 124
+   776   00270E                     
+   777                           ;maincode.c: 15:     OSCCON1 = 0x60;
+   778   00270E  0E60               	movlw	96
+   779   002710  0100               	movlb	0	; () banked
+   780   002712  6FAD               	movwf	173,b	;volatile
+   781                           
+   782                           ;maincode.c: 16:     OSCFRQ = 0x03;
+   783   002714  0E03               	movlw	3
+   784   002716  6FB1               	movwf	177,b	;volatile
+   785                           
+   786                           ;maincode.c: 17:     OSCEN = 0x40;
+   787   002718  0E40               	movlw	64
+   788   00271A  6FB3               	movwf	179,b	;volatile
+   789                           
+   790                           ;maincode.c: 18:     TRISD = 0x00;
+   791   00271C  0E00               	movlw	0
+   792   00271E  6EC9               	movwf	201,c	;volatile
+   793                           
+   794                           ;maincode.c: 19:     ANSELD = 0x00;
+   795   002720  0E00               	movlw	0
+   796   002722  0104               	movlb	4	; () banked
+   797   002724  6F18               	movwf	24,b	;volatile
+   798                           
+   799                           ;maincode.c: 20:     TRISB = 0xC0;
+   800   002726  0EC0               	movlw	192
+   801   002728  6EC7               	movwf	199,c	;volatile
+   802                           
+   803                           ;maincode.c: 21:     ANSELB = 0xC0;
+   804   00272A  0EC0               	movlw	192
+   805   00272C  6F08               	movwf	8,b	;volatile
+   806                           
+   807                           ;maincode.c: 22:     ANSELE = 0xFC;
+   808   00272E  0EFC               	movlw	252
+   809   002730  6F20               	movwf	32,b	;volatile
+   810                           
+   811                           ;maincode.c: 23:     WPUE = 0x03;
+   812   002732  0E03               	movlw	3
+   813   002734  6F21               	movwf	33,b	;volatile
+   814                           
+   815                           ;maincode.c: 24:     T0CON0 = 0x90;
+   816   002736  0E90               	movlw	144
+   817   002738  0103               	movlb	3	; () banked
+   818   00273A  6F1A               	movwf	26,b	;volatile
+   819                           
+   820                           ;maincode.c: 25:     T0CON1 = 0x43;
+   821   00273C  0E43               	movlw	67
+   822   00273E  6F1B               	movwf	27,b	;volatile
+   823   002740                     
+   824                           ; BSR set to: 3
+   825                           ;maincode.c: 26:     INTCON0bits.GIE = 1;
+   826   002740  8ED6               	bsf	214,7,c	;volatile
+   827   002742                     
+   828                           ; BSR set to: 3
+   829                           ;maincode.c: 27:     PIE3bits.TMR0IE = 1;
+   830   002742  8EA1               	bsf	161,7,c	;volatile
+   831   002744                     
+   832                           ; BSR set to: 3
+   833                           ;maincode.c: 28:     cantidad = strlen(mensaje);
+   834   002744  0E1B               	movlw	low _mensaje
+   835   002746  6E3B               	movwf	strlen@s^(0+1280),c
+   836   002748  0E05               	movlw	high _mensaje
+   837   00274A  6E3C               	movwf	(strlen@s+1)^(0+1280),c
+   838   00274C  EC01  F014         	call	_strlen	;wreg free
+   839   002750  C53B  F544         	movff	?_strlen,_cantidad
+   840   002754  C53C  F545         	movff	?_strlen+1,_cantidad+1
+   841   002758  0012               	return		;funcret
+   842   00275A                     __end_of_configuro:
+   843                           	callstack 0
+   844                           
+   845 ;; *************** function _strlen *****************
+   846 ;; Defined at:
+   847 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c"
+   848 ;; Parameters:    Size  Location     Type
+   849 ;;  s               2    4[COMRAM] PTR const unsigned char 
+   850 ;;		 -> mensaje(28), 
+   851 ;; Auto vars:     Size  Location     Type
+   852 ;;  a               2    6[COMRAM] PTR const unsigned char 
+   853 ;;		 -> mensaje(28), 
+   854 ;; Return value:  Size  Location     Type
+   855 ;;                  2    4[COMRAM] unsigned int 
+   856 ;; Registers used:
+   857 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+   858 ;; Tracked objects:
+   859 ;;		On entry : 0/0
+   860 ;;		On exit  : 0/0
+   861 ;;		Unchanged: 0/0
+   862 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   863 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   864 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   865 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   866 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   867 ;;Total ram usage:        4 bytes
+   868 ;; Hardware stack levels used: 1
+   869 ;; Hardware stack levels required when called: 1
+   870 ;; This function calls:
+   871 ;;		Nothing
+   872 ;; This function is called by:
+   873 ;;		_configuro
+   874 ;;		_decodificacion
+   875 ;; This function uses a non-reentrant model
+   876 ;;
+   877                           
+   878                           	psect	text4
+   879   002802                     __ptext4:
+   880                           	callstack 0
+   881   002802                     _strlen:
+   882                           	callstack 124
+   883   002802  C53B  F53D         	movff	strlen@s,strlen@a
+   884   002806  C53C  F53E         	movff	strlen@s+1,strlen@a+1
+   885   00280A  EF09  F014         	goto	l894
+   886   00280E                     l892:
+   887   00280E  4A3B               	infsnz	strlen@s^(0+1280),f,c
+   888   002810  2A3C               	incf	(strlen@s+1)^(0+1280),f,c
+   889   002812                     l894:
+   890   002812  C53B  F4D9         	movff	strlen@s,fsr2l
+   891   002816  C53C  F4DA         	movff	strlen@s+1,fsr2h
+   892   00281A  50DF               	movf	indf2,w,c
+   893   00281C  A4D8               	btfss	status,2,c
+   894   00281E  EF13  F014         	goto	u71
+   895   002822  EF15  F014         	goto	u70
+   896   002826                     u71:
+   897   002826  EF07  F014         	goto	l892
+   898   00282A                     u70:
+   899   00282A  503D               	movf	strlen@a^(0+1280),w,c
+   900   00282C  5C3B               	subwf	strlen@s^(0+1280),w,c
+   901   00282E  6E3B               	movwf	?_strlen^(0+1280),c
+   902   002830  503E               	movf	(strlen@a+1)^(0+1280),w,c
+   903   002832  583C               	subwfb	(strlen@s+1)^(0+1280),w,c
+   904   002834  6E3C               	movwf	(?_strlen+1)^(0+1280),c
+   905   002836  0012               	return		;funcret
+   906   002838                     __end_of_strlen:
+   907                           	callstack 0
+   908                           
+   909 ;; *************** function _TMR0_ISR *****************
+   910 ;; Defined at:
+   911 ;;		line 95 in file "maincode.c"
+   912 ;; Parameters:    Size  Location     Type
+   913 ;;		None
+   914 ;; Auto vars:     Size  Location     Type
+   915 ;;		None
+   916 ;; Return value:  Size  Location     Type
+   917 ;;                  1    wreg      void 
+   918 ;; Registers used:
+   919 ;;		wreg, status,2, status,0
+   920 ;; Tracked objects:
+   921 ;;		On entry : 0/0
+   922 ;;		On exit  : 0/0
+   923 ;;		Unchanged: 0/0
+   924 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+   925 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   926 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   927 ;;      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   928 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+   929 ;;Total ram usage:        4 bytes
+   930 ;; Hardware stack levels used: 1
+   931 ;; This function calls:
+   932 ;;		Nothing
+   933 ;; This function is called by:
+   934 ;;		Interrupt level 2
+   935 ;; This function uses a non-reentrant model
+   936 ;;
+   937                           
+   938                           	psect	text5
+   939   002794                     __ptext5:
+   940                           	callstack 0
+   941   002794                     _TMR0_ISR:
+   942                           	callstack 124
+   943   002794                     
+   944                           ;maincode.c: 96:     PIR3bits.TMR0IF = 0;
+   945   002794  9EB1               	bcf	177,7,c	;volatile
+   946   002796                     
+   947                           ;maincode.c: 97:     if(indice == cantidad+7){
+   948   002796  5046               	movf	_indice^(0+1280),w,c
+   949   002798  6E37               	movwf	??_TMR0_ISR^(0+1280),c
+   950   00279A  6A38               	clrf	(??_TMR0_ISR+1)^(0+1280),c
+   951   00279C  0E07               	movlw	7
+   952   00279E  2444               	addwf	_cantidad^(0+1280),w,c
+   953   0027A0  6E39               	movwf	(??_TMR0_ISR+2)^(0+1280),c
+   954   0027A2  0E00               	movlw	0
+   955   0027A4  2045               	addwfc	(_cantidad+1)^(0+1280),w,c
+   956   0027A6  6E3A               	movwf	(??_TMR0_ISR+3)^(0+1280),c
+   957   0027A8  5037               	movf	??_TMR0_ISR^(0+1280),w,c
+   958   0027AA  1839               	xorwf	(??_TMR0_ISR+2)^(0+1280),w,c
+   959   0027AC  E107               	bnz	i2u6_41
+   960   0027AE  5038               	movf	(??_TMR0_ISR+1)^(0+1280),w,c
+   961   0027B0  183A               	xorwf	(??_TMR0_ISR+3)^(0+1280),w,c
+   962   0027B2  A4D8               	btfss	status,2,c
+   963   0027B4  EFDE  F013         	goto	i2u6_41
+   964   0027B8  EFE0  F013         	goto	i2u6_40
+   965   0027BC                     i2u6_41:
+   966   0027BC  EFE4  F013         	goto	i2l888
+   967   0027C0                     i2u6_40:
+   968   0027C0                     
+   969                           ;maincode.c: 98:         indice = 0;
+   970   0027C0  0E00               	movlw	0
+   971   0027C2  6E46               	movwf	_indice^(0+1280),c
+   972                           
+   973                           ;maincode.c: 99:     }
+   974   0027C4  EFE5  F013         	goto	i2l79
+   975   0027C8                     i2l888:
+   976                           
+   977                           ;maincode.c: 101:         indice++;
+   978   0027C8  2A46               	incf	_indice^(0+1280),f,c
+   979   0027CA                     i2l79:
+   980   0027CA  0011               	retfie		f
+   981   0027CC                     __end_of_TMR0_ISR:
+   982                           	callstack 0
+   983                           
+   984 ;; *************** function _DEFAULT_ISR *****************
+   985 ;; Defined at:
+   986 ;;		line 105 in file "maincode.c"
+   987 ;; Parameters:    Size  Location     Type
+   988 ;;		None
+   989 ;; Auto vars:     Size  Location     Type
+   990 ;;		None
+   991 ;; Return value:  Size  Location     Type
+   992 ;;                  1    wreg      void 
+   993 ;; Registers used:
+   994 ;;		None
+   995 ;; Tracked objects:
+   996 ;;		On entry : 0/0
+   997 ;;		On exit  : 0/0
+   998 ;;		Unchanged: 0/0
+   999 ;; Data sizes:     COMRAM   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15  BANK1
+      +6  BANK17  BANK18  BANK19  BANK20  BANK21  BANK22  BANK23  BANK24  BANK25  BANK26  BANK27  BANK28  BANK29  BANK30  BANK3
+      +1  BANK32  BANK33  BANK34  BANK35  BANK36
+  1000 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1001 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1002 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1003 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0       0
+  1004 ;;Total ram usage:        0 bytes
+  1005 ;; Hardware stack levels used: 1
+  1006 ;; This function calls:
+  1007 ;;		Nothing
+  1008 ;; This function is called by:
+  1009 ;;		Interrupt level 2
+  1010 ;; This function uses a non-reentrant model
+  1011 ;;
+  1012                           
+  1013                           	psect	text6
+  1014   00284C                     __ptext6:
+  1015                           	callstack 0
+  1016   00284C                     _DEFAULT_ISR:
+  1017                           	callstack 124
+  1018   00284C  0011               	retfie		f
+  1019   00284E                     __end_of_DEFAULT_ISR:
+  1020                           	callstack 0
+  1021                           
+  1022                           ;
+  1023                           ; H/W Interrupt Vector Table @ 0x8
+  1024                           ;
+  1025                           
+  1026                           	psect	ivt0x8
+  1027   000008                     __pivt0x8:
+  1028                           	callstack 0
+  1029   000008                     ivt0x8_base:
+  1030                           	callstack 0
+  1031                           
+  1032                           ; Vector 0 : SWINT
+  1033   000008  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1034                           
+  1035                           ; Vector 1 : HLVD
+  1036   00000A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1037                           
+  1038                           ; Vector 2 : OSF
+  1039   00000C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1040                           
+  1041                           ; Vector 3 : CSW
+  1042   00000E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1043                           
+  1044                           ; Vector 4 : Undefined
+  1045   000010  0040               	dw	ivt0x8_undefint shr (0+2)
+  1046                           
+  1047                           ; Vector 5 : CLC1
+  1048   000012  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1049                           
+  1050                           ; Vector 6 : Undefined
+  1051   000014  0040               	dw	ivt0x8_undefint shr (0+2)
+  1052                           
+  1053                           ; Vector 7 : IOC
+  1054   000016  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1055                           
+  1056                           ; Vector 8 : INT0
+  1057   000018  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1058                           
+  1059                           ; Vector 9 : ZCD
+  1060   00001A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1061                           
+  1062                           ; Vector 10 : AD
+  1063   00001C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1064                           
+  1065                           ; Vector 11 : ACT
+  1066   00001E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1067                           
+  1068                           ; Vector 12 : CMP1
+  1069   000020  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1070                           
+  1071                           ; Vector 13 : SMT1
+  1072   000022  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1073                           
+  1074                           ; Vector 14 : SMT1PRA
+  1075   000024  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1076                           
+  1077                           ; Vector 15 : SMT1PRW
+  1078   000026  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1079                           
+  1080                           ; Vector 16 : ADT
+  1081   000028  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1082                           
+  1083                           ; Vector 17 : Undefined
+  1084   00002A  0040               	dw	ivt0x8_undefint shr (0+2)
+  1085                           
+  1086                           ; Vector 18 : Undefined
+  1087   00002C  0040               	dw	ivt0x8_undefint shr (0+2)
+  1088                           
+  1089                           ; Vector 19 : Undefined
+  1090   00002E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1091                           
+  1092                           ; Vector 20 : DMA1SCNT
+  1093   000030  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1094                           
+  1095                           ; Vector 21 : DMA1DCNT
+  1096   000032  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1097                           
+  1098                           ; Vector 22 : DMA1OR
+  1099   000034  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1100                           
+  1101                           ; Vector 23 : DMA1A
+  1102   000036  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1103                           
+  1104                           ; Vector 24 : SPI1RX
+  1105   000038  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1106                           
+  1107                           ; Vector 25 : SPI1TX
+  1108   00003A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1109                           
+  1110                           ; Vector 26 : SPI1
+  1111   00003C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1112                           
+  1113                           ; Vector 27 : TMR2
+  1114   00003E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1115                           
+  1116                           ; Vector 28 : TMR1
+  1117   000040  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1118                           
+  1119                           ; Vector 29 : TMR1G
+  1120   000042  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1121                           
+  1122                           ; Vector 30 : CCP1
+  1123   000044  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1124                           
+  1125                           ; Vector 31 : TMR0
+  1126   000046  09E5               	dw	_TMR0_ISR shr (0+2)
+  1127                           
+  1128                           ; Vector 32 : U1RX
+  1129   000048  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1130                           
+  1131                           ; Vector 33 : U1TX
+  1132   00004A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1133                           
+  1134                           ; Vector 34 : U1E
+  1135   00004C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1136                           
+  1137                           ; Vector 35 : U1
+  1138   00004E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1139                           
+  1140                           ; Vector 36 : Undefined
+  1141   000050  0040               	dw	ivt0x8_undefint shr (0+2)
+  1142                           
+  1143                           ; Vector 37 : Undefined
+  1144   000052  0040               	dw	ivt0x8_undefint shr (0+2)
+  1145                           
+  1146                           ; Vector 38 : PWM1PR
+  1147   000054  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1148                           
+  1149                           ; Vector 39 : PWM1
+  1150   000056  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1151                           
+  1152                           ; Vector 40 : SPI2RX
+  1153   000058  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1154                           
+  1155                           ; Vector 41 : SPI2TX
+  1156   00005A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1157                           
+  1158                           ; Vector 42 : SPI2
+  1159   00005C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1160                           
+  1161                           ; Vector 43 : Undefined
+  1162   00005E  0040               	dw	ivt0x8_undefint shr (0+2)
+  1163                           
+  1164                           ; Vector 44 : TMR3
+  1165   000060  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1166                           
+  1167                           ; Vector 45 : TMR3G
+  1168   000062  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1169                           
+  1170                           ; Vector 46 : PWM2PR
+  1171   000064  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1172                           
+  1173                           ; Vector 47 : PWM2
+  1174   000066  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1175                           
+  1176                           ; Vector 48 : INT1
+  1177   000068  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1178                           
+  1179                           ; Vector 49 : CLC2
+  1180   00006A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1181                           
+  1182                           ; Vector 50 : CWG1
+  1183   00006C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1184                           
+  1185                           ; Vector 51 : NCO1
+  1186   00006E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1187                           
+  1188                           ; Vector 52 : DMA2SCNT
+  1189   000070  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1190                           
+  1191                           ; Vector 53 : DMA2DCNT
+  1192   000072  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1193                           
+  1194                           ; Vector 54 : DMA2OR
+  1195   000074  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1196                           
+  1197                           ; Vector 55 : DMA2A
+  1198   000076  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1199                           
+  1200                           ; Vector 56 : I2C1RX
+  1201   000078  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1202                           
+  1203                           ; Vector 57 : I2C1TX
+  1204   00007A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1205                           
+  1206                           ; Vector 58 : I2C1
+  1207   00007C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1208                           
+  1209                           ; Vector 59 : I2C1E
+  1210   00007E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1211                           
+  1212                           ; Vector 60 : Undefined
+  1213   000080  0040               	dw	ivt0x8_undefint shr (0+2)
+  1214                           
+  1215                           ; Vector 61 : CLC3
+  1216   000082  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1217                           
+  1218                           ; Vector 62 : PWM3PR
+  1219   000084  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1220                           
+  1221                           ; Vector 63 : PWM3
+  1222   000086  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1223                           
+  1224                           ; Vector 64 : U2RX
+  1225   000088  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1226                           
+  1227                           ; Vector 65 : U2TX
+  1228   00008A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1229                           
+  1230                           ; Vector 66 : U2E
+  1231   00008C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1232                           
+  1233                           ; Vector 67 : U2
+  1234   00008E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1235                           
+  1236                           ; Vector 68 : TMR5
+  1237   000090  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1238                           
+  1239                           ; Vector 69 : TMR5G
+  1240   000092  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1241                           
+  1242                           ; Vector 70 : CCP2
+  1243   000094  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1244                           
+  1245                           ; Vector 71 : SCAN
+  1246   000096  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1247                           
+  1248                           ; Vector 72 : U3RX
+  1249   000098  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1250                           
+  1251                           ; Vector 73 : U3TX
+  1252   00009A  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1253                           
+  1254                           ; Vector 74 : U3E
+  1255   00009C  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1256                           
+  1257                           ; Vector 75 : U3
+  1258   00009E  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1259                           
+  1260                           ; Vector 76 : Undefined
+  1261   0000A0  0040               	dw	ivt0x8_undefint shr (0+2)
+  1262                           
+  1263                           ; Vector 77 : CLC4
+  1264   0000A2  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1265                           
+  1266                           ; Vector 78 : Undefined
+  1267   0000A4  0040               	dw	ivt0x8_undefint shr (0+2)
+  1268                           
+  1269                           ; Vector 79 : Undefined
+  1270   0000A6  0040               	dw	ivt0x8_undefint shr (0+2)
+  1271                           
+  1272                           ; Vector 80 : INT2
+  1273   0000A8  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1274                           
+  1275                           ; Vector 81 : CLC5
+  1276   0000AA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1277                           
+  1278                           ; Vector 82 : CWG2
+  1279   0000AC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1280                           
+  1281                           ; Vector 83 : NCO2
+  1282   0000AE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1283                           
+  1284                           ; Vector 84 : DMA3SCNT
+  1285   0000B0  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1286                           
+  1287                           ; Vector 85 : DMA3DCNT
+  1288   0000B2  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1289                           
+  1290                           ; Vector 86 : DMA3OR
+  1291   0000B4  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1292                           
+  1293                           ; Vector 87 : DMA3A
+  1294   0000B6  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1295                           
+  1296                           ; Vector 88 : CCP3
+  1297   0000B8  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1298                           
+  1299                           ; Vector 89 : CLC6
+  1300   0000BA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1301                           
+  1302                           ; Vector 90 : CWG3
+  1303   0000BC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1304                           
+  1305                           ; Vector 91 : TMR4
+  1306   0000BE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1307                           
+  1308                           ; Vector 92 : DMA4SCNT
+  1309   0000C0  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1310                           
+  1311                           ; Vector 93 : DMA4DCNT
+  1312   0000C2  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1313                           
+  1314                           ; Vector 94 : DMA4OR
+  1315   0000C4  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1316                           
+  1317                           ; Vector 95 : DMA4A
+  1318   0000C6  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1319                           
+  1320                           ; Vector 96 : U4RX
+  1321   0000C8  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1322                           
+  1323                           ; Vector 97 : U4TX
+  1324   0000CA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1325                           
+  1326                           ; Vector 98 : U4E
+  1327   0000CC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1328                           
+  1329                           ; Vector 99 : U4
+  1330   0000CE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1331                           
+  1332                           ; Vector 100 : DMA5SCNT
+  1333   0000D0  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1334                           
+  1335                           ; Vector 101 : DMA5DCNT
+  1336   0000D2  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1337                           
+  1338                           ; Vector 102 : DMA5OR
+  1339   0000D4  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1340                           
+  1341                           ; Vector 103 : DMA5A
+  1342   0000D6  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1343                           
+  1344                           ; Vector 104 : U5RX
+  1345   0000D8  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1346                           
+  1347                           ; Vector 105 : U5TX
+  1348   0000DA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1349                           
+  1350                           ; Vector 106 : U5E
+  1351   0000DC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1352                           
+  1353                           ; Vector 107 : U5
+  1354   0000DE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1355                           
+  1356                           ; Vector 108 : DMA6SCNT
+  1357   0000E0  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1358                           
+  1359                           ; Vector 109 : DMA6DCNT
+  1360   0000E2  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1361                           
+  1362                           ; Vector 110 : DMA6OR
+  1363   0000E4  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1364                           
+  1365                           ; Vector 111 : DMA6A
+  1366   0000E6  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1367                           
+  1368                           ; Vector 112 : Undefined
+  1369   0000E8  0040               	dw	ivt0x8_undefint shr (0+2)
+  1370                           
+  1371                           ; Vector 113 : CLC7
+  1372   0000EA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1373                           
+  1374                           ; Vector 114 : CMP2
+  1375   0000EC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1376                           
+  1377                           ; Vector 115 : NCO3
+  1378   0000EE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1379                           
+  1380                           ; Vector 116 : Undefined
+  1381   0000F0  0040               	dw	ivt0x8_undefint shr (0+2)
+  1382                           
+  1383                           ; Vector 117 : Undefined
+  1384   0000F2  0040               	dw	ivt0x8_undefint shr (0+2)
+  1385                           
+  1386                           ; Vector 118 : Undefined
+  1387   0000F4  0040               	dw	ivt0x8_undefint shr (0+2)
+  1388                           
+  1389                           ; Vector 119 : Undefined
+  1390   0000F6  0040               	dw	ivt0x8_undefint shr (0+2)
+  1391                           
+  1392                           ; Vector 120 : NVM
+  1393   0000F8  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1394                           
+  1395                           ; Vector 121 : CLC8
+  1396   0000FA  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1397                           
+  1398                           ; Vector 122 : CRC
+  1399   0000FC  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1400                           
+  1401                           ; Vector 123 : TMR6
+  1402   0000FE  0A13               	dw	_DEFAULT_ISR shr (0+2)
+  1403   000100                     ivt0x8_undefint:
+  1404                           	callstack 0
+  1405   000100  00FF               	reset	
+  1406                           
+  1407                           	psect	smallconst
+  1408   002500                     __psmallconst:
+  1409                           	callstack 0
+  1410   002500  00                 	db	0
+  1411   002501  00                 	db	0	; dummy byte at the end
+  1412   000000                     
+  1413                           	psect	rparam
+  1414   000000                     
+  1415                           	psect	config
+  1416                           
+  1417                           ;Config register CONFIG1 @ 0x300000
+  1418                           ;	External Oscillator Selection
+  1419                           ;	FEXTOSC = ECH, EC (external clock) above 8 MHz
+  1420                           ;	Reset Oscillator Selection
+  1421                           ;	RSTOSC = EXTOSC, EXTOSC operating per FEXTOSC bits (device manufacturing default)
+  1422   300000                     	org	3145728
+  1423   300000  FF                 	db	255
+  1424                           
+  1425                           ;Config register CONFIG2 @ 0x300001
+  1426                           ;	Clock out Enable bit
+  1427                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+  1428                           ;	PRLOCKED One-Way Set Enable bit
+  1429                           ;	PR1WAY = ON, PRLOCKED bit can be cleared and set only once
+  1430                           ;	Clock Switch Enable bit
+  1431                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+  1432                           ;	Fail-Safe Clock Monitor Enable bit
+  1433                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+  1434   300001                     	org	3145729
+  1435   300001  FF                 	db	255
+  1436                           
+  1437                           ;Config register CONFIG3 @ 0x300002
+  1438                           ;	MCLR Enable bit
+  1439                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+  1440                           ;	Power-up timer selection bits
+  1441                           ;	PWRTS = PWRT_64, PWRT set at 64ms
+  1442                           ;	Multi-vector enable bit
+  1443                           ;	MVECEN = ON, Multi-vector enabled, Vector table used for interrupts
+  1444                           ;	IVTLOCK bit One-way set enable bit
+  1445                           ;	IVT1WAY = ON, IVTLOCKED bit can be cleared and set only once
+  1446                           ;	Low Power BOR Enable bit
+  1447                           ;	LPBOREN = OFF, Low-Power BOR disabled
+  1448                           ;	Brown-out Reset Enable bits
+  1449                           ;	BOREN = OFF, Brown-out Reset disabled
+  1450   300002                     	org	3145730
+  1451   300002  3D                 	db	61
+  1452                           
+  1453                           ;Config register CONFIG4 @ 0x300003
+  1454                           ;	Brown-out Reset Voltage Selection bits
+  1455                           ;	BORV = VBOR_1P9, Brown-out Reset Voltage (VBOR) set to 1.9V
+  1456                           ;	ZCD Disable bit
+  1457                           ;	ZCD = OFF, ZCD module is disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCD
+      +                          CON
+  1458                           ;	PPSLOCK bit One-Way Set Enable bit
+  1459                           ;	PPS1WAY = ON, PPSLOCKED bit can be cleared and set only once; PPS registers remain loc
+      +                          ked after one clear/set cycle
+  1460                           ;	Stack Full/Underflow Reset Enable bit
+  1461                           ;	STVREN = ON, Stack full/underflow will cause Reset
+  1462                           ;	Low Voltage Programming Enable bit
+  1463                           ;	LVP = OFF, HV on MCLR/VPP must be used for programming
+  1464                           ;	Extended Instruction Set Enable bit
+  1465                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+  1466   300003                     	org	3145731
+  1467   300003  DF                 	db	223
+  1468                           
+  1469                           ;Config register CONFIG5 @ 0x300004
+  1470                           ;	WDT Period selection bits
+  1471                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+  1472                           ;	WDT operating mode
+  1473                           ;	WDTE = OFF, WDT Disabled; SWDTEN is ignored
+  1474   300004                     	org	3145732
+  1475   300004  9F                 	db	159
+  1476                           
+  1477                           ;Config register CONFIG6 @ 0x300005
+  1478                           ;	WDT Window Select bits
+  1479                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+  1480                           ;	WDT input clock selector
+  1481                           ;	WDTCCS = SC, Software Control
+  1482   300005                     	org	3145733
+  1483   300005  FF                 	db	255
+  1484                           
+  1485                           ;Config register CONFIG7 @ 0x300006
+  1486                           ;	Boot Block Size selection bits
+  1487                           ;	BBSIZE = BBSIZE_512, Boot Block size is 512 words
+  1488                           ;	Boot Block enable bit
+  1489                           ;	BBEN = OFF, Boot block disabled
+  1490                           ;	Storage Area Flash enable bit
+  1491                           ;	SAFEN = OFF, SAF disabled
+  1492                           ;	Background Debugger
+  1493                           ;	DEBUG = OFF, Background Debugger disabled
+  1494   300006                     	org	3145734
+  1495   300006  FF                 	db	255
+  1496                           
+  1497                           ;Config register CONFIG8 @ 0x300007
+  1498                           ;	Boot Block Write Protection bit
+  1499                           ;	WRTB = OFF, Boot Block not Write protected
+  1500                           ;	Configuration Register Write Protection bit
+  1501                           ;	WRTC = OFF, Configuration registers not Write protected
+  1502                           ;	Data EEPROM Write Protection bit
+  1503                           ;	WRTD = OFF, Data EEPROM not Write protected
+  1504                           ;	SAF Write protection bit
+  1505                           ;	WRTSAF = OFF, SAF not Write Protected
+  1506                           ;	Application Block write protection bit
+  1507                           ;	WRTAPP = OFF, Application Block not write protected
+  1508   300007                     	org	3145735
+  1509   300007  FF                 	db	255
+  1510                           
+  1511                           ;Config register CONFIG10 @ 0x300009
+  1512                           ;	PFM and Data EEPROM Code Protection bit
+  1513                           ;	CP = OFF, PFM and Data EEPROM code protection disabled
+  1514   300009                     	org	3145737
+  1515   300009  FF                 	db	255
+  1516                           tosu	equ	0x4FF
+  1517                           tosh	equ	0x4FE
+  1518                           tosl	equ	0x4FD
+  1519                           stkptr	equ	0x4FC
+  1520                           pclatu	equ	0x4FB
+  1521                           pclath	equ	0x4FA
+  1522                           pcl	equ	0x4F9
+  1523                           tblptru	equ	0x4F8
+  1524                           tblptrh	equ	0x4F7
+  1525                           tblptrl	equ	0x4F6
+  1526                           tablat	equ	0x4F5
+  1527                           prodh	equ	0x4F4
+  1528                           prodl	equ	0x4F3
+  1529                           indf0	equ	0x4EF
+  1530                           postinc0	equ	0x4EE
+  1531                           postdec0	equ	0x4ED
+  1532                           preinc0	equ	0x4EC
+  1533                           plusw0	equ	0x4EB
+  1534                           fsr0h	equ	0x4EA
+  1535                           fsr0l	equ	0x4E9
+  1536                           wreg	equ	0x4E8
+  1537                           indf1	equ	0x4E7
+  1538                           postinc1	equ	0x4E6
+  1539                           postdec1	equ	0x4E5
+  1540                           preinc1	equ	0x4E4
+  1541                           plusw1	equ	0x4E3
+  1542                           fsr1h	equ	0x4E2
+  1543                           fsr1l	equ	0x4E1
+  1544                           bsr	equ	0x4E0
+  1545                           indf2	equ	0x4DF
+  1546                           postinc2	equ	0x4DE
+  1547                           postdec2	equ	0x4DD
+  1548                           preinc2	equ	0x4DC
+  1549                           plusw2	equ	0x4DB
+  1550                           fsr2h	equ	0x4DA
+  1551                           fsr2l	equ	0x4D9
+  1552                           status	equ	0x4D8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        54
+    BSS         2
+    Persistent  2
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     13      71
+    BANK5           160      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15          256      0       0
+    BANK16          256      0       0
+    BANK17          256      0       0
+    BANK18          256      0       0
+    BANK19          256      0       0
+    BANK20          256      0       0
+    BANK21          256      0       0
+    BANK22          256      0       0
+    BANK23          256      0       0
+    BANK24          256      0       0
+    BANK25          256      0       0
+    BANK26          256      0       0
+    BANK27          256      0       0
+    BANK28          256      0       0
+    BANK29          256      0       0
+    BANK30          256      0       0
+    BANK31          256      0       0
+    BANK32          256      0       0
+    BANK33          256      0       0
+    BANK34          256      0       0
+    BANK35          256      0       0
+    BANK36          256      0       0
+
+Pointer List with Targets:
+
+    strlen@a	PTR const unsigned char  size(2) Largest target is 28
+		 -> mensaje(COMRAM[28]), 
+
+    strlen@s	PTR const unsigned char  size(2) Largest target is 28
+		 -> mensaje(COMRAM[28]), 
+
+
+Critical Paths under _main in COMRAM
+
+    _main->_decodificacion
+    _decodificacion->_strlen
+    _configuro->_strlen
+
+Critical Paths under _TMR0_ISR in COMRAM
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK5
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK6
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK7
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK8
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK9
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK10
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK11
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK12
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK13
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK14
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK15
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK15
+
+    None.
+
+Critical Paths under _main in BANK16
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK16
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK16
+
+    None.
+
+Critical Paths under _main in BANK17
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK17
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK17
+
+    None.
+
+Critical Paths under _main in BANK18
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK18
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK18
+
+    None.
+
+Critical Paths under _main in BANK19
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK19
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK19
+
+    None.
+
+Critical Paths under _main in BANK20
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK20
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK20
+
+    None.
+
+Critical Paths under _main in BANK21
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK21
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK21
+
+    None.
+
+Critical Paths under _main in BANK22
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK22
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK22
+
+    None.
+
+Critical Paths under _main in BANK23
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK23
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK23
+
+    None.
+
+Critical Paths under _main in BANK24
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK24
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK24
+
+    None.
+
+Critical Paths under _main in BANK25
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK25
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK25
+
+    None.
+
+Critical Paths under _main in BANK26
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK26
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK26
+
+    None.
+
+Critical Paths under _main in BANK27
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK27
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK27
+
+    None.
+
+Critical Paths under _main in BANK28
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK28
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK28
+
+    None.
+
+Critical Paths under _main in BANK29
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK29
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK29
+
+    None.
+
+Critical Paths under _main in BANK30
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK30
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK30
+
+    None.
+
+Critical Paths under _main in BANK31
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK31
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK31
+
+    None.
+
+Critical Paths under _main in BANK32
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK32
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK32
+
+    None.
+
+Critical Paths under _main in BANK33
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK33
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK33
+
+    None.
+
+Critical Paths under _main in BANK34
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK34
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK34
+
+    None.
+
+Critical Paths under _main in BANK35
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK35
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK35
+
+    None.
+
+Critical Paths under _main in BANK36
+
+    None.
+
+Critical Paths under _TMR0_ISR in BANK36
+
+    None.
+
+Critical Paths under _DEFAULT_ISR in BANK36
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     732
+                          _configuro
+                     _decodificacion
+                     _multiplexacion
+ ---------------------------------------------------------------------------------
+ (1) _multiplexacion                                       1     1      0       0
+                                              4 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _decodificacion                                       5     5      0     490
+                                              8 COMRAM     5     5      0
+                             _strlen
+ ---------------------------------------------------------------------------------
+ (1) _configuro                                            0     0      0     242
+                             _strlen
+ ---------------------------------------------------------------------------------
+ (2) _strlen                                               4     2      2     242
+                                              4 COMRAM     4     2      2
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _TMR0_ISR                                             4     4      0       0
+                                              0 COMRAM     4     4      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _DEFAULT_ISR                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _configuro
+     _strlen
+   _decodificacion
+     _strlen
+   _multiplexacion
+
+ _TMR0_ISR (ROOT)
+
+ _DEFAULT_ISR (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM            1FFF      0       0      69        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBIGSFRhhhlll    266      0       0      81        0.0%
+BITBIGSFR_1        100      0       0      68        0.0%
+BITBANK36          100      0       0      66        0.0%
+BANK36             100      0       0      67        0.0%
+BITBANK35          100      0       0      64        0.0%
+BANK35             100      0       0      65        0.0%
+BITBANK34          100      0       0      62        0.0%
+BANK34             100      0       0      63        0.0%
+BITBANK33          100      0       0      60        0.0%
+BANK33             100      0       0      61        0.0%
+BITBANK32          100      0       0      58        0.0%
+BANK32             100      0       0      59        0.0%
+BITBANK31          100      0       0      56        0.0%
+BANK31             100      0       0      57        0.0%
+BITBANK30          100      0       0      54        0.0%
+BANK30             100      0       0      55        0.0%
+BITBANK29          100      0       0      52        0.0%
+BANK29             100      0       0      53        0.0%
+BITBANK28          100      0       0      50        0.0%
+BANK28             100      0       0      51        0.0%
+BITBANK27          100      0       0      48        0.0%
+BANK27             100      0       0      49        0.0%
+BITBANK26          100      0       0      46        0.0%
+BANK26             100      0       0      47        0.0%
+BITBANK25          100      0       0      44        0.0%
+BANK25             100      0       0      45        0.0%
+BITBANK24          100      0       0      42        0.0%
+BANK24             100      0       0      43        0.0%
+BITBANK23          100      0       0      40        0.0%
+BANK23             100      0       0      41        0.0%
+BITBANK22          100      0       0      38        0.0%
+BANK22             100      0       0      39        0.0%
+BITBANK21          100      0       0      36        0.0%
+BANK21             100      0       0      37        0.0%
+BITBANK20          100      0       0      34        0.0%
+BANK20             100      0       0      35        0.0%
+BITBANK19          100      0       0      32        0.0%
+BANK19             100      0       0      33        0.0%
+BITBANK18          100      0       0      30        0.0%
+BANK18             100      0       0      31        0.0%
+BITBANK17          100      0       0      28        0.0%
+BANK17             100      0       0      29        0.0%
+BITBANK16          100      0       0      26        0.0%
+BANK16             100      0       0      27        0.0%
+BITBANK15          100      0       0      24        0.0%
+BANK15             100      0       0      25        0.0%
+BITBANK14          100      0       0      22        0.0%
+BANK14             100      0       0      23        0.0%
+BITBANK13          100      0       0      20        0.0%
+BANK13             100      0       0      21        0.0%
+BITBANK12          100      0       0      18        0.0%
+BANK12             100      0       0      19        0.0%
+BITBANK11          100      0       0      16        0.0%
+BANK11             100      0       0      17        0.0%
+BITBANK10          100      0       0      14        0.0%
+BANK10             100      0       0      15        0.0%
+BITBANK9           100      0       0      12        0.0%
+BANK9              100      0       0      13        0.0%
+BITBANK8           100      0       0      10        0.0%
+BANK8              100      0       0      11        0.0%
+BITBANK7           100      0       0       8        0.0%
+BANK7              100      0       0       9        0.0%
+BITBANK6           100      0       0       6        0.0%
+BANK6              100      0       0       7        0.0%
+BITBIGSFRhhhlll     EC      0       0      80        0.0%
+BITBIGSFRl          AD      0       0      84        0.0%
+BITBANK5            A0      0       0       4        0.0%
+BANK5               A0      0       0       5        0.0%
+BITBIGSFRhhhlhl     7F      0       0      77        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      D      47       1       74.7%
+BITBIGSFRhhhhh      29      0       0      70        0.0%
+BITBIGSFRhhhlhl      F      0       0      76        0.0%
+BITBIGSFRhhhllh      F      0       0      79        0.0%
+BITBIGSFRhhhlhl      D      0       0      75        0.0%
+BITBIGSFRhhhhl       C      0       0      71        0.0%
+BITBIGSFRhhhlhl      7      0       0      78        0.0%
+BITBIGSFRhhhlhl      5      0       0      73        0.0%
+BITBIGSFRhl          3      0       0      83        0.0%
+BITBIGSFRhhhlhl      1      0       0      74        0.0%
+BITBIGSFRhhhlhh      1      0       0      72        0.0%
+BITBIGSFRhhl         1      0       0      82        0.0%
+BIGSFR_1             0      0       0     200        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_6             0      0       0     200        0.0%
+SFR_6                0      0       0     200        0.0%
+BITSFR_5             0      0       0     200        0.0%
+SFR_5                0      0       0     200        0.0%
+BITSFR_4             0      0       0     200        0.0%
+SFR_4                0      0       0     200        0.0%
+BITSFR_3             0      0       0     200        0.0%
+SFR_3                0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      47      85        0.0%
+DATA                 0      0      47       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.46 build 20240104201356 
+Symbol Table                                                                                   Mon Apr 29 18:27:54 2024
+
+                     l61 270C                       l64 2612                       l49 2758  
+                     u70 282A                       u71 2826                       u80 2638  
+                     u81 2634                       u90 2672                       u91 266E  
+                    l900 270E                      l902 2740                      l830 2524  
+                    l822 2502                      l904 2742                      l920 2638  
+                    l840 2558                      l832 2534                      l824 2512  
+                    l906 2744                      l930 26B2                      l922 264C  
+                    l914 2618                      l850 258A                      l842 2566  
+                    l834 2544                      l826 2514                      l764 2836  
+                    l940 26D4                      l924 2654                      l932 26B4  
+                    l916 2626                      l908 2614                      l860 25BE  
+                    l852 259A                      l844 2578                      l836 2546  
+                    l828 2522                      l942 26FA                      l934 26D0  
+                    l926 2672                      l918 2628                      l870 25F0  
+                    l862 25CC                      l854 25AA                      l846 257A  
+                    l838 2556                      l950 2840                      l944 26FC  
+                    l928 2684                      l872 2600                      l864 25DE  
+                    l856 25AC                      l848 2588                      l890 2802  
+                    l874 2610                      l866 25E0                      l858 25BC  
+                    l946 2838                      l892 280E                      l868 25EE  
+                    l948 283C                      l894 2812                      l896 282A  
+                    u100 26D0                      u101 26CC                      u110 270C  
+                    u111 2708                      u127 251A                      u137 253C  
+                    u147 255E                      u157 2580                      u167 25A2  
+                    u177 25C4                      u187 25E6                      u197 2608  
+                    wreg 04E8                     _LATD 04C1                     i2l84 284C  
+                   i2l79 27CA                     _WPUE 0421                     _main 2838  
+                   fsr2h 04DA                     indf1 04E7                     indf2 04DF  
+                   fsr1l 04E1                     fsr2l 04D9                     start 0102  
+         _decodificacion 2614             ___param_bank 0000                    ?_main 0537  
+                  i2l882 2794                    i2l884 2796                    i2l886 27C0  
+                  i2l888 27C8                    _OSCEN 00B3                    _TRISB 04C7  
+                  _TRISD 04C9         __end_of_TMR0_ISR 27CC                    _decod 0501  
+                  tablat 04F5                    status 04D8   __end_of_decodificacion 270E  
+        __initialization 275A             __end_of_main 284C                   ??_main 0544  
+          __activetblptr 0000                   _ANSELB 0408                   _ANSELD 0418  
+                 _ANSELE 0420                   _T0CON0 031A                   _T0CON1 031B  
+                 _OSCFRQ 00B1                   i2u6_40 27C0                   i2u6_41 27BC  
+        ?_decodificacion 0537                   _indice 0546                   isa$std 0001  
+                 _strlen 2802         ??_multiplexacion 053B             __pdataCOMRAM 0501  
+           __mediumconst 0000                   tblptrh 04F7                   tblptrl 04F6  
+                 tblptru 04F8               __accesstop 0560  __end_of__initialization 278C  
+          ___rparam_used 0001             _decodificado 0547           __pcstackCOMRAM 0537  
+              ?_TMR0_ISR 0537           ivt0x8_undefint 0100               __pnvCOMRAM 0544  
+                IVTBASEH 045E                  IVTBASEL 045D                  IVTBASEU 045F  
+             ??_TMR0_ISR 0537                  ?_strlen 053B            ??_DEFAULT_ISR 053B  
+                _OSCCON1 00AD      decodificacion@x_var 0543      decodificacion@y_var 0541  
+    decodificacion@z_var 0542                  __Hparam 0000                  __Lparam 0000  
+      __end_of_configuro 275A             __psmallconst 2500                  __pcinit 275A  
+                __ramtop 2500                  __ptext0 2838                  __ptext1 2502  
+                __ptext2 2614                  __ptext3 270E                  __ptext4 2802  
+                __ptext5 2794                  __ptext6 284C                  _mensaje 051B  
+       ??_decodificacion 053F      __end_of_DEFAULT_ISR 284E     end_of_initialization 278C  
+                postdec1 04E5                  postinc0 04EE                  postinc2 04DE  
+                strlen@a 053D                  strlen@s 053B            __pidataCOMRAM 27CC  
+            _DEFAULT_ISR 284C           __end_of_strlen 2838      start_initialization 275A  
+             ivt0x8_base 0008                 ??_strlen 053D              __pbssCOMRAM 0546  
+              _configuro 270E              __smallconst 2500                 _LATBbits 04BF  
+               _PIE3bits 04A1                 _PIR3bits 04B1                 _TMR0_ISR 2794  
+             ?_configuro 0537              _INTCON0bits 04D6                copy_data0 276E  
+               __Hrparam 0000                 __Lrparam 0000             ?_DEFAULT_ISR 0537  
+               _cantidad 0544                 __pivt0x8 0008           _multiplexacion 2502  
+               isa$xinst 0000              ??_configuro 053F   __end_of_multiplexacion 2614  
+               intlevel2 0000          ?_multiplexacion 0537  
