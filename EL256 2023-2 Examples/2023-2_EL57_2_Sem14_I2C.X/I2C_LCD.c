@@ -1,9 +1,9 @@
-//Librer韆 I2C-LCD desarrollada por Kalun Lau
+//Librer铆a I2C-LCD desarrollada por Kalun Lau
 //Las principales funciones para el LCD fueron basados en una libreria
 //desarrollada por Sergio Salas para un PIC18F4550
-//Las configuraciones del perif閞ico I2C1 fueron basados en un c骴igo
-//proporcionado por Alonso S醤chez
-//Las funciones de inicializaci髇, env韔 de dato y env韔 de comando para el LCD
+//Las configuraciones del perif茅rico I2C1 fueron basados en un c贸digo
+//proporcionado por Alonso S谩nchez
+//Las funciones de inicializaci贸n, env铆o de dato y env铆o de comando para el LCD
 //se basaron en el trabajo de Vladimir Anglas
 //Curso de Microcontroladores
 //Universidad Peruana de Ciencias Aplicadas
@@ -58,6 +58,7 @@ void I2C_POS_CURSOR(unsigned char fila,unsigned char columna){
 	else if(fila == 4){
 		I2C_ENVIA_LCD_CMD(0xD4+columna);
 	}
+	__delay_ms(1);
 }
 
 void I2C_BLINK_CURSOR(unsigned char val){
@@ -153,12 +154,12 @@ void I2C_ENVIA_LCD_CMD(unsigned char command){
 
 void I2C_GENERACARACTER(const unsigned char *vector,unsigned char pos){
 	unsigned char i;
-	I2C_ENVIA_LCD_CMD(0x40+8*pos);//Direcci髇 de la CGRAM +
-	for(i=0;i<8;i++)			 //offset de posici髇 de caracter	
+	I2C_ENVIA_LCD_CMD(0x40+8*pos);//Direcci贸n de la CGRAM +
+	for(i=0;i<8;i++)			 //offset de posici贸n de caracter	
 	{
 		I2C_ENVIA_LCD_DATA(vector[i]);
 	}
-	I2C_ENVIA_LCD_CMD(0x80);	//Direcci髇 de la DDRAM
+	I2C_ENVIA_LCD_CMD(0x80);	//Direcci贸n de la DDRAM
 }
 
 void I2C_LCD_INIT(void){
