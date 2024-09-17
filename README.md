@@ -30,3 +30,4 @@ External resources:<br>
 -Renzo Rey: https://www.youtube.com/playlist?list=PLb8OzRofTZ02Sql_n3M4C6jbUBQmyUyif<br>
 -Julio Francisco Motta Claudio - Proyecto Final - Especialización Completa en Microcontroladores Pic Nuevas Familias: https://www.youtube.com/watch?v=RFbnPU8FA6E<br>
 -Simple Circuit - Interfacing DS18B20 Sensor: https://simple-circuit.com/mplab-xc8-ds18b20-pic-microcontroller/<br>
+-Omar Santiago Alvarado Cando - Programación de microcontrolador PIC 18F57Q43 Español: https://www.youtube.com/watch?v=NAfgaGpzGAo&list=PLj2hH1As9Tr5GSBhCxXQafHNoDZS8ReC2
