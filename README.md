@@ -37,6 +37,7 @@ External resources:<br>
 -kwiecinski - PIC16/18 KS0108 Library / XC8 compiler: https://github.com/kwiecinski/PIC-XC8-KS0108-NT7108-LCD-LIBRARY<br>
 -Electro-Tech-Online - Acessing bits of variable on XC8: https://www.electro-tech-online.com/threads/accessing-bits-of-variable-xc8.151239/<br>
 -Microchip - Switch Debouncing with the PIC18F16Q40 using CLC peripheral: https://github.com/microchip-pic-avr-examples/pic18f16q40-clc-switch-debouncing<br>
+-Microchip - SPI to WS2812 0 Use Case for CLB Using the PIC16F13145 Microcontroller with MCC Melody: https://github.com/microchip-pic-avr-examples/pic16f13145-spi-ws2812-mplab-mcc<br>
 
 Misc:<br>
 -Subroutine for 74HC595:<br>
