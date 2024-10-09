@@ -40,4 +40,4 @@ External resources:<br>
 
 Misc:<br>
 -Subroutine for 74HC595:<br>
-<img src="Screenshot 2024-10-07 165540.png"><br>
+<img src="Screenshot 2024-10-07 165540.png" height="250"><br>
