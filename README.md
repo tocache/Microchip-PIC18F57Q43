@@ -8,7 +8,7 @@ Documentation:<br>
 -Curiosity Board for PIC18F57Q43: http://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F57Q43-Curiosity-Nano-HW-UserGuide-DS40002186B.pdf<br>
 -PIC18F57Q43 Curiosity Nano Hardware User Guide: https://onlinedocs.microchip.com/pr/GUID-5D38BF5C-8481-46C4-BD08-1B8F4C7289B2-en-US-2/index.html<br>
 -Update 20/09/2024: New version of the Curiosity Nano PIC18F57Q43, now it comes with USB type C port
-<img src="Screenshot 2024-10-09 001459.png" height="200"><br>
+<img src="Screenshot 2024-10-09 001459.png" height="250"><br>
 
 My contributions:<br>
 -LCD HD44780: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem13_UART.X<br>
