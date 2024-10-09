@@ -33,6 +33,7 @@ External resources:<br>
 -Simple Circuit - Interfacing DS18B20 Sensor: https://simple-circuit.com/mplab-xc8-ds18b20-pic-microcontroller/<br>
 -Omar Santiago Alvarado Cando - Programación de microcontrolador PIC 18F57Q43 Español: https://www.youtube.com/watch?v=NAfgaGpzGAo&list=PLj2hH1As9Tr5GSBhCxXQafHNoDZS8ReC2<br>
 -kwiecinski - PIC16/18 KS0108 Library / XC8 compiler: https://github.com/kwiecinski/PIC-XC8-KS0108-NT7108-LCD-LIBRARY<br><br>
+-Electro-Tech-Online - Acessing bits of variable on XC8: https://www.electro-tech-online.com/threads/accessing-bits-of-variable-xc8.151239/<br>
 
 Misc:<br>
 -Subroutine for 74HC595:<br>
