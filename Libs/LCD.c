@@ -1,4 +1,4 @@
-//Librería desarrollada por Sergio Salas y Kalun Lau
+//LibrerÃ­a desarrollada por Sergio Salas y Kalun Lau
 //Curso de Microcontroladores
 //Universidad Peruana de Ciencias Aplicadas
 
@@ -77,7 +77,7 @@ void ENVIA_CHAR(unsigned char dato){
 	RS = 1;
 	//LEER_LCD();
 	//TRISD = 0x00;
-    __delay_us(100);
+    __delay_us(300);
 	RW = 0;
 	E = 0;
 	RS = 1;
@@ -97,7 +97,7 @@ void LCD_CONFIG(void){
 	ENVIA_NIBBLE(0x30);
     __delay_ms(4);
 	ENVIA_NIBBLE(0x30);
-    __delay_us(100);
+    __delay_us(300);
     ENVIA_NIBBLE(0x30);
 	ENVIA_NIBBLE(0x20);
 	ENVIA_LCD_CMD(0x01);
@@ -112,7 +112,7 @@ void ENVIA_NIBBLE(unsigned char dato){
 	dato &= 0xF0;
 	LATD|= dato;
 	E = 1;
-    __delay_us(100);
+    __delay_us(300);
 	E = 0;
 }
 
@@ -121,7 +121,7 @@ void ENVIA_LCD_CMD(unsigned char dato){
  	RS = 0;
 	//LEER_LCD();
 	//TRISD = 0b00000000;
-    __delay_us(100);
+    __delay_us(300);
     RW = 0;
 	E = 0;
 	RS = 0;
@@ -137,22 +137,22 @@ void LEER_LCD(void){
 	RS = 0;
 	RW = 1;
 	E = 1;
-    __delay_us(100);
+    __delay_us(300);
 	aux = PORTD;
 	E = 0;
-    __delay_us(100);
+    __delay_us3100);
 	E = 1;
-    __delay_us(100);
+    __delay_us(300);
 	E = 0;
 	aux = aux & 0x80;
 	while(aux == 0x80){
             E = 1;
-            __delay_us(100);
+            __delay_us(300);
             aux = PORTD;
             E = 0;
-            __delay_us(100);
+            __delay_us(300);
             E = 1;
-            __delay_us(100);
+            __delay_us(300);
             E = 0;
             aux = aux & 0x80;
 	}
@@ -160,21 +160,21 @@ void LEER_LCD(void){
 
 void GENERACARACTER(const unsigned char *vector,unsigned char pos){
 	unsigned char i;
-	ENVIA_LCD_CMD(0x40+8*pos);//Dirección de la CGRAM +
-	for(i=0;i<8;i++)			 //offset de posición de caracter	
+	ENVIA_LCD_CMD(0x40+8*pos);//DirecciÃ³n de la CGRAM +
+	for(i=0;i<8;i++)			 //offset de posiciÃ³n de caracter	
 	{
 		ENVIA_CHAR(vector[i]);
 	}
-	ENVIA_LCD_CMD(0x80);	//Dirección de la DDRAM
+	ENVIA_LCD_CMD(0x80);	//DirecciÃ³n de la DDRAM
 }
 
 void LCD_INIT(void){
     __delay_ms(500);
     TRISD = 0x00;
     ANSELD = 0x00;
-    __delay_ms(15);
+    __delay_ms(30);
     LCD_CONFIG();
-    __delay_ms(15);
+    __delay_ms(30);
     BORRAR_LCD();
     CURSOR_HOME();
     CURSOR_ONOFF(OFF);
