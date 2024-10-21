@@ -1,0 +1,1053 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+$dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ivt0x8 CODE 0 8 8 FA 1 2
+cinit CODE 0 361E 361E 4C 1 2
+text0 CODE 0 2F64 2F64 248 1 2
+text1 CODE 0 251C 251C A48 1 2
+text2 CODE 0 3270 3270 B0 1 2
+text3 CODE 0 31AC 31AC C4 1 2
+text4 CODE 0 3578 3578 54 1 2
+text5 CODE 0 366A 366A 4C 1 2
+text6 CODE 0 3320 3320 AE 1 2
+text7 CODE 0 34BA 34BA 66 1 2
+text8 CODE 0 35CC 35CC 52 1 2
+text9 CODE 0 37DC 37DC 30 1 2
+text10 CODE 0 3828 3828 8 1 2
+text11 CODE 0 3830 3830 8 1 2
+text12 CODE 0 33CE 33CE 7A 1 2
+text13 CODE 0 3776 3776 34 1 2
+text14 CODE 0 3448 3448 72 1 2
+text15 CODE 0 36B6 36B6 44 1 2
+text16 CODE 0 373E 373E 38 1 2
+text17 CODE 0 37AA 37AA 32 1 2
+text18 CODE 0 380C 380C 1C 1 2
+text19 CODE 0 36FC 36FC 42 1 4
+text20 CODE 0 3838 3838 2 1 4
+cstackCOMRAM COMRAM 1 501 501 52 1 1
+bssBANK5 BANK5 1 5B8 5B8 8 1 1
+smallconst SMALLCONST 0 2500 2500 1C 1 2
+idataBANK5 CODE 0 3520 3520 58 1 1
+dataBANK5 BANK5 1 560 560 58 1 1
+bssCOMRAM COMRAM 1 553 553 6 1 1
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 5C0-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 5C0-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 106-24FF 1
+CONST 36FA-36FB 1
+CONST 383A-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 36FA-36FB 1
+SMALLCONST 383A-1FFFF 1
+CODE 4-7 1
+CODE 106-24FF 1
+CODE 36FA-36FB 1
+CODE 383A-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 559-55F 1
+BIGRAM 5C0-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 559-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 36FA-36FB 1
+MEDIUMCONST 383A-FFFF 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Sem10_MAX7219_matrix.X.production.o
+3838 text20 CODE >297:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3838 text20 CODE >299:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3838 text20 CODE >301:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+36FC text19 CODE >121:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36FC text19 CODE >288:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+36FC text19 CODE >289:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+36FE text19 CODE >290:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3722 text19 CODE >291:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3732 text19 CODE >292:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3734 text19 CODE >293:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3738 text19 CODE >295:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+373C text19 CODE >297:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+380C text18 CODE >112:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+380E text18 CODE >114:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3812 text18 CODE >115:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3816 text18 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+381A text18 CODE >117:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+381C text18 CODE >119:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3824 text18 CODE >120:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3826 text18 CODE >121:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37AA text17 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37AC text17 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37AE text17 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37BC text17 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37BE text17 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37C0 text17 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37C2 text17 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37C8 text17 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37CE text17 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37D4 text17 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37DA text17 CODE >88:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+373E text16 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+373E text16 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+3742 text16 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+3746 text16 CODE >9:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+3748 text16 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+3768 text16 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+3774 text16 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+36B6 text15 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36B6 text15 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36C2 text15 CODE >69:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36C2 text15 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36CA text15 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36E4 text15 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+36F8 text15 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3448 text14 CODE >140:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3448 text14 CODE >143:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+344C text14 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+344E text14 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3450 text14 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3452 text14 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+345A text14 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+345E text14 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3460 text14 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3468 text14 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+346A text14 CODE >154:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3472 text14 CODE >156:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3474 text14 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+347A text14 CODE >158:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+347E text14 CODE >160:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3480 text14 CODE >161:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3488 text14 CODE >162:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+348C text14 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+348E text14 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3496 text14 CODE >165:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3498 text14 CODE >166:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34A0 text14 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34A6 text14 CODE >158:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34B8 text14 CODE >170:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3776 text13 CODE >123:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3778 text13 CODE >126:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+377A text13 CODE >127:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+377E text13 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3782 text13 CODE >130:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+378A text13 CODE >131:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+378C text13 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+378E text13 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3790 text13 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3796 text13 CODE >135:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+379C text13 CODE >136:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37A2 text13 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37A8 text13 CODE >138:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33CE text12 CODE >9:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33D0 text12 CODE >10:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33E0 text12 CODE >11:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33E8 text12 CODE >12:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33EC text12 CODE >13:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+33FE text12 CODE >14:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3406 text12 CODE >15:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+340A text12 CODE >16:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+341C text12 CODE >17:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3424 text12 CODE >18:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3428 text12 CODE >19:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+343A text12 CODE >20:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3446 text12 CODE >21:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3446 text12 CODE >22:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3830 text11 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3830 text11 CODE >91:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3836 text11 CODE >92:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3828 text10 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3828 text10 CODE >35:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+382E text10 CODE >36:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37DC text9 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37DE text9 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+37F4 text9 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+380A text9 CODE >57:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35CC text8 CODE >94:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35CC text8 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35CE text8 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35D0 text8 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35D6 text8 CODE >99:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35E4 text8 CODE >100:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35EA text8 CODE >102:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35F2 text8 CODE >103:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35F8 text8 CODE >104:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+35FE text8 CODE >105:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3604 text8 CODE >106:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+360A text8 CODE >107:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3610 text8 CODE >108:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3616 text8 CODE >109:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+361C text8 CODE >110:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34BA text7 CODE >182:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34BA text7 CODE >183:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34D2 text7 CODE >184:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34D6 text7 CODE >185:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34DC text7 CODE >186:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34F4 text7 CODE >187:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+34F8 text7 CODE >188:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3510 text7 CODE >189:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3514 text7 CODE >190:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3518 text7 CODE >191:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+351E text7 CODE >192:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\LCD.c
+3320 text6 CODE >58:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3322 text6 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3324 text6 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3326 text6 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3328 text6 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+332A text6 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+332E text6 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3330 text6 CODE >69:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+335E text6 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3360 text6 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3364 text6 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3364 text6 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3366 text6 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3366 text6 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3368 text6 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+337A text6 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+337E text6 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3380 text6 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33AE text6 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B0 text6 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B4 text6 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B4 text6 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B6 text6 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B6 text6 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33B8 text6 CODE >88:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33CA text6 CODE >89:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+33CC text6 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+366A text5 CODE >11:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+366A text5 CODE >12:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+366C text5 CODE >13:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3670 text5 CODE >14:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3674 text5 CODE >15:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3678 text5 CODE >16:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3682 text5 CODE >17:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+368C text5 CODE >18:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3696 text5 CODE >19:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+36A0 text5 CODE >20:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+36AA text5 CODE >21:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+36B4 text5 CODE >22:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\MAX7219.c
+3578 text4 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3578 text4 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+357E text4 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3582 text4 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3586 text4 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3588 text4 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+358C text4 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3592 text4 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3596 text4 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+359A text4 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+359C text4 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+359E text4 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+35A0 text4 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+35A4 text4 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+35A8 text4 CODE >57:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+35B2 text4 CODE >58:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+35CA text4 CODE >59:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+31AC text3 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31AC text3 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31B0 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31BE text3 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31C6 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31CA text3 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31D8 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31E0 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31E4 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31EC text3 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+31FE text3 CODE >24:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3202 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3206 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+320C text3 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+320E text3 CODE >25:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+321C text3 CODE >30:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3222 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3238 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3240 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3242 text3 CODE >35:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3248 text3 CODE >36:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+324E text3 CODE >38:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+325E text3 CODE >39:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3266 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+326E text3 CODE >41:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awdiv.c
+3270 text2 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+3270 text2 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+3274 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+3282 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+328A text2 CODE >15:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+328E text2 CODE >17:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+329C text2 CODE >18:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32A4 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32B6 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32BA text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32BE text2 CODE >22:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32C4 text2 CODE >23:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32C6 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32D4 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32EA text2 CODE >27:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32F2 text2 CODE >28:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32F8 text2 CODE >29:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+32FE text2 CODE >31:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+330E text2 CODE >32:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+3316 text2 CODE >33:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+331E text2 CODE >34:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\awmod.c
+251C text1 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+251E text1 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2534 text1 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+255E text1 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2574 text1 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2578 text1 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+25A0 text1 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+25BC text1 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+25C4 text1 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+25EC text1 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2608 text1 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2610 text1 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2638 text1 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2654 text1 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+265C text1 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2684 text1 CODE >91:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+26A0 text1 CODE >92:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+26A8 text1 CODE >95:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+26D0 text1 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+26EC text1 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+26F4 text1 CODE >100:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+271C text1 CODE >101:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2738 text1 CODE >102:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2740 text1 CODE >105:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2768 text1 CODE >106:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2784 text1 CODE >107:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+278C text1 CODE >110:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+27B4 text1 CODE >111:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+27D0 text1 CODE >112:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+27D8 text1 CODE >115:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2800 text1 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+281C text1 CODE >117:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2824 text1 CODE >120:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+284C text1 CODE >121:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2868 text1 CODE >122:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2870 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2874 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+287C text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2884 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+288C text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2894 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+289C text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28A4 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28AC text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28B4 text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28BC text1 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28C6 text1 CODE >127:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+28EE text1 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+290A text1 CODE >129:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2912 text1 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+293A text1 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2956 text1 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+295E text1 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2986 text1 CODE >138:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+29A2 text1 CODE >139:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+29AA text1 CODE >142:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+29D2 text1 CODE >143:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+29EE text1 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+29F6 text1 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A1E text1 CODE >148:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A3A text1 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A42 text1 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A6A text1 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A86 text1 CODE >154:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2A8E text1 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2AB6 text1 CODE >158:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2AD2 text1 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2ADA text1 CODE >162:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B02 text1 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B1E text1 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B26 text1 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B4E text1 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B6A text1 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B72 text1 CODE >172:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2B9A text1 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BB6 text1 CODE >174:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BBE text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BC2 text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BCA text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BD2 text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BDA text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BE2 text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BEA text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BF2 text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2BFA text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C02 text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C0A text1 CODE >176:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C14 text1 CODE >180:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C3C text1 CODE >181:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C58 text1 CODE >182:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C60 text1 CODE >185:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2C88 text1 CODE >186:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2CA4 text1 CODE >187:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2CAC text1 CODE >190:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2CD4 text1 CODE >191:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2CF0 text1 CODE >192:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2CF8 text1 CODE >195:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D20 text1 CODE >196:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D3C text1 CODE >197:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D44 text1 CODE >200:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D6C text1 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D88 text1 CODE >202:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2D90 text1 CODE >205:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2DB8 text1 CODE >206:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2DD4 text1 CODE >207:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2DDC text1 CODE >210:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E04 text1 CODE >211:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E20 text1 CODE >212:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E28 text1 CODE >215:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E50 text1 CODE >216:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E6C text1 CODE >217:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E74 text1 CODE >220:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2E9C text1 CODE >221:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2EB8 text1 CODE >222:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2EC0 text1 CODE >225:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2EE8 text1 CODE >226:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F04 text1 CODE >227:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F0C text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F10 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F18 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F20 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F28 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F30 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F38 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F40 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F48 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F50 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F58 text1 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F62 text1 CODE >230:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F64 text0 CODE >232:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F64 text0 CODE >233:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F68 text0 CODE >234:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F72 text0 CODE >235:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F7A text0 CODE >236:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F84 text0 CODE >237:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F8C text0 CODE >238:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2F96 text0 CODE >239:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FA0 text0 CODE >240:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FAA text0 CODE >241:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FB4 text0 CODE >242:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FBE text0 CODE >243:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FC8 text0 CODE >244:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FD2 text0 CODE >245:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FDC text0 CODE >246:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FF2 text0 CODE >247:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+2FFC text0 CODE >248:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3006 text0 CODE >249:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3010 text0 CODE >250:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+301A text0 CODE >251:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3024 text0 CODE >252:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+302E text0 CODE >253:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3038 text0 CODE >254:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3042 text0 CODE >255:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3058 text0 CODE >256:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3062 text0 CODE >257:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+306C text0 CODE >258:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3076 text0 CODE >259:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3080 text0 CODE >260:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+308A text0 CODE >261:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3094 text0 CODE >262:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+309E text0 CODE >263:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30A8 text0 CODE >264:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30BE text0 CODE >265:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30C0 text0 CODE >268:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30C4 text0 CODE >269:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30CA text0 CODE >275:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30E0 text0 CODE >276:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+30F6 text0 CODE >277:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+310C text0 CODE >278:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3122 text0 CODE >279:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3138 text0 CODE >280:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+314E text0 CODE >281:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3164 text0 CODE >282:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+317A text0 CODE >283:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+3192 text0 CODE >284:D:\Taller de Microcontroladores y Flacas\Sem10_MAX7219_matrix.X\maincode02.c
+361E cinit CODE >5543:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+361E cinit CODE >5545:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+361E cinit CODE >5548:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+361E cinit CODE >5654:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3620 cinit CODE >5655:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3622 cinit CODE >5656:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3624 cinit CODE >5657:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3626 cinit CODE >5658:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3628 cinit CODE >5659:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+362A cinit CODE >5660:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+362E cinit CODE >5661:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3632 cinit CODE >5662:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3632 cinit CODE >5663:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3634 cinit CODE >5664:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3638 cinit CODE >5665:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+363A cinit CODE >5666:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+363C cinit CODE >5667:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+363E cinit CODE >5671:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3642 cinit CODE >5672:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3644 cinit CODE >5673:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3644 cinit CODE >5674:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3646 cinit CODE >5675:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3648 cinit CODE >5676:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+364A cinit CODE >5679:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+364C cinit CODE >5680:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+364E cinit CODE >5681:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3650 cinit CODE >5682:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3652 cinit CODE >5683:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3654 cinit CODE >5684:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3656 cinit CODE >5692:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3658 cinit CODE >5693:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+365A cinit CODE >5694:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+365C cinit CODE >5695:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+365E cinit CODE >5696:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3660 cinit CODE >5697:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3662 cinit CODE >5698:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3664 cinit CODE >5704:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3664 cinit CODE >5706:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+3666 cinit CODE >5707:C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LdataBANK5 0 0 ABS 0 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hspace_0 383A 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hspace_1 5C0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HidataBANK5 0 0 ABS 0 idataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ENVIA_CHAR@aux 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+_ENVIA_LCD_CMD 3776 0 CODE 0 text13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_MAX7219_WriteData2 33CE 0 CODE 0 text6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LCD_CONFIG 35CC 0 CODE 0 text8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lsmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LATD 4C1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+_main 2F64 0 CODE 0 text0 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ENVIA_NIBBLE@dato 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__end_of_ENVIA_CHAR 37DC 0 CODE 0 text17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+start 102 0 CODE 0 init C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_deco_centena 555 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LidataBANK5 0 0 ABS 0 idataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_variablazo 558 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LCD_INIT 34BA 0 CODE 0 text7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awmod@sign 507 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_MAX7219_WriteData2 3320 0 CODE 0 text6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__end_of_LCD_INIT 3520 0 CODE 0 text7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+intlevel0 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awdiv@sign 50D 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_configuro 35CC 0 CODE 0 text4 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_LCD_CONFIG 361E 0 CODE 0 text8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_deco_decena 554 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ANSELD 418 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ANSELE 420 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_CURSOR_HOME 3828 0 CODE 0 text10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awdiv@dividend 508 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+MAX7219_WriteData2@comando 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_configuro 3578 0 CODE 0 text4 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awdiv@divisor 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of___awdiv 3270 0 CODE 0 text3 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of___awmod 3320 0 CODE 0 text2 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+?_strlen 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_MAX7219_Init 366A 0 CODE 0 text5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_ENVIA_LCD_CMD 37AA 0 CODE 0 text13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+start_initialization 361E 0 CODE 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ESCRIBE_MENSAJE2 36B6 0 CODE 0 text15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_OSCFRQ B1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_default_ISR 3838 0 CODE 0 text20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TRISCbits 4C8 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TRISFbits 4CB 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_BORRAR_LCD 3830 0 CODE 0 text11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_deco_unidad 553 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_T0CON0 31A 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_T0CON1 31B 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+LEER_LCD@aux 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+_decodificacion 251C 0 CODE 0 text1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_strlen 3776 0 CODE 0 text16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_POS_CURSOR 33CE 0 CODE 0 text12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__smallconst 2500 0 SMALLCONST 0 smallconst C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_MAX7219_Init 36B6 0 CODE 0 text5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hinit 106 0 CODE 0 init dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Linit 102 0 CODE 0 init dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_BORRAR_LCD 3838 0 CODE 0 text11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+POS_CURSOR@fila 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_CURSOR_ONOFF 37DC 0 CODE 0 text9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__S0 383A 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__S1 5C0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hivt0x8 102 0 CODE 0 ivt0x8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+IVTBASEH 45E 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+IVTBASEL 45D 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+IVTBASEU 45F 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_ESCRIBE_MENSAJE2 36FA 0 CODE 0 text15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_concatenado 557 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_decodificacion 2F64 0 CODE 0 text1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_POS_CURSOR 3448 0 CODE 0 text12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/production\Sem10_MAX7219_matrix.X.production.o
+strlen@a 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+strlen@s 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ENVIA_NIBBLE 380C 0 CODE 0 text18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pdataBANK5 560 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LbssBANK5 0 0 ABS 0 bssBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_letra_a 5B0 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awmod@counter 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_CURSOR_HOME 3830 0 CODE 0 text10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_PIE3bits 4A1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_desplazamiento 556 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TMR0_ISR 36FC 0 CODE 0 text19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext10 3828 0 CODE 0 text10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext11 3830 0 CODE 0 text11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext12 33CE 0 CODE 0 text12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext13 3776 0 CODE 0 text13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext14 3448 0 CODE 0 text14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext15 36B6 0 CODE 0 text15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext16 373E 0 CODE 0 text16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext17 37AA 0 CODE 0 text17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext18 380C 0 CODE 0 text18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext19 36FC 0 CODE 0 text19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext20 3838 0 CODE 0 text20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@decena 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awdiv 31AC 0 CODE 0 text3 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awmod 3270 0 CODE 0 text2 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_TMR0_ISR 373E 0 CODE 0 text19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LATCbits 4C0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LATDbits 4C1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LATEbits 4C2 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LATFbits 4C3 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_CURSOR_ONOFF 380C 0 CODE 0 text9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+_strlen 373E 0 CODE 0 text16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pbssCOMRAM 553 0 COMRAM 1 bssCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+main@cuenta 552 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@numero 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_LEER_LCD 3448 0 CODE 0 text14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_PIR3bits 4B1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+MAX7219_WriteData2@dato 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_ENVIA_NIBBLE 3828 0 CODE 0 text18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_default_ISR 383A 0 CODE 0 text20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+end_of_initialization 3664 0 CODE 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_LEER_LCD 34BA 0 CODE 0 text14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ESCRIBE_MENSAJE2@cadena 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awdiv@quotient 50E 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+?___awdiv 508 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+?___awmod 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_486 516 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_487 518 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_488 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_489 51C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_490 51E 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_491 520 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_492 522 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_493 524 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_494 526 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_495 528 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_496 52A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_497 52C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_498 52E 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_499 530 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_500 532 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_501 534 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_502 536 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_503 538 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_504 53A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_505 53C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_506 53E 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_507 540 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_508 542 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_509 544 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_510 546 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_511 548 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_512 54A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_513 54C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i_514 54E 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HbssBANK5 0 0 ABS 0 bssBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awmod@dividend 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pcinit 361E 0 CODE 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@unidad 512 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext0 2F64 0 CODE 0 text0 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext1 251C 0 CODE 0 text1 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext2 3270 0 CODE 0 text2 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext3 31AC 0 CODE 0 text3 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext4 3578 0 CODE 0 text4 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext5 366A 0 CODE 0 text5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext6 3320 0 CODE 0 text6 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext7 34BA 0 CODE 0 text7 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext8 35CC 0 CODE 0 text8 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ptext9 37DC 0 CODE 0 text9 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ENVIA_LCD_CMD@dato 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__psmallconst 2500 0 SMALLCONST 0 smallconst dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAsjd8.\driver_tmp_9.o
+MAX7219_WriteData2@var_x 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of__initialization 3664 0 CODE 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+___awmod@divisor 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+POS_CURSOR@columna 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pidataBANK5 3520 0 CODE 0 idataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ESCRIBE_MENSAJE2@i 509 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ENVIA_CHAR@dato 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__end_of_main 31AC 0 CODE 0 text0 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ESCRIBE_MENSAJE2@tam 508 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_OSCEN B3 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_PORTD 4D1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TMR0H 319 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TRISD 4C9 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_TRISE 4CA 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_0 5A8 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_1 5A0 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_2 598 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_3 590 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_4 588 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_5 580 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_6 578 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_7 570 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_8 568 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_num_9 560 0 BANK5 1 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ENVIA_CHAR 37AA 0 CODE 0 text17 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@i 514 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_vacio 5B8 0 BANK5 1 bssBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__HdataBANK5 0 0 ABS 0 dataBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__initialization 361E 0 CODE 0 cinit dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__pbssBANK5 5B8 0 BANK5 1 bssBANK5 dist/default/production\Sem10_MAX7219_matrix.X.production.o
+ENVIA_LCD_CMD@aux 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hsmallconst 251C 0 SMALLCONST 0 smallconst dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ANSELCbits 410 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+_ANSELFbits 428 0 ABS 0 - dist/default/production\Sem10_MAX7219_matrix.X.production.o
+decodificacion@centena 510 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Sem10_MAX7219_matrix.X.production.o
+CURSOR_ONOFF@estado 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem10_MAX7219_matrix.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 FE 1
+text1 0 251C 251C 11DE 1
+text19 0 36FC 36FC 13E 1
+cstackCOMRAM 1 501 501 58 1
+reset_vec 0 0 0 4 1
+smallconst 0 2500 2500 1C 1
+dataBANK5 1 560 560 60 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
