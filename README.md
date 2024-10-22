@@ -41,6 +41,7 @@ External resources:<br>
 -Microchip - SPI to WS2812 - Use Case for CLB Using the PIC16F13145 Microcontroller with MCC Melody: https://github.com/microchip-pic-avr-examples/pic16f13145-spi-ws2812-mplab-mcc<br>
 -Gavin Lyons - Library for SSD1306 I2C OLED: https://github.com/gavinlyonsrepo/pic_16F1619_projects/tree/master/projects/OLED_I2C<br>
 -Ivan de Jesus Deras - PIC GLCD Library (KS0108): https://github.com/ideras/pic-glcd-library/tree/master<br> 
+-iSebas - DS18B20: https://www.youtube.com/watch?v=iTrRXLVT2gc&t=624s<br>
 
 Misc:<br>
 -Subroutine for 74HC595:<br>
