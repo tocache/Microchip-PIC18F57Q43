@@ -22,6 +22,7 @@ My contributions:<br>
 -Servo movement with Timer0: https://github.com/tocache/Microchip-PIC18F57Q43/blob/main/EL256%202023-2%20Examples/2023-2_EL57_2_Sem11_servon.X/maincode4.c<br>
 -DHT11 Sensor with I2C_LCD: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/ELEC225%202024-1%20Examples/Sem11_I2CLCD_DHT11.X<br>
 -8-digit 7-segment module with MAX7219: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/Examples/Prueba_MAX7219.X<br>
+-DAC: https://github.com/tocache/Microchip-PIC18F57Q43/tree/main/Examples/Test_ADCDAC.X
 
 External resources:<br>
 -iSebas microProgramando - Serie - Curiosity Nano: https://youtube.com/playlist?list=PLmX2_OhrubDAKTyopNOu7JDwZPXZ6jRMr<br>
