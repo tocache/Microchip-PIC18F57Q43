@@ -43,6 +43,7 @@ External resources:<br>
 -Gavin Lyons - Library for SSD1306 I2C OLED: https://github.com/gavinlyonsrepo/pic_16F1619_projects/tree/master/projects/OLED_I2C<br>
 -Ivan de Jesus Deras - PIC GLCD Library (KS0108): https://github.com/ideras/pic-glcd-library/tree/master<br> 
 -iSebas - DS18B20: https://www.youtube.com/watch?v=iTrRXLVT2gc&t=624s<br>
+-upir - Smooth Arduino 16x2 gauge: https://www.youtube.com/watch?v=cx9CoGqpsfg<br>
 
 Misc:<br>
 -Subroutine for 74HC595:<br>
