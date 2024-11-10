@@ -45,6 +45,7 @@ Some examples using the PIC18F57Q43 microcontroller and the Microchip PIC18F57Q4
 -iSebas - DS18B20: https://www.youtube.com/watch?v=iTrRXLVT2gc&t=624s<br>
 -upir - Smooth Arduino 16x2 gauge: https://www.youtube.com/watch?v=cx9CoGqpsfg<br>
 -Microchip Community Forum - How to properly use 8x8 hardware multiplier in PIC18F27Q43: https://forum.microchip.com/s/topic/a5C3l000000MbbNEAS/t374601<br>
+-LCD 16 segment with TM1622 controller Arduino - https://github.com/MartyMacGyver/LCD_HT1622_16SegLcd/blob/master/Arduino/LCD_HT1622_16SegLcd_demo_driver/LCD_HT1622_16SegLcd_demo_driver.ino<br>
 
 <b>Misc:</b><br>
 -Subroutine for 74HC595:<br>
