@@ -1,0 +1,1065 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+$dist/default/production\Sem13_uart_txrt.X.production.o
+ivt0x8 CODE 0 8 8 FA 1 2
+cinit CODE 0 10C2C 10C2C 28 1 2
+text0 CODE 0 10C54 10C54 28 1 2
+text1 CODE 0 104D0 104D0 132 1 2
+text2 CODE 0 1099C 1099C 4E 1 2
+text3 CODE 0 10B54 10B54 3E 1 2
+text4 CODE 0 10CD2 10CD2 E 1 2
+text5 CODE 0 10CA2 10CA2 18 1 2
+text6 CODE 0 10C00 10C00 2C 1 2
+text7 CODE 0 10C7C 10C7C 26 1 2
+text8 CODE 0 10000 10000 354 1 2
+text9 CODE 0 10BD0 10BD0 30 1 2
+text10 CODE 0 10CEE 10CEE 8 1 2
+text11 CODE 0 10CF6 10CF6 8 1 2
+text12 CODE 0 108CC 108CC 68 1 2
+text13 CODE 0 10AD0 10AD0 42 1 2
+text14 CODE 0 10A86 10A86 4A 1 2
+text15 CODE 0 10354 10354 17C 1 4
+text16 CODE 0 10602 10602 132 1 2
+text17 CODE 0 10CFE 10CFE 8 1 2
+text18 CODE 0 10734 10734 A2 1 2
+text19 CODE 0 109EA 109EA 4E 1 2
+text20 CODE 0 10CE0 10CE0 E 1 2
+text21 CODE 0 10CBA 10CBA 18 1 2
+text22 CODE 0 107D6 107D6 8A 1 2
+text23 CODE 0 10934 10934 68 1 2
+text24 CODE 0 10A38 10A38 4E 1 2
+text25 CODE 0 10B92 10B92 3E 1 2
+text26 CODE 0 10860 10860 6C 1 2
+text27 CODE 0 10B12 10B12 42 1 2
+text28 CODE 0 10D08 10D08 2 1 4
+idataCOMRAM CODE 0 10D0A 10D0A 1 1 1
+cstackCOMRAM COMRAM 1 501 501 1C 1 1
+dataCOMRAM COMRAM 1 51E 51E 1 1 1
+bssCOMRAM COMRAM 1 51D 51D 1 1 1
+mediumconst MEDIUMCONST 0 FCD8 FCD8 328 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 106-FCD7 1
+CONST 10D06-10D07 1
+CONST 10D0B-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2500-FCD7 1
+SMALLCONST 10D06-10D07 1
+SMALLCONST 10D0B-1FFFF 1
+CODE 4-7 1
+CODE 106-FCD7 1
+CODE 10D06-10D07 1
+CODE 10D0B-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 51F-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 51F-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2500-FCD7 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\Sem13_uart_txrt.X.production.o
+10D08 text28 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10D08 text28 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10D08 text28 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10B12 text27 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B14 text27 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B1A text27 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B22 text27 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B26 text27 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B28 text27 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B36 text27 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B44 text27 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B52 text27 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10860 text26 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10862 text26 CODE >141:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1086A text26 CODE >142:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1087A text26 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10886 text26 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1088E text26 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1089A text26 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108A2 text26 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108AE text26 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108B6 text26 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108C2 text26 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108CA text26 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B92 text25 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B92 text25 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B9A text25 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B9E text25 CODE >9:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10BA2 text25 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10BC2 text25 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10BCE text25 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10A38 text24 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A38 text24 CODE >130:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A48 text24 CODE >131:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A48 text24 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A50 text24 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A70 text24 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A84 text24 CODE >135:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10934 text23 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10936 text23 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1093E text23 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1094E text23 CODE >166:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1095A text23 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10962 text23 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1096C text23 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10974 text23 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10980 text23 CODE >172:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10988 text23 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10992 text23 CODE >174:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1099A text23 CODE >175:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+107D6 text22 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+107D8 text22 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+107E8 text22 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+107F0 text22 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+107F4 text22 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10806 text22 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1080E text22 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10812 text22 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10824 text22 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1082C text22 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10830 text22 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10842 text22 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1084E text22 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1084E text22 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1085E text22 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CBA text21 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CBC text21 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CC0 text21 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CD0 text21 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CE0 text20 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CE0 text20 CODE >202:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CE6 text20 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CEC text20 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109EA text19 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109EA text19 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109FA text19 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109FA text19 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10A02 text19 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10A22 text19 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10A36 text19 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10734 text18 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10734 text18 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10740 text18 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10744 text18 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10750 text18 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10754 text18 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10760 text18 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10764 text18 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10770 text18 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10774 text18 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10780 text18 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10784 text18 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10790 text18 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10794 text18 CODE >88:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107A0 text18 CODE >89:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107A4 text18 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107B0 text18 CODE >91:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107B4 text18 CODE >92:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107C0 text18 CODE >93:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107C4 text18 CODE >94:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107D0 text18 CODE >95:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+107D4 text18 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10CFE text17 CODE >155:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CFE text17 CODE >156:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10D04 text17 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10602 text16 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10602 text16 CODE >35:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1060E text16 CODE >36:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10612 text16 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1061E text16 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10622 text16 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1062E text16 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10632 text16 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1063E text16 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10642 text16 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1064E text16 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10652 text16 CODE >45:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1065E text16 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10662 text16 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1066E text16 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10672 text16 CODE >49:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1067E text16 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10682 text16 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1068E text16 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10692 text16 CODE >53:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1069E text16 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106A2 text16 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106AE text16 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106B2 text16 CODE >57:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106BE text16 CODE >58:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106C2 text16 CODE >59:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106CE text16 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106D2 text16 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106DE text16 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106E2 text16 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106EE text16 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106F2 text16 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+106FE text16 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10702 text16 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1070E text16 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10712 text16 CODE >69:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1071E text16 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10722 text16 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1072E text16 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10732 text16 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10354 text15 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10354 text15 CODE >109:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10364 text15 CODE >110:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10366 text15 CODE >111:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1037A text15 CODE >113:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1037A text15 CODE >114:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1037C text15 CODE >115:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10388 text15 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1038C text15 CODE >117:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10390 text15 CODE >118:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10390 text15 CODE >119:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10392 text15 CODE >120:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103A2 text15 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103A6 text15 CODE >125:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103AA text15 CODE >127:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103AE text15 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103B2 text15 CODE >129:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103B6 text15 CODE >131:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103C6 text15 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103CC text15 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103D4 text15 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103DC text15 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103E4 text15 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+103EE text15 CODE >135:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10402 text15 CODE >138:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10406 text15 CODE >139:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10416 text15 CODE >143:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10422 text15 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10426 text15 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10430 text15 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1043C text15 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10440 text15 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1044C text15 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10450 text15 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1045A text15 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10466 text15 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1046A text15 CODE >155:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1046E text15 CODE >156:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10472 text15 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10476 text15 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1047A text15 CODE >160:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1047E text15 CODE >162:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1048E text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10494 text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1049C text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104A4 text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104AC text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104B4 text15 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104BE text15 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10A86 text14 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A86 text14 CODE >36:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A88 text14 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A8A text14 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A8E text14 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A90 text14 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A92 text14 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A94 text14 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A9A text14 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10A9E text14 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AA6 text14 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AAE text14 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AB6 text14 CODE >49:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10ABE text14 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AC0 text14 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AC4 text14 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10ACC text14 CODE >53:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10ACE text14 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AD0 text13 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AD2 text13 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AD8 text13 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AE0 text13 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AE4 text13 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AE6 text13 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10AF4 text13 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B02 text13 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10B10 text13 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108CC text12 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108CE text12 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108D6 text12 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108E6 text12 CODE >166:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108F2 text12 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+108FA text12 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10904 text12 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1090C text12 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10918 text12 CODE >172:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10920 text12 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1092A text12 CODE >174:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10932 text12 CODE >175:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CF6 text11 CODE >155:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CF6 text11 CODE >156:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CFC text11 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CEE text10 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CEE text10 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10CF4 text10 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10BD0 text9 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10BD2 text9 CODE >117:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10BE8 text9 CODE >118:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10BFE text9 CODE >119:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10000 text8 CODE >187:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10000 text8 CODE >188:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10004 text8 CODE >189:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10014 text8 CODE >191:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1001E text8 CODE >192:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10036 text8 CODE >195:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10040 text8 CODE >196:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1004A text8 CODE >197:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10052 text8 CODE >198:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1005C text8 CODE >199:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10064 text8 CODE >200:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1006E text8 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1007C text8 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10086 text8 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1008E text8 CODE >205:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10098 text8 CODE >206:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100A0 text8 CODE >207:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100AA text8 CODE >209:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100B8 text8 CODE >211:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100C2 text8 CODE >212:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100CA text8 CODE >213:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100D4 text8 CODE >214:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100DC text8 CODE >215:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100E6 text8 CODE >217:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100F4 text8 CODE >219:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+100FE text8 CODE >220:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10106 text8 CODE >221:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10110 text8 CODE >222:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10118 text8 CODE >223:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10122 text8 CODE >225:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10128 text8 CODE >227:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10132 text8 CODE >228:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1013A text8 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10144 text8 CODE >230:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1014C text8 CODE >231:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10156 text8 CODE >233:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1015C text8 CODE >235:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10166 text8 CODE >236:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1016E text8 CODE >237:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10178 text8 CODE >238:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10180 text8 CODE >239:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1018A text8 CODE >241:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10190 text8 CODE >243:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1019A text8 CODE >244:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101A2 text8 CODE >245:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101AC text8 CODE >246:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101B4 text8 CODE >247:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101BE text8 CODE >249:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101C4 text8 CODE >251:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101CE text8 CODE >252:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101D6 text8 CODE >253:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101E0 text8 CODE >254:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101E8 text8 CODE >255:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101F2 text8 CODE >257:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+101F8 text8 CODE >259:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10202 text8 CODE >260:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1020A text8 CODE >261:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10214 text8 CODE >262:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1021C text8 CODE >263:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10226 text8 CODE >265:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1022C text8 CODE >267:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10236 text8 CODE >268:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1023E text8 CODE >269:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10248 text8 CODE >270:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10250 text8 CODE >271:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1025A text8 CODE >273:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1026A text8 CODE >275:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10274 text8 CODE >276:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1027C text8 CODE >277:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10286 text8 CODE >278:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1028E text8 CODE >279:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10298 text8 CODE >281:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1029E text8 CODE >283:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102A8 text8 CODE >284:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102B0 text8 CODE >285:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102BA text8 CODE >286:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102C2 text8 CODE >287:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102CC text8 CODE >289:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102D2 text8 CODE >291:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102DC text8 CODE >292:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102E4 text8 CODE >293:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102EE text8 CODE >294:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+102F6 text8 CODE >295:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10300 text8 CODE >297:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10306 text8 CODE >299:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10310 text8 CODE >300:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10318 text8 CODE >301:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10322 text8 CODE >302:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1032A text8 CODE >303:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10334 text8 CODE >305:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10344 text8 CODE >306:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10348 text8 CODE >307:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+1034C text8 CODE >308:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10352 text8 CODE >309:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\I2C_LCD.c
+10C7C text7 CODE >23:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C7C text7 CODE >25:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C82 text7 CODE >26:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C86 text7 CODE >27:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C8A text7 CODE >28:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C8E text7 CODE >29:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C92 text7 CODE >30:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C96 text7 CODE >31:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C9A text7 CODE >32:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C9C text7 CODE >33:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CA0 text7 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10C00 text6 CODE >16:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C00 text6 CODE >18:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C06 text6 CODE >19:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C0A text6 CODE >20:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C0E text6 CODE >22:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C10 text6 CODE >23:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C14 text6 CODE >25:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C20 text6 CODE >27:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C22 text6 CODE >28:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C24 text6 CODE >29:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C26 text6 CODE >31:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C2A text6 CODE >32:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10CA2 text5 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CA4 text5 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CA8 text5 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CB8 text5 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CD2 text4 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CD2 text4 CODE >202:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CD8 text4 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10CDE text4 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+10B54 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B54 text3 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B5C text3 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B60 text3 CODE >9:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B64 text3 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B84 text3 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B90 text3 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+1099C text2 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+1099C text2 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109AC text2 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109AC text2 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109B4 text2 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109D4 text2 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+109E8 text2 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\LIB_UART.c
+104D0 text1 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104D0 text1 CODE >35:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104DC text1 CODE >36:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104E0 text1 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104EC text1 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104F0 text1 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+104FC text1 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10500 text1 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1050C text1 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10510 text1 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1051C text1 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10520 text1 CODE >45:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1052C text1 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10530 text1 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1053C text1 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10540 text1 CODE >49:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1054C text1 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10550 text1 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1055C text1 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10560 text1 CODE >53:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1056C text1 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10570 text1 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1057C text1 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10580 text1 CODE >57:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1058C text1 CODE >58:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10590 text1 CODE >59:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+1059C text1 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105A0 text1 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105AC text1 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105B0 text1 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105BC text1 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105C0 text1 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105CC text1 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105D0 text1 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105DC text1 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105E0 text1 CODE >69:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105EC text1 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105F0 text1 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+105FC text1 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10600 text1 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C54 text0 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C54 text0 CODE >99:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C58 text0 CODE >100:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C70 text0 CODE >101:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C74 text0 CODE >102:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C74 text0 CODE >104:D:\Taller de Microcontroladores y Flacas\Sem13_uart_txrt.X\maincode02.c
+10C2C cinit CODE >6295:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C2C cinit CODE >6297:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C2C cinit CODE >6300:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C2C cinit CODE >6321:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C2E cinit CODE >6322:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C30 cinit CODE >6323:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C32 cinit CODE >6324:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C34 cinit CODE >6325:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C36 cinit CODE >6326:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C38 cinit CODE >6327:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C3A cinit CODE >6328:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C3E cinit CODE >6332:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C40 cinit CODE >6340:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C42 cinit CODE >6341:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C44 cinit CODE >6342:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C46 cinit CODE >6343:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C48 cinit CODE >6344:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C4A cinit CODE >6345:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C4C cinit CODE >6346:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C4E cinit CODE >6352:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C4E cinit CODE >6354:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+10C50 cinit CODE >6355:C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_I2C_ENVIA_LCD_DATA 10860 0 CODE 0 text26 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lmediumconst FCD8 0 MEDIUMCONST 0 mediumconst dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_CMD@lownibble 516 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Hspace_0 10D0B 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hspace_1 51F 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_POS_CURSOR 10860 0 CODE 0 text22 dist/default/production\Sem13_uart_txrt.X.production.o
+i2U1_STRING_SEND@i 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_CURSOR_HOME 10CEE 0 CODE 0 text10 dist/default/production\Sem13_uart_txrt.X.production.o
+__mediumconst FCD8 0 MEDIUMCONST 0 mediumconst C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_CMD@highnibble 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Sem13_uart_txrt.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Sem13_uart_txrt.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+_main 10C54 0 CODE 0 text0 dist/default/production\Sem13_uart_txrt.X.production.o
+U1_STRING_SEND@i 51A 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+start 102 0 CODE 0 init C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+U1_BYTE_SEND@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_U1_BYTE_SEND 10CD2 0 CODE 0 text21 dist/default/production\Sem13_uart_txrt.X.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_CURSOR_ONOFF 10C00 0 CODE 0 text9 dist/default/production\Sem13_uart_txrt.X.production.o
+i2_U1_STRING_SEND 109EA 0 CODE 0 text19 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_LCD_ADDR 51E 0 COMRAM 1 dataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_LCD_INIT 10000 0 CODE 0 text8 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\Sem13_uart_txrt.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+_U1RX_ISR 10354 0 CODE 0 text15 dist/default/production\Sem13_uart_txrt.X.production.o
+__accesstop 560 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Sem13_uart_txrt.X.production.o
+i2U1_STRING_SEND@cadena 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_U1RX_ISR 104D0 0 CODE 0 text15 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\Sem13_uart_txrt.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\Sem13_uart_txrt.X.production.o
+i2_I2C1_WRITESINGLEBYTE 10B12 0 CODE 0 text27 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_configuro 10C2C 0 CODE 0 text6 dist/default/production\Sem13_uart_txrt.X.production.o
+__pidataCOMRAM 10D0A 0 CODE 0 idataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Sem13_uart_txrt.X.production.o
+_vis_menu_LCD 10734 0 CODE 0 text18 dist/default/production\Sem13_uart_txrt.X.production.o
+_U1RXPPS 272 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1_INIT 10C7C 0 CODE 0 text7 dist/default/production\Sem13_uart_txrt.X.production.o
+i2I2C1_WRITESINGLEBYTE@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+_I2C1ADB1 28F 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_DATA@data 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Sem13_uart_txrt.X.production.o
+_configuro 10C00 0 CODE 0 text6 dist/default/production\Sem13_uart_txrt.X.production.o
+_U1_BYTE_SEND 10CA2 0 CODE 0 text5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hmediumconst 10000 0 MEDIUMCONST 0 mediumconst dist/default/production\Sem13_uart_txrt.X.production.o
+i2_I2C_ENVIA_LCD_CMD 10934 0 CODE 0 text23 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_U1_STRING_SEND 10A38 0 CODE 0 text19 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_LCD_INIT 10354 0 CODE 0 text8 dist/default/production\Sem13_uart_txrt.X.production.o
+?_strlen 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+i2_I2C_BORRAR_LCD 10CFE 0 CODE 0 text17 dist/default/production\Sem13_uart_txrt.X.production.o
+i2I2C_ENVIA_LCD_CMD@command 504 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+start_initialization 10C2C 0 CODE 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+_OSCFRQ B1 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Sem13_uart_txrt.X.production.o
+_default_ISR 10D08 0 CODE 0 text28 dist/default/production\Sem13_uart_txrt.X.production.o
+_TRISCbits 4C8 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_TRISEbits 4CA 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_TRISFbits 4CB 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_vis_menu_LCD 107D6 0 CODE 0 text18 dist/default/production\Sem13_uart_txrt.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_RC3PPS 214 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_RC4PPS 215 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_RF0PPS 229 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1BRGH 2AF 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1BRGL 2AE 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1CON0 2AB 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1CON1 2AC 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1CON2 2AD 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_ESCRIBE_MENSAJE2 10A38 0 CODE 0 text24 dist/default/production\Sem13_uart_txrt.X.production.o
+U1_INIT@velocidad 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_POS_CURSOR@columna 507 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+isa$xinst 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+I2C_ESCRIBE_MENSAJE2@i 50C 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+i2_vis_menu_P 10602 0 CODE 0 text16 dist/default/production\Sem13_uart_txrt.X.production.o
+_menu_activo 51D 0 COMRAM 1 bssCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_U1_BYTE_SEND 10CBA 0 CODE 0 text5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_strlen 10B92 0 CODE 0 text3 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\Sem13_uart_txrt.X.production.o
+__Hidloc 0 0 ABS 0 idloc dist/default/production\Sem13_uart_txrt.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\Sem13_uart_txrt.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\Sem13_uart_txrt.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\Sem13_uart_txrt.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C1_WRITESINGLEBYTE 10B12 0 CODE 0 text13 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/production\Sem13_uart_txrt.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+I2C1_WRITESINGLEBYTE@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\Sem13_uart_txrt.X.production.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/production\Sem13_uart_txrt.X.production.o
+i2U1_STRING_SEND@tam 509 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_CURSOR_ONOFF@estado 517 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\Sem13_uart_txrt.X.production.o
+__Lidloc 0 0 ABS 0 idloc dist/default/production\Sem13_uart_txrt.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\Sem13_uart_txrt.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\Sem13_uart_txrt.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\Sem13_uart_txrt.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production\Sem13_uart_txrt.X.production.o
+i2_U1_NEWLINE 10CE0 0 CODE 0 text20 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_I2C_ENVIA_LCD_CMD 1099C 0 CODE 0 text23 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\Sem13_uart_txrt.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\Sem13_uart_txrt.X.production.o
+__Hheap 0 0 HEAP 7 heap dist/default/production\Sem13_uart_txrt.X.production.o
+__Hinit 106 0 CODE 0 init dist/default/production\Sem13_uart_txrt.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\Sem13_uart_txrt.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\Sem13_uart_txrt.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\Sem13_uart_txrt.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\Sem13_uart_txrt.X.production.o
+__Lheap 0 0 HEAP 7 heap dist/default/production\Sem13_uart_txrt.X.production.o
+__Linit 102 0 CODE 0 init dist/default/production\Sem13_uart_txrt.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\Sem13_uart_txrt.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_I2C1_WRITESINGLEBYTE 10B54 0 CODE 0 text27 dist/default/production\Sem13_uart_txrt.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ESCRIBE_MENSAJE2@cadena 507 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_I2C_BORRAR_LCD 10D06 0 CODE 0 text17 dist/default/production\Sem13_uart_txrt.X.production.o
+__S0 10D0B 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__S1 51F 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__S4 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__S5 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hivt0x8 102 0 CODE 0 ivt0x8 dist/default/production\Sem13_uart_txrt.X.production.o
+IVTBASEH 45E 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+IVTBASEL 45D 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+IVTBASEU 45F 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_ENVIA_LCD_CMD 10934 0 CODE 0 text12 dist/default/production\Sem13_uart_txrt.X.production.o
+i2_strlen 10B92 0 CODE 0 text25 dist/default/production\Sem13_uart_txrt.X.production.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1STAT1bits 299 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Sem13_uart_txrt.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Sem13_uart_txrt.X.production.o
+I2C1_WRITESINGLEBYTE@direccion 512 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+i2I2C_ENVIA_LCD_CMD@highnibble 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_CMD@command 514 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_strlen 10BD0 0 CODE 0 text25 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_vis_menu_P 10734 0 CODE 0 text16 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1CON0bits 294 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1CON1bits 295 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1CON2bits 296 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/production\Sem13_uart_txrt.X.production.o
+strlen@a 513 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+strlen@s 511 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\Sem13_uart_txrt.X.production.o
+i2I2C_ENVIA_LCD_CMD@lownibble 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__activetblptr 3 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1CNT 28D 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1TXB 28C 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production\Sem13_uart_txrt.X.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production\Sem13_uart_txrt.X.production.o
+_U1_STRING_SEND 1099C 0 CODE 0 text2 dist/default/production\Sem13_uart_txrt.X.production.o
+_PIE4bits 4A2 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_RC4I2Cbits 286 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__end_ofi2_U1_NEWLINE 10CEE 0 CODE 0 text20 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext10 10CEE 0 CODE 0 text10 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext11 10CF6 0 CODE 0 text11 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext12 108CC 0 CODE 0 text12 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext13 10AD0 0 CODE 0 text13 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext14 10A86 0 CODE 0 text14 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext15 10354 0 CODE 0 text15 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext16 10602 0 CODE 0 text16 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext17 10CFE 0 CODE 0 text17 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext18 10734 0 CODE 0 text18 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext19 109EA 0 CODE 0 text19 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext20 10CE0 0 CODE 0 text20 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext21 10CBA 0 CODE 0 text21 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext22 107D6 0 CODE 0 text22 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext23 10934 0 CODE 0 text23 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext24 10A38 0 CODE 0 text24 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext25 10B92 0 CODE 0 text25 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext26 10860 0 CODE 0 text26 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext27 10B12 0 CODE 0 text27 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext28 10D08 0 CODE 0 text28 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Sem13_uart_txrt.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\Sem13_uart_txrt.X.production.o
+__Lconfig 0 0 CONFIG 4 config dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C1_INIT 10AD0 0 CODE 0 text14 dist/default/production\Sem13_uart_txrt.X.production.o
+ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/production\Sem13_uart_txrt.X.production.o
+_LATEbits 4C2 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Sem13_uart_txrt.X.production.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+_strlen 10B54 0 CODE 0 text3 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\Sem13_uart_txrt.X.production.o
+isa$std 1 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+_RC3I2Cbits 287 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_OSCCON1 AD 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\Sem13_uart_txrt.X.production.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1_INIT 10A86 0 CODE 0 text14 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_ENVIA_LCD_CMD 108CC 0 CODE 0 text12 dist/default/production\Sem13_uart_txrt.X.production.o
+i2strlen@a 503 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+i2strlen@s 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lspace_4 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__pbssCOMRAM 51D 0 COMRAM 1 bssCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_U1_STRING_SEND 109EA 0 CODE 0 text2 dist/default/production\Sem13_uart_txrt.X.production.o
+_PIR4bits 4B2 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_default_ISR 10D0A 0 CODE 0 text28 dist/default/production\Sem13_uart_txrt.X.production.o
+end_of_initialization 10C4E 0 CODE 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Sem13_uart_txrt.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_DATA@lownibble 506 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/production\Sem13_uart_txrt.X.production.o
+_vis_menu_P 104D0 0 CODE 0 text1 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\Sem13_uart_txrt.X.production.o
+__pcinit 10C2C 0 CODE 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+?i2_strlen 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext0 10C54 0 CODE 0 text0 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext1 104D0 0 CODE 0 text1 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext2 1099C 0 CODE 0 text2 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext3 10B54 0 CODE 0 text3 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext4 10CD2 0 CODE 0 text4 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext5 10CA2 0 CODE 0 text5 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext6 10C00 0 CODE 0 text6 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext7 10C7C 0 CODE 0 text7 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext8 10000 0 CODE 0 text8 dist/default/production\Sem13_uart_txrt.X.production.o
+__ptext9 10BD0 0 CODE 0 text9 dist/default/production\Sem13_uart_txrt.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1PIRbits 29A 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production\Sem13_uart_txrt.X.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production\Sem13_uart_txrt.X.production.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\Sem13_uart_txrt.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Sem13_uart_txrt.X.production.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ESCRIBE_MENSAJE2@tam 50B 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Sem13_uart_txrt.X.production.o
+U1_STRING_SEND@cadena 515 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_ENVIA_LCD_DATA@highnibble 505 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_U1_INIT 10CA2 0 CODE 0 text7 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_BORRAR_LCD 10CF6 0 CODE 0 text11 dist/default/production\Sem13_uart_txrt.X.production.o
+_U1_NEWLINE 10CD2 0 CODE 0 text4 dist/default/production\Sem13_uart_txrt.X.production.o
+___heap_hi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcBsmgo.1\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1_WRITESINGLEBYTE 10AD0 0 CODE 0 text13 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of__initialization 10C4E 0 CODE 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+i2U1_BYTE_SEND@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\Sem13_uart_txrt.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\Sem13_uart_txrt.X.production.o
+i2I2C1_WRITESINGLEBYTE@direccion 502 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+U1_STRING_SEND@tam 519 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__pmediumconst FCD8 0 MEDIUMCONST 0 mediumconst dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C1CLKbits 29C 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_POS_CURSOR 107D6 0 CODE 0 text22 dist/default/production\Sem13_uart_txrt.X.production.o
+_I2C_CURSOR_ONOFF 10BD0 0 CODE 0 text9 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_vis_menu_P 10602 0 CODE 0 text1 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_main 10C7C 0 CODE 0 text0 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_CURSOR_HOME 10CF6 0 CODE 0 text10 dist/default/production\Sem13_uart_txrt.X.production.o
+_ODCONCbits 412 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_ENVIA_LCD_DATA 108CC 0 CODE 0 text26 dist/default/production\Sem13_uart_txrt.X.production.o
+_OSCEN B3 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1RXB 2A1 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_U1TXB 2A3 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\Sem13_uart_txrt.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\Sem13_uart_txrt.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\Sem13_uart_txrt.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\Sem13_uart_txrt.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\Sem13_uart_txrt.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_BORRAR_LCD 10CFE 0 CODE 0 text11 dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_I2C_ESCRIBE_MENSAJE2 10A86 0 CODE 0 text24 dist/default/production\Sem13_uart_txrt.X.production.o
+__initialization 10C2C 0 CODE 0 cinit dist/default/production\Sem13_uart_txrt.X.production.o
+i2_U1_BYTE_SEND 10CBA 0 CODE 0 text21 dist/default/production\Sem13_uart_txrt.X.production.o
+__pdataCOMRAM 51E 0 COMRAM 1 dataCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+__end_of_U1_NEWLINE 10CE0 0 CODE 0 text4 dist/default/production\Sem13_uart_txrt.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\Sem13_uart_txrt.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\Sem13_uart_txrt.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\Sem13_uart_txrt.X.production.o
+I2C_POS_CURSOR@fila 509 0 COMRAM 1 cstackCOMRAM dist/default/production\Sem13_uart_txrt.X.production.o
+_U1ERRIRbits 2B2 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_ANSELCbits 410 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_ANSELEbits 420 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+_ANSELFbits 428 0 ABS 0 - dist/default/production\Sem13_uart_txrt.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Sem13_uart_txrt.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 FE 1
+text8 0 10000 10000 D06 1
+text28 0 10D08 10D08 3 1
+cstackCOMRAM 1 501 501 1E 1
+reset_vec 0 0 0 4 1
+mediumconst 0 FCD8 FCD8 328 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
