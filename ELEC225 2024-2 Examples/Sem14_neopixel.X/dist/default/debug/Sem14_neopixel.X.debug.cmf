@@ -1,0 +1,1150 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+init CODE 0 102 102 4 1 2
+reset_vec CODE 0 0 0 4 1 2
+config CONFIG 4 300000 300000 A 1 1
+$dist/default/debug\Sem14_neopixel.X.debug.o
+ivt0x8 CODE 0 8 8 FA 1 2
+cinit CODE 0 10DDE 10DDE 28 1 2
+text0 CODE 0 10A9C 10A9C 54 1 2
+text1 CODE 0 104A8 104A8 152 1 2
+text2 CODE 0 10AF0 10AF0 4E 1 2
+text3 CODE 0 10E5C 10E5C E 1 2
+text4 CODE 0 10E2C 10E2C 18 1 2
+text5 CODE 0 1074C 1074C 94 1 2
+text6 CODE 0 10E06 10E06 26 1 2
+text7 CODE 0 10000 10000 354 1 2
+text8 CODE 0 10DAE 10DAE 30 1 2
+text9 CODE 0 10E78 10E78 8 1 2
+text10 CODE 0 10E80 10E80 8 1 2
+text11 CODE 0 10C28 10C28 4A 1 2
+text12 CODE 0 107E0 107E0 8A 1 2
+text13 CODE 0 109CC 109CC 68 1 2
+text14 CODE 0 10B3E 10B3E 4E 1 2
+text15 CODE 0 10CF6 10CF6 3E 1 2
+text16 CODE 0 108F4 108F4 6C 1 2
+text17 CODE 0 10C72 10C72 42 1 2
+text18 CODE 0 10354 10354 154 1 4
+text19 CODE 0 105FA 105FA 152 1 2
+text20 CODE 0 10B8C 10B8C 4E 1 2
+text21 CODE 0 10E6A 10E6A E 1 2
+text22 CODE 0 10E44 10E44 18 1 2
+text23 CODE 0 1086A 1086A 8A 1 2
+text24 CODE 0 10A34 10A34 68 1 2
+text25 CODE 0 10BDA 10BDA 4E 1 2
+text26 CODE 0 10D34 10D34 3E 1 2
+text27 CODE 0 10960 10960 6C 1 2
+text28 CODE 0 10CB4 10CB4 42 1 2
+text29 CODE 0 10D72 10D72 3C 1 2
+text30 CODE 0 10E88 10E88 2 1 4
+idataCOMRAM CODE 0 10E8A 10E8A 1 1 1
+cstackCOMRAM COMRAM 1 501 501 1E 1 1
+dataCOMRAM COMRAM 1 520 520 1 1 1
+bssCOMRAM COMRAM 1 51F 51F 1 1 1
+mediumconst MEDIUMCONST 0 FD62 FD62 29E 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 106-FD61 1
+CONST 10E8B-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2500-FD61 1
+SMALLCONST 10E8B-1FFFF 1
+CODE 4-7 1
+CODE 106-FD61 1
+CODE 10E8B-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 521-24FF 1
+BIGSFR 0-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 521-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2500-FD61 1
+MEDIUMCONST 12500-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\Sem14_neopixel.X.debug.o
+10E88 text30 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10E88 text30 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10E88 text30 CODE >175:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D72 text29 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D74 text29 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D78 text29 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D88 text29 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D8C text29 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D9A text29 CODE >69:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10D9E text29 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10DAC text29 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10CB4 text28 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CB6 text28 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CBC text28 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CC4 text28 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CC8 text28 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CCA text28 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CD8 text28 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CE6 text28 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CF4 text28 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10960 text27 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10962 text27 CODE >141:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1096A text27 CODE >142:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1097A text27 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10986 text27 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1098E text27 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1099A text27 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109A2 text27 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109AE text27 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109B6 text27 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109C2 text27 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109CA text27 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10D34 text26 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D34 text26 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D3C text26 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D40 text26 CODE >9:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D44 text26 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D64 text26 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D70 text26 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10BDA text25 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10BDA text25 CODE >130:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10BEA text25 CODE >131:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10BEA text25 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10BF2 text25 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C12 text25 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C26 text25 CODE >135:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A34 text24 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A36 text24 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A3E text24 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A4E text24 CODE >166:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A5A text24 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A62 text24 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A6C text24 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A74 text24 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A80 text24 CODE >172:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A88 text24 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A92 text24 CODE >174:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A9A text24 CODE >175:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1086A text23 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1086C text23 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1087C text23 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10884 text23 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10888 text23 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1089A text23 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108A2 text23 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108A6 text23 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108B8 text23 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108C0 text23 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108C4 text23 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108D6 text23 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108E2 text23 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108E2 text23 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108F2 text23 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E44 text22 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E46 text22 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E4A text22 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E5A text22 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E6A text21 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E6A text21 CODE >202:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E70 text21 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E76 text21 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B8C text20 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B8C text20 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B9C text20 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B9C text20 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10BA4 text20 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10BC4 text20 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10BD8 text20 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+105FA text19 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105FA text19 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10606 text19 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1060A text19 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10616 text19 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1061A text19 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10626 text19 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1062A text19 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10636 text19 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1063A text19 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10646 text19 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1064A text19 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10656 text19 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1065A text19 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10666 text19 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1066A text19 CODE >88:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10676 text19 CODE >89:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1067A text19 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10686 text19 CODE >91:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1068A text19 CODE >92:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10696 text19 CODE >93:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1069A text19 CODE >94:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106A6 text19 CODE >95:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106AA text19 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106B6 text19 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106BA text19 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106C6 text19 CODE >99:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106CA text19 CODE >100:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106D6 text19 CODE >101:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106DA text19 CODE >102:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106E6 text19 CODE >103:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106EA text19 CODE >104:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106F6 text19 CODE >105:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+106FA text19 CODE >106:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10706 text19 CODE >107:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1070A text19 CODE >108:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10716 text19 CODE >109:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1071A text19 CODE >110:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10726 text19 CODE >111:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1072A text19 CODE >112:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10736 text19 CODE >113:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1073A text19 CODE >114:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10746 text19 CODE >115:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1074A text19 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10354 text18 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10354 text18 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10364 text18 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10366 text18 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1036A text18 CODE >136:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10376 text18 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1037A text18 CODE >138:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10384 text18 CODE >139:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10390 text18 CODE >140:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1039E text18 CODE >141:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103A2 text18 CODE >143:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103AE text18 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103B2 text18 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103BC text18 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103C8 text18 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103D6 text18 CODE >148:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103DA text18 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103E6 text18 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103EA text18 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+103F4 text18 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10400 text18 CODE >154:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1040E text18 CODE >155:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10412 text18 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1041E text18 CODE >158:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10422 text18 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1042C text18 CODE >160:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10438 text18 CODE >161:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10446 text18 CODE >162:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1044A text18 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1044E text18 CODE >165:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10452 text18 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1045E text18 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10462 text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1046C text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10474 text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1047C text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10484 text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1048C text18 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10496 text18 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10C72 text17 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C74 text17 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C7A text17 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C82 text17 CODE >63:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C86 text17 CODE >64:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C88 text17 CODE >65:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C96 text17 CODE >66:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CA4 text17 CODE >67:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CB2 text17 CODE >68:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108F4 text16 CODE >137:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108F6 text16 CODE >141:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+108FE text16 CODE >142:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1090E text16 CODE >144:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1091A text16 CODE >145:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10922 text16 CODE >146:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1092E text16 CODE >147:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10936 text16 CODE >149:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10942 text16 CODE >150:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1094A text16 CODE >151:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10956 text16 CODE >152:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1095E text16 CODE >153:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10CF6 text15 CODE >5:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10CF6 text15 CODE >7:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10CFE text15 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D02 text15 CODE >9:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D06 text15 CODE >8:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D26 text15 CODE >11:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10D32 text15 CODE >12:C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c
+10B3E text14 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B3E text14 CODE >130:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B4E text14 CODE >131:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B4E text14 CODE >132:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B56 text14 CODE >133:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B76 text14 CODE >134:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10B8A text14 CODE >135:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109CC text13 CODE >159:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109CE text13 CODE >163:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109D6 text13 CODE >164:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109E6 text13 CODE >166:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109F2 text13 CODE >167:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+109FA text13 CODE >168:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A04 text13 CODE >169:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A0C text13 CODE >171:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A18 text13 CODE >172:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A20 text13 CODE >173:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A2A text13 CODE >174:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10A32 text13 CODE >175:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+107E0 text12 CODE >70:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+107E2 text12 CODE >71:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+107F2 text12 CODE >72:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+107FA text12 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+107FE text12 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10810 text12 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10818 text12 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1081C text12 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1082E text12 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10836 text12 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1083A text12 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1084C text12 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10858 text12 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10858 text12 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10868 text12 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C28 text11 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C28 text11 CODE >36:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C2A text11 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C2C text11 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C30 text11 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C32 text11 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C34 text11 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C36 text11 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C3C text11 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C40 text11 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C48 text11 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C50 text11 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C58 text11 CODE >49:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C60 text11 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C62 text11 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C66 text11 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C6E text11 CODE >53:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10C70 text11 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E80 text10 CODE >155:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E80 text10 CODE >156:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E86 text10 CODE >157:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E78 text9 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E78 text9 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E7E text9 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10DAE text8 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10DB0 text8 CODE >117:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10DC6 text8 CODE >118:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10DDC text8 CODE >119:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10000 text7 CODE >187:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10000 text7 CODE >188:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10004 text7 CODE >189:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10014 text7 CODE >191:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1001E text7 CODE >192:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10036 text7 CODE >195:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10040 text7 CODE >196:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1004A text7 CODE >197:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10052 text7 CODE >198:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1005C text7 CODE >199:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10064 text7 CODE >200:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1006E text7 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1007C text7 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10086 text7 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1008E text7 CODE >205:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10098 text7 CODE >206:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100A0 text7 CODE >207:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100AA text7 CODE >209:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100B8 text7 CODE >211:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100C2 text7 CODE >212:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100CA text7 CODE >213:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100D4 text7 CODE >214:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100DC text7 CODE >215:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100E6 text7 CODE >217:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100F4 text7 CODE >219:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+100FE text7 CODE >220:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10106 text7 CODE >221:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10110 text7 CODE >222:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10118 text7 CODE >223:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10122 text7 CODE >225:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10128 text7 CODE >227:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10132 text7 CODE >228:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1013A text7 CODE >229:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10144 text7 CODE >230:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1014C text7 CODE >231:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10156 text7 CODE >233:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1015C text7 CODE >235:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10166 text7 CODE >236:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1016E text7 CODE >237:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10178 text7 CODE >238:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10180 text7 CODE >239:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1018A text7 CODE >241:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10190 text7 CODE >243:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1019A text7 CODE >244:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101A2 text7 CODE >245:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101AC text7 CODE >246:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101B4 text7 CODE >247:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101BE text7 CODE >249:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101C4 text7 CODE >251:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101CE text7 CODE >252:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101D6 text7 CODE >253:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101E0 text7 CODE >254:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101E8 text7 CODE >255:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101F2 text7 CODE >257:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+101F8 text7 CODE >259:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10202 text7 CODE >260:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1020A text7 CODE >261:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10214 text7 CODE >262:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1021C text7 CODE >263:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10226 text7 CODE >265:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1022C text7 CODE >267:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10236 text7 CODE >268:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1023E text7 CODE >269:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10248 text7 CODE >270:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10250 text7 CODE >271:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1025A text7 CODE >273:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1026A text7 CODE >275:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10274 text7 CODE >276:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1027C text7 CODE >277:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10286 text7 CODE >278:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1028E text7 CODE >279:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10298 text7 CODE >281:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1029E text7 CODE >283:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102A8 text7 CODE >284:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102B0 text7 CODE >285:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102BA text7 CODE >286:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102C2 text7 CODE >287:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102CC text7 CODE >289:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102D2 text7 CODE >291:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102DC text7 CODE >292:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102E4 text7 CODE >293:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102EE text7 CODE >294:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+102F6 text7 CODE >295:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10300 text7 CODE >297:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10306 text7 CODE >299:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10310 text7 CODE >300:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10318 text7 CODE >301:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10322 text7 CODE >302:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1032A text7 CODE >303:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10334 text7 CODE >305:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10344 text7 CODE >306:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10348 text7 CODE >307:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+1034C text7 CODE >308:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10352 text7 CODE >309:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\I2C_LCD.c
+10E06 text6 CODE >23:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E06 text6 CODE >25:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E0C text6 CODE >26:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E10 text6 CODE >27:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E14 text6 CODE >28:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E18 text6 CODE >29:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E1C text6 CODE >30:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E20 text6 CODE >31:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E24 text6 CODE >32:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E26 text6 CODE >33:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E2A text6 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+1074C text5 CODE >16:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1074C text5 CODE >18:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10752 text5 CODE >19:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10756 text5 CODE >20:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1075A text5 CODE >22:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1075C text5 CODE >23:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10760 text5 CODE >25:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1076C text5 CODE >27:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1076E text5 CODE >28:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10770 text5 CODE >29:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10772 text5 CODE >31:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10776 text5 CODE >33:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1077C text5 CODE >34:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10780 text5 CODE >35:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10784 text5 CODE >37:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1078A text5 CODE >38:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1078E text5 CODE >39:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10792 text5 CODE >40:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10796 text5 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+1079C text5 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107A0 text5 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107A4 text5 CODE >46:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107AA text5 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107AE text5 CODE >48:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107B2 text5 CODE >49:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107B6 text5 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107BA text5 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107BE text5 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107C2 text5 CODE >53:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107C6 text5 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107CA text5 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107CE text5 CODE >57:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107D0 text5 CODE >58:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107D4 text5 CODE >59:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107D6 text5 CODE >60:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107D8 text5 CODE >61:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+107DE text5 CODE >62:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10E2C text4 CODE >41:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E2E text4 CODE >42:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E32 text4 CODE >43:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E42 text4 CODE >44:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E5C text3 CODE >201:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E5C text3 CODE >202:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E62 text3 CODE >203:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10E68 text3 CODE >204:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10AF0 text2 CODE >47:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10AF0 text2 CODE >50:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B00 text2 CODE >51:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B00 text2 CODE >52:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B08 text2 CODE >54:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B28 text2 CODE >55:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+10B3C text2 CODE >56:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\LIB_UART.c
+104A8 text1 CODE >73:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104A8 text1 CODE >74:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104B4 text1 CODE >75:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104B8 text1 CODE >76:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104C4 text1 CODE >77:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104C8 text1 CODE >78:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104D4 text1 CODE >79:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104D8 text1 CODE >80:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104E4 text1 CODE >81:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104E8 text1 CODE >82:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104F4 text1 CODE >83:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+104F8 text1 CODE >84:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10504 text1 CODE >85:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10508 text1 CODE >86:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10514 text1 CODE >87:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10518 text1 CODE >88:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10524 text1 CODE >89:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10528 text1 CODE >90:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10534 text1 CODE >91:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10538 text1 CODE >92:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10544 text1 CODE >93:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10548 text1 CODE >94:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10554 text1 CODE >95:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10558 text1 CODE >96:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10564 text1 CODE >97:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10568 text1 CODE >98:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10574 text1 CODE >99:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10578 text1 CODE >100:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10584 text1 CODE >101:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10588 text1 CODE >102:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10594 text1 CODE >103:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10598 text1 CODE >104:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105A4 text1 CODE >105:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105A8 text1 CODE >106:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105B4 text1 CODE >107:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105B8 text1 CODE >108:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105C4 text1 CODE >109:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105C8 text1 CODE >110:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105D4 text1 CODE >111:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105D8 text1 CODE >112:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105E4 text1 CODE >113:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105E8 text1 CODE >114:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105F4 text1 CODE >115:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+105F8 text1 CODE >116:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10A9C text0 CODE >118:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10A9C text0 CODE >119:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AA0 text0 CODE >120:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AB8 text0 CODE >121:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10ABC text0 CODE >122:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AC6 text0 CODE >123:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AD2 text0 CODE >124:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10ADC text0 CODE >125:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AE8 text0 CODE >126:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10AE8 text0 CODE >128:D:\Taller de Microcontroladores y Flacas\Sem14_neopixel.X\maincode02.c
+10DDE cinit CODE >6195:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DDE cinit CODE >6197:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DDE cinit CODE >6200:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DDE cinit CODE >6222:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DE0 cinit CODE >6223:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DE2 cinit CODE >6224:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DE4 cinit CODE >6225:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DE6 cinit CODE >6226:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DE8 cinit CODE >6227:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DEA cinit CODE >6228:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DEC cinit CODE >6229:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DF0 cinit CODE >6233:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DF2 cinit CODE >6241:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DF4 cinit CODE >6242:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DF6 cinit CODE >6243:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DF8 cinit CODE >6244:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DFA cinit CODE >6245:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DFC cinit CODE >6246:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10DFE cinit CODE >6247:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10E00 cinit CODE >6253:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10E00 cinit CODE >6255:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+10E02 cinit CODE >6256:C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_I2C_ENVIA_LCD_DATA 108F4 0 CODE 0 text16 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lmediumconst FD62 0 MEDIUMCONST 0 mediumconst dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_CMD@lownibble 516 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+neopixel@b 502 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+neopixel@g 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+neopixel@r 503 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hspace_0 10E8B 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hspace_1 521 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hspace_2 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hspace_4 60000A 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_I2C_ESCRIBE_MENSAJE2 10C28 0 CODE 0 text25 dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnCON D6 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnPOL D7 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_POS_CURSOR 1086A 0 CODE 0 text12 dist/default/debug\Sem14_neopixel.X.debug.o
+i2U1_STRING_SEND@i 50A 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_CURSOR_HOME 10E78 0 CODE 0 text9 dist/default/debug\Sem14_neopixel.X.debug.o
+__mediumconst FD62 0 MEDIUMCONST 0 mediumconst C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ESCRIBE_MENSAJE2@cadena 507 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_CMD@highnibble 515 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Sem14_neopixel.X.debug.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\Sem14_neopixel.X.debug.o
+_T2PR 323 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+_main 10A9C 0 CODE 0 text0 dist/default/debug\Sem14_neopixel.X.debug.o
+U1_STRING_SEND@i 51A 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+start 102 0 CODE 0 init C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+U1_BYTE_SEND@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_U1_BYTE_SEND 10E5C 0 CODE 0 text22 dist/default/debug\Sem14_neopixel.X.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_CURSOR_ONOFF 10DDE 0 CODE 0 text8 dist/default/debug\Sem14_neopixel.X.debug.o
+i2_U1_STRING_SEND 10B8C 0 CODE 0 text20 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_LCD_ADDR 520 0 COMRAM 1 dataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_LCD_INIT 10000 0 CODE 0 text7 dist/default/debug\Sem14_neopixel.X.debug.o
+_neopixel 10D72 0 CODE 0 text29 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/debug\Sem14_neopixel.X.debug.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_U1RX_ISR 10354 0 CODE 0 text18 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_neopixel 10DAE 0 CODE 0 text29 dist/default/debug\Sem14_neopixel.X.debug.o
+__accesstop 560 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2U1_STRING_SEND@cadena 505 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_U1RX_ISR 104A8 0 CODE 0 text18 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\Sem14_neopixel.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\Sem14_neopixel.X.debug.o
+i2_I2C1_WRITESINGLEBYTE 10CB4 0 CODE 0 text28 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_configuro 107E0 0 CODE 0 text5 dist/default/debug\Sem14_neopixel.X.debug.o
+__pidataCOMRAM 10E8A 0 CODE 0 idataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/debug\Sem14_neopixel.X.debug.o
+_U1RXPPS 272 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1_INIT 10E06 0 CODE 0 text6 dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C1_WRITESINGLEBYTE@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+_I2C1ADB1 28F 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_CCPR1H 341 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CCPR1L 340 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_DATA@data 514 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Sem14_neopixel.X.debug.o
+_configuro 1074C 0 CODE 0 text5 dist/default/debug\Sem14_neopixel.X.debug.o
+_U1_BYTE_SEND 10E2C 0 CODE 0 text4 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hmediumconst 10000 0 MEDIUMCONST 0 mediumconst dist/default/debug\Sem14_neopixel.X.debug.o
+i2_I2C_ENVIA_LCD_CMD 10A34 0 CODE 0 text24 dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ENVIA_LCD_DATA@lownibble 506 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_U1_STRING_SEND 10BDA 0 CODE 0 text20 dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCSELECT D5 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_LCD_INIT 10354 0 CODE 0 text7 dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1STATUSbits 87 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_POS_CURSOR@fila 509 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+?_strlen 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2_I2C_ENVIA_LCD_DATA 10960 0 CODE 0 text27 dist/default/debug\Sem14_neopixel.X.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_INTCON0bits 4D6 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ENVIA_LCD_CMD@command 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+start_initialization 10DDE 0 CODE 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+_OSCFRQ B1 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_default_ISR 10E88 0 CODE 0 text30 dist/default/debug\Sem14_neopixel.X.debug.o
+_TRISCbits 4C8 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_TRISEbits 4CA 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_TRISFbits 4CB 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+___rparam_used 1 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_RC3PPS 214 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_RC4PPS 215 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_RF0PPS 229 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_RF2PPS 22B 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_T2CLKCON 326 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1BRGH 2AF 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1BRGL 2AE 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1CON0 2AB 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1CON1 2AC 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1CON2 2AD 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_ESCRIBE_MENSAJE2 10B3E 0 CODE 0 text14 dist/default/debug\Sem14_neopixel.X.debug.o
+U1_INIT@velocidad 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_POS_CURSOR@columna 517 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2_I2C_POS_CURSOR 1086A 0 CODE 0 text23 dist/default/debug\Sem14_neopixel.X.debug.o
+isa$xinst 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+I2C_ESCRIBE_MENSAJE2@i 51C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2_vis_menu_P 105FA 0 CODE 0 text19 dist/default/debug\Sem14_neopixel.X.debug.o
+_menu_activo 51F 0 COMRAM 1 bssCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_POS_CURSOR@columna 507 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_U1_BYTE_SEND 10E44 0 CODE 0 text4 dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ESCRIBE_MENSAJE2@i 50C 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+__Hconst 0 0 CONST 0 const dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_strlen 10D34 0 CODE 0 text15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hidata 0 0 CODE 0 idata dist/default/debug\Sem14_neopixel.X.debug.o
+__Hidloc 0 0 ABS 0 idloc dist/default/debug\Sem14_neopixel.X.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Sem14_neopixel.X.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\Sem14_neopixel.X.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\Sem14_neopixel.X.debug.o
+__Hstack 0 0 STACK 2 stack dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext0 0 0 ABS 0 text0 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext8 0 0 ABS 0 text8 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C1_WRITESINGLEBYTE 10CB4 0 CODE 0 text17 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank16 0 0 ABS 0 bank16 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank17 0 0 ABS 0 bank17 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank18 0 0 ABS 0 bank18 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank19 0 0 ABS 0 bank19 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank20 0 0 ABS 0 bank20 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank21 0 0 ABS 0 bank21 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank22 0 0 ABS 0 bank22 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank23 0 0 ABS 0 bank23 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank24 0 0 ABS 0 bank24 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank25 0 0 ABS 0 bank25 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank26 0 0 ABS 0 bank26 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank27 0 0 ABS 0 bank27 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank28 0 0 ABS 0 bank28 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank29 0 0 ABS 0 bank29 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank30 0 0 ABS 0 bank30 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank31 0 0 ABS 0 bank31 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank32 0 0 ABS 0 bank32 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank33 0 0 ABS 0 bank33 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank34 0 0 ABS 0 bank34 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank35 0 0 ABS 0 bank35 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbank36 0 0 ABS 0 bank36 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Sem14_neopixel.X.debug.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+I2C1_WRITESINGLEBYTE@dato 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hcomram 0 0 ABS 0 comram dist/default/debug\Sem14_neopixel.X.debug.o
+__Hconfig 30000A 0 CONFIG 4 config dist/default/debug\Sem14_neopixel.X.debug.o
+i2U1_STRING_SEND@tam 509 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+__Lconst 0 0 CONST 0 const dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_CURSOR_ONOFF@estado 517 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lidata 0 0 CODE 0 idata dist/default/debug\Sem14_neopixel.X.debug.o
+__Lidloc 0 0 ABS 0 idloc dist/default/debug\Sem14_neopixel.X.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\Sem14_neopixel.X.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\Sem14_neopixel.X.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\Sem14_neopixel.X.debug.o
+__Lstack 0 0 STACK 2 stack dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\Sem14_neopixel.X.debug.o
+i2_U1_NEWLINE 10E6A 0 CODE 0 text21 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_I2C_ENVIA_LCD_CMD 10A9C 0 CODE 0 text24 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\Sem14_neopixel.X.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hdata 0 0 ABS 0 data dist/default/debug\Sem14_neopixel.X.debug.o
+__Hheap 0 0 HEAP 7 heap dist/default/debug\Sem14_neopixel.X.debug.o
+__Hinit 106 0 CODE 0 init dist/default/debug\Sem14_neopixel.X.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\Sem14_neopixel.X.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\Sem14_neopixel.X.debug.o
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext 0 0 ABS 0 text dist/default/debug\Sem14_neopixel.X.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ldata 0 0 ABS 0 data dist/default/debug\Sem14_neopixel.X.debug.o
+__Lheap 0 0 HEAP 7 heap dist/default/debug\Sem14_neopixel.X.debug.o
+__Linit 102 0 CODE 0 init dist/default/debug\Sem14_neopixel.X.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\Sem14_neopixel.X.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext 0 0 ABS 0 text dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_I2C1_WRITESINGLEBYTE 10CF6 0 CODE 0 text28 dist/default/debug\Sem14_neopixel.X.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ESCRIBE_MENSAJE2@cadena 517 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\Sem14_neopixel.X.debug.o
+__S0 10E8B 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__S1 521 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__S4 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__S5 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hivt0x8 102 0 CODE 0 ivt0x8 dist/default/debug\Sem14_neopixel.X.debug.o
+IVTBASEH 45E 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+IVTBASEL 45D 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+IVTBASEU 45F 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnGLS0 DC 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnGLS1 DD 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnGLS2 DE 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnGLS3 DF 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnSEL0 D8 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnSEL1 D9 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_CLCnSEL2 DA 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1CON0 84 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1CON1 85 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1CON2 86 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_ENVIA_LCD_CMD 10A34 0 CODE 0 text13 dist/default/debug\Sem14_neopixel.X.debug.o
+i2_strlen 10D34 0 CODE 0 text26 dist/default/debug\Sem14_neopixel.X.debug.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1STAT1bits 299 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Sem14_neopixel.X.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Sem14_neopixel.X.debug.o
+I2C1_WRITESINGLEBYTE@direccion 512 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ENVIA_LCD_CMD@highnibble 505 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_CMD@command 514 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_strlen 10D72 0 CODE 0 text26 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_vis_menu_P 1074C 0 CODE 0 text19 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1CON0bits 294 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1CON1bits 295 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1CON2bits 296 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_I2C_POS_CURSOR 108F4 0 CODE 0 text23 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hramtop 2500 0 RAM 0 ramtop dist/default/debug\Sem14_neopixel.X.debug.o
+strlen@a 513 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+strlen@s 511 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ENVIA_LCD_CMD@lownibble 506 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__activetblptr 3 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1CNT 28D 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1TXB 28C 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext11 0 0 ABS 0 text11 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext12 0 0 ABS 0 text12 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext13 0 0 ABS 0 text13 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext14 0 0 ABS 0 text14 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext15 0 0 ABS 0 text15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext16 0 0 ABS 0 text16 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext17 0 0 ABS 0 text17 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext18 0 0 ABS 0 text18 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext19 0 0 ABS 0 text19 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext20 0 0 ABS 0 text20 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext21 0 0 ABS 0 text21 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext22 0 0 ABS 0 text22 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext23 0 0 ABS 0 text23 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext24 0 0 ABS 0 text24 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext25 0 0 ABS 0 text25 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext26 0 0 ABS 0 text26 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext27 0 0 ABS 0 text27 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext28 0 0 ABS 0 text28 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext29 0 0 ABS 0 text29 dist/default/debug\Sem14_neopixel.X.debug.o
+__Htext30 0 0 ABS 0 text30 dist/default/debug\Sem14_neopixel.X.debug.o
+_U1_STRING_SEND 10AF0 0 CODE 0 text2 dist/default/debug\Sem14_neopixel.X.debug.o
+_PIE4bits 4A2 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_RC4I2Cbits 286 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_U1_NEWLINE 10E78 0 CODE 0 text21 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext10 10E80 0 CODE 0 text10 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext11 10C28 0 CODE 0 text11 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext12 107E0 0 CODE 0 text12 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext13 109CC 0 CODE 0 text13 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext14 10B3E 0 CODE 0 text14 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext15 10CF6 0 CODE 0 text15 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext16 108F4 0 CODE 0 text16 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext17 10C72 0 CODE 0 text17 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext18 10354 0 CODE 0 text18 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext19 105FA 0 CODE 0 text19 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext20 10B8C 0 CODE 0 text20 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext21 10E6A 0 CODE 0 text21 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext22 10E44 0 CODE 0 text22 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext23 1086A 0 CODE 0 text23 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext24 10A34 0 CODE 0 text24 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext25 10BDA 0 CODE 0 text25 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext26 10D34 0 CODE 0 text26 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext27 10960 0 CODE 0 text27 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext28 10CB4 0 CODE 0 text28 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext29 10D72 0 CODE 0 text29 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext30 10E88 0 CODE 0 text30 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank16 0 0 ABS 0 bank16 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank17 0 0 ABS 0 bank17 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank18 0 0 ABS 0 bank18 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank19 0 0 ABS 0 bank19 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank20 0 0 ABS 0 bank20 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank21 0 0 ABS 0 bank21 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank22 0 0 ABS 0 bank22 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank23 0 0 ABS 0 bank23 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank24 0 0 ABS 0 bank24 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank25 0 0 ABS 0 bank25 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank26 0 0 ABS 0 bank26 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank27 0 0 ABS 0 bank27 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank28 0 0 ABS 0 bank28 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank29 0 0 ABS 0 bank29 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank30 0 0 ABS 0 bank30 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank31 0 0 ABS 0 bank31 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank32 0 0 ABS 0 bank32 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank33 0 0 ABS 0 bank33 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank34 0 0 ABS 0 bank34 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank35 0 0 ABS 0 bank35 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbank36 0 0 ABS 0 bank36 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug\Sem14_neopixel.X.debug.o
+__Lcomram 0 0 ABS 0 comram dist/default/debug\Sem14_neopixel.X.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C1_INIT 10C72 0 CODE 0 text11 dist/default/debug\Sem14_neopixel.X.debug.o
+ivt0x8_undefint 100 0 CODE 0 ivt0x8 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\Sem14_neopixel.X.debug.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+_strlen 10CF6 0 CODE 0 text15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\Sem14_neopixel.X.debug.o
+isa$std 1 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+_RC3I2Cbits 287 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_OSCCON1 AD 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\Sem14_neopixel.X.debug.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1_INIT 10C28 0 CODE 0 text11 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_ENVIA_LCD_CMD 109CC 0 CODE 0 text13 dist/default/debug\Sem14_neopixel.X.debug.o
+i2strlen@a 503 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2strlen@s 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lspace_0 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Lspace_1 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Lspace_2 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Lspace_4 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__pbssCOMRAM 51F 0 COMRAM 1 bssCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+i2_I2C_ESCRIBE_MENSAJE2 10BDA 0 CODE 0 text25 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_U1_STRING_SEND 10B3E 0 CODE 0 text2 dist/default/debug\Sem14_neopixel.X.debug.o
+_PIR4bits 4B2 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ESCRIBE_MENSAJE2@tam 50B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_default_ISR 10E8A 0 CODE 0 text30 dist/default/debug\Sem14_neopixel.X.debug.o
+end_of_initialization 10E00 0 CODE 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\Sem14_neopixel.X.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_DATA@lownibble 516 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lramtop 2500 0 RAM 0 ramtop dist/default/debug\Sem14_neopixel.X.debug.o
+_vis_menu_P 104A8 0 CODE 0 text1 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\Sem14_neopixel.X.debug.o
+__pcinit 10DDE 0 CODE 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+?i2_strlen 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext0 10A9C 0 CODE 0 text0 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext1 104A8 0 CODE 0 text1 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext2 10AF0 0 CODE 0 text2 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext3 10E5C 0 CODE 0 text3 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext4 10E2C 0 CODE 0 text4 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext5 1074C 0 CODE 0 text5 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext6 10E06 0 CODE 0 text6 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext7 10000 0 CODE 0 text7 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext8 10DAE 0 CODE 0 text8 dist/default/debug\Sem14_neopixel.X.debug.o
+__ptext9 10E78 0 CODE 0 text9 dist/default/debug\Sem14_neopixel.X.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1PIRbits 29A 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext13 0 0 ABS 0 text13 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext14 0 0 ABS 0 text14 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext15 0 0 ABS 0 text15 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext16 0 0 ABS 0 text16 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext17 0 0 ABS 0 text17 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext18 0 0 ABS 0 text18 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext19 0 0 ABS 0 text19 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext20 0 0 ABS 0 text20 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext21 0 0 ABS 0 text21 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext22 0 0 ABS 0 text22 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext23 0 0 ABS 0 text23 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext24 0 0 ABS 0 text24 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext25 0 0 ABS 0 text25 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext26 0 0 ABS 0 text26 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext27 0 0 ABS 0 text27 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext28 0 0 ABS 0 text28 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext29 0 0 ABS 0 text29 dist/default/debug\Sem14_neopixel.X.debug.o
+__Ltext30 0 0 ABS 0 text30 dist/default/debug\Sem14_neopixel.X.debug.o
+__ramtop 2500 0 RAM 0 ramtop C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+i2I2C_ENVIA_LCD_DATA@data 504 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/debug\Sem14_neopixel.X.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\Sem14_neopixel.X.debug.o
+__H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ESCRIBE_MENSAJE2@tam 51B 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\Sem14_neopixel.X.debug.o
+U1_STRING_SEND@cadena 515 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_ENVIA_LCD_DATA@highnibble 515 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_U1_INIT 10E2C 0 CODE 0 text6 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_BORRAR_LCD 10E80 0 CODE 0 text10 dist/default/debug\Sem14_neopixel.X.debug.o
+_U1_NEWLINE 10E5C 0 CODE 0 text3 dist/default/debug\Sem14_neopixel.X.debug.o
+___heap_hi 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+___param_bank 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\upao\AppData\Local\Temp\xcAs4fs.\driver_tmp_9.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1_WRITESINGLEBYTE 10C72 0 CODE 0 text17 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of__initialization 10E00 0 CODE 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+i2U1_BYTE_SEND@dato 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\Sem14_neopixel.X.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1CLK 8C 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_SPI1TXB 81 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_ofi2_I2C_ENVIA_LCD_DATA 109CC 0 CODE 0 text27 dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C1_WRITESINGLEBYTE@direccion 502 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+U1_STRING_SEND@tam 519 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__pcstackCOMRAM 501 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__pmediumconst FD62 0 MEDIUMCONST 0 mediumconst dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C1CLKbits 29C 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_POS_CURSOR 107E0 0 CODE 0 text12 dist/default/debug\Sem14_neopixel.X.debug.o
+_I2C_CURSOR_ONOFF 10DAE 0 CODE 0 text8 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_vis_menu_P 105FA 0 CODE 0 text1 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_main 10AF0 0 CODE 0 text0 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_CURSOR_HOME 10E80 0 CODE 0 text9 dist/default/debug\Sem14_neopixel.X.debug.o
+_ODCONCbits 412 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_ENVIA_LCD_DATA 10960 0 CODE 0 text16 dist/default/debug\Sem14_neopixel.X.debug.o
+_OSCEN B3 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_T2CON 324 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1RXB 2A1 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_U1TXB 2A3 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__HRAM 0 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hbss 0 0 RAM 1 bss dist/default/debug\Sem14_neopixel.X.debug.o
+__Hram 0 0 ABS 0 ram dist/default/debug\Sem14_neopixel.X.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\Sem14_neopixel.X.debug.o
+__LRAM 1 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Lbss 0 0 RAM 1 bss dist/default/debug\Sem14_neopixel.X.debug.o
+__Lram 0 0 ABS 0 ram dist/default/debug\Sem14_neopixel.X.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\Sem14_neopixel.X.debug.o
+_CCP1CON 342 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_BORRAR_LCD 10E88 0 CODE 0 text10 dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_I2C_ESCRIBE_MENSAJE2 10B8C 0 CODE 0 text14 dist/default/debug\Sem14_neopixel.X.debug.o
+__initialization 10DDE 0 CODE 0 cinit dist/default/debug\Sem14_neopixel.X.debug.o
+i2_U1_BYTE_SEND 10E44 0 CODE 0 text22 dist/default/debug\Sem14_neopixel.X.debug.o
+__pdataCOMRAM 520 0 COMRAM 1 dataCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+__end_of_U1_NEWLINE 10E6A 0 CODE 0 text3 dist/default/debug\Sem14_neopixel.X.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\Sem14_neopixel.X.debug.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\Sem14_neopixel.X.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\Sem14_neopixel.X.debug.o
+i2I2C_ENVIA_LCD_DATA@highnibble 505 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+I2C_POS_CURSOR@fila 519 0 COMRAM 1 cstackCOMRAM dist/default/debug\Sem14_neopixel.X.debug.o
+_U1ERRIRbits 2B2 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_ANSELCbits 410 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_ANSELEbits 420 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+_ANSELFbits 428 0 ABS 0 - dist/default/debug\Sem14_neopixel.X.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\Sem14_neopixel.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+ivt0x8 0 8 8 FE 1
+text7 0 10000 10000 E8B 1
+cstackCOMRAM 1 501 501 20 1
+reset_vec 0 0 0 4 1
+mediumconst 0 FD62 FD62 29E 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
