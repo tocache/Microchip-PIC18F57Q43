@@ -1,13 +1,13 @@
 /*
-LibrerÌa I2C-LCD desarrollada por Kalun Lau.
+Librer√≠a I2C-LCD desarrollada por Kalun Lau.
 Las principales funciones para el LCD fueron basados en una libreria
 desarrollada por Sergio Salas para un PIC18F4550.
-Las configuraciones del perifÈrico I2C1 fueron basados en un cÛdigo
-proporcionado por Alonso S·nchez.
-Las funciones de inicializaciÛn, envÌo de dato y envÌo de comando
+Las configuraciones del perif√©rico I2C1 fueron basados en un c√≥digo
+proporcionado por Alonso S√°nchez.
+Las funciones de inicializaci√≥n, env√≠o de dato y env√≠o de comando
 para el LCD se basaron en el trabajo de Vladimir Anglas.
-La opciÛn de tener la capacidad de cambiar la direcciÛn del
-I2C para poder conectar varios I2C-LCDs fuÈ propuesta por
+La opci√≥n de tener la capacidad de cambiar la direcci√≥n del
+I2C para poder conectar varios I2C-LCDs fu√© propuesta por
 Ucchelly Romero.
 Curso de Microcontroladores
 Universidad Peruana de Ciencias Aplicadas
@@ -15,14 +15,14 @@ Lima - Peru
 
 
 Changelog:
-19/11/2023 Primera versiÛn funcionando
+19/11/2023 Primera versi√≥n funcionando
 14/06/2024 Se agrego opcion para seleccionar la direccion
 del PCF8574/PCF8574A, como para usar varios LCD montados en el I2C.
-La direcciÛn esclavo I2C esta definido por la variable I2C_LCD_ADDR,
+La direcci√≥n esclavo I2C esta definido por la variable I2C_LCD_ADDR,
 por defecto esta en 0x27 (PCF8574_7), para modificar se actualiza
-I2C_LCD_ADDR para la direcciÛn nueva.
-Tener en cuenta que antes de manipular un I2C_LCD se deber· de
-establecer la direcciÛn de dicho I2C_LCD
+I2C_LCD_ADDR para la direcci√≥n nueva.
+Tener en cuenta que antes de manipular un I2C_LCD se deber√° de
+establecer la direcci√≥n de dicho I2C_LCD
  */
 
 #include <xc.h>
@@ -58,7 +58,10 @@ void I2C_LCD_ADDR_SET(unsigned char configuracion){
 }
 
 void I2C1_WRITESINGLEBYTE(unsigned char direccion, unsigned char dato){
-    I2C1CNT = 1;
+    //I2C1CNT = 1;
+    asm("movlb 2H");
+    asm("movlw 01H");
+    asm("movwf 8CH, 1");        //Update para que funcione en el Q84	
     I2C1ADB1 = (direccion << 1) & 0xFE;     //slave addr + 0 (write)
     I2C1TXB = dato;                     //colocamos el dato a enviar
     I2C1CON0bits.S = 1; // START condition
@@ -176,12 +179,12 @@ void I2C_ENVIA_LCD_CMD(unsigned char command){
 
 void I2C_GENERACARACTER(const unsigned char *vector,unsigned char pos){
 	unsigned char i;
-	I2C_ENVIA_LCD_CMD(0x40+8*pos);//DirecciÛn de la CGRAM +
-	for(i=0;i<8;i++)			 //offset de posiciÛn de caracter	
+	I2C_ENVIA_LCD_CMD(0x40+8*pos);//Direcci√≥n de la CGRAM +
+	for(i=0;i<8;i++)			 //offset de posici√≥n de caracter	
 	{
 		I2C_ENVIA_LCD_DATA(vector[i]);
 	}
-	I2C_ENVIA_LCD_CMD(0x80);	//DirecciÛn de la DDRAM
+	I2C_ENVIA_LCD_CMD(0x80);	//Direcci√≥n de la DDRAM
 }
 
 void I2C_LCD_INIT(void){
