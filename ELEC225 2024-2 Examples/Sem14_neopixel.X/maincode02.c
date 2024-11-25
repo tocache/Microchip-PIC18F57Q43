@@ -9,6 +9,7 @@
 #include "cabecera.h"
 #include "LIB_UART.h"
 #include "I2C_LCD.h"
+#include "LIB_WS2812.h"
 #define _XTAL_FREQ 32000000UL
 
 unsigned char menu_activo = 0;      //0 es menu principal, 1 es menu LCD
@@ -29,30 +30,8 @@ void configuro(void){
     INTCON0bits.GIE = 1; 
     //inicializar el LCD
     I2C_LCD_INIT();
-    //Timer2 config
-    T2CON = 0x80;       //TMR2=ON, PRESC=1:1, POSTS=1:1
-    T2CLKCON = 0x01;    //TMR2 SOURCE = FOSC/4
-    T2PR = 5;           //Limit value
-    //SPI config
-    SPI1CON0 = 0x83;    //SPI enabled, Master, BMODE=1
-    SPI1CON1 = 0x40;    //default values
-    SPI1CON2 = 0x02;    //TXR=1, RXR=0
-    SPI1CLK = 0x06;     //CLK=TMR2_Posts
-    //PWM config (CCP1)
-    CCP1CON = 0x8C;     //CCP1 enabled, right aligned, PWM operation
-    CCPR1H = 0x00;
-    CCPR1L = 0x0A;      //Duty Cycle at 50%
-    //CLC1 config
-    CLCSELECT = 0x00;
-    CLCnSEL0 = 0x1F;    //CLC1SEL0=CCP1 (PWM)
-    CLCnSEL1 = 0x41;    //CLC1SEL1=SPI1_SCK
-    CLCnSEL2 = 0x40;    //CLC1SEL2=SPI1_SDO
-    CLCnGLS0 = 0x05;    //CLC1 Gate1 => INV_SEL0 INV_SEL1
-    CLCnGLS1 = 0x10;    //CLC1 Gate2 => INV_SEL2
-    CLCnGLS2 = 0x08;    //CLC1`Gate3 => SEL1
-    CLCnGLS3 = 0x20;    //CLC1 Gate4 => SEL2
-    CLCnPOL = 0x01;     //CLC1 Gate1 POL inverted
-    CLCnCON = 0x80;     //CLC1 enabled, AND-OR mode
+    //inicializar el WS2812
+    WS2812_INIT();
     //port config
     TRISFbits.TRISF3 = 0;   //onboard LED config
     ANSELFbits.ANSELF3 = 0;
@@ -61,14 +40,6 @@ void configuro(void){
     RF2PPS = 0x01;      //CLC1out connected to RF2    
 }
 
-void neopixel(unsigned char r, unsigned char g, unsigned char b){
-    SPI1TXB = r;
-    while(!SPI1STATUSbits.TXBE);
-    SPI1TXB = g;
-    while(!SPI1STATUSbits.TXBE);
-    SPI1TXB = b;
-    while(!SPI1STATUSbits.TXBE);
-}
 
 void vis_menu_P(void){
     U1_STRING_SEND("*******************************");
@@ -123,7 +94,7 @@ void main(void) {
     I2C_ESCRIBE_MENSAJE2("Neopixel");
     I2C_POS_CURSOR(2,0);
     I2C_ESCRIBE_MENSAJE2("Apagado!");
-    neopixel(0,0,0);
+    WS2812_DATA_SEND(0,0,0);
     while(1){
         
     }
@@ -138,28 +109,28 @@ void __interrupt(irq(IRQ_U1RX)) U1RX_ISR(void){
             U1_NEWLINE();
             I2C_POS_CURSOR(2,0);
             I2C_ESCRIBE_MENSAJE2("Azul!   ");
-            neopixel(0,0,255);
+            WS2812_DATA_SEND(0,0,255);
             break;
         case '2':
             U1_STRING_SEND("LED verde!");
             U1_NEWLINE();
             I2C_POS_CURSOR(2,0);
             I2C_ESCRIBE_MENSAJE2("Verde!  ");
-            neopixel(255,0,0);
+            WS2812_DATA_SEND(255,0,0);
             break;
         case '3':
             U1_STRING_SEND("LED rojo!");
             U1_NEWLINE();
             I2C_POS_CURSOR(2,0);
             I2C_ESCRIBE_MENSAJE2("Rojo!   ");
-            neopixel(0,255,0);
+            WS2812_DATA_SEND(0,255,0);
             break;
         case '4':
             U1_STRING_SEND("LED apagado!");
             U1_NEWLINE();
             I2C_POS_CURSOR(2,0);
             I2C_ESCRIBE_MENSAJE2("Apagado!");
-            neopixel(0,0,0);
+            WS2812_DATA_SEND(0,0,0);
             break;            
         case 'm':
             vis_menu_P();
