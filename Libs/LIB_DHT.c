@@ -22,27 +22,50 @@ void DHT_Start(unsigned char modelo){
 }
 
 void DHT_Check(unsigned char modelo){
-    if(modelo == DHT11){    
-        while(PORTBbits.RB0);
+    unsigned char temp_x;
+    if(modelo == DHT11){
+        temp_x = 0;
+        while((PORTBbits.RB0 == 1) && temp_x < 100){
+            temp_x++;
+        }
         __delay_us(80);
-        while(!PORTBbits.RB0);
+        temp_x = 0;
+        while((PORTBbits.RB0 == 0) && temp_x < 100){
+            temp_x++;
+        }
         __delay_us(80);
-        while(PORTBbits.RB0);
+        temp_x = 0;
+        while((PORTBbits.RB0 == 1) && temp_x < 100){
+            temp_x++;
+        }
     }
     else if(modelo == DHT22){
-        while(PORTBbits.RB0);
+        temp_x = 0;
+        while((PORTBbits.RB0 == 1) && temp_x < 100){
+            temp_x++;
+        }
         __delay_us(80);
-        while(!PORTBbits.RB0);
+        temp_x = 0;
+        while((PORTBbits.RB0 == 0) && temp_x < 100){
+            temp_x++;
+        }
         __delay_us(80);
-        while(PORTBbits.RB0);        
+        temp_x = 0;
+        while((PORTBbits.RB0 == 1) && temp_x < 100){
+            temp_x++;
+        } 
     }        
 }
 
 unsigned char DHT_Read(unsigned char modelo){
     unsigned char x = 0, data = 0;
+    unsigned char temp_x;
     if(modelo == DHT11){
         for(x=0;x<8;x++){
-            while(!PORTBbits.RB0);
+            temp_x = 0;
+            while((PORTBbits.RB0 == 0) && temp_x < 100){
+                temp_x++;
+            }
             __delay_us(35);
             if(PORTBbits.RB0){
                 data = ((data<<1) | 1);
@@ -50,12 +73,18 @@ unsigned char DHT_Read(unsigned char modelo){
             else{
                 data = (data<<1);
             }
-            while(PORTBbits.RB0);
+            temp_x = 0;
+            while((PORTBbits.RB0 == 1) && temp_x < 100){
+                temp_x++;
+            }
         }
     }
     else if(modelo == DHT22){
         for(x=0;x<8;x++){
-            while(!PORTBbits.RB0);
+            temp_x = 0;
+            while((PORTBbits.RB0 == 0) && temp_x < 100){
+                temp_x++;
+            }
             __delay_us(35);
             if(PORTBbits.RB0){
                 data = ((data<<1) | 1);
@@ -63,7 +92,10 @@ unsigned char DHT_Read(unsigned char modelo){
             else{
                 data = (data<<1);
             }
-            while(PORTBbits.RB0);
+            temp_x = 0;
+            while((PORTBbits.RB0 == 1) && temp_x < 100){
+                temp_x++;
+            }
         }        
     }
     return data;
