@@ -63,8 +63,19 @@ void I2C1_WRITESINGLEBYTE(unsigned char direccion, unsigned char dato){
     asm("movlw 01H");
     asm("movwf 8CH, 1");        //Update para que funcione en el Q84	
     I2C1ADB1 = (direccion << 1) & 0xFE;     //slave addr + 0 (write)
-    I2C1TXB = dato;                     //colocamos el dato a enviar
+    //I2C1TXB = dato;                     //colocamos el dato a enviar
     I2C1CON0bits.S = 1; // START condition
+    while(I2C1CON0bits.S);
+    while(I2C1STAT0bits.MMA)
+    {
+        if(I2C1CON0bits.MDR)
+        {
+            if(I2C1STAT1bits.TXBE)
+            {
+                I2C1TXB=dato;
+            }
+        }
+    }	
     while(I2C1STAT1bits.TXBE == 0); // espera a que el buffer TX este vacio
     while(I2C1CON1bits.ACKSTAT == 1); // Espera a recibir la rpta del cliente (ACK))
     while(I2C1PIRbits.PCIF == 0); //Espera a terminar STOP condition
