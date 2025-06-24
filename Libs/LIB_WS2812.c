@@ -2,6 +2,10 @@
 #include "LIB_WS2812.h"
 
 void WS2812_INIT(void){
+    //Output port on RF2
+    RF2PPS = 0x01;
+    TRISFbits.TRISF2 = 0;
+    ANSELFbits.ANSELF2 = 0;
     //Timer2 config
     T2CON = 0x80;       //TMR2=ON, PRESC=1:1, POSTS=1:1
     T2CLKCON = 0x01;    //TMR2 SOURCE = FOSC/4
