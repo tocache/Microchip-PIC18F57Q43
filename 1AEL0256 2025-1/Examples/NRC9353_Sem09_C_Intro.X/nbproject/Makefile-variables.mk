@@ -1,0 +1,10 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# default configuration
+CND_ARTIFACT_DIR_default=dist/default/production
+CND_ARTIFACT_NAME_default=NRC9353_Sem09_C_Intro.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/NRC9353_Sem09_C_Intro.X.production.hex
