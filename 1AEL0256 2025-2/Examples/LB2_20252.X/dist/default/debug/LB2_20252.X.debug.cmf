@@ -1,0 +1,429 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/maincode.o
+INT0_ISR CODE 0 A0 A0 A 1 4
+INT1_ISR CODE 0 94 94 A 1 4
+INT2_ISR CODE 0 8C 8C 8 1 4
+code CODE 0 1FBD6 1FBD6 42A 1 2
+TMR0_ISR CODE 0 AC AC 14 1 4
+config CONFIG 4 300000 300000 A 1 1
+elebe2 CODE 0 C0 C0 240 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 0-8B 1
+SFR 9E-9F 1
+SFR AA-AB 1
+SFR 300-4FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 0-8B 1
+CONST 9E-9F 1
+CONST AA-AB 1
+CONST 42A-1FBD5 1
+IDLOC 200000-20003F 1
+SMALLCONST 2600-FFFF 1
+SMALLCONST 12600-1FBD5 1
+CODE 0-8B 1
+CODE 9E-9F 1
+CODE AA-AB 1
+CODE 42A-1FBD5 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 500-24FF 1
+BIGSFR 0-8B 1
+BIGSFR 9E-9F 1
+BIGSFR AA-AB 1
+BIGSFR 300-4FF 1
+BIGSFR 2500-25FF 1
+COMRAM 500-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2600-FFFF 1
+MEDIUMCONST 12600-1FBD5 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/maincode.o
+8C INT2_ISR CODE >70:E:\Microbios\LB2_20252.X\maincode.s
+8E INT2_ISR CODE >71:E:\Microbios\LB2_20252.X\maincode.s
+90 INT2_ISR CODE >72:E:\Microbios\LB2_20252.X\maincode.s
+92 INT2_ISR CODE >73:E:\Microbios\LB2_20252.X\maincode.s
+94 INT1_ISR CODE >62:E:\Microbios\LB2_20252.X\maincode.s
+96 INT1_ISR CODE >63:E:\Microbios\LB2_20252.X\maincode.s
+98 INT1_ISR CODE >64:E:\Microbios\LB2_20252.X\maincode.s
+9A INT1_ISR CODE >65:E:\Microbios\LB2_20252.X\maincode.s
+9C INT1_ISR CODE >66:E:\Microbios\LB2_20252.X\maincode.s
+AC TMR0_ISR CODE >47:E:\Microbios\LB2_20252.X\maincode.s
+AE TMR0_ISR CODE >48:E:\Microbios\LB2_20252.X\maincode.s
+B0 TMR0_ISR CODE >49:E:\Microbios\LB2_20252.X\maincode.s
+B2 TMR0_ISR CODE >50:E:\Microbios\LB2_20252.X\maincode.s
+B4 TMR0_ISR CODE >51:E:\Microbios\LB2_20252.X\maincode.s
+B6 TMR0_ISR CODE >52:E:\Microbios\LB2_20252.X\maincode.s
+B8 TMR0_ISR CODE >53:E:\Microbios\LB2_20252.X\maincode.s
+BA TMR0_ISR CODE >55:E:\Microbios\LB2_20252.X\maincode.s
+BC TMR0_ISR CODE >57:E:\Microbios\LB2_20252.X\maincode.s
+BE TMR0_ISR CODE >58:E:\Microbios\LB2_20252.X\maincode.s
+A0 INT0_ISR CODE >39:E:\Microbios\LB2_20252.X\maincode.s
+A2 INT0_ISR CODE >40:E:\Microbios\LB2_20252.X\maincode.s
+A4 INT0_ISR CODE >41:E:\Microbios\LB2_20252.X\maincode.s
+A6 INT0_ISR CODE >42:E:\Microbios\LB2_20252.X\maincode.s
+A8 INT0_ISR CODE >43:E:\Microbios\LB2_20252.X\maincode.s
+C0 elebe2 CODE >12:E:\Microbios\LB2_20252.X\maincode.s
+D0 elebe2 CODE >15:E:\Microbios\LB2_20252.X\maincode.s
+FE elebe2 CODE >18:E:\Microbios\LB2_20252.X\maincode.s
+120 elebe2 CODE >21:E:\Microbios\LB2_20252.X\maincode.s
+160 elebe2 CODE >24:E:\Microbios\LB2_20252.X\maincode.s
+2C0 elebe2 CODE >27:E:\Microbios\LB2_20252.X\maincode.s
+2C8 elebe2 CODE >28:E:\Microbios\LB2_20252.X\maincode.s
+2D0 elebe2 CODE >29:E:\Microbios\LB2_20252.X\maincode.s
+2D8 elebe2 CODE >30:E:\Microbios\LB2_20252.X\maincode.s
+2E0 elebe2 CODE >31:E:\Microbios\LB2_20252.X\maincode.s
+2E8 elebe2 CODE >32:E:\Microbios\LB2_20252.X\maincode.s
+2F0 elebe2 CODE >33:E:\Microbios\LB2_20252.X\maincode.s
+2F8 elebe2 CODE >34:E:\Microbios\LB2_20252.X\maincode.s
+1FED6 code CODE >80:E:\Microbios\LB2_20252.X\maincode.s
+1FED8 code CODE >81:E:\Microbios\LB2_20252.X\maincode.s
+1FEDA code CODE >82:E:\Microbios\LB2_20252.X\maincode.s
+1FEDC code CODE >83:E:\Microbios\LB2_20252.X\maincode.s
+1FEDE code CODE >84:E:\Microbios\LB2_20252.X\maincode.s
+1FEE0 code CODE >85:E:\Microbios\LB2_20252.X\maincode.s
+1FEE2 code CODE >86:E:\Microbios\LB2_20252.X\maincode.s
+1FEE4 code CODE >88:E:\Microbios\LB2_20252.X\maincode.s
+1FEE6 code CODE >89:E:\Microbios\LB2_20252.X\maincode.s
+1FEE8 code CODE >90:E:\Microbios\LB2_20252.X\maincode.s
+1FEEA code CODE >91:E:\Microbios\LB2_20252.X\maincode.s
+1FEEC code CODE >92:E:\Microbios\LB2_20252.X\maincode.s
+1FEEE code CODE >93:E:\Microbios\LB2_20252.X\maincode.s
+1FEF0 code CODE >94:E:\Microbios\LB2_20252.X\maincode.s
+1FEF2 code CODE >96:E:\Microbios\LB2_20252.X\maincode.s
+1FEF4 code CODE >97:E:\Microbios\LB2_20252.X\maincode.s
+1FEF6 code CODE >98:E:\Microbios\LB2_20252.X\maincode.s
+1FEF8 code CODE >99:E:\Microbios\LB2_20252.X\maincode.s
+1FEFA code CODE >100:E:\Microbios\LB2_20252.X\maincode.s
+1FEFC code CODE >101:E:\Microbios\LB2_20252.X\maincode.s
+1FEFE code CODE >102:E:\Microbios\LB2_20252.X\maincode.s
+1FF00 code CODE >104:E:\Microbios\LB2_20252.X\maincode.s
+1FF02 code CODE >105:E:\Microbios\LB2_20252.X\maincode.s
+1FF04 code CODE >106:E:\Microbios\LB2_20252.X\maincode.s
+1FF06 code CODE >107:E:\Microbios\LB2_20252.X\maincode.s
+1FF08 code CODE >108:E:\Microbios\LB2_20252.X\maincode.s
+1FF0A code CODE >109:E:\Microbios\LB2_20252.X\maincode.s
+1FF0C code CODE >110:E:\Microbios\LB2_20252.X\maincode.s
+1FF0E code CODE >111:E:\Microbios\LB2_20252.X\maincode.s
+1FF10 code CODE >112:E:\Microbios\LB2_20252.X\maincode.s
+1FF12 code CODE >113:E:\Microbios\LB2_20252.X\maincode.s
+1FF14 code CODE >114:E:\Microbios\LB2_20252.X\maincode.s
+1FF16 code CODE >115:E:\Microbios\LB2_20252.X\maincode.s
+1FF18 code CODE >116:E:\Microbios\LB2_20252.X\maincode.s
+1FF1A code CODE >117:E:\Microbios\LB2_20252.X\maincode.s
+1FF1C code CODE >118:E:\Microbios\LB2_20252.X\maincode.s
+1FF1E code CODE >120:E:\Microbios\LB2_20252.X\maincode.s
+1FF20 code CODE >121:E:\Microbios\LB2_20252.X\maincode.s
+1FF22 code CODE >122:E:\Microbios\LB2_20252.X\maincode.s
+1FF24 code CODE >123:E:\Microbios\LB2_20252.X\maincode.s
+1FF26 code CODE >124:E:\Microbios\LB2_20252.X\maincode.s
+1FF28 code CODE >126:E:\Microbios\LB2_20252.X\maincode.s
+1FF2A code CODE >127:E:\Microbios\LB2_20252.X\maincode.s
+1FF2C code CODE >128:E:\Microbios\LB2_20252.X\maincode.s
+1FF2E code CODE >129:E:\Microbios\LB2_20252.X\maincode.s
+1FF30 code CODE >130:E:\Microbios\LB2_20252.X\maincode.s
+1FF32 code CODE >131:E:\Microbios\LB2_20252.X\maincode.s
+1FF34 code CODE >132:E:\Microbios\LB2_20252.X\maincode.s
+1FF36 code CODE >133:E:\Microbios\LB2_20252.X\maincode.s
+1FF38 code CODE >134:E:\Microbios\LB2_20252.X\maincode.s
+1FF3A code CODE >135:E:\Microbios\LB2_20252.X\maincode.s
+1FF3C code CODE >137:E:\Microbios\LB2_20252.X\maincode.s
+1FF3E code CODE >138:E:\Microbios\LB2_20252.X\maincode.s
+1FF40 code CODE >139:E:\Microbios\LB2_20252.X\maincode.s
+1FF42 code CODE >140:E:\Microbios\LB2_20252.X\maincode.s
+1FF44 code CODE >141:E:\Microbios\LB2_20252.X\maincode.s
+1FF46 code CODE >142:E:\Microbios\LB2_20252.X\maincode.s
+1FF48 code CODE >143:E:\Microbios\LB2_20252.X\maincode.s
+1FF4A code CODE >146:E:\Microbios\LB2_20252.X\maincode.s
+1FF4C code CODE >147:E:\Microbios\LB2_20252.X\maincode.s
+1FF4E code CODE >148:E:\Microbios\LB2_20252.X\maincode.s
+1FF50 code CODE >149:E:\Microbios\LB2_20252.X\maincode.s
+1FF52 code CODE >150:E:\Microbios\LB2_20252.X\maincode.s
+1FF54 code CODE >151:E:\Microbios\LB2_20252.X\maincode.s
+1FF56 code CODE >152:E:\Microbios\LB2_20252.X\maincode.s
+1FF58 code CODE >153:E:\Microbios\LB2_20252.X\maincode.s
+1FF5A code CODE >155:E:\Microbios\LB2_20252.X\maincode.s
+1FF5C code CODE >157:E:\Microbios\LB2_20252.X\maincode.s
+1FF5E code CODE >158:E:\Microbios\LB2_20252.X\maincode.s
+1FF60 code CODE >159:E:\Microbios\LB2_20252.X\maincode.s
+1FF62 code CODE >161:E:\Microbios\LB2_20252.X\maincode.s
+1FF64 code CODE >162:E:\Microbios\LB2_20252.X\maincode.s
+1FF66 code CODE >163:E:\Microbios\LB2_20252.X\maincode.s
+1FF68 code CODE >164:E:\Microbios\LB2_20252.X\maincode.s
+1FF6A code CODE >165:E:\Microbios\LB2_20252.X\maincode.s
+1FF6C code CODE >166:E:\Microbios\LB2_20252.X\maincode.s
+1FF6E code CODE >167:E:\Microbios\LB2_20252.X\maincode.s
+1FF70 code CODE >168:E:\Microbios\LB2_20252.X\maincode.s
+1FF72 code CODE >170:E:\Microbios\LB2_20252.X\maincode.s
+1FF74 code CODE >171:E:\Microbios\LB2_20252.X\maincode.s
+1FF76 code CODE >172:E:\Microbios\LB2_20252.X\maincode.s
+1FF78 code CODE >173:E:\Microbios\LB2_20252.X\maincode.s
+1FF7A code CODE >174:E:\Microbios\LB2_20252.X\maincode.s
+1FF7C code CODE >175:E:\Microbios\LB2_20252.X\maincode.s
+1FF7E code CODE >176:E:\Microbios\LB2_20252.X\maincode.s
+1FF80 code CODE >177:E:\Microbios\LB2_20252.X\maincode.s
+1FF82 code CODE >179:E:\Microbios\LB2_20252.X\maincode.s
+1FF84 code CODE >180:E:\Microbios\LB2_20252.X\maincode.s
+1FF86 code CODE >181:E:\Microbios\LB2_20252.X\maincode.s
+1FF88 code CODE >182:E:\Microbios\LB2_20252.X\maincode.s
+1FF8A code CODE >183:E:\Microbios\LB2_20252.X\maincode.s
+1FF8C code CODE >184:E:\Microbios\LB2_20252.X\maincode.s
+1FF8E code CODE >185:E:\Microbios\LB2_20252.X\maincode.s
+1FF90 code CODE >186:E:\Microbios\LB2_20252.X\maincode.s
+1FF92 code CODE >188:E:\Microbios\LB2_20252.X\maincode.s
+1FF94 code CODE >189:E:\Microbios\LB2_20252.X\maincode.s
+1FF96 code CODE >190:E:\Microbios\LB2_20252.X\maincode.s
+1FF98 code CODE >191:E:\Microbios\LB2_20252.X\maincode.s
+1FF9A code CODE >193:E:\Microbios\LB2_20252.X\maincode.s
+1FF9C code CODE >194:E:\Microbios\LB2_20252.X\maincode.s
+1FFA0 code CODE >195:E:\Microbios\LB2_20252.X\maincode.s
+1FFA2 code CODE >198:E:\Microbios\LB2_20252.X\maincode.s
+1FFA4 code CODE >199:E:\Microbios\LB2_20252.X\maincode.s
+1FFA6 code CODE >200:E:\Microbios\LB2_20252.X\maincode.s
+1FFA8 code CODE >201:E:\Microbios\LB2_20252.X\maincode.s
+1FFAA code CODE >202:E:\Microbios\LB2_20252.X\maincode.s
+1FFAC code CODE >203:E:\Microbios\LB2_20252.X\maincode.s
+1FFAE code CODE >205:E:\Microbios\LB2_20252.X\maincode.s
+1FFB0 code CODE >207:E:\Microbios\LB2_20252.X\maincode.s
+1FFB2 code CODE >208:E:\Microbios\LB2_20252.X\maincode.s
+1FFB4 code CODE >209:E:\Microbios\LB2_20252.X\maincode.s
+1FFB6 code CODE >210:E:\Microbios\LB2_20252.X\maincode.s
+1FFBA code CODE >211:E:\Microbios\LB2_20252.X\maincode.s
+1FFBC code CODE >212:E:\Microbios\LB2_20252.X\maincode.s
+1FFC0 code CODE >213:E:\Microbios\LB2_20252.X\maincode.s
+1FFC2 code CODE >214:E:\Microbios\LB2_20252.X\maincode.s
+1FFC4 code CODE >215:E:\Microbios\LB2_20252.X\maincode.s
+1FFC8 code CODE >216:E:\Microbios\LB2_20252.X\maincode.s
+1FFCA code CODE >217:E:\Microbios\LB2_20252.X\maincode.s
+1FFCE code CODE >218:E:\Microbios\LB2_20252.X\maincode.s
+1FFD0 code CODE >219:E:\Microbios\LB2_20252.X\maincode.s
+1FFD2 code CODE >220:E:\Microbios\LB2_20252.X\maincode.s
+1FFD6 code CODE >221:E:\Microbios\LB2_20252.X\maincode.s
+1FFD8 code CODE >222:E:\Microbios\LB2_20252.X\maincode.s
+1FFDC code CODE >223:E:\Microbios\LB2_20252.X\maincode.s
+1FFDE code CODE >224:E:\Microbios\LB2_20252.X\maincode.s
+1FFE0 code CODE >225:E:\Microbios\LB2_20252.X\maincode.s
+1FFE2 code CODE >226:E:\Microbios\LB2_20252.X\maincode.s
+1FFE6 code CODE >227:E:\Microbios\LB2_20252.X\maincode.s
+1FFE8 code CODE >228:E:\Microbios\LB2_20252.X\maincode.s
+1FFEC code CODE >229:E:\Microbios\LB2_20252.X\maincode.s
+1FFEE code CODE >230:E:\Microbios\LB2_20252.X\maincode.s
+1FFF0 code CODE >233:E:\Microbios\LB2_20252.X\maincode.s
+1FFF2 code CODE >234:E:\Microbios\LB2_20252.X\maincode.s
+1FFF4 code CODE >235:E:\Microbios\LB2_20252.X\maincode.s
+1FFF6 code CODE >236:E:\Microbios\LB2_20252.X\maincode.s
+1FFF8 code CODE >237:E:\Microbios\LB2_20252.X\maincode.s
+1FFFA code CODE >238:E:\Microbios\LB2_20252.X\maincode.s
+1FFFC code CODE >239:E:\Microbios\LB2_20252.X\maincode.s
+1FFFE code CODE >240:E:\Microbios\LB2_20252.X\maincode.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 20000 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000A 0 ABS 0 - -
+__Hudata_bank5 0 0 ABS 0 udata_bank5 -
+__Hudata_bank6 0 0 ABS 0 udata_bank6 -
+__Hudata_bank7 0 0 ABS 0 udata_bank7 -
+__Hudata_bank8 0 0 ABS 0 udata_bank8 -
+__Hudata_bank9 0 0 ABS 0 udata_bank9 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__LINT0_ISR 0 0 ABS 0 INT0_ISR -
+__LINT1_ISR 0 0 ABS 0 INT1_ISR -
+__LINT2_ISR 0 0 ABS 0 INT2_ISR -
+__HTMR0_ISR 0 0 ABS 0 TMR0_ISR -
+__HINT0_ISR 0 0 ABS 0 INT0_ISR -
+__HINT1_ISR 0 0 ABS 0 INT1_ISR -
+__HINT2_ISR 0 0 ABS 0 INT2_ISR -
+__Hudata_bank10 0 0 ABS 0 udata_bank10 -
+__Hudata_bank11 0 0 ABS 0 udata_bank11 -
+__Hudata_bank12 0 0 ABS 0 udata_bank12 -
+__Hudata_bank13 0 0 ABS 0 udata_bank13 -
+__Hudata_bank14 0 0 ABS 0 udata_bank14 -
+__Hudata_bank15 0 0 ABS 0 udata_bank15 -
+__Hudata_bank16 0 0 ABS 0 udata_bank16 -
+__Hudata_bank17 0 0 ABS 0 udata_bank17 -
+__Hudata_bank18 0 0 ABS 0 udata_bank18 -
+__Hudata_bank19 0 0 ABS 0 udata_bank19 -
+__Hudata_bank20 0 0 ABS 0 udata_bank20 -
+__Hudata_bank21 0 0 ABS 0 udata_bank21 -
+__Hudata_bank22 0 0 ABS 0 udata_bank22 -
+__Hudata_bank23 0 0 ABS 0 udata_bank23 -
+__Hudata_bank24 0 0 ABS 0 udata_bank24 -
+__Hudata_bank25 0 0 ABS 0 udata_bank25 -
+__Hudata_bank26 0 0 ABS 0 udata_bank26 -
+__Hudata_bank27 0 0 ABS 0 udata_bank27 -
+__Hudata_bank28 0 0 ABS 0 udata_bank28 -
+__Hudata_bank29 0 0 ABS 0 udata_bank29 -
+__Hudata_bank30 0 0 ABS 0 udata_bank30 -
+__Hudata_bank31 0 0 ABS 0 udata_bank31 -
+__Hudata_bank32 0 0 ABS 0 udata_bank32 -
+__Hudata_bank33 0 0 ABS 0 udata_bank33 -
+__Hudata_bank34 0 0 ABS 0 udata_bank34 -
+__Hudata_bank35 0 0 ABS 0 udata_bank35 -
+__Hudata_bank36 0 0 ABS 0 udata_bank36 -
+isa$xinst 0 0 ABS 0 - build/default/debug/maincode.o
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 30000A 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Helebe2 0 0 ABS 0 elebe2 -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 20000 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Ludata_bank10 0 0 ABS 0 udata_bank10 -
+__Ludata_bank11 0 0 ABS 0 udata_bank11 -
+__Ludata_bank12 0 0 ABS 0 udata_bank12 -
+__Ludata_bank13 0 0 ABS 0 udata_bank13 -
+__Ludata_bank14 0 0 ABS 0 udata_bank14 -
+__Ludata_bank15 0 0 ABS 0 udata_bank15 -
+__Ludata_bank16 0 0 ABS 0 udata_bank16 -
+__Ludata_bank17 0 0 ABS 0 udata_bank17 -
+__Ludata_bank18 0 0 ABS 0 udata_bank18 -
+__Ludata_bank19 0 0 ABS 0 udata_bank19 -
+__Ludata_bank20 0 0 ABS 0 udata_bank20 -
+__Ludata_bank21 0 0 ABS 0 udata_bank21 -
+__Ludata_bank22 0 0 ABS 0 udata_bank22 -
+__Ludata_bank23 0 0 ABS 0 udata_bank23 -
+__Ludata_bank24 0 0 ABS 0 udata_bank24 -
+__Ludata_bank25 0 0 ABS 0 udata_bank25 -
+__Ludata_bank26 0 0 ABS 0 udata_bank26 -
+__Ludata_bank27 0 0 ABS 0 udata_bank27 -
+__Ludata_bank28 0 0 ABS 0 udata_bank28 -
+__Ludata_bank29 0 0 ABS 0 udata_bank29 -
+__Ludata_bank30 0 0 ABS 0 udata_bank30 -
+__Ludata_bank31 0 0 ABS 0 udata_bank31 -
+__Ludata_bank32 0 0 ABS 0 udata_bank32 -
+__Ludata_bank33 0 0 ABS 0 udata_bank33 -
+__Ludata_bank34 0 0 ABS 0 udata_bank34 -
+__Ludata_bank35 0 0 ABS 0 udata_bank35 -
+__Ludata_bank36 0 0 ABS 0 udata_bank36 -
+__Lconfig 0 0 CONFIG 4 config -
+__Lelebe2 0 0 ABS 0 elebe2 -
+isa$std 1 0 ABS 0 - build/default/debug/maincode.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank5 0 0 ABS 0 udata_bank5 -
+__Ludata_bank6 0 0 ABS 0 udata_bank6 -
+__Ludata_bank7 0 0 ABS 0 udata_bank7 -
+__Ludata_bank8 0 0 ABS 0 udata_bank8 -
+__Ludata_bank9 0 0 ABS 0 udata_bank9 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_acs 0 0 ABS 0 udata_acs -
+__LTMR0_ISR 0 0 ABS 0 TMR0_ISR -
+__Ludata_acs 0 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+INT0_ISR 0 A0 A0 A 1
+INT1_ISR 0 94 94 A 1
+INT2_ISR 0 8C 8C 8 1
+code 0 1FBD6 1FBD6 42A 1
+TMR0_ISR 0 AC AC 14 1
+elebe2 0 C0 C0 240 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
