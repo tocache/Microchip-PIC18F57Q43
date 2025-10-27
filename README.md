@@ -48,6 +48,8 @@ Some examples using the PIC18F57Q43 microcontroller and the Microchip PIC18F57Q4
 -LCD 16 segment with TM1622 controller Arduino - https://github.com/MartyMacGyver/LCD_HT1622_16SegLcd/blob/master/Arduino/LCD_HT1622_16SegLcd_demo_driver/LCD_HT1622_16SegLcd_demo_driver.ino<br>
 -Bit manipulation on Arduino: https://forum.arduino.cc/t/can-you-read-or-write-8-bits-at-once/136650/12<br>
 -U8g2 library: https://www.youtube.com/watch?v=-bntyE8UYTY<br>
+-MCC for I2C setup: https://forum.microchip.com/s/topic/a5C3l000000Md4OEAS/t380239
+
 
 <b>Misc:</b><br>
 -Subroutine for 74HC595:<br>
