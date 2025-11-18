@@ -139,3 +139,24 @@ unsigned int DHT_GetHumid(unsigned char modelo){
     }
 }
 
+struct DHT_Values DHT_GetBoth(unsigned char modelo){
+    static struct DHT_Values lectura;
+    unsigned char RH_Ent, RH_Dec, Temp_Ent, Temp_Dec, Chksum;
+    DHT_Start(modelo);
+    DHT_Check(modelo);
+    RH_Ent = DHT_Read(modelo);
+    RH_Dec = DHT_Read(modelo);
+    Temp_Ent = DHT_Read(modelo);
+    Temp_Dec = DHT_Read(modelo);
+    Chksum = DHT_Read(modelo);
+    if(modelo == DHT11){
+        lectura.DHT_Temp = Temp_Ent;
+        lectura.DHT_Humid = RH_Ent;
+    }
+    else if(modelo == DHT22){
+        lectura.DHT_Temp = (Temp_Ent << 8) | Temp_Dec;
+        lectura.DHT_Humid = (RH_Ent << 8) | RH_Dec;
+    }
+    return lectura;
+}
+
