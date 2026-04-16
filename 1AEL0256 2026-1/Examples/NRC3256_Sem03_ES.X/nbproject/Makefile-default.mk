@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=maincode00.s
+SOURCEFILES_QUOTED_IF_SPACED=maincode01.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/maincode00.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/maincode00.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/maincode01.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/maincode01.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/maincode00.o
+OBJECTFILES=${OBJECTDIR}/maincode01.o
 
 # Source Files
-SOURCEFILES=maincode00.s
+SOURCEFILES=maincode01.s
 
 
 
@@ -89,21 +89,21 @@ FINAL_IMAGE_NAME_MINUS_EXTENSION=${DISTDIR}/NRC3256_Sem03_ES.X.${IMAGE_TYPE}
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: pic-as-assembler
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/maincode00.o: maincode00.s  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/maincode01.o: maincode01.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/maincode00.o 
+	@${RM} ${OBJECTDIR}/maincode01.o 
 	${MP_AS} -mcpu=PIC18F57Q43 -c \
-	-o ${OBJECTDIR}/maincode00.o \
-	maincode00.s \
+	-o ${OBJECTDIR}/maincode01.o \
+	maincode01.s \
 	 -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
 else
-${OBJECTDIR}/maincode00.o: maincode00.s  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/maincode01.o: maincode01.s  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/maincode00.o 
+	@${RM} ${OBJECTDIR}/maincode01.o 
 	${MP_AS} -mcpu=PIC18F57Q43 -c \
-	-o ${OBJECTDIR}/maincode00.o \
-	maincode00.s \
+	-o ${OBJECTDIR}/maincode01.o \
+	maincode01.s \
 	  -mdfp="${DFP_DIR}/xc8"  -misa=std -msummary=+mem,-psect,-class,-hex,-file,-sha1,-sha256,-xml,-xmlfull -fmax-errors=20 -mwarn=0 -xassembler-with-cpp
 	
 endif

@@ -11,8 +11,8 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$build/default/production/maincode00.o
-upcino CODE 0 0 0 120 1 2
+$build/default/production/maincode01.o
+upcino CODE 0 0 0 12A 1 2
 config CONFIG 4 300000 300000 A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -21,18 +21,18 @@ config CONFIG 4 300000 300000 A 1 1
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
 RAM 560-24FF 1
-SFR 120-4FF 1
+SFR 12A-4FF 1
 SFR 2500-25FF 1
 BANK5 560-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 120-1FFFF 1
+CONST 12A-1FFFF 1
 IDLOC 200000-20003F 1
 SMALLCONST 2600-FFFF 1
 SMALLCONST 12600-1FFFF 1
-CODE 120-1FFFF 1
+CODE 12A-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -61,7 +61,7 @@ BANK34 2200-22FF 1
 BANK35 2300-23FF 1
 BANK36 2400-24FF 1
 BIGRAM 500-24FF 1
-BIGSFR 120-4FF 1
+BIGSFR 12A-4FF 1
 BIGSFR 2500-25FF 1
 COMRAM 500-55F 1
 CONFIG 30000A-300011 1
@@ -81,24 +81,29 @@ MEDIUMCONST 12600-1FFFF 1
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$build/default/production/maincode00.o
-0 upcino CODE >7:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-100 upcino CODE >12:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-102 upcino CODE >13:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-104 upcino CODE >14:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-106 upcino CODE >15:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-108 upcino CODE >16:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-10A upcino CODE >17:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-10C upcino CODE >18:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-10E upcino CODE >20:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-110 upcino CODE >21:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-112 upcino CODE >22:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-114 upcino CODE >23:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-116 upcino CODE >24:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-118 upcino CODE >25:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-11A upcino CODE >28:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-11C upcino CODE >29:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
-11E upcino CODE >30:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode00.s
+$build/default/production/maincode01.o
+0 upcino CODE >7:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+100 upcino CODE >12:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+102 upcino CODE >13:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+104 upcino CODE >14:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+106 upcino CODE >15:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+108 upcino CODE >16:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+10A upcino CODE >17:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+10C upcino CODE >18:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+10E upcino CODE >20:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+110 upcino CODE >21:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+112 upcino CODE >22:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+114 upcino CODE >23:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+116 upcino CODE >24:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+118 upcino CODE >25:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+11A upcino CODE >28:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+11C upcino CODE >29:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+11E upcino CODE >30:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+120 upcino CODE >31:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+122 upcino CODE >32:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+124 upcino CODE >34:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+126 upcino CODE >35:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
+128 upcino CODE >36:C:\Users\ALUMNOS\MPLABXProjects\NRC3256_Sem03_ES.X\maincode01.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -111,7 +116,7 @@ $build/default/production/maincode00.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__Hspace_0 120 0 ABS 0 - -
+__Hspace_0 12A 0 ABS 0 - -
 __Hspace_1 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 60000A 0 ABS 0 - -
@@ -148,7 +153,7 @@ __Hudata_bank33 0 0 ABS 0 udata_bank33 -
 __Hudata_bank34 0 0 ABS 0 udata_bank34 -
 __Hudata_bank35 0 0 ABS 0 udata_bank35 -
 __Hudata_bank36 0 0 ABS 0 udata_bank36 -
-isa$xinst 0 0 ABS 0 - build/default/production/maincode00.o
+isa$xinst 0 0 ABS 0 - build/default/production/maincode01.o
 __Hedata 0 0 ABS 0 edata -
 __Hudata 0 0 ABS 0 udata -
 __Hconfig 30000A 0 CONFIG 4 config -
@@ -190,7 +195,7 @@ __Ludata_bank35 0 0 ABS 0 udata_bank35 -
 __Ludata_bank36 0 0 ABS 0 udata_bank36 -
 __Hupcino 0 0 ABS 0 upcino -
 __Lconfig 0 0 CONFIG 4 config -
-isa$std 1 0 ABS 0 - build/default/production/maincode00.o
+isa$std 1 0 ABS 0 - build/default/production/maincode01.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -

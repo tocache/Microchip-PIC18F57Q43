@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cs -h+dist/default/production\NRC3256_Sem03_ES.X.production.sym \
   --cmf=dist/default/production\NRC3256_Sem03_ES.X.production.cmf -z \
-  -Q18F57Q43 -oC:\Users\ALUMNOS\AppData\Local\Temp\xcAsd5g.0\driver_tmp_3.o \
+  -Q18F57Q43 -oC:\Users\ALUMNOS\AppData\Local\Temp\xcAs7uw.0\driver_tmp_3.o \
   --fixupoverflow=error -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
   -Mdist/default/production/NRC3256_Sem03_ES.X.production.map -E1 \
   -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
@@ -27,7 +27,7 @@ Linker command line:
   -ASFR=00h-0FFhx4,0400h-045Fh,0460h-04FFh,02500h-025FFh \
   -ABIGSFR=00h-04FFh,02500h-025FFh -ACONFIG=030000Ah-0300011h \
   -AIDLOC=0200000h-020003Fh -AEEDATA=0380000h-03803FFh \
-  build/default/production/maincode00.o 
+  build/default/production/maincode01.o 
 
 Object code version is 3.11
 
@@ -36,13 +36,13 @@ Machine type is 18F57Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-build/default/production/maincode00.o
+build/default/production/maincode01.o
                 config                           300000   300000        A        0       4
-                upcino                                0        0      120        0       0
+                upcino                                0        0      12A        0       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
-                upcino                                0        0      120         0
+                upcino                                0        0      12A         0
 
         CLASS   CONST          
 
@@ -175,18 +175,18 @@ UNUSED ADDRESS RANGES
         BANK8            000800-0008FF              100
         BANK9            000900-0009FF              100
         BIGRAM           000500-0024FF             2000
-        BIGSFR           000120-0004FF              3E0
+        BIGSFR           00012A-0004FF              3D6
                          002500-0025FF              100
-        CODE             000120-01FFFF            1FEE0
+        CODE             00012A-01FFFF            1FED6
         COMRAM           000500-00055F               60
         CONFIG           30000A-300011                8
-        CONST            000120-01FFFF            1FEE0
+        CONST            00012A-01FFFF            1FED6
         EEDATA           380000-3803FF              400
         IDLOC            200000-20003F               40
         MEDIUMCONST      002600-00FFFF             DA00
                          012600-01FFFF             DA00
         RAM              000560-0024FF              100
-        SFR              000120-0004FF              100
+        SFR              00012A-0004FF              100
                          002500-0025FF              100
         SMALLCONST       002600-00FFFF              100
                          012600-01FFFF              100
@@ -195,7 +195,7 @@ UNUSED ADDRESS RANGES
 
 __H__absolute__ __absolute__ 000000  __Hcode         code         000000
 __Hconfig       config       30000A  __Hdata         data         000000
-__Hedata        edata        000000  __Hspace_0      (abs)        000120
+__Hedata        edata        000000  __Hspace_0      (abs)        00012A
 __Hspace_1      (abs)        000000  __Hspace_3      (abs)        000000
 __Hspace_4      (abs)        60000A  __Hudata        udata        000000
 __Hudata_acs    udata_acs    000000  __Hudata_bank10 udata_bank10 000000
