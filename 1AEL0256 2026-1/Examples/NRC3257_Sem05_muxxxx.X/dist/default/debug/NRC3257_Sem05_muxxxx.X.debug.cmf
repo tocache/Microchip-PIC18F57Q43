@@ -1,0 +1,310 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/maincode01.o
+chesss CODE 0 0 0 810 1 2
+config CONFIG 4 300000 300000 A 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 560-24FF 1
+SFR 2500-25FF 1
+BANK5 560-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 810-1FFFF 1
+IDLOC 200000-20003F 1
+SMALLCONST 2600-FFFF 1
+SMALLCONST 12600-1FFFF 1
+CODE 810-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-FFF 1
+BANK16 1000-10FF 1
+BANK17 1100-11FF 1
+BANK18 1200-12FF 1
+BANK19 1300-13FF 1
+BANK20 1400-14FF 1
+BANK21 1500-15FF 1
+BANK22 1600-16FF 1
+BANK23 1700-17FF 1
+BANK24 1800-18FF 1
+BANK25 1900-19FF 1
+BANK26 1A00-1AFF 1
+BANK27 1B00-1BFF 1
+BANK28 1C00-1CFF 1
+BANK29 1D00-1DFF 1
+BANK30 1E00-1EFF 1
+BANK31 1F00-1FFF 1
+BANK32 2000-20FF 1
+BANK33 2100-21FF 1
+BANK34 2200-22FF 1
+BANK35 2300-23FF 1
+BANK36 2400-24FF 1
+BIGRAM 810-24FF 1
+BIGSFR 2500-25FF 1
+COMRAM 500-55F 1
+CONFIG 30000A-300011 1
+EEDATA 380000-3803FF 1
+MEDIUMCONST 2600-FFFF 1
+MEDIUMCONST 12600-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/maincode01.o
+0 chesss CODE >9:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+100 chesss CODE >14:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+102 chesss CODE >15:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+104 chesss CODE >16:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+106 chesss CODE >17:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+108 chesss CODE >18:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+10A chesss CODE >19:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+10C chesss CODE >20:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+10E chesss CODE >22:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+110 chesss CODE >23:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+112 chesss CODE >24:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+114 chesss CODE >25:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+116 chesss CODE >26:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+118 chesss CODE >27:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+11A chesss CODE >28:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+11C chesss CODE >29:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+11E chesss CODE >30:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+120 chesss CODE >31:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+122 chesss CODE >32:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+124 chesss CODE >34:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+126 chesss CODE >35:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+128 chesss CODE >36:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+12A chesss CODE >37:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+12C chesss CODE >39:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+12E chesss CODE >40:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+130 chesss CODE >41:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+132 chesss CODE >42:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+134 chesss CODE >43:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+136 chesss CODE >46:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+138 chesss CODE >47:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+13A chesss CODE >48:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+13C chesss CODE >49:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+13E chesss CODE >50:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+140 chesss CODE >51:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+142 chesss CODE >52:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+144 chesss CODE >53:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+146 chesss CODE >54:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+148 chesss CODE >56:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+14A chesss CODE >58:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+14C chesss CODE >59:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+14E chesss CODE >60:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+150 chesss CODE >61:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+152 chesss CODE >63:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+154 chesss CODE >64:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+156 chesss CODE >65:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+158 chesss CODE >66:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+15A chesss CODE >67:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+15C chesss CODE >68:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+15E chesss CODE >69:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+160 chesss CODE >70:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+162 chesss CODE >71:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+164 chesss CODE >73:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+166 chesss CODE >75:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+168 chesss CODE >76:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+16A chesss CODE >77:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+16C chesss CODE >79:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+170 chesss CODE >80:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+172 chesss CODE >83:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+174 chesss CODE >84:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+176 chesss CODE >85:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+17A chesss CODE >86:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+17C chesss CODE >87:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+180 chesss CODE >88:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+182 chesss CODE >89:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+184 chesss CODE >90:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+188 chesss CODE >91:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+18A chesss CODE >92:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+18E chesss CODE >93:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+190 chesss CODE >94:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+192 chesss CODE >95:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+196 chesss CODE >96:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+198 chesss CODE >97:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+19C chesss CODE >98:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+19E chesss CODE >99:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1A0 chesss CODE >100:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1A4 chesss CODE >101:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1A6 chesss CODE >102:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1AA chesss CODE >103:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1AC chesss CODE >104:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1AE chesss CODE >107:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1B0 chesss CODE >108:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1B2 chesss CODE >109:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1B4 chesss CODE >110:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1B6 chesss CODE >111:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1B8 chesss CODE >112:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1BA chesss CODE >113:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+1BC chesss CODE >114:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+800 chesss CODE >117:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+804 chesss CODE >118:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+808 chesss CODE >119:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+80C chesss CODE >120:C:\Users\ALUMNOS\MPLABXProjects\NRC3257_Sem05_muxxxx.X\maincode01.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 810 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000A 0 ABS 0 - -
+__Hudata_bank5 0 0 ABS 0 udata_bank5 -
+__Hudata_bank6 0 0 ABS 0 udata_bank6 -
+__Hudata_bank7 0 0 ABS 0 udata_bank7 -
+__Hudata_bank8 0 0 ABS 0 udata_bank8 -
+__Hudata_bank9 0 0 ABS 0 udata_bank9 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_bank10 0 0 ABS 0 udata_bank10 -
+__Hudata_bank11 0 0 ABS 0 udata_bank11 -
+__Hudata_bank12 0 0 ABS 0 udata_bank12 -
+__Hudata_bank13 0 0 ABS 0 udata_bank13 -
+__Hudata_bank14 0 0 ABS 0 udata_bank14 -
+__Hudata_bank15 0 0 ABS 0 udata_bank15 -
+__Hudata_bank16 0 0 ABS 0 udata_bank16 -
+__Hudata_bank17 0 0 ABS 0 udata_bank17 -
+__Hudata_bank18 0 0 ABS 0 udata_bank18 -
+__Hudata_bank19 0 0 ABS 0 udata_bank19 -
+__Hudata_bank20 0 0 ABS 0 udata_bank20 -
+__Hudata_bank21 0 0 ABS 0 udata_bank21 -
+__Hudata_bank22 0 0 ABS 0 udata_bank22 -
+__Hudata_bank23 0 0 ABS 0 udata_bank23 -
+__Hudata_bank24 0 0 ABS 0 udata_bank24 -
+__Hudata_bank25 0 0 ABS 0 udata_bank25 -
+__Hudata_bank26 0 0 ABS 0 udata_bank26 -
+__Hudata_bank27 0 0 ABS 0 udata_bank27 -
+__Hudata_bank28 0 0 ABS 0 udata_bank28 -
+__Hudata_bank29 0 0 ABS 0 udata_bank29 -
+__Hudata_bank30 0 0 ABS 0 udata_bank30 -
+__Hudata_bank31 0 0 ABS 0 udata_bank31 -
+__Hudata_bank32 0 0 ABS 0 udata_bank32 -
+__Hudata_bank33 0 0 ABS 0 udata_bank33 -
+__Hudata_bank34 0 0 ABS 0 udata_bank34 -
+__Hudata_bank35 0 0 ABS 0 udata_bank35 -
+__Hudata_bank36 0 0 ABS 0 udata_bank36 -
+isa$xinst 0 0 ABS 0 - build/default/debug/maincode01.o
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hchesss 0 0 ABS 0 chesss -
+__Hconfig 30000A 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Ludata_bank10 0 0 ABS 0 udata_bank10 -
+__Ludata_bank11 0 0 ABS 0 udata_bank11 -
+__Ludata_bank12 0 0 ABS 0 udata_bank12 -
+__Ludata_bank13 0 0 ABS 0 udata_bank13 -
+__Ludata_bank14 0 0 ABS 0 udata_bank14 -
+__Ludata_bank15 0 0 ABS 0 udata_bank15 -
+__Ludata_bank16 0 0 ABS 0 udata_bank16 -
+__Ludata_bank17 0 0 ABS 0 udata_bank17 -
+__Ludata_bank18 0 0 ABS 0 udata_bank18 -
+__Ludata_bank19 0 0 ABS 0 udata_bank19 -
+__Ludata_bank20 0 0 ABS 0 udata_bank20 -
+__Ludata_bank21 0 0 ABS 0 udata_bank21 -
+__Ludata_bank22 0 0 ABS 0 udata_bank22 -
+__Ludata_bank23 0 0 ABS 0 udata_bank23 -
+__Ludata_bank24 0 0 ABS 0 udata_bank24 -
+__Ludata_bank25 0 0 ABS 0 udata_bank25 -
+__Ludata_bank26 0 0 ABS 0 udata_bank26 -
+__Ludata_bank27 0 0 ABS 0 udata_bank27 -
+__Ludata_bank28 0 0 ABS 0 udata_bank28 -
+__Ludata_bank29 0 0 ABS 0 udata_bank29 -
+__Ludata_bank30 0 0 ABS 0 udata_bank30 -
+__Ludata_bank31 0 0 ABS 0 udata_bank31 -
+__Ludata_bank32 0 0 ABS 0 udata_bank32 -
+__Ludata_bank33 0 0 ABS 0 udata_bank33 -
+__Ludata_bank34 0 0 ABS 0 udata_bank34 -
+__Ludata_bank35 0 0 ABS 0 udata_bank35 -
+__Ludata_bank36 0 0 ABS 0 udata_bank36 -
+__Lchesss 0 0 ABS 0 chesss -
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/debug/maincode01.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank5 0 0 ABS 0 udata_bank5 -
+__Ludata_bank6 0 0 ABS 0 udata_bank6 -
+__Ludata_bank7 0 0 ABS 0 udata_bank7 -
+__Ludata_bank8 0 0 ABS 0 udata_bank8 -
+__Ludata_bank9 0 0 ABS 0 udata_bank9 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_acs 0 0 ABS 0 udata_acs -
+__Ludata_acs 0 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
