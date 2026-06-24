@@ -1,0 +1,3 @@
+build/default/debug/PROGRAMAMATRIZ01.p1:  \
+PROGRAMAMATRIZ01.c  \
+CABECERA.h 
