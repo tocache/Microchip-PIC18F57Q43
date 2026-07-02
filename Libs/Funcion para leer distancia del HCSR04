@@ -1,0 +1,16 @@
+//Se esta empleando el Timer0 para contar el tiempo del pulso que se esta recibiendo de ECHO del HCSR04
+
+float HCSR04_GetDistance(void){
+    //condiciones inicial
+    Timer0_CounterSet(0x0000);
+    //envio del pulso de 10us por TRIG
+    IO_RF2_SetHigh();
+    __delay_us(10);
+    IO_RF2_SetLow();
+    //medir el tiempo del ancho positivo de la señal de ECHO
+    while(!IO_RF3_GetValue());
+    Timer0_Start();
+    while(IO_RF3_GetValue());
+    Timer0_Stop();
+    return (Timer0_CounterGet() / 58.31);
+}
