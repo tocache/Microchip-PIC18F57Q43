@@ -1,0 +1,160 @@
+//Las siguientes funciones fueron agregadas al archivo uart1.c que fue generado por el MCC Melody, tner en cuenta que la funcion UART1_Write() se le agregó la confirmación de envio del dato.
+
+void UART1_Write(uint8_t txData){
+    U1TXB = txData; 
+    while(!UART1_IsTxDone());
+}
+
+void UART1_String_Write(const uint8_t *cadenasa){
+    while(*cadenasa){
+        UART1_Write(*cadenasa++);
+    }
+}
+
+void UART1_NewLine(void){
+    UART1_Write(0x0A);
+    UART1_Write(0x0D);
+}
+
+void UART1_8bitVar_Write(uint8_t numero){
+    UART1_Write((numero / 100) + 0x30);
+    UART1_Write(((numero % 100) / 10) + 0x30);
+    UART1_Write((numero % 10) + 0x30);
+}
+
+void UART1_8bitVar_Write2(uint8_t numero, uint8_t c_digitos){
+    switch(c_digitos){
+        case 3:
+            UART1_Write((numero / 100) + 0x30);
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 2:
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 1:
+            UART1_Write((numero % 10) + 0x30);
+            break;
+    }
+}
+
+void UART1_16bitVar_Write(uint16_t numero){
+    UART1_Write((numero / 10000) + 0x30);
+    UART1_Write(((numero % 10000) / 1000) + 0x30);
+    UART1_Write(((numero % 1000) / 100) + 0x30);
+    UART1_Write(((numero % 100) / 10) + 0x30);
+    UART1_Write((numero % 10) + 0x30);
+}
+
+void UART1_16bitVar_Write2(uint16_t numero, uint8_t c_digitos){
+    switch(c_digitos){
+        case 5:
+            UART1_Write((numero / 10000) + 0x30);
+            UART1_Write(((numero % 10000) / 1000) + 0x30);
+            UART1_Write(((numero % 1000) / 100) + 0x30);
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 4:
+            UART1_Write(((numero % 10000) / 1000) + 0x30);
+            UART1_Write(((numero % 1000) / 100) + 0x30);
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 3:
+            UART1_Write((numero / 100) + 0x30);
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 2:
+            UART1_Write(((numero % 100) / 10) + 0x30);
+            UART1_Write((numero % 10) + 0x30);
+            break;
+        case 1:
+            UART1_Write((numero % 10) + 0x30);
+            break;
+    }
+}
+
+void UART1_Float_Write(float numero, uint8_t decimales){
+    char buffer[20]; // Buffer para almacenar el texto convertido
+    
+    // snprintf formatea el float de forma segura dentro del buffer
+    // %. *f permite pasar la cantidad de decimales como variable
+    snprintf(buffer, sizeof(buffer), "%.*f", decimales, numero);
+    
+    // Bucle para enviar caracter por caracter hasta encontrar el fin de cadena '\0'
+    for (int i = 0; buffer[i] != '\0'; i++) {
+        UART1_Write(buffer[i]);           // Enviar el caracter actual
+    }    
+}
+
+//--------------------------------------------------------------------------------------------------
+//Las cabezas de las funciones a ser agregadas al uart1.h generado por el MCC Melody
+
+/**
+ * @ingroup uart1
+ * @brief escribe una cadena de caracteres en un terminal serial.
+ * @pre nada
+ * @param *cadenasa  - la cadena de caracteres a enviar
+ * @return None.
+ */
+void UART1_String_Write(const uint8_t *cadenasa);
+
+/**
+ * @ingroup uart1
+ * @brief envia comando de nueva linea y retorno de carro al terminal serial
+ * @pre nada
+ * @param ninguno
+ * @return None.
+ */
+void UART1_NewLine(void);
+
+/**
+ * @ingroup uart1
+ * @brief escribe una variable de 8 bit al terminal serial en decimal
+ * @pre nada
+ * @param numero - el numero de 8 bit a imprimir
+ * @return None.
+ */
+void UART1_8bitVar_Write(uint8_t numero);
+
+/**
+ * @ingroup uart1
+ * @brief escribe una variable de 8 bit al terminal serial en decimal y con control de visualizacion de cantidad de digitos
+ * @pre nada
+ * @param numero - el numero de 8 bit a imprimir
+ *  c_digitos - cantidad de digitos de la variable a mandar
+ * @return None.
+ */
+void UART1_8bitVar_Write2(uint8_t numero, uint8_t c_digitos);
+
+/**
+ * @ingroup uart1
+ * @brief escribe una variable de 16 bit al terminal serial en decimal
+ * @pre nada
+ * @param numero - el numero de 16 bit a imprimir
+ * @return None.
+ */
+void UART1_16bitVar_Write(uint16_t numero);
+
+/**
+ * @ingroup uart1
+ * @brief escribe una variable de 16 bit al terminal serial en decimal y con control de visualizacion de cantidad de digitos
+ * @pre nada
+ * @param numero - el numero de 16 bit a imprimir
+ *  c_digitos - cantidad de digitos de la variable a mandar
+ * @return None.
+ */
+void UART1_16bitVar_Write2(uint16_t numero, uint8_t c_digitos);
+
+/**
+ * @ingroup uart1
+ * @brief escribe una variable float al terminal serial en decimal y con control de visualizacion de cantidad de digitos
+ * @pre nada
+ * @param numero - el numero de float a imprimir
+ *  c_digitos - cantidad de digitos de la variable a mandar
+ * @return None.
+ */
+void UART1_Float_Write(float numero, uint8_t decimales);
